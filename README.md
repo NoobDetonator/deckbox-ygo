@@ -1,109 +1,90 @@
 # Deck box YGO — impressão 3D em ABS
 
 Deck box para **90 cartas com sleeve duplo** (tamanho japonês, 62 × 89 mm): main + extra + side deck.
-Tampa basculante com dobradiça de 5 nós e pino de filamento, trava de clique escondida, divisória removível.
-Imprime **sem suporte**. Modelada em [SolidCraft](https://github.com/bherbruck/solidcraft), 100 % paramétrica.
+Tem tampa basculante, trava de clique escondida e divisória removível, e imprime **sem suporte**.
+Modelada em [SolidCraft](https://github.com/bherbruck/solidcraft), 100 % paramétrica.
 
 ![Fechada](images/shot_fechada.png)
 
-| Aberta (90 cartas + divisória) | Explodida | Dobradiça |
+## Qual versão imprimir
+
+A caixa é a mesma nas duas versões; muda só a dobradiça.
+
+| | **A — dobradiça integrada** | **B — dobradiça colada** |
 |---|---|---|
-| ![Aberta](images/shot_aberta.png) | ![Explodida](images/shot_explodida.png) | ![Traseira](images/shot_traseira.png) |
+| Visual | ![A](images/shot_traseira.png) | ![B](images/dobradica_impressa_montada.png) |
+| Dobradiça | 5 nós impressos na própria caixa | dobradiça de 50 × 38 mm colada num rebaixo-guia: **de metal** (2") ou a **impressa print-in-place** deste repositório |
+| Pino | 59,6 mm de filamento 1,75 (ou aço de 2 mm) | já vem na dobradiça |
+| Abertura | até ~168° | até 180° |
+| Pasta | [`stl/A-dobradica-integrada`](stl/A-dobradica-integrada) | [`stl/B-dobradica-colada`](stl/B-dobradica-colada) |
 
-![Detalhe da trava, do cavado do polegar e da etiqueta](images/shot_detalhe.png)
+Cada pasta tem tudo que precisa ser impresso para aquela versão.
 
-## Medidas
+---
 
-| | mm |
-|---|---|
-| Externa (fechada) | 69,6 × 67,6 × 94,5 |
-| Interna | 64 × 62 × 90,5 |
-| Paredes / fundo / topo | 2,8 / 2,0 / 2,0 |
-| Divisão corpo/tampa | 64 (as cartas ficam ~22 mm acima do lábio para pegar) |
+## Versão A — dobradiça integrada
 
-## Peças
+![Aberta](images/shot_aberta.png)
 
-| Arquivo | Orientação de impressão | Volume |
+### Imprimir
+
+| Arquivo | Orientação | Volume |
 |---|---|---|
-| `stl/deckbox_corpo.stl` | em pé, fundo na mesa | 55,4 cm³ |
-| `stl/deckbox_tampa.stl` | de cabeça para baixo, topo na mesa | 28,1 cm³ |
-| `stl/deckbox_divisoria.stl` | deitada | 8,7 cm³ |
-| Pino | 59,6 mm de filamento 1,75 | — |
+| `A_corpo.stl` | em pé, fundo na mesa | 55,4 cm³ |
+| `A_tampa.stl` | de cabeça para baixo, topo na mesa | 28,1 cm³ |
+| `A_divisoria.stl` | deitada | 8,7 cm³ |
 
-Fonte em `cad/`: `deckbox_ygo.sc` (SolidCraft), `deckbox_ygo.step` (montagem, para qualquer CAD) e `deckbox_build.json` (script que reconstrói o modelo do zero).
+Os arquivos já estão na posição de impressão. Total: ~90 g de ABS.
 
-Prefere dobradiça de metal? Veja a [variante com dobradiça colada](#variante-dobradiça-de-metal-colada).
+### Montar
 
-## Mecanismos
-
-- **Dobradiça:** 5 nós intercalados (corpo, tampa, corpo, tampa, corpo) com reforços a 45° e furos em gota, então imprime sem suporte. A tampa abre livre até ~168° e para nos reforços.
-- **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na saia da tampa. A interferência fica em 0,3 mm só nos primeiros 2° de abertura.
-- **Lábio e saia:** o lábio de 5 mm do corpo entra na saia da tampa com folga de 0,3 mm. Tem chanfro de entrada e um vinco de 0,4 mm na linha de divisão.
-- **Cavado do polegar** na frente, logo abaixo da tampa, para abrir com uma mão.
-- **Rebaixo de 44 × 30 × 0,6 mm** na frente, para adesivo com o nome do deck.
-- **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o "pé de elefante".
-
-## Impressão em ABS
-
-- Câmara fechada, sem corrente de ar. Mesa 100–110 °C, bico 240–250 °C, ventoinha 0–20 % (30–40 % nas pontes).
-- Camada 0,2 mm, **6 perímetros**, 5 camadas de topo e de fundo, 15 % gyroid.
-- **Brim de 5–8 mm** no corpo e na tampa.
-- Sem suporte. Costura posicionada atrás.
-- O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado ou vidro).
-- Consumo: ~90 g de ABS.
-
-## Montagem
-
-1. Corte 59,6 mm de filamento 1,75 (ABS de preferência).
+1. Corte **59,6 mm de filamento 1,75** (ABS de preferência).
 2. Encaixe a tampa e passe o pino por um lado através dos 5 nós.
 3. Os nós das pontas são do corpo: uma gota de acetona ali solda o pino no corpo, e a tampa continua girando livre.
 
-## Calibração
+**Pino de aço (opcional, mais durável):** use um raio de bicicleta inox 14G (2,0 mm), corda de piano ou eixo retificado de 2 mm.
+- No SolidCraft, mude `hole_body` para **2,0** e `hole_lid` para **2,35**, e gere de novo o corpo e a tampa.
+- Prenda as pontas com super bonder (acetona não cola metal).
 
-Os parâmetros de ajuste estão marcados como favoritos no SolidCraft:
+### Calibrar
 
 | Parâmetro | Padrão | Faixa | Efeito |
 |---|---|---|---|
 | `fit` | 0,3 | 0,2–0,4 | folga da tampa no lábio |
-| `ridge_proud` | 0,6 | 0,4–0,8 | força do clique (`ridge_proud - fit`) |
+| `ridge_proud` | 0,6 | 0,4–0,8 | força do clique |
 | `hole_body` | 1,9 | 1,8–2,0 | pino justo nos nós do corpo |
 | `hole_lid` | 2,2 | 2,1–2,4 | tampa girando solta |
 | `hclr` / `hgap` | 0,35 / 0,4 | 0,3–0,5 | folgas radial e axial da dobradiça |
 
-Para mudar outros tamanhos (outro tamanho de sleeve, mais cartas), edite `in_x`, `in_y` ou `in_z`.
+---
 
-Edite no app (Parâmetros) ou reconstrua pela linha de comando:
+## Versão B — dobradiça colada
 
-```bash
-solidcraft-cli run cad/deckbox_build.json --save cad/deckbox_ygo.sc
-```
+| Rebaixo-guia | Com dobradiça de metal | Dobradiça impressa |
+|---|---|---|
+| ![Guia](images/dobradica_guia.png) | ![Metal](images/dobradica_montada.png) | ![Impressa](images/dobradica_impressa.png) |
 
-Depois exporte cada peça em STL pelo app. O modelo está na posição de montagem, então vire a tampa de cabeça para baixo no fatiador.
-
-## Variante: dobradiça de metal colada
-
-Esta variante troca a dobradiça impressa por uma **dobradiça pequena de 2" (50 × 38 mm, chapa de 1,2 mm)**, dessas vendidas em kit para portinha de armário. Ela é colada com cianoacrilato.
-
-| Rebaixo-guia | Com a dobradiça |
-|---|---|
-| ![Guia](images/dobradica_guia.png) | ![Montada](images/dobradica_montada.png) |
-
-A traseira ganha um **ressalto de 3 mm** com:
-- um **rebaixo de 1,2 mm** no tamanho exato da dobradiça, com 0,4 mm de folga, que serve de guia para ela não ficar torta;
-- um **canal para o canudo do pino**;
+A traseira tem um **ressalto de 3 mm** com:
+- um **rebaixo de 1,2 mm no tamanho exato da dobradiça**, com 0,4 mm de folga, que serve de guia para ela não ficar torta;
+- um **canal para o canudo** do pino;
 - **base a 45°**, para imprimir sem suporte.
 
-O eixo fica na face do ressalto, então a tampa abre até 180°. A trava de clique continua igual.
+### Imprimir
 
-| Arquivo | Orientação |
-|---|---|
-| `stl/deckbox_corpo_dobradica.stl` | em pé |
-| `stl/deckbox_tampa_dobradica.stl` | de cabeça para baixo |
-| `stl/deckbox_divisoria.stl` | igual à versão normal |
+| Arquivo | Orientação | Volume |
+|---|---|---|
+| `B_corpo.stl` | em pé, fundo na mesa | 57,7 cm³ |
+| `B_tampa.stl` | de cabeça para baixo, topo na mesa | 30,5 cm³ |
+| `B_divisoria.stl` | deitada | 8,7 cm³ |
+| `B_dobradica-impressa.stl` | deitada, lado liso na mesa (**só se não for usar a de metal**) | 3,3 cm³ |
 
-Fonte: `cad/deckbox_ygo_dobradica.sc`, `cad/deckbox_ygo_dobradica.step` e `cad/deckbox_build_dobradica.json`. A profundidade passa para 70,6 mm por causa do ressalto.
+Total: ~95 g de ABS.
 
-**Meça a sua dobradiça antes de imprimir.** O anúncio não informa tudo, e cada lote varia. Ajuste estes parâmetros no SolidCraft:
+### Dobradiça de metal
+
+Use uma dobradiça pequena de 2" (50 × 38 mm, chapa de 1,2 mm), dessas vendidas em kit para portinha de armário.
+
+**Meça a sua antes de imprimir a caixa.** Se as medidas não baterem, ajuste estes parâmetros no SolidCraft e gere de novo:
 
 | Parâmetro | Padrão | O que medir |
 |---|---|---|
@@ -113,53 +94,94 @@ Fonte: `cad/deckbox_ygo_dobradica.sc`, `cad/deckbox_ygo_dobradica.step` e `cad/d
 | `barrel_d` | 5 | diâmetro externo do canudo |
 | `pocket_clr` | 0,4 | folga em volta (0,3–0,6) |
 
-**Colagem:**
-1. Teste antes sem cola. O lado em que o canudo fica **mais saltado vai para fora**: assim a dobradiça dobra para trás e a tampa abre. Ao contrário, ela não assenta no canal.
-2. Lixe as abas e o fundo do rebaixo (lixa 220) e limpe com álcool isopropílico.
-3. **Cole com a caixa fechada e travada no clique**, assim a tampa já fica alinhada.
-4. Borrife o ativador nas costas das abas e espere secar uns segundos. Pingue poucas gotas de cola no fundo do rebaixo, **longe do canal**: cola no canudo trava a dobradiça. Encaixe e pressione por 30 s.
-5. Use pouca cola: o vapor do cianoacrilato deixa o ABS esbranquiçado ("blooming").
-6. Se um dia descolar, epóxi bicomponente aguenta melhor impacto do que cianoacrilato.
-
-Verificado da mesma forma que a versão normal: a dobradiça de referência assenta sem interferência; corpo, tampa e cartas não se tocam; a tampa gira livre de 3° a 180°, com o clique em 1–2°.
-
 ### Dobradiça impressa (print-in-place)
 
-Alternativa à de metal: uma dobradiça impressa **já montada**, com o pino preso dentro dos nós. Ela encaixa no mesmo rebaixo da variante (50 × 38 mm, abas de 1,2 mm).
+Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm preso dentro dos nós.
+- As folgas são de 0,4 mm entre pino e furo e de 0,5 mm entre os nós.
+- Os nós que giram têm furo em gota, então o teto do furo sai a 45° e não gruda no pino.
 
-| Como sai da impressora | Montada na caixa |
+1. **Imprima primeiro só ela** (~3,5 g): as folgas dependem da sua impressora.
+2. Deitada, como está no arquivo, sem suporte. Não esmague demais a primeira camada, senão o "pé de elefante" solda os nós.
+3. Ao tirar da mesa, **dobre devagar para um lado e para o outro** algumas vezes, até girar livre.
+4. Se sair grudada, aumente `pip_clr` (0,45–0,5) e `pip_gap` (0,6) no SolidCraft e gere de novo.
+
+### Colar (metal ou impressa)
+
+1. **Teste antes sem cola.**
+   - Metal: o lado em que o canudo fica mais saltado vai para fora.
+   - Impressa: o lado liso (o que ficou na mesa) vai para dentro do rebaixo.
+2. Lixe as abas e o fundo do rebaixo (lixa 220) e limpe com álcool isopropílico.
+3. **Cole com a caixa fechada e travada no clique**, assim a tampa já fica alinhada.
+4. Borrife o **ativador de cianoacrilato** nas costas das abas e espere secar uns segundos. Pingue poucas gotas de super bonder no rebaixo, **longe do canal**: cola no canudo trava a dobradiça. Encaixe e pressione por 30 s.
+5. Use pouca cola: o vapor do cianoacrilato deixa o ABS esbranquiçado ("blooming").
+6. Se um dia descolar, epóxi bicomponente aguenta melhor impacto.
+
+---
+
+## Configuração de impressão (ABS, vale para tudo)
+
+| | |
 |---|---|
-| ![Dobradiça impressa](images/dobradica_impressa.png) | ![Montada](images/dobradica_impressa_montada.png) |
+| Câmara | fechada, sem corrente de ar |
+| Temperatura | mesa 100–110 °C, bico 240–250 °C |
+| Ventoinha | 0–20 % (30–40 % nas pontes) |
+| Camada | 0,2 mm |
+| Perímetros | **6** (as paredes ficam maciças) |
+| Topo e fundo | 5 camadas |
+| Preenchimento | 15 % gyroid |
+| Brim | **5–8 mm** no corpo e na tampa; a divisória e a dobradiça não precisam |
+| Suporte | nenhum |
+| Costura | atrás |
 
-O design:
-- 5 nós intercalados e pino de 2,6 mm;
-- folga de 0,4 mm entre pino e furo, e de 0,5 mm entre os nós;
-- furo em gota nos nós que giram, então o teto do furo sai a 45° e não gruda no pino;
-- o fundo do canudo encosta na mesa, então tudo imprime sem suporte.
+O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado ou vidro).
 
-Arquivos: `stl/dobradica_impressa.stl` (as duas abas num arquivo só, já na posição de impressão) e, em `cad/`, `dobradica_impressa.sc`, `dobradica_impressa.step` e `dobradica_impressa_build.json`.
+---
 
-**Imprimir:**
-- deitada, como está no arquivo, com o lado liso na mesa;
-- sem suporte, camada de 0,2 mm, ventoinha baixa (ABS);
-- primeira camada sem esmagar demais: o "pé de elefante" pode soldar os nós entre si.
+## Medidas e mecanismos
 
-**Soltar:** ao tirar da mesa, dobre devagar para um lado e para o outro algumas vezes, até ela girar livre.
+| | mm |
+|---|---|
+| Externa (fechada) | 69,6 × 67,6 × 94,5 (B: 70,6 de profundidade, por causa do ressalto) |
+| Interna | 64 × 62 × 90,5 |
+| Paredes / fundo / topo | 2,8 / 2,0 / 2,0 |
+| Divisão corpo/tampa | 64 (as cartas ficam ~22 mm acima do lábio para pegar) |
 
-**Se sair grudada:** aumente `pip_clr` (0,45–0,5) e `pip_gap` (0,6) no SolidCraft e gere de novo.
+- **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm, só nos primeiros 1–2° de abertura.
+- **Lábio e saia:** o lábio de 5 mm do corpo entra na saia da tampa com 0,3 mm de folga. Tem chanfro de entrada e um vinco de 0,4 mm na linha de divisão.
+- **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
+- **Cavado do polegar** na frente, para abrir com uma mão.
+- **Rebaixo de 44 × 30 × 0,6 mm** na frente, para um adesivo com o nome do deck.
+- **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o pé de elefante.
 
-**Montar:** o lado liso, que ficou na mesa, vai para dentro do rebaixo, com o canudo para fora. Cole como a de metal: com a caixa fechada e sem deixar cola chegar no canudo.
-
-Verificado no SolidCraft:
-- impressa plana, as duas abas não se tocam;
-- dobra livre de 10° a 180°;
-- montada na caixa, não encosta em nada;
-- a tampa gira livre de 2° a 180°, com o clique a 1°.
+| Detalhe da frente | Explodida (A) |
+|---|---|
+| ![Detalhe](images/shot_detalhe.png) | ![Explodida](images/shot_explodida.png) |
 
 ## Verificação
 
 Feita com booleanas exatas do SolidCraft (`inspect.interference`):
 
-- Caixa fechada, corpo × tampa: 0 de interferência.
-- 90 cartas (62 × 55,8 × 89) + divisória em pé + pino de 1,75: 0 de interferência.
-- Giro da tampa, de 1° a 180°: só o ressalto da trava encosta a 1–2° (o clique). De 3° a 168° fica livre, e o batente fica em ~169°.
+| | A | B |
+|---|---|---|
+| Caixa fechada (corpo × tampa) | 0 de interferência | 0 de interferência |
+| 90 cartas (62 × 55,8 × 89) + divisória | 0 | 0 |
+| Pino / dobradiça montada | pino de 1,75 sem tocar | dobradiça de metal e impressa sem tocar |
+| Giro da tampa | clique a 1–2°, livre de 3° a 168°, batente a ~169° | clique a 1–2°, livre até 180° |
+| Dobradiça impressa sozinha | — | plana sem as abas se tocarem, dobra livre até 180° |
+
+## Editar o modelo
+
+Os arquivos editáveis estão em `cad/A-dobradica-integrada/` e `cad/B-dobradica-colada/`:
+- `.sc` — projeto do SolidCraft, com os parâmetros de calibração marcados como favoritos;
+- `.step` — para abrir em qualquer CAD;
+- `_build.json` — script que reconstrói o modelo do zero.
+
+Para mudar o tamanho (outro sleeve, mais cartas), edite `in_x`, `in_y` ou `in_z`.
+
+Edite no app, em Parâmetros, ou reconstrua pela linha de comando:
+
+```bash
+solidcraft-cli run cad/A-dobradica-integrada/A_deckbox_build.json --save cad/A-dobradica-integrada/A_deckbox.sc
+```
+
+Depois exporte cada peça em STL pelo app. O modelo fica na posição de montagem, então vire a tampa de cabeça para baixo no fatiador.
