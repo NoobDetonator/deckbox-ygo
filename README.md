@@ -1,7 +1,7 @@
 # Deck box YGO — impressão 3D em ABS
 
 Deck box para **90 cartas com sleeve duplo** (tamanho japonês, 62 × 89 mm): main + extra + side deck.
-Tem tampa basculante, trava de clique escondida e divisória removível, e imprime **sem suporte**.
+Tem tampa basculante, trava de clique escondida, **porta-arte trocável** na frente e divisória removível, e imprime **sem suporte**.
 Modelada em [SolidCraft](https://github.com/bherbruck/solidcraft), 100 % paramétrica.
 
 ![Fechada](images/shot_fechada.png)
@@ -30,9 +30,9 @@ Cada pasta tem tudo que precisa ser impresso para aquela versão.
 
 | Arquivo | Orientação | Volume |
 |---|---|---|
-| `A_corpo.stl` | em pé, fundo na mesa | 55,4 cm³ |
+| `A_corpo.stl` | em pé, fundo na mesa | 52,8 cm³ |
 | `A_tampa.stl` | de cabeça para baixo, topo na mesa | 28,1 cm³ |
-| `A_divisoria.stl` | deitada | 8,7 cm³ |
+| `A_divisoria.stl` | deitada | 8,6 cm³ |
 
 Os arquivos já estão na posição de impressão. Total: ~90 g de ABS.
 
@@ -73,9 +73,9 @@ A traseira tem um **ressalto de 3 mm** com:
 
 | Arquivo | Orientação | Volume |
 |---|---|---|
-| `B_corpo.stl` | em pé, fundo na mesa | 57,7 cm³ |
+| `B_corpo.stl` | em pé, fundo na mesa | 55,1 cm³ |
 | `B_tampa.stl` | de cabeça para baixo, topo na mesa | 30,5 cm³ |
-| `B_divisoria.stl` | deitada | 8,7 cm³ |
+| `B_divisoria.stl` | deitada | 8,6 cm³ |
 | `B_dobradica-impressa.stl` | deitada, lado liso na mesa (**só se não for usar a de metal**) | 3,3 cm³ |
 
 Total: ~95 g de ABS.
@@ -118,6 +118,35 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
 
 ---
 
+## Detalhes de design (nas duas versões)
+
+| Por dentro e porta-arte | Fundo |
+|---|---|
+| ![Detalhe](images/shot_detalhe.png) | ![Fundo](images/shot_fundo.png) |
+
+- **Porta-arte deslizante:** uma janela com trilhos na frente.
+  - A arte entra por cima, pela boca na linha de divisão, e com a **tampa fechada ela não sai**.
+  - Imprima a arte do seu deck em papel fotográfico ou cartão de até 0,5 mm e **corte em 46 × 43,5 mm**.
+  - Para trocar, abra a tampa e puxe a arte para cima.
+  - A boca do porta-arte também serve de apoio para o polegar ao abrir a tampa.
+- **Canelado horizontal:** 20 ranhuras em V de 0,6 mm nas laterais. Dá pegada e disfarça as linhas de camada.
+- **Linha de sombra:** um degrau de 0,5 × 1,2 mm no topo do corpo, logo abaixo da tampa. Marca a divisão com uma linha escura e esconde desalinhamentos.
+- **Nervuras internas:** 4 filetes verticais nas laterais de dentro. Centralizam o deck e reduzem o atrito ao tirar as cartas. A divisória foi estreitada para 62,2 mm, para passar entre elas em qualquer posição.
+- **Fundo:**
+  - 4 rebaixos para **pezinhos de silicone autoadesivos de 8 mm**, para a caixa não escorregar na mesa;
+  - o texto "DECK BOX / 90 CARTAS · ABS" em baixo-relevo, editável pelos parâmetros `bt_title` e `bt_sub` (coloque o nome do seu deck).
+
+| Parâmetro | Padrão | Efeito |
+|---|---|---|
+| `art_t` | 0,6 | espessura da fenda da arte (para papel ou cartão de até 0,5 mm) |
+| `art_w` / `art_z0` | 46 / 20 | largura da arte e altura do fundo da fenda (altura da arte = 64 − `art_z0`) |
+| `fl_n` / `fl_p` / `fl_d` | 20 / 2 / 0,6 | quantidade, passo e profundidade das ranhuras |
+| `sg_d` / `sg_h` | 0,5 / 1,2 | profundidade e altura da linha de sombra |
+| `rib_p` | 0,5 | quanto as nervuras avançam para dentro |
+| `bt_title` / `bt_sub` | texto | as duas linhas do texto no fundo |
+
+---
+
 ## Configuração de impressão (ABS, vale para tudo)
 
 | | |
@@ -149,13 +178,9 @@ O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado 
 - **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm, só nos primeiros 1–2° de abertura.
 - **Lábio e saia:** o lábio de 5 mm do corpo entra na saia da tampa com 0,3 mm de folga. Tem chanfro de entrada e um vinco de 0,4 mm na linha de divisão.
 - **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
-- **Cavado do polegar** na frente, para abrir com uma mão.
-- **Rebaixo de 44 × 30 × 0,6 mm** na frente, para um adesivo com o nome do deck.
 - **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o pé de elefante.
 
-| Detalhe da frente | Explodida (A) |
-|---|---|
-| ![Detalhe](images/shot_detalhe.png) | ![Explodida](images/shot_explodida.png) |
+![Explodida (A): tampa, arte saindo do porta-arte, divisória e pino](images/shot_explodida.png)
 
 ## Verificação
 
@@ -165,6 +190,9 @@ Feita com booleanas exatas do SolidCraft (`inspect.interference`):
 |---|---|---|
 | Caixa fechada (corpo × tampa) | 0 de interferência | 0 de interferência |
 | 90 cartas (62 × 55,8 × 89) + divisória | 0 | 0 |
+| Divisória em cima das nervuras | passa | passa |
+| Arte de 46 × 43,5 × 0,5 no porta-arte | cabe sem tocar | cabe sem tocar |
+| Arte empurrada 1 mm para cima | a tampa bloqueia (fica presa) | a tampa bloqueia (fica presa) |
 | Pino / dobradiça montada | pino de 1,75 sem tocar | dobradiça de metal e impressa sem tocar |
 | Giro da tampa | clique a 1–2°, livre de 3° a 168°, batente a ~169° | clique a 1–2°, livre até 180° |
 | Dobradiça impressa sozinha | — | plana sem as abas se tocarem, dobra livre até 180° |

@@ -438,38 +438,6 @@
   {
    "command": "parameters.add",
    "params": {
-    "name": "label_w",
-    "expression": "44 mm",
-    "comment": "label recess width"
-   }
-  },
-  {
-   "command": "parameters.add",
-   "params": {
-    "name": "label_h",
-    "expression": "30 mm",
-    "comment": "label recess height"
-   }
-  },
-  {
-   "command": "parameters.add",
-   "params": {
-    "name": "label_d",
-    "expression": "0.6 mm",
-    "comment": "label recess depth (sticker)"
-   }
-  },
-  {
-   "command": "parameters.add",
-   "params": {
-    "name": "label_z",
-    "expression": "32 mm",
-    "comment": "label recess centre height"
-   }
-  },
-  {
-   "command": "parameters.add",
-   "params": {
     "name": "ridge_r",
     "expression": "0.8 mm",
     "comment": "snap ridge radius"
@@ -517,70 +485,6 @@
    }
   },
   {
-   "command": "parameters.add",
-   "params": {
-    "name": "scallop_r",
-    "expression": "22 mm",
-    "comment": "thumb scallop sphere radius"
-   }
-  },
-  {
-   "command": "parameters.add",
-   "params": {
-    "name": "scallop_d",
-    "expression": "1.3 mm",
-    "comment": "thumb scallop depth"
-   }
-  },
-  {
-   "command": "solid.box",
-   "params": {
-    "length": "label_w",
-    "width": "label_d + 1",
-    "height": "label_h",
-    "center": [
-     0,
-     "-D/2 + (label_d - 1)/2",
-     "label_z"
-    ],
-    "operation": "cut",
-    "targets": [
-     "Body"
-    ],
-    "name": "LabelRecess"
-   }
-  },
-  {
-   "command": "solid.fillet",
-   "params": {
-    "body": "Body",
-    "edges": [
-     [
-      22,
-      -33.5,
-      17
-     ],
-     [
-      -22,
-      -33.5,
-      17
-     ],
-     [
-      22,
-      -33.5,
-      47
-     ],
-     [
-      -22,
-      -33.5,
-      47
-     ]
-    ],
-    "radius": 3,
-    "name": "LabelCorners"
-   }
-  },
-  {
    "command": "solid.cylinder",
    "params": {
     "radius": "ridge_r",
@@ -599,19 +503,566 @@
    }
   },
   {
-   "command": "solid.sphere",
+   "command": "parameters.add",
    "params": {
-    "radius": "scallop_r",
-    "center": [
-     0,
-     "-D/2 - scallop_r + scallop_d",
-     "split"
+    "name": "sg_d",
+    "expression": "0.5 mm",
+    "comment": "shadow line: depth of the step under the lid"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "sg_h",
+    "expression": "1.2 mm",
+    "comment": "shadow line: height of the step under the lid"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_n",
+    "expression": "20",
+    "comment": "side grooves: count (whole number, 1 or more)",
+    "unit": ""
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_p",
+    "expression": "2 mm",
+    "comment": "side grooves: pitch"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_d",
+    "expression": "0.6 mm",
+    "comment": "side grooves: depth of the 45 deg V, 0.8 at most"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_z0",
+    "expression": "6 mm",
+    "comment": "side grooves: height of the first one"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_y",
+    "expression": "D/2 - r_out - 3",
+    "comment": "side grooves: half length"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_w",
+    "expression": "46 mm",
+    "comment": "art insert width (cut the art 46 x 43.5 mm)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_z0",
+    "expression": "20 mm",
+    "comment": "art slot bottom height (art height = split - art_z0)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_t",
+    "expression": "0.6 mm",
+    "comment": "CALIBRATE: art slot thickness (photo paper or card up to 0.5)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_f",
+    "expression": "0.8 mm",
+    "comment": "lip thickness in front of the art"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_lip",
+    "expression": "2.5 mm",
+    "comment": "how far the lips cover the art edges"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_clr",
+    "expression": "0.2 mm",
+    "comment": "side play of the art in its slot"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rib_r",
+    "expression": "0.75 mm",
+    "comment": "inner ribs: radius"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rib_p",
+    "expression": "0.5 mm",
+    "comment": "inner ribs: how far they stand off the side walls"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rib_y",
+    "expression": "15 mm",
+    "comment": "inner ribs: distance from the centre"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "foot_d",
+    "expression": "8.4 mm",
+    "comment": "recess for 8 mm adhesive silicone feet"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "foot_h",
+    "expression": "0.6 mm",
+    "comment": "foot recess depth"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "foot_e",
+    "expression": "7 mm",
+    "comment": "foot centre inset from the edges"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_d",
+    "expression": "0.4 mm",
+    "comment": "bottom text depth (2 layers)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_y",
+    "expression": "4 mm",
+    "comment": "bottom text: line offset from the centre"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_title",
+    "expression": "DECK BOX",
+    "comment": "bottom text, first line",
+    "unit": "text"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_sub",
+    "expression": "90 CARTAS \u00b7 ABS",
+    "comment": "bottom text, second line",
+    "unit": "text"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XY",
+    "offset": "split - sg_h",
+    "name": "ShadowGapSk"
+   }
+  },
+  {
+   "command": "sketch.draw.dimensioned",
+   "params": {
+    "command": "sketch.rectangle.center",
+    "params": {
+     "center": [
+      0,
+      0
+     ],
+     "corner": [
+      40,
+      39
+     ]
+    },
+    "dimensions": {
+     "width": "W + 10",
+     "height": "D + 10"
+    }
+   }
+  },
+  {
+   "command": "sketch.draw.dimensioned",
+   "params": {
+    "command": "sketch.rectangle.center",
+    "params": {
+     "center": [
+      0,
+      0
+     ],
+     "corner": [
+      34.3,
+      33.3
+     ]
+    },
+    "dimensions": {
+     "width": "W - 2*sg_d",
+     "height": "D - 2*sg_d"
+    }
+   }
+  },
+  {
+   "command": "sketch.fillet",
+   "params": {
+    "points": [
+     {
+      "a": "l7",
+      "b": "l10"
+     },
+     {
+      "a": "l7",
+      "b": "l8"
+     },
+     {
+      "a": "l8",
+      "b": "l9"
+     },
+     {
+      "a": "l9",
+      "b": "l10"
+     }
     ],
+    "radius": "r_out - sg_d"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "ShadowGapSk",
+    "distance": "sg_h + 1",
+    "name": "ShadowGap",
     "operation": "cut",
     "targets": [
      "Body"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XZ",
+    "offset": "-fl_y",
+    "name": "FlutingSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "W/2 + fl_d",
+      "-(fl_z0 - 2*fl_d)"
+     ],
+     [
+      "W/2 + fl_d",
+      "-(fl_z0 + 2*fl_d)"
+     ],
+     [
+      "W/2 - fl_d",
+      "-fl_z0"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "-(W/2 + fl_d)",
+      "-(fl_z0 - 2*fl_d)"
+     ],
+     [
+      "-(W/2 + fl_d)",
+      "-(fl_z0 + 2*fl_d)"
+     ],
+     [
+      "-(W/2 - fl_d)",
+      "-fl_z0"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "FlutingSk",
+    "distance": "2*fl_y",
+    "name": "Fluting",
+    "operation": "cut",
+    "targets": [
+     "Body"
+    ]
+   }
+  },
+  {
+   "command": "solid.pattern.rectangular",
+   "params": {
+    "features": [
+     "Fluting"
     ],
-    "name": "ThumbScallop"
+    "dir1": [
+     0,
+     0,
+     1
+    ],
+    "count1": "fl_n",
+    "spacing1": "fl_p",
+    "name": "Flutings"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "art_w + 2*art_clr",
+    "width": "art_t",
+    "height": "split + 1 - art_z0",
+    "corner": [
+     "-(art_w/2 + art_clr)",
+     "-D/2 + art_f",
+     "art_z0"
+    ],
+    "name": "ArtSlot",
+    "operation": "cut",
+    "targets": [
+     "Body"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "art_w - 2*art_lip",
+    "width": "art_f + 1.1",
+    "height": "split + 1 - art_z0 - art_lip",
+    "corner": [
+     "-(art_w/2 - art_lip)",
+     "-D/2 - 1",
+     "art_z0 + art_lip"
+    ],
+    "name": "ArtWindow",
+    "operation": "cut",
+    "targets": [
+     "Body"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "art_w + 2*art_clr",
+    "width": "art_f + 1.1",
+    "height": "sg_h + 1",
+    "corner": [
+     "-(art_w/2 + art_clr)",
+     "-D/2 - 1",
+     "split - sg_h"
+    ],
+    "name": "ArtMouth",
+    "operation": "cut",
+    "targets": [
+     "Body"
+    ]
+   }
+  },
+  {
+   "command": "solid.fillet",
+   "params": {
+    "body": "Body",
+    "edges": [
+     [
+      20.5,
+      -33.4,
+      22.5
+     ],
+     [
+      -20.5,
+      -33.4,
+      22.5
+     ]
+    ],
+    "radius": 2,
+    "name": "ArtWindowCorners"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "rib_r",
+    "height": "split + lip_h - base_t - 0.1",
+    "axis": "Z",
+    "base": [
+     "-(in_x/2 + rib_r - rib_p)",
+     "-rib_y",
+     "base_t"
+    ],
+    "operation": "join",
+    "targets": [
+     "Body"
+    ],
+    "name": "Rib"
+   }
+  },
+  {
+   "command": "solid.pattern.rectangular",
+   "params": {
+    "features": [
+     "Rib"
+    ],
+    "dir1": [
+     1,
+     0,
+     0
+    ],
+    "count1": 2,
+    "spacing1": "in_x + 2*(rib_r - rib_p)",
+    "dir2": [
+     0,
+     1,
+     0
+    ],
+    "count2": 2,
+    "spacing2": "2*rib_y",
+    "name": "Ribs"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "foot_d",
+    "height": "foot_h + 1",
+    "axis": "Z",
+    "base": [
+     "-(W/2 - foot_e)",
+     "-(D/2 - foot_e)",
+     -1
+    ],
+    "name": "FootRecess",
+    "operation": "cut",
+    "targets": [
+     "Body"
+    ]
+   }
+  },
+  {
+   "command": "solid.pattern.rectangular",
+   "params": {
+    "features": [
+     "FootRecess"
+    ],
+    "dir1": [
+     1,
+     0,
+     0
+    ],
+    "count1": 2,
+    "spacing1": "W - 2*foot_e",
+    "dir2": [
+     0,
+     1,
+     0
+    ],
+    "count2": 2,
+    "spacing2": "D - 2*foot_e",
+    "name": "FootRecesses"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XY",
+    "offset": -1,
+    "flip": true,
+    "name": "BottomTextSk"
+   }
+  },
+  {
+   "command": "sketch.text",
+   "params": {
+    "text_expression": "bt_title",
+    "at": [
+     "0*W",
+     "bt_y"
+    ],
+    "height": 6,
+    "align": "center",
+    "vertical_align": "middle"
+   }
+  },
+  {
+   "command": "sketch.text",
+   "params": {
+    "text_expression": "bt_sub",
+    "at": [
+     "0*W",
+     "-bt_y"
+    ],
+    "height": 3.5,
+    "align": "center",
+    "vertical_align": "middle"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "BottomTextSk",
+    "distance": "1 + bt_d",
+    "direction": "negative",
+    "name": "BottomText",
+    "operation": "cut",
+    "targets": [
+     "Body"
+    ]
    }
   },
   {
@@ -1205,7 +1656,7 @@
   {
    "command": "solid.box",
    "params": {
-    "length": "in_x - 2*div_gap",
+    "length": "in_x - 2*div_gap - 2*rib_p",
     "width": "div_h",
     "height": "div_t",
     "corner": [
@@ -1247,12 +1698,12 @@
       0.8
      ],
      [
-      113,
+      112,
       -33.8,
       0.8
      ],
      [
-      113,
+      112,
       50.2,
       0.8
      ],
