@@ -1,0 +1,33 @@
+{"commands": [
+ {"command": "parameters.add", "params": {"name": "pip_l", "expression": "50 mm", "comment": "hinge length (same as the 2 in metal hinge / hinge_l of the box)", "favorite": true}},
+ {"command": "parameters.add", "params": {"name": "pip_w", "expression": "38 mm", "comment": "width opened flat (same as hinge_w of the box)"}},
+ {"command": "parameters.add", "params": {"name": "pip_t", "expression": "1.2 mm", "comment": "leaf thickness (= pocket depth hinge_t of the box)"}},
+ {"command": "parameters.add", "params": {"name": "pip_r", "expression": "3 mm", "comment": "knuckle radius; the knuckles touch the bed, so the axis is pip_r above it"}},
+ {"command": "parameters.add", "params": {"name": "pip_pin", "expression": "2.6 mm", "comment": "printed pin diameter"}},
+ {"command": "parameters.add", "params": {"name": "pip_clr", "expression": "0.4 mm", "comment": "CALIBRATE: radial clearance pin/hole and knuckle/leaf, 0.3-0.5 (raise if it prints fused)", "favorite": true}},
+ {"command": "parameters.add", "params": {"name": "pip_gap", "expression": "0.5 mm", "comment": "CALIBRATE: axial gap between knuckles, 0.4-0.6 (raise if it prints fused)", "favorite": true}},
+ {"command": "parameters.add", "params": {"name": "pip_seg", "expression": "(pip_l - 4*pip_gap)/5", "comment": "knuckle length (5 knuckles)"}},
+ {"command": "parameters.add", "params": {"name": "pip_rh", "expression": "pip_pin/2 + pip_clr", "comment": "hole radius in the moving knuckles"}},
+
+ {"command": "solid.box", "params": {"length": "pip_l", "width": "pip_w/2", "height": "pip_t", "corner": ["-pip_l/2", "-pip_w/2", 0], "operation": "new", "body_name": "LeafA", "name": "PipLeafA"}},
+ {"command": "solid.box", "params": {"length": "pip_l", "width": "pip_w/2", "height": "pip_t", "corner": ["-pip_l/2", 0, 0], "operation": "new", "body_name": "LeafB", "name": "PipLeafB"}},
+ {"command": "solid.fillet", "params": {"body": "LeafA", "edges": [[25, -19, 0.6], [-25, -19, 0.6]], "radius": 1, "name": "PipCornersA"}},
+ {"command": "solid.fillet", "params": {"body": "LeafB", "edges": [[25, 19, 0.6], [-25, 19, 0.6]], "radius": 1, "name": "PipCornersB"}},
+
+ {"command": "solid.cylinder", "params": {"radius": "pip_r", "height": "pip_seg", "axis": "X", "base": ["-pip_l/2", 0, "pip_r"], "operation": "join", "targets": ["LeafA"], "name": "PipKnuckleA"}},
+ {"command": "solid.pattern.rectangular", "params": {"features": ["PipKnuckleA"], "dir1": [1, 0, 0], "count1": 3, "spacing1": "2*(pip_seg + pip_gap)", "name": "PipKnucklesA"}},
+ {"command": "solid.cylinder", "params": {"radius": "pip_r", "height": "pip_seg", "axis": "X", "base": ["-pip_l/2 + pip_seg + pip_gap", 0, "pip_r"], "operation": "join", "targets": ["LeafB"], "name": "PipKnuckleB"}},
+ {"command": "solid.pattern.rectangular", "params": {"features": ["PipKnuckleB"], "dir1": [1, 0, 0], "count1": 2, "spacing1": "2*(pip_seg + pip_gap)", "name": "PipKnucklesB"}},
+
+ {"command": "solid.cylinder", "params": {"radius": "pip_r + pip_clr", "height": "pip_seg + 2*pip_gap", "axis": "X", "base": ["-pip_l/2 - pip_gap", 0, "pip_r"], "operation": "cut", "targets": ["LeafB"], "name": "PipClearB"}},
+ {"command": "solid.pattern.rectangular", "params": {"features": ["PipClearB"], "dir1": [1, 0, 0], "count1": 3, "spacing1": "2*(pip_seg + pip_gap)", "name": "PipClearsB"}},
+ {"command": "solid.cylinder", "params": {"radius": "pip_r + pip_clr", "height": "pip_seg + 2*pip_gap", "axis": "X", "base": ["-pip_l/2 + pip_seg", 0, "pip_r"], "operation": "cut", "targets": ["LeafA"], "name": "PipClearA"}},
+ {"command": "solid.pattern.rectangular", "params": {"features": ["PipClearA"], "dir1": [1, 0, 0], "count1": 2, "spacing1": "2*(pip_seg + pip_gap)", "name": "PipClearsA"}},
+
+ {"command": "solid.cylinder", "params": {"diameter": "pip_pin", "height": "pip_l", "axis": "X", "base": ["-pip_l/2", 0, "pip_r"], "operation": "join", "targets": ["LeafA"], "name": "PipPin"}},
+ {"command": "solid.cylinder", "params": {"radius": "pip_rh", "height": "pip_l", "axis": "X", "base": ["-pip_l/2", 0, "pip_r"], "operation": "cut", "targets": ["LeafB"], "name": "PipHoleB"}},
+ {"command": "sketch.create", "params": {"plane": "YZ", "offset": "-pip_l/2", "name": "PipTearSk"}},
+ {"command": "sketch.line", "params": {"closed": true, "points": [["-pip_rh*sqrt(0.5)", "pip_r + pip_rh*sqrt(0.5)"], ["pip_rh*sqrt(0.5)", "pip_r + pip_rh*sqrt(0.5)"], ["0*pip_rh", "pip_r + pip_rh*sqrt(2)"]]}},
+ {"command": "sketch.finish", "params": {}},
+ {"command": "solid.extrude", "params": {"sketch": "PipTearSk", "distance": "pip_l", "operation": "cut", "targets": ["LeafB"], "name": "PipTearB"}}
+]}

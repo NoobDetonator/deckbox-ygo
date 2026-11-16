@@ -123,6 +123,39 @@ Fonte: `cad/deckbox_ygo_dobradica.sc`, `cad/deckbox_ygo_dobradica.step` e `cad/d
 
 Verificado da mesma forma que a versão normal: a dobradiça de referência assenta sem interferência; corpo, tampa e cartas não se tocam; a tampa gira livre de 3° a 180°, com o clique em 1–2°.
 
+### Dobradiça impressa (print-in-place)
+
+Alternativa à de metal: uma dobradiça impressa **já montada**, com o pino preso dentro dos nós. Ela encaixa no mesmo rebaixo da variante (50 × 38 mm, abas de 1,2 mm).
+
+| Como sai da impressora | Montada na caixa |
+|---|---|
+| ![Dobradiça impressa](images/dobradica_impressa.png) | ![Montada](images/dobradica_impressa_montada.png) |
+
+O design:
+- 5 nós intercalados e pino de 2,6 mm;
+- folga de 0,4 mm entre pino e furo, e de 0,5 mm entre os nós;
+- furo em gota nos nós que giram, então o teto do furo sai a 45° e não gruda no pino;
+- o fundo do canudo encosta na mesa, então tudo imprime sem suporte.
+
+Arquivos: `stl/dobradica_impressa.stl` (as duas abas num arquivo só, já na posição de impressão) e, em `cad/`, `dobradica_impressa.sc`, `dobradica_impressa.step` e `dobradica_impressa_build.json`.
+
+**Imprimir:**
+- deitada, como está no arquivo, com o lado liso na mesa;
+- sem suporte, camada de 0,2 mm, ventoinha baixa (ABS);
+- primeira camada sem esmagar demais: o "pé de elefante" pode soldar os nós entre si.
+
+**Soltar:** ao tirar da mesa, dobre devagar para um lado e para o outro algumas vezes, até ela girar livre.
+
+**Se sair grudada:** aumente `pip_clr` (0,45–0,5) e `pip_gap` (0,6) no SolidCraft e gere de novo.
+
+**Montar:** o lado liso, que ficou na mesa, vai para dentro do rebaixo, com o canudo para fora. Cole como a de metal: com a caixa fechada e sem deixar cola chegar no canudo.
+
+Verificado no SolidCraft:
+- impressa plana, as duas abas não se tocam;
+- dobra livre de 10° a 180°;
+- montada na caixa, não encosta em nada;
+- a tampa gira livre de 2° a 180°, com o clique a 1°.
+
 ## Verificação
 
 Feita com booleanas exatas do SolidCraft (`inspect.interference`):
