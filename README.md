@@ -147,6 +147,39 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
 
 ---
 
+## Adesivo da tampa (opcional)
+
+Gabarito em escala real para envelopar a tampa com vinil adesivo. São duas peças:
+- uma **faixa** para as quatro laterais, com a emenda escondida na traseira e **5 mm de sobreposição** (o fim passa por cima do começo);
+- uma peça para o **topo**.
+
+| Versão A | Versão B |
+|---|---|
+| ![Adesivo A](images/adesivo_tampa_A.png) | ![Adesivo B](images/adesivo_tampa_B.png) |
+
+**Arquivos:** `adesivo/adesivo_tampa_A.svg` e `adesivo/adesivo_tampa_B.svg`.
+- São A4 paisagem, em mm, com as camadas Arte, Sangria, Área segura, Guias, Corte e Textos.
+- Abrem no Inkscape, Illustrator, Canva e nos programas de plotter de recorte (Silhouette, Cricut).
+
+**Medidas:**
+- Faixa: 272,5 × 28,5 mm. Topo: 66,6 × 64,6 mm, cantos R2,5.
+- Embaixo da faixa, na parte da traseira, há um recorte para a dobradiça. Na versão B sobra só uma tira de 3,3 mm acima do ressalto.
+
+**Como usar:**
+1. Monte a arte até a linha azul (sangria) e deixe textos e detalhes dentro da verde (área segura).
+2. Imprima em **tamanho real** (100 %, sem "ajustar à página") e confira a régua de 50 mm.
+3. Cole primeiro o topo, centralizado na face plana dentro do chanfro.
+4. Depois a faixa: comece no meio da traseira, com a borda de cima logo abaixo do chanfro do topo, e dê a volta. Os cantos arredondados (R4) aceitam o vinil normalmente.
+5. Se puder, aplique laminação por cima, para durar mais.
+
+Mudou alguma medida da caixa? Ajuste os números no começo de `adesivo/gerar_guia.py` e rode:
+
+```bash
+python adesivo/gerar_guia.py
+```
+
+---
+
 ## Configuração de impressão (ABS, vale para tudo)
 
 | | |
