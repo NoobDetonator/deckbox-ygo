@@ -32,6 +32,8 @@ Imprime **sem suporte**. Modelada em [SolidCraft](https://github.com/bherbruck/s
 
 Fonte em `cad/`: `deckbox_ygo.sc` (SolidCraft), `deckbox_ygo.step` (montagem, para qualquer CAD) e `deckbox_build.json` (script que reconstrói o modelo do zero).
 
+Prefere dobradiça de metal? Veja a [variante com dobradiça colada](#variante-dobradiça-de-metal-colada).
+
 ## Mecanismos
 
 - **Dobradiça:** 5 nós intercalados (corpo, tampa, corpo, tampa, corpo) com reforços a 45° e furos em gota, então imprime sem suporte. A tampa abre livre até ~168° e para nos reforços.
@@ -77,6 +79,49 @@ solidcraft-cli run cad/deckbox_build.json --save cad/deckbox_ygo.sc
 ```
 
 Depois exporte cada peça em STL pelo app. O modelo está na posição de montagem, então vire a tampa de cabeça para baixo no fatiador.
+
+## Variante: dobradiça de metal colada
+
+Esta variante troca a dobradiça impressa por uma **dobradiça pequena de 2" (50 × 38 mm, chapa de 1,2 mm)**, dessas vendidas em kit para portinha de armário. Ela é colada com cianoacrilato.
+
+| Rebaixo-guia | Com a dobradiça |
+|---|---|
+| ![Guia](images/dobradica_guia.png) | ![Montada](images/dobradica_montada.png) |
+
+A traseira ganha um **ressalto de 3 mm** com:
+- um **rebaixo de 1,2 mm** no tamanho exato da dobradiça, com 0,4 mm de folga, que serve de guia para ela não ficar torta;
+- um **canal para o canudo do pino**;
+- **base a 45°**, para imprimir sem suporte.
+
+O eixo fica na face do ressalto, então a tampa abre até 180°. A trava de clique continua igual.
+
+| Arquivo | Orientação |
+|---|---|
+| `stl/deckbox_corpo_dobradica.stl` | em pé |
+| `stl/deckbox_tampa_dobradica.stl` | de cabeça para baixo |
+| `stl/deckbox_divisoria.stl` | igual à versão normal |
+
+Fonte: `cad/deckbox_ygo_dobradica.sc`, `cad/deckbox_ygo_dobradica.step` e `cad/deckbox_build_dobradica.json`. A profundidade passa para 70,6 mm por causa do ressalto.
+
+**Meça a sua dobradiça antes de imprimir.** O anúncio não informa tudo, e cada lote varia. Ajuste estes parâmetros no SolidCraft:
+
+| Parâmetro | Padrão | O que medir |
+|---|---|---|
+| `hinge_l` | 50 | comprimento ao longo do pino |
+| `hinge_w` | 38 | largura total aberta (as duas abas + o canudo) |
+| `hinge_t` | 1,2 | espessura da aba (é a profundidade do rebaixo) |
+| `barrel_d` | 5 | diâmetro externo do canudo |
+| `pocket_clr` | 0,4 | folga em volta (0,3–0,6) |
+
+**Colagem:**
+1. Teste antes sem cola. O lado em que o canudo fica **mais saltado vai para fora**: assim a dobradiça dobra para trás e a tampa abre. Ao contrário, ela não assenta no canal.
+2. Lixe as abas e o fundo do rebaixo (lixa 220) e limpe com álcool isopropílico.
+3. **Cole com a caixa fechada e travada no clique**, assim a tampa já fica alinhada.
+4. Borrife o ativador nas costas das abas e espere secar uns segundos. Pingue poucas gotas de cola no fundo do rebaixo, **longe do canal**: cola no canudo trava a dobradiça. Encaixe e pressione por 30 s.
+5. Use pouca cola: o vapor do cianoacrilato deixa o ABS esbranquiçado ("blooming").
+6. Se um dia descolar, epóxi bicomponente aguenta melhor impacto do que cianoacrilato.
+
+Verificado da mesma forma que a versão normal: a dobradiça de referência assenta sem interferência; corpo, tampa e cartas não se tocam; a tampa gira livre de 3° a 180°, com o clique em 1–2°.
 
 ## Verificação
 
