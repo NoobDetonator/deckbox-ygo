@@ -447,7 +447,7 @@
    "command": "parameters.add",
    "params": {
     "name": "ridge_proud",
-    "expression": "0.6 mm",
+    "expression": "0.7 mm",
     "comment": "CALIBRATE: how far the snap ridge stands off the lip, 0.4-0.8 (click strength = ridge_proud - fit)",
     "favorite": true
    }

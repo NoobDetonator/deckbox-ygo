@@ -51,7 +51,7 @@ Os arquivos já estão na posição de impressão. Total: ~90 g de ABS.
 | Parâmetro | Padrão | Faixa | Efeito |
 |---|---|---|---|
 | `fit` | 0,3 | 0,2–0,4 | folga da tampa no lábio |
-| `ridge_proud` | 0,6 | 0,4–0,8 | força do clique |
+| `ridge_proud` | 0,6 (B: 0,7) | 0,4–0,8 | força do clique |
 | `hole_body` | 1,9 | 1,8–2,0 | pino justo nos nós do corpo |
 | `hole_lid` | 2,2 | 2,1–2,4 | tampa girando solta |
 | `hclr` / `hgap` | 0,35 / 0,4 | 0,3–0,5 | folgas radial e axial da dobradiça |
@@ -208,7 +208,7 @@ O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado 
 | Paredes / fundo / topo | 2,8 / 2,0 / 2,0 |
 | Divisão corpo/tampa | 64 (as cartas ficam ~22 mm acima do lábio para pegar) |
 
-- **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm, só nos primeiros 1–2° de abertura.
+- **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm (0,4 mm na versão B), só nos primeiros 1–2° de abertura.
 - **Lábio e saia:** o lábio de 5 mm do corpo entra na saia da tampa com 0,3 mm de folga. Tem chanfro de entrada e um vinco de 0,4 mm na linha de divisão.
 - **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
 - **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o pé de elefante.
