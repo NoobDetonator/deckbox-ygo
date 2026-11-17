@@ -18,7 +18,7 @@ LID_H = 34.5                 # altura da tampa (H - split)
 HINGE = {
     "A": {"half_x": W / 2 - R, "top": 4.64,   # nós + reforços a 45° da dobradiça integrada
           "nome": "versão A (dobradiça integrada)"},
-    "B": {"half_x": 28.4, "top": 25.4,        # ressalto da dobradiça colada (pad_l/2, pad_h + pad_t)
+    "B": {"half_x": 28.2, "top": 25.2,        # ressalto da dobradiça colada (pad_l/2, pad_h + pad_t)
           "nome": "versão B (dobradiça colada)"},
 }
 # ---- folgas do adesivo e folha ----

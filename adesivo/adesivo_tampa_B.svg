@@ -12,14 +12,14 @@
     </style>
 <rect x="0" y="0" width="297" height="210" fill="#fff"/>
 <g inkscape:groupmode="layer" inkscape:label="Arte" id="arte"><!-- coloque a arte aqui, até a linha azul --></g>
-<g inkscape:groupmode="layer" inkscape:label="Sangria" id="sangria"><path class="sangria" d="M10.000,33.000 A3.000,3.000 0 0 1 13.000,30.000 L272.733,30.000 A3.000,3.000 0 0 1 275.733,33.000 L275.733,63.500 A3.000,3.000 0 0 1 272.733,66.500 L41.900,66.500 A3.000,3.000 0 0 1 38.900,63.500 L38.900,41.300 L13.000,41.300 A3.000,3.000 0 0 1 10.000,38.300 Z"/>
-<path class="sangria" d="M10.000,83.500 A3.000,3.000 0 0 1 13.000,80.500 L52.800,80.500 A3.000,3.000 0 0 1 55.800,83.500 L55.800,88.800 A3.000,3.000 0 0 1 52.800,91.800 L21.900,91.800 L21.900,114.000 A3.000,3.000 0 0 1 18.900,117.000 L13.000,117.000 A3.000,3.000 0 0 1 10.000,114.000 Z"/>
+<g inkscape:groupmode="layer" inkscape:label="Sangria" id="sangria"><path class="sangria" d="M10.000,33.000 A3.000,3.000 0 0 1 13.000,30.000 L272.733,30.000 A3.000,3.000 0 0 1 275.733,33.000 L275.733,63.500 A3.000,3.000 0 0 1 272.733,66.500 L41.700,66.500 A3.000,3.000 0 0 1 38.700,63.500 L38.700,41.500 L13.000,41.500 A3.000,3.000 0 0 1 10.000,38.500 Z"/>
+<path class="sangria" d="M10.000,83.500 A3.000,3.000 0 0 1 13.000,80.500 L52.800,80.500 A3.000,3.000 0 0 1 55.800,83.500 L55.800,89.000 A3.000,3.000 0 0 1 52.800,92.000 L22.100,92.000 L22.100,114.000 A3.000,3.000 0 0 1 19.100,117.000 L13.000,117.000 A3.000,3.000 0 0 1 10.000,114.000 Z"/>
 <rect class="sangria" x="66.800" y="80.500" width="72.600" height="79.600" rx="4.500" ry="4.500"/></g>
-<g inkscape:groupmode="layer" inkscape:label="Area segura" id="segura"><rect class="segura" x="14.000" y="34.000" width="27.800" height="3.300"/>
+<g inkscape:groupmode="layer" inkscape:label="Area segura" id="segura"><rect class="segura" x="14.000" y="34.000" width="27.800" height="3.500"/>
 <rect class="segura" x="52.083" y="34.000" width="66.600" height="28.500"/>
 <rect class="segura" x="128.966" y="34.000" width="59.600" height="28.500"/>
 <rect class="segura" x="198.850" y="34.000" width="66.600" height="28.500"/>
-<rect class="segura" x="19.000" y="84.500" width="27.800" height="3.300"/>
+<rect class="segura" x="19.000" y="84.500" width="27.800" height="3.500"/>
 <rect class="segura" x="70.800" y="84.500" width="64.600" height="71.600" rx="0.500" ry="0.500"/></g>
 <g inkscape:groupmode="layer" inkscape:label="Guias" id="guias"><text class="f" x="27.900" y="27.000">TRASEIRA</text>
 <line class="guia" x1="43.800" y1="29.000" x2="43.800" y2="67.500"/>
@@ -33,16 +33,16 @@
 <text class="f" x="232.150" y="27.000">LATERAL DIREITA</text>
 <line class="guia" x1="267.450" y1="29.000" x2="267.450" y2="67.500"/>
 <line class="guia" x1="273.733" y1="29.000" x2="273.733" y2="67.500"/>
-<rect class="sobre" x="12.000" y="32.000" width="5.000" height="7.300"/>
+<rect class="sobre" x="12.000" y="32.000" width="5.000" height="7.500"/>
 <rect class="sobre" x="268.733" y="32.000" width="5.000" height="32.500"/>
 <line class="guia" x1="17.000" y1="79.500" x2="17.000" y2="118.000"/>
 <text class="f" x="32.900" y="77.500">TRASEIRA</text>
-<rect class="sobre" x="48.800" y="82.500" width="5.000" height="7.300"/>
+<rect class="sobre" x="48.800" y="82.500" width="5.000" height="7.500"/>
 <rect class="sobre" x="12.000" y="82.500" width="5.000" height="32.500"/>
 <text class="f" x="103.100" y="120.300">TOPO</text>
 <text class="f" x="103.100" y="163.600">FRENTE (este lado vai para a frente)</text></g>
-<g inkscape:groupmode="layer" inkscape:label="Corte" id="corte"><path class="corte" d="M12.000,33.000 A1.000,1.000 0 0 1 13.000,32.000 L272.733,32.000 A1.000,1.000 0 0 1 273.733,33.000 L273.733,63.500 A1.000,1.000 0 0 1 272.733,64.500 L41.900,64.500 A1.000,1.000 0 0 1 40.900,63.500 L40.900,40.300 A1.000,1.000 0 0 0 39.900,39.300 L13.000,39.300 A1.000,1.000 0 0 1 12.000,38.300 Z"/>
-<path class="corte" d="M12.000,83.500 A1.000,1.000 0 0 1 13.000,82.500 L52.800,82.500 A1.000,1.000 0 0 1 53.800,83.500 L53.800,88.800 A1.000,1.000 0 0 1 52.800,89.800 L20.900,89.800 A1.000,1.000 0 0 0 19.900,90.800 L19.900,114.000 A1.000,1.000 0 0 1 18.900,115.000 L13.000,115.000 A1.000,1.000 0 0 1 12.000,114.000 Z"/>
+<g inkscape:groupmode="layer" inkscape:label="Corte" id="corte"><path class="corte" d="M12.000,33.000 A1.000,1.000 0 0 1 13.000,32.000 L272.733,32.000 A1.000,1.000 0 0 1 273.733,33.000 L273.733,63.500 A1.000,1.000 0 0 1 272.733,64.500 L41.700,64.500 A1.000,1.000 0 0 1 40.700,63.500 L40.700,40.500 A1.000,1.000 0 0 0 39.700,39.500 L13.000,39.500 A1.000,1.000 0 0 1 12.000,38.500 Z"/>
+<path class="corte" d="M12.000,83.500 A1.000,1.000 0 0 1 13.000,82.500 L52.800,82.500 A1.000,1.000 0 0 1 53.800,83.500 L53.800,89.000 A1.000,1.000 0 0 1 52.800,90.000 L21.100,90.000 A1.000,1.000 0 0 0 20.100,91.000 L20.100,114.000 A1.000,1.000 0 0 1 19.100,115.000 L13.000,115.000 A1.000,1.000 0 0 1 12.000,114.000 Z"/>
 <rect class="corte" x="68.800" y="82.500" width="68.600" height="75.600" rx="2.500" ry="2.500"/></g>
 <g inkscape:groupmode="layer" inkscape:label="Textos" id="textos"><text class="n" x="11.000" y="27.500" text-anchor="end">1</text>
 <text class="n" x="11.000" y="78.000" text-anchor="end">2</text>
@@ -53,7 +53,7 @@
 <text class="t" x="151.4" y="91.5">Topo: 68.6 × 75.6 mm, cantos R2.5</text>
 <text class="t" x="151.4" y="96.5">Vermelho = corte · Azul tracejado = sangria (estenda a arte até ela)</text>
 <text class="t" x="151.4" y="101.5">Verde tracejado = área segura · Cinza = cantos arredondados</text>
-<text class="t" x="151.4" y="106.5">Recorte embaixo, na traseira = espaço da dobradiça (57.8 × 25.2 mm)</text>
+<text class="t" x="151.4" y="106.5">Recorte embaixo, na traseira = espaço da dobradiça (57.4 × 25.0 mm)</text>
 <text class="t" x="151.4" y="111.5">Aplicar: topo primeiro; depois a faixa, começando no meio da</text>
 <text class="t" x="151.4" y="116.5">traseira, com a borda de cima logo abaixo do chanfro do topo.</text>
 <text class="t" x="151.4" y="121.5">Use vinil adesivo (fosco ou brilho) e, se possível, laminação.</text>

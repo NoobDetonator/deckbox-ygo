@@ -121,7 +121,7 @@ Os arquivos já estão na posição de impressão. Total: ~130 g de ABS.
 | ![Guia](images/dobradica_guia.png) | ![Metal](images/dobradica_montada.png) | ![Impressa](images/dobradica_impressa.png) |
 
 A traseira tem um **ressalto de 3 mm** com:
-- um **rebaixo de 1,2 mm no tamanho exato da dobradiça**, com 0,4 mm de folga, que serve de guia para ela não ficar torta;
+- um **rebaixo de 1,2 mm no tamanho exato da dobradiça**, com 0,2 mm de folga, que serve de guia para ela não ficar torta;
 - um **canal para o canudo** do pino;
 - **base a 45°**, para imprimir sem suporte.
 
@@ -132,7 +132,7 @@ A traseira tem um **ressalto de 3 mm** com:
 | `B_corpo.stl` | em pé, fundo na mesa | 88,6 cm³ |
 | `B_tampa.stl` | de cabeça para baixo, topo na mesa | 48,4 cm³ |
 | `B_divisoria.stl` | deitada | 8,8 cm³ |
-| `B_dobradica-impressa.stl` | deitada, lado liso na mesa (**só se não for usar a de metal**) | 3,3 cm³ |
+| `B_dobradica-impressa.stl` | deitada, lado liso na mesa (**só se não for usar a de metal**) | 3,4 cm³ |
 
 Total: ~135 g de ABS.
 
@@ -148,18 +148,18 @@ Use uma dobradiça pequena de 2" (50 × 38 mm, chapa de 1,2 mm), dessas vendidas
 | `hinge_w` | 38 | largura total aberta (as duas abas + o canudo) |
 | `hinge_t` | 1,2 | espessura da aba (é a profundidade do rebaixo) |
 | `barrel_d` | 5 | diâmetro externo do canudo |
-| `pocket_clr` | 0,4 | folga em volta (0,3–0,6) |
+| `pocket_clr` | 0,2 | folga em volta (0,15–0,4). Dobradiça de metal maior que 50,4 × 38,4 mm? Aumente |
 
 ### Dobradiça impressa (print-in-place)
 
 Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm preso dentro dos nós.
-- As folgas são de 0,4 mm entre pino e furo e de 0,5 mm entre os nós.
+- As folgas são de 0,3 mm entre pino e furo (`pip_pin_clr`) e de 0,35 mm entre os nós (`pip_gap`). A primeira versão, com 0,4 e 0,5, saiu perfeita mas com jogo; esta é mais justa.
 - Os nós que giram têm furo em gota, então o teto do furo sai a 45° e não gruda no pino.
 
 1. **Imprima primeiro só ela** (~3,5 g): as folgas dependem da sua impressora.
 2. Deitada, como está no arquivo, sem suporte. Não esmague demais a primeira camada, senão o "pé de elefante" solda os nós.
 3. Ao tirar da mesa, **dobre devagar para um lado e para o outro** algumas vezes, até girar livre.
-4. Se sair grudada, aumente `pip_clr` (0,45–0,5) e `pip_gap` (0,6) no SolidCraft e gere de novo.
+4. Se sair grudada e não soltar dobrando, aumente `pip_pin_clr` (0,35–0,4) e `pip_gap` (0,4–0,5) no SolidCraft e gere de novo. Se ainda tiver jogo, dá para descer até 0,25 e 0,3.
 
 ### Colar (metal ou impressa)
 
@@ -218,7 +218,7 @@ Gabarito em escala real para envelopar a tampa com vinil adesivo:
 **Medidas:**
 - Faixa: 293,5 mm de contorno × 32,5 mm de altura. A parte 1 tem 261,7 mm e a parte 2, 41,8 mm.
 - Topo: 68,6 × 75,6 mm, cantos R2,5.
-- Embaixo da faixa, na parte da traseira, há um recorte para a dobradiça. Na versão B sobra uma tira de 7,3 mm acima do ressalto.
+- Embaixo da faixa, na parte da traseira, há um recorte para a dobradiça. Na versão B sobra uma tira de 7,5 mm acima do ressalto.
 
 **Como usar:**
 1. Monte a arte até a linha azul (sangria) e deixe textos e detalhes dentro da verde (área segura).
