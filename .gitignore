@@ -1,1 +1,4 @@
 *.bak
+
+# arte do folheto (fica so local)
+folheto/
