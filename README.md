@@ -1,7 +1,7 @@
 # Deck box YGO — impressão 3D em ABS
 
-Deck box para **90 cartas com sleeve duplo** (tamanho japonês, 62 × 89 mm): main + extra + side deck.
-Tem tampa basculante, trava de clique escondida, **porta-arte trocável** na frente e divisória removível, e imprime **sem suporte**.
+Deck box para **90 cartas com sleeve duplo** (tamanho japonês, 62 × 89 mm): main + extra + side deck, com espaço para **forro de tecido** por dentro.
+Tem tampa basculante, **fechamento com ímãs** e trava de clique, **porta-arte trocável** na frente e divisória removível, e imprime **sem suporte**.
 Modelada em [SolidCraft](https://github.com/bherbruck/solidcraft), 100 % paramétrica.
 
 ![Fechada](images/shot_fechada.png)
@@ -14,11 +14,47 @@ A caixa é a mesma nas duas versões; muda só a dobradiça.
 |---|---|---|
 | Visual | ![A](images/shot_traseira.png) | ![B](images/dobradica_impressa_montada.png) |
 | Dobradiça | 5 nós impressos na própria caixa | dobradiça de 50 × 38 mm colada num rebaixo-guia: **de metal** (2") ou a **impressa print-in-place** deste repositório |
-| Pino | 59,6 mm de filamento 1,75 (ou aço de 2 mm) | já vem na dobradiça |
+| Pino | 61,6 mm de filamento 1,75 (ou aço de 2 mm) | já vem na dobradiça |
 | Abertura | até ~168° | até 180° |
 | Pasta | [`stl/A-dobradica-integrada`](stl/A-dobradica-integrada) | [`stl/B-dobradica-colada`](stl/B-dobradica-colada) |
 
 Cada pasta tem tudo que precisa ser impresso para aquela versão.
+
+---
+
+## Cartas, folga e forro
+
+O interior é calculado a partir da carta com sleeve, do forro e de uma folga livre. Tudo isso são parâmetros.
+
+| | Medida | Fonte |
+|---|---|---|
+| Carta Yu-Gi-Oh! | 59 × 86 mm | [Gamegenic](https://www.gamegenic.com/product/japanese-size-prime-sleeves/), [Dragon Shield](https://www.dragonshield.com/collections/japanese-size-sleeves) |
+| Sleeve interno (perfect fit) | 59 × 86 mm | [Dragon Shield Perfect Fit](https://www.miniaturemarket.com/at-13051.html) |
+| Sleeve externo (tamanho japonês) | 62 × 89 mm | [Gamegenic](https://www.jbhifi.com.au/products/gamegenic-prime-japanese-sized-sleeves-size-code-pink-sleeve-colour-red-62mmx89mm-60-sleeves-per-pack), [Ultimate Guard](https://ultimateguard.com/en/Cortex/Cortex-Sleeves/UGD011179) |
+| Espessura por carta com sleeve duplo | ~0,65 mm (varia com a marca) | caixas comerciais: 70 cartas com sleeve duplo em ~46 mm ([guia](https://geekydomain.com/blogs/guides/best-deck-boxes-every-game)) |
+
+**Valores de projeto** (com margem para costura do sleeve e tolerância):
+
+| Parâmetro | Padrão | O que é |
+|---|---|---|
+| `card_w` × `card_h` | 62,5 × 91 | carta com sleeve, na prática |
+| `card_t` | 0,68 | **calibre:** meça 40 cartas com sleeve e divida por 40 |
+| `n_cards` | 90 | capacidade |
+| `liner_t` | 1,0 | **forro** em todas as faces internas (feltro adesivo de 1 mm; use 0,5 para veludo adesivo e 0 sem forro) |
+| `play_x` / `play_y` / `play_z` | 1,5 / 2 / 1,5 | folga livre que sobra depois do forro |
+
+Resultado: interior de **66 × 66,8 × 94,5 mm**.
+
+**Forro:** pode cobrir as paredes, o fundo e o teto da tampa. **Não cubra o topo do lábio** (onde ficam os ímãs) nem o degrau interno da tampa.
+
+## Ímãs
+
+Dois pares de **ímãs de neodímio em disco 5 × 1 mm (N35)** ficam na frente. Os do corpo vão no topo do lábio; os da tampa, no degrau interno logo acima. Com a caixa fechada, ficam face a face a 0,5 mm e puxam a tampa direto para baixo. A trava de clique continua lá.
+
+- São **4 ímãs** por caixa. Para fechar mais firme, empilhe 2 por encaixe (8 ímãs) e mude `mag_stack` para 2.
+- Para os ímãs caberem com parede em volta, a **parede da frente tem 9 mm** (as outras têm 2,8).
+- **Polaridade:** cole primeiro os 2 ímãs do corpo. Depois apoie cada ímã da tampa em cima do ímã correspondente do corpo: ele "gruda" no lado certo. Marque a face de cima com caneta antes de passar cola no encaixe da tampa.
+- Fixe com uma gota de super bonder no fundo do encaixe. O encaixe tem 5,3 mm (`mag_clr` 0,3).
 
 ---
 
@@ -30,15 +66,15 @@ Cada pasta tem tudo que precisa ser impresso para aquela versão.
 
 | Arquivo | Orientação | Volume |
 |---|---|---|
-| `A_corpo.stl` | em pé, fundo na mesa | 52,8 cm³ |
-| `A_tampa.stl` | de cabeça para baixo, topo na mesa | 28,1 cm³ |
-| `A_divisoria.stl` | deitada | 8,6 cm³ |
+| `A_corpo.stl` | em pé, fundo na mesa | 86,4 cm³ |
+| `A_tampa.stl` | de cabeça para baixo, topo na mesa | 46,1 cm³ |
+| `A_divisoria.stl` | deitada | 8,8 cm³ |
 
-Os arquivos já estão na posição de impressão. Total: ~90 g de ABS.
+Os arquivos já estão na posição de impressão. Total: ~130 g de ABS.
 
 ### Montar
 
-1. Corte **59,6 mm de filamento 1,75** (ABS de preferência).
+1. Corte **61,6 mm de filamento 1,75** (ABS de preferência).
 2. Encaixe a tampa e passe o pino por um lado através dos 5 nós.
 3. Os nós das pontas são do corpo: uma gota de acetona ali solda o pino no corpo, e a tampa continua girando livre.
 
@@ -73,12 +109,12 @@ A traseira tem um **ressalto de 3 mm** com:
 
 | Arquivo | Orientação | Volume |
 |---|---|---|
-| `B_corpo.stl` | em pé, fundo na mesa | 55,1 cm³ |
-| `B_tampa.stl` | de cabeça para baixo, topo na mesa | 30,5 cm³ |
-| `B_divisoria.stl` | deitada | 8,6 cm³ |
+| `B_corpo.stl` | em pé, fundo na mesa | 88,6 cm³ |
+| `B_tampa.stl` | de cabeça para baixo, topo na mesa | 48,4 cm³ |
+| `B_divisoria.stl` | deitada | 8,8 cm³ |
 | `B_dobradica-impressa.stl` | deitada, lado liso na mesa (**só se não for usar a de metal**) | 3,3 cm³ |
 
-Total: ~95 g de ABS.
+Total: ~135 g de ABS.
 
 ### Dobradiça de metal
 
@@ -131,7 +167,6 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
   - A boca do porta-arte também serve de apoio para o polegar ao abrir a tampa.
 - **Canelado horizontal:** 20 ranhuras em V de 0,6 mm nas laterais. Dá pegada e disfarça as linhas de camada.
 - **Linha de sombra:** um degrau de 0,5 × 1,2 mm no topo do corpo, logo abaixo da tampa. Marca a divisão com uma linha escura e esconde desalinhamentos.
-- **Nervuras internas:** 4 filetes verticais nas laterais de dentro. Centralizam o deck e reduzem o atrito ao tirar as cartas. A divisória foi estreitada para 62,2 mm, para passar entre elas em qualquer posição.
 - **Fundo:**
   - 4 rebaixos para **pezinhos de silicone autoadesivos de 8 mm**, para a caixa não escorregar na mesa;
   - o texto "DECK BOX / 90 CARTAS · ABS" em baixo-relevo, editável pelos parâmetros `bt_title` e `bt_sub` (coloque o nome do seu deck).
@@ -142,15 +177,14 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
 | `art_w` / `art_z0` | 46 / 20 | largura da arte e altura do fundo da fenda (altura da arte = 64 − `art_z0`) |
 | `fl_n` / `fl_p` / `fl_d` | 20 / 2 / 0,6 | quantidade, passo e profundidade das ranhuras |
 | `sg_d` / `sg_h` | 0,5 / 1,2 | profundidade e altura da linha de sombra |
-| `rib_p` | 0,5 | quanto as nervuras avançam para dentro |
 | `bt_title` / `bt_sub` | texto | as duas linhas do texto no fundo |
 
 ---
 
 ## Adesivo da tampa (opcional)
 
-Gabarito em escala real para envelopar a tampa com vinil adesivo. São duas peças:
-- uma **faixa** para as quatro laterais, com a emenda escondida na traseira e **5 mm de sobreposição** (o fim passa por cima do começo);
+Gabarito em escala real para envelopar a tampa com vinil adesivo:
+- uma **faixa** para as quatro laterais, em **2 partes** porque a volta inteira não cabe numa A4. As duas emendas ficam escondidas na traseira, com **5 mm de sobreposição**: a parte 2 passa por cima da parte 1;
 - uma peça para o **topo**.
 
 | Versão A | Versão B |
@@ -162,15 +196,17 @@ Gabarito em escala real para envelopar a tampa com vinil adesivo. São duas peç
 - Abrem no Inkscape, Illustrator, Canva e nos programas de plotter de recorte (Silhouette, Cricut).
 
 **Medidas:**
-- Faixa: 272,5 × 28,5 mm. Topo: 66,6 × 64,6 mm, cantos R2,5.
-- Embaixo da faixa, na parte da traseira, há um recorte para a dobradiça. Na versão B sobra só uma tira de 3,3 mm acima do ressalto.
+- Faixa: 293,5 mm de contorno × 32,5 mm de altura. A parte 1 tem 261,7 mm e a parte 2, 41,8 mm.
+- Topo: 68,6 × 75,6 mm, cantos R2,5.
+- Embaixo da faixa, na parte da traseira, há um recorte para a dobradiça. Na versão B sobra uma tira de 7,3 mm acima do ressalto.
 
 **Como usar:**
 1. Monte a arte até a linha azul (sangria) e deixe textos e detalhes dentro da verde (área segura).
 2. Imprima em **tamanho real** (100 %, sem "ajustar à página") e confira a régua de 50 mm.
 3. Cole primeiro o topo, centralizado na face plana dentro do chanfro.
-4. Depois a faixa: comece no meio da traseira, com a borda de cima logo abaixo do chanfro do topo, e dê a volta. Os cantos arredondados (R4) aceitam o vinil normalmente.
-5. Se puder, aplique laminação por cima, para durar mais.
+4. Depois a parte 1 da faixa: comece no meio da traseira, com a borda de cima logo abaixo do chanfro do topo, e dê a volta até o canto traseiro direito. Os cantos arredondados (R4) aceitam o vinil normalmente.
+5. Por último a parte 2, fechando a traseira por cima das duas pontas da parte 1.
+6. Se puder, aplique laminação por cima, para durar mais.
 
 Mudou alguma medida da caixa? Ajuste os números no começo de `adesivo/gerar_guia.py` e rode:
 
@@ -203,12 +239,13 @@ O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado 
 
 | | mm |
 |---|---|
-| Externa (fechada) | 69,6 × 67,6 × 94,5 (B: 70,6 de profundidade, por causa do ressalto) |
-| Interna | 64 × 62 × 90,5 |
-| Paredes / fundo / topo | 2,8 / 2,0 / 2,0 |
-| Divisão corpo/tampa | 64 (as cartas ficam ~22 mm acima do lábio para pegar) |
+| Externa (fechada) | 71,6 × 78,6 × 98,5 (B: 81,6 de profundidade, por causa do ressalto) |
+| Interna | 66 × 66,8 × 94,5 |
+| Paredes / fundo / topo | 2,8 (frente 9,0) / 2,0 / 2,0 |
+| Divisão corpo/tampa | 64 (as cartas ficam ~25 mm acima do lábio para pegar) |
 
-- **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm (0,45 mm na versão B), só nos primeiros 1–2° de abertura.
+- **Ímãs:** 2 pares de 5 × 1 mm na frente, face a face a 0,5 mm com a caixa fechada.
+- **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm (0,45 mm na versão B, ajustada depois do teste impresso), só no primeiro grau de abertura.
 - **Lábio e saia:** o lábio de 5 mm do corpo entra na saia da tampa com 0,3 mm de folga. Tem chanfro de entrada e um vinco de 0,4 mm na linha de divisão.
 - **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
 - **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o pé de elefante.
@@ -222,12 +259,12 @@ Feita com booleanas exatas do SolidCraft (`inspect.interference`):
 | | A | B |
 |---|---|---|
 | Caixa fechada (corpo × tampa) | 0 de interferência | 0 de interferência |
-| 90 cartas (62 × 55,8 × 89) + divisória | 0 | 0 |
-| Divisória em cima das nervuras | passa | passa |
+| 90 cartas (62,5 × 61,2 × 91) **com 1 mm de forro em volta** + divisória | cabem: 0,75 mm de folga de cada lado e 1,5 mm em cima | igual |
+| 4 ímãs 5 × 1 mm nos encaixes | assentam sem tocar; 0,5 mm entre os pares | igual |
 | Arte de 46 × 43,5 × 0,5 no porta-arte | cabe sem tocar | cabe sem tocar |
 | Arte empurrada 1 mm para cima | a tampa bloqueia (fica presa) | a tampa bloqueia (fica presa) |
 | Pino / dobradiça montada | pino de 1,75 sem tocar | dobradiça de metal e impressa sem tocar |
-| Giro da tampa | clique a 1–2°, livre de 3° a 168°, batente a ~169° | clique a 1–2°, livre até 180° |
+| Giro da tampa | clique a 1°, livre de 2° a 168°, batente a ~169° | clique a 1°, livre até 180° |
 | Dobradiça impressa sozinha | — | plana sem as abas se tocarem, dobra livre até 180° |
 
 ## Editar o modelo
@@ -237,7 +274,7 @@ Os arquivos editáveis estão em `cad/A-dobradica-integrada/` e `cad/B-dobradica
 - `.step` — para abrir em qualquer CAD;
 - `_build.json` — script que reconstrói o modelo do zero.
 
-Para mudar o tamanho (outro sleeve, mais cartas), edite `in_x`, `in_y` ou `in_z`.
+Para mudar o tamanho (outro sleeve, mais cartas, outro forro), edite `card_w`, `card_h`, `card_t`, `n_cards` ou `liner_t`: o interior é calculado a partir deles.
 
 Edite no app, em Parâmetros, ou reconstrua pela linha de comando:
 
