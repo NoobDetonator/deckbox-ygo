@@ -45,7 +45,27 @@ O interior é calculado a partir da carta com sleeve, do forro e de uma folga li
 
 Resultado: interior de **66 × 66,8 × 94,5 mm**.
 
-**Forro:** pode cobrir as paredes, o fundo e o teto da tampa. **Não cubra o topo do lábio** (onde ficam os ímãs) nem o degrau interno da tampa.
+### Forro interno
+
+**Tecido recomendado:**
+- **Veludo / flocado autoadesivo** (~0,5 mm, o de forrar caixa de joia): visual premium e o sleeve desliza bem.
+- **Feltro adesivo de 1 mm:** mais barato e esconde melhor as linhas de camada.
+
+Os dois já vêm com cola. Se o tecido não tiver adesivo, use **cola spray** (tipo 3M Super 77) ou fita dupla face fina. **Cola branca não segura bem no ABS** e mancha tecido fino.
+
+**Gabarito de corte** (escala 1:1, A4): `forro/forro_feltro_1mm.svg` e `forro/forro_veludo_0-5mm.svg`.
+- São 10 peças: fundo, frente, traseira e laterais do corpo, teto e paredes da tampa.
+- Cada peça tem nome, medida e ordem de colagem.
+
+![Gabarito do forro](images/forro_feltro_1mm.png)
+
+**Como forrar:**
+1. Passe uma lixa 220 de leve por dentro e limpe com álcool.
+2. Cole o fundo (e o teto da tampa).
+3. Cole a frente e a traseira, com a largura toda.
+4. Cole as laterais entre elas.
+
+As paredes param 0,5 mm antes do topo do lábio e do degrau da tampa. **Não cubra essas faces: é onde ficam os ímãs.** Se mudar o tamanho da caixa, ajuste os números no começo de `forro/gerar_forro.py` e rode `python forro/gerar_forro.py`.
 
 ## Ímãs
 

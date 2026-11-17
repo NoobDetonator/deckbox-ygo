@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="297mm" height="210mm" viewBox="0 0 297 210">
+<style>
+    .corte{fill:none;stroke:#e3001b;stroke-width:0.25}
+    text{font-family:Arial,Helvetica,sans-serif;fill:#333}
+    .t{font-size:3px}.h{font-size:4.2px;font-weight:bold}.p{font-size:2.8px;fill:#555;text-anchor:middle}.q{font-size:2.3px;fill:#888;text-anchor:middle}
+    </style>
+<rect x="0" y="0" width="297" height="210" fill="#fff"/>
+<g inkscape:groupmode="layer" inkscape:label="Corte" id="corte"><rect class="corte" x="12.00" y="26.00" width="65.60" height="65.50" rx="1.0" ry="1.0"/>
+<rect class="corte" x="80.60" y="26.00" width="65.60" height="65.50" rx="1.0" ry="1.0"/>
+<rect class="corte" x="149.20" y="26.00" width="64.40" height="65.50" rx="1.0" ry="1.0"/>
+<rect class="corte" x="216.60" y="26.00" width="64.40" height="65.50" rx="1.0" ry="1.0"/>
+<rect class="corte" x="12.00" y="98.50" width="65.60" height="25.70" rx="1.0" ry="1.0"/>
+<rect class="corte" x="80.60" y="98.50" width="65.60" height="25.70" rx="1.0" ry="1.0"/>
+<rect class="corte" x="149.20" y="98.50" width="64.40" height="25.70" rx="1.0" ry="1.0"/>
+<rect class="corte" x="216.60" y="98.50" width="64.40" height="25.70" rx="1.0" ry="1.0"/>
+<rect class="corte" x="12.00" y="131.20" width="64.00" height="64.80" rx="1.0" ry="1.0"/>
+<rect class="corte" x="79.00" y="131.20" width="64.00" height="64.80" rx="1.0" ry="1.0"/></g>
+<g inkscape:groupmode="layer" inkscape:label="Textos" id="textos"><text class="p" x="44.80" y="58.75">CORPO frente/traseira</text>
+<text class="q" x="44.80" y="62.75">65.6 × 65.5 mm · 2º: largura toda</text>
+<text class="p" x="113.40" y="58.75">CORPO frente/traseira</text>
+<text class="q" x="113.40" y="62.75">65.6 × 65.5 mm · 2º: largura toda</text>
+<text class="p" x="181.40" y="58.75">CORPO lateral</text>
+<text class="q" x="181.40" y="62.75">64.4 × 65.5 mm · 3º: entre frente e traseira</text>
+<text class="p" x="248.80" y="58.75">CORPO lateral</text>
+<text class="q" x="248.80" y="62.75">64.4 × 65.5 mm · 3º: entre frente e traseira</text>
+<text class="p" x="44.80" y="111.35">TAMPA frente/traseira</text>
+<text class="q" x="44.80" y="115.35">65.6 × 25.7 mm · 2º: largura toda</text>
+<text class="p" x="113.40" y="111.35">TAMPA frente/traseira</text>
+<text class="q" x="113.40" y="115.35">65.6 × 25.7 mm · 2º: largura toda</text>
+<text class="p" x="181.40" y="111.35">TAMPA lateral</text>
+<text class="q" x="181.40" y="115.35">64.4 × 25.7 mm · 3º: entre frente e traseira</text>
+<text class="p" x="248.80" y="111.35">TAMPA lateral</text>
+<text class="q" x="248.80" y="115.35">64.4 × 25.7 mm · 3º: entre frente e traseira</text>
+<text class="p" x="44.00" y="163.60">FUNDO</text>
+<text class="q" x="44.00" y="167.60">64.0 × 64.8 mm · 1º: no fundo do corpo</text>
+<text class="p" x="111.00" y="163.60">TETO DA TAMPA</text>
+<text class="q" x="111.00" y="167.60">64.0 × 64.8 mm · 1º: no teto da tampa</text>
+<text class="t" x="154.0" y="135.2">Tecido: feltro adesivo de 1 mm (espessura 1 mm)</text>
+<text class="t" x="154.0" y="140.2">Interior da caixa: 66 × 66.8 mm</text>
+<text class="t" x="154.0" y="145.2">Vermelho = corte. Todas as peças: lado do adesivo para a parede.</text>
+<text class="t" x="154.0" y="150.2">Ordem: fundo / teto, depois frente e traseira, por último as laterais.</text>
+<text class="t" x="154.0" y="155.2">As paredes param 0,5 mm antes do topo do lábio e do degrau</text>
+<text class="t" x="154.0" y="160.2">da tampa: não cubra essas faces, é onde ficam os ímãs.</text>
+<text class="t" x="154.0" y="165.2">Sem adesivo no tecido? Use cola spray ou fita dupla face fina.</text>
+<line x1="154.0" y1="176.2" x2="204.0" y2="176.2" stroke="#000" stroke-width="0.3"/>
+<line x1="154.0" y1="174.2" x2="154.0" y2="176.2" stroke="#000" stroke-width="0.2"/>
+<line x1="164.0" y1="175.0" x2="164.0" y2="176.2" stroke="#000" stroke-width="0.2"/>
+<line x1="174.0" y1="175.0" x2="174.0" y2="176.2" stroke="#000" stroke-width="0.2"/>
+<line x1="184.0" y1="175.0" x2="184.0" y2="176.2" stroke="#000" stroke-width="0.2"/>
+<line x1="194.0" y1="175.0" x2="194.0" y2="176.2" stroke="#000" stroke-width="0.2"/>
+<line x1="204.0" y1="174.2" x2="204.0" y2="176.2" stroke="#000" stroke-width="0.2"/>
+<text class="t" x="207.0" y="177.2">50 mm — confira com uma régua</text>
+<text class="h" x="12" y="14">Forro interno — feltro adesivo de 1 mm</text>
+<text class="t" x="12" y="20">Imprima em TAMANHO REAL (100 %, sem "ajustar à página"), recorte as peças e use como molde no tecido.</text></g>
+</svg>
