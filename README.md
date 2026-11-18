@@ -326,6 +326,20 @@ python adesivo/gerar_guia.py
 
 ---
 
+## Card Token (extra)
+
+`stl/token/token.stl` é um card de token de 59 × 86 × 2,8 mm, do tamanho de uma carta japonesa. Tem:
+- moldura de 3 mm com chanfro interno;
+- TOKEN em relevo chanfrado;
+- estrelas facetadas;
+- arte em losangos com um olho de dragão num anel octogonal;
+- ATK / DEF com duas cavidades de Ø10 mm;
+- entalhes de orientação na moldura: o de cima é ataque e os laterais são defesa.
+
+Imprima com a face para cima; o chanfro da base evita pé de elefante. Os losangos têm 0,3 mm de altura, então use camada de 0,1 mm no topo (altura de camada variável). Com camada de 0,2 mm eles viram uma ou duas camadas.
+
+Em `cad/token/` estão o `token.sc`, o `token.step` e o `token_build.json`. Nos parâmetros dá para trocar o número de estrelas (`n_est`), o tamanho do dado (`dado_d`), a altura da face (`z_face`) e o resto das cotas. O formato dos desenhos finos (estrela, losangos e brasão) sai de `cad/token/gerar_token.py`: mude lá e gere o JSON de novo.
+
 ## Configuração de impressão (ABS, vale para tudo)
 
 | | |
