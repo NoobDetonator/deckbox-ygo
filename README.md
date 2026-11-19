@@ -188,7 +188,9 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
 
 Ao abrir a tampa, o próprio giro dela ergue um **berço** com as cartas. As cartas só encostam no berço forrado; o mecanismo fica em cavidades laterais fechadas por painéis colados com acetona.
 
-| Mecanismo fechado (lateral transparente) | Aberto a 110° |
+![Animação: tampa de 0° a 110°, mecanismo visto de lado sem o painel e em 3/4, com a curva de subida do berço](images/C_animacao.gif)
+
+| Mecanismo fechado (sem o painel lateral) | Aberto a 110° |
 |---|---|
 | ![Mecanismo fechado](images/C_mecanismo_fechada.png) | ![Mecanismo aberto](images/C_mecanismo_aberta.png) |
 
