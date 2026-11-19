@@ -59,6 +59,8 @@ Os dois já vêm com cola. Se o tecido não tiver adesivo, use **cola spray** (t
 
 ![Gabarito do forro](images/forro_feltro_1mm.png)
 
+O de veludo tem as mesmas peças, com as medidas para 0,5 mm: [prévia](images/forro_veludo_0-5mm.png).
+
 **Como forrar:**
 1. Passe uma lixa 220 de leve por dentro e limpe com álcool.
 2. Cole o fundo (e o teto da tampa).
@@ -115,6 +117,8 @@ Os arquivos já estão na posição de impressão. Total: ~130 g de ABS.
 ---
 
 ## Versão B — dobradiça colada
+
+<img src="images/render_B_caixa.png" width="360" alt="Versão B montada, com arte no porta-arte">
 
 | Rebaixo-guia | Com dobradiça de metal | Dobradiça impressa |
 |---|---|---|
