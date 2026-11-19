@@ -1,0 +1,8136 @@
+{
+ "commands": [
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "card_w",
+    "expression": "62.5 mm",
+    "comment": "carta com sleeve (sleeve japones 62 + 0,5)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "card_h",
+    "expression": "91 mm",
+    "comment": "carta com sleeve (89 + costura)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "card_t",
+    "expression": "0.68 mm",
+    "comment": "CALIBRAR: espessura por carta com sleeve duplo",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "n_cards",
+    "expression": "90",
+    "comment": "capacidade",
+    "unit": ""
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "liner_t",
+    "expression": "1 mm",
+    "comment": "CALIBRAR: forro em todas as faces internas",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "play_x",
+    "expression": "1.5 mm",
+    "comment": "folga livre na largura"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "play_y",
+    "expression": "2 mm",
+    "comment": "folga livre na profundidade"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "play_z",
+    "expression": "1.5 mm",
+    "comment": "folga livre em cima"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "div_t",
+    "expression": "1.6 mm",
+    "comment": "divisoria"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "shrink",
+    "expression": "0.006",
+    "comment": "CALIBRAR: contracao do ABS (so onde o ABS encosta em carta, ima ou aco)",
+    "unit": "",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "k",
+    "expression": "1 + shrink",
+    "comment": "fator de compensacao",
+    "unit": ""
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "in_x",
+    "expression": "k*(card_w + 2*liner_t + play_x)",
+    "comment": "interior do berco: largura",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "in_y",
+    "expression": "k*(n_cards*card_t + div_t + 2*liner_t + play_y)",
+    "comment": "interior do berco: profundidade",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "in_z",
+    "expression": "k*(card_h + 2*liner_t + play_z)",
+    "comment": "do piso do berco ao teto da tampa",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "crad_t",
+    "expression": "1.6 mm",
+    "comment": "parede do berco"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "crad_f",
+    "expression": "1.6 mm",
+    "comment": "piso do berco"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "crad_gap",
+    "expression": "0.3 mm",
+    "comment": "berco acima do fundo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "core_t",
+    "expression": "2 mm",
+    "comment": "parede do nucleo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "base_t",
+    "expression": "2 mm",
+    "comment": "fundo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "roof_t",
+    "expression": "2 mm",
+    "comment": "teto da tampa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "lid_t",
+    "expression": "2.4 mm",
+    "comment": "parede da tampa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "lay_t",
+    "expression": "3.2 mm",
+    "comment": "espessura de cada camada do mecanismo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "shell_t",
+    "expression": "2 mm",
+    "comment": "painel externo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "sh_m",
+    "expression": "4 mm",
+    "comment": "borda do nucleo em volta do painel"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "sh_z0",
+    "expression": "3 mm",
+    "comment": "base do painel"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_f",
+    "expression": "1.2 mm",
+    "comment": "face na frente da arte"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_t",
+    "expression": "0.8 mm",
+    "comment": "fenda da arte"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_w",
+    "expression": "46 mm",
+    "comment": "largura da arte"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_z0",
+    "expression": "30 mm",
+    "comment": "base da arte"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_lip",
+    "expression": "2.5 mm",
+    "comment": "borda que segura a arte"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "back_t",
+    "expression": "5.6 mm",
+    "comment": "eixo da tampa: distancia da face traseira (h_a)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "h_b",
+    "expression": "10.8 mm",
+    "comment": "eixo da tampa abaixo da divisao"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "lid_h",
+    "expression": "12.4 mm",
+    "comment": "altura da tampa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "r_out",
+    "expression": "4 mm",
+    "comment": "raio das quinas"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bed_ch",
+    "expression": "0.8 mm",
+    "comment": "chanfro da base"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "top_ch",
+    "expression": "1 mm",
+    "comment": "chanfro do topo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "reveal",
+    "expression": "0.4 mm",
+    "comment": "chanfro da divisao"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "pin_d",
+    "expression": "3 mm",
+    "comment": "pinos de aco"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "pin_bl",
+    "expression": "1.6 mm",
+    "comment": "profundidade dos furos cegos dos pinos"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "hub_r",
+    "expression": "3.3 mm",
+    "comment": "raio dos cubos"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tg_w",
+    "expression": "9.2 mm",
+    "comment": "lingua do berco: largura"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tg_h",
+    "expression": "14 mm",
+    "comment": "lingua do berco: altura"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "u_w",
+    "expression": "30 mm",
+    "comment": "recorte em U: largura"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "u_d",
+    "expression": "18 mm",
+    "comment": "recorte em U: profundidade"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_d",
+    "expression": "5 mm",
+    "comment": "ima"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_t",
+    "expression": "1 mm",
+    "comment": "ima"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "sg_d",
+    "expression": "0.5 mm",
+    "comment": "linha de sombra"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "sg_h",
+    "expression": "1.2 mm",
+    "comment": "linha de sombra"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_p",
+    "expression": "2.4 mm",
+    "comment": "canelado: passo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_d",
+    "expression": "0.6 mm",
+    "comment": "canelado: profundidade"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_z0",
+    "expression": "12 mm",
+    "comment": "canelado: primeira ranhura"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "foot_d",
+    "expression": "8.4 mm",
+    "comment": "pes de silicone"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "foot_h",
+    "expression": "0.6 mm",
+    "comment": "pes"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "foot_e",
+    "expression": "7 mm",
+    "comment": "pes: distancia da borda"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_d",
+    "expression": "0.4 mm",
+    "comment": "texto do fundo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_y",
+    "expression": "4 mm",
+    "comment": "texto do fundo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "div_gap",
+    "expression": "0.4 mm",
+    "comment": "folga lateral da divisoria"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tab_w",
+    "expression": "22 mm",
+    "comment": "aba da divisoria"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rail_clr",
+    "expression": "0.3 mm",
+    "comment": "CALIBRAR: folga berco x nucleo (cada lado)",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "cam_clr",
+    "expression": "0.3 mm",
+    "comment": "CALIBRAR: folga dos pinos nas ranhuras e entre camadas",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "hinge_clr",
+    "expression": "0.2 mm",
+    "comment": "CALIBRAR: folga radial dos furos que giram",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "pin_press",
+    "expression": "0.1 mm",
+    "comment": "CALIBRAR: aperto dos pinos fixos",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "weld_clr",
+    "expression": "0.1 mm",
+    "comment": "CALIBRAR: folga dos pinos-guia dos paineis",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_clr",
+    "expression": "0.3 mm",
+    "comment": "CALIBRAR: folga dos imas",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "art_clr",
+    "expression": "0.2 mm",
+    "comment": "folga lateral da arte",
+    "favorite": true
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_stack",
+    "expression": "1",
+    "comment": "imas empilhados por furo",
+    "unit": ""
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "fl_n",
+    "expression": "30",
+    "comment": "canelado: quantidade",
+    "unit": ""
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_title",
+    "expression": "DECK BOX",
+    "comment": "texto do fundo, 1a linha",
+    "unit": "text"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bt_sub",
+    "expression": "90 CARTAS · ABS",
+    "comment": "texto do fundo, 2a linha",
+    "unit": "text"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "cav_w",
+    "expression": "2*lay_t + 3*cam_clr",
+    "comment": "largura da cavidade do mecanismo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "W",
+    "expression": "in_x + 2*(crad_t + rail_clr + core_t + cav_w + shell_t)",
+    "comment": "largura externa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "D",
+    "expression": "in_y + 2*crad_t + 2*rail_clr + core_t + art_t + art_f + back_t",
+    "comment": "profundidade externa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "H",
+    "expression": "base_t + crad_gap + crad_f + in_z + roof_t",
+    "comment": "altura externa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "split",
+    "expression": "H - lid_h",
+    "comment": "divisao corpo/tampa"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "Hy",
+    "expression": "D/2 - back_t",
+    "comment": "eixo da tampa: Y"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "Hz",
+    "expression": "split - h_b",
+    "comment": "eixo da tampa: Z"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "x_co",
+    "expression": "in_x/2 + crad_t",
+    "comment": "face externa do berco"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "x_ki",
+    "expression": "x_co + rail_clr",
+    "comment": "face interna do nucleo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "x_ko",
+    "expression": "x_ki + core_t",
+    "comment": "face externa do nucleo"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "x_si",
+    "expression": "x_ko + cav_w",
+    "comment": "face interna do painel"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "cy",
+    "expression": "(art_f + art_t + core_t - back_t)/2",
+    "comment": "centro do interior do berco em Y"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "z_c0",
+    "expression": "base_t + crad_gap",
+    "comment": "base do berco"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_h",
+    "expression": "mag_stack*mag_t + 0.1",
+    "comment": "profundidade do furo do ima"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "cav_y0",
+    "expression": "Hy - 64.2819",
+    "comment": "frente da cavidade (atras do pilar dos imas)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "cav_y1",
+    "expression": "D/2 - 1.2",
+    "comment": "fundo da cavidade (casca traseira de 1,2)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "cav_z0",
+    "expression": "Hz - 33.0709",
+    "comment": "piso da cavidade"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tg_y",
+    "expression": "Hy - 59.5819",
+    "comment": "centro da lingua do berco"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tg_z0",
+    "expression": "Hz - 32.0709",
+    "comment": "base da lingua (fechada)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_x",
+    "expression": "(x_ko + x_si)/2",
+    "comment": "imas: X"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "mag_y",
+    "expression": "(-D/2 + cav_y0)/2",
+    "comment": "imas: Y (pilar da frente)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "bn_z",
+    "expression": "h_b - 2.4",
+    "comment": "entalhe traseiro sob a tampa (relativo ao eixo)"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "div_h",
+    "expression": "card_h - 7",
+    "comment": "altura da divisoria"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tab_top",
+    "expression": "card_h + 1",
+    "comment": "topo da aba"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "W",
+    "width": "(D/2) - (-D/2)",
+    "height": "(split) - (0)",
+    "corner": [
+     "-W/2",
+     "-D/2",
+     "0"
+    ],
+    "operation": "new",
+    "name": "CoreBlock",
+    "body_name": "Core"
+   }
+  },
+  {
+   "command": "solid.fillet",
+   "params": {
+    "body": "Core",
+    "edges": [
+     [
+      46.398,
+      40.3004,
+      44.283500000000004
+     ],
+     [
+      46.398,
+      -40.3004,
+      44.283500000000004
+     ],
+     [
+      -46.398,
+      40.3004,
+      44.283500000000004
+     ],
+     [
+      -46.398,
+      -40.3004,
+      44.283500000000004
+     ]
+    ],
+    "radius": "r_out",
+    "name": "CoreCorners"
+   }
+  },
+  {
+   "command": "solid.chamfer",
+   "params": {
+    "body": "Core",
+    "edges": [
+     [
+      0,
+      -40.3004,
+      0
+     ]
+    ],
+    "distance": "bed_ch",
+    "name": "BedChamfer"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "2*x_ki",
+    "width": "(Hy) - (-D/2 + art_f + art_t + core_t)",
+    "height": "(split + 1) - (base_t)",
+    "corner": [
+     "-x_ki",
+     "-D/2 + art_f + art_t + core_t",
+     "base_t"
+    ],
+    "operation": "cut",
+    "name": "CradleCavity",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.fillet",
+   "params": {
+    "body": "Core",
+    "edges": [
+     [
+      35.098,
+      -36.3004,
+      50
+     ],
+     [
+      35.098,
+      34.7004,
+      50
+     ],
+     [
+      -35.098,
+      -36.3004,
+      50
+     ],
+     [
+      -35.098,
+      34.7004,
+      50
+     ]
+    ],
+    "radius": 1.0,
+    "name": "CavityCorners"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2 + 1) - (x_si)",
+    "width": "(D/2 - sh_m) - (-D/2 + sh_m)",
+    "height": "(split + 1) - (sh_z0)",
+    "corner": [
+     "x_si",
+     "-D/2 + sh_m",
+     "sh_z0"
+    ],
+    "operation": "cut",
+    "name": "ShellRecessR",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_si + 0.01) - (x_ko)",
+    "width": "(cav_y1) - (cav_y0)",
+    "height": "(split + 1) - (cav_z0)",
+    "corner": [
+     "x_ko",
+     "cav_y0",
+     "cav_z0"
+    ],
+    "operation": "cut",
+    "name": "MechCavityR",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + 0.5) - (x_ki - 0.5)",
+    "width": "(tg_y + tg_w/2 + rail_clr) - (tg_y - tg_w/2 - rail_clr)",
+    "height": "(split + 1) - (tg_z0 - rail_clr)",
+    "corner": [
+     "x_ki - 0.5",
+     "tg_y - tg_w/2 - rail_clr",
+     "tg_z0 - rail_clr"
+    ],
+    "operation": "cut",
+    "name": "TongueSlotR",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + 0.5) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "x_ko - pin_bl",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "cut",
+    "name": "AxleHoleCoreR",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + 0.5) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "x_ko - pin_bl",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "cut",
+    "name": "PivotHoleCoreR",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "mag_d + mag_clr",
+    "height": "mag_h + 1",
+    "axis": "Z",
+    "base": [
+     "mag_x",
+     "mag_y",
+     "split - mag_h"
+    ],
+    "operation": "cut",
+    "targets": [
+     "Core"
+    ],
+    "name": "MagnetPocketBodyR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "x_si - 2",
+     "-D/2 + 8",
+     "20"
+    ],
+    "operation": "cut",
+    "name": "PegHoleR104",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "x_si - 2",
+     "D/2 - 8",
+     "20"
+    ],
+    "operation": "cut",
+    "name": "PegHoleR105",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "x_si - 2",
+     "-D/2 + 6",
+     "split - 10"
+    ],
+    "operation": "cut",
+    "name": "PegHoleR106",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "x_si - 2",
+     "D/2 - 8",
+     "cav_z0 - 6"
+    ],
+    "operation": "cut",
+    "name": "PegHoleR107",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko - 0.2",
+    "name": "LidStopRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 2.2166",
+      "Hz + 4.4818"
+     ],
+     [
+      "Hy - 4.1453",
+      "Hz + 5.6406"
+     ],
+     [
+      "Hy - 3.7417",
+      "Hz + 5.9161"
+     ],
+     [
+      "Hy - 3.2984",
+      "Hz + 6.1742"
+     ],
+     [
+      "Hy - 2.8373",
+      "Hz + 6.3992"
+     ],
+     [
+      "Hy - 2.361",
+      "Hz + 6.5898"
+     ],
+     [
+      "Hy - 1.8721",
+      "Hz + 6.745"
+     ],
+     [
+      "Hy - 1.373",
+      "Hz + 6.864"
+     ],
+     [
+      "Hy - 0.9807",
+      "Hz + 4.9029"
+     ],
+     [
+      "Hy - 1.3485",
+      "Hz + 4.8147"
+     ],
+     [
+      "Hy - 1.7086",
+      "Hz + 4.699"
+     ],
+     [
+      "Hy - 2.0589",
+      "Hz + 4.5564"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "LidStopRSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko - 0.2)",
+    "operation": "join",
+    "name": "LidStopR",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2 + 1) - (x_si)",
+    "width": "(D/2 - sh_m) - (-D/2 + sh_m)",
+    "height": "(split + 1) - (sh_z0)",
+    "corner": [
+     "-(W/2 + 1)",
+     "-D/2 + sh_m",
+     "sh_z0"
+    ],
+    "operation": "cut",
+    "name": "ShellRecessL",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_si + 0.01) - (x_ko)",
+    "width": "(cav_y1) - (cav_y0)",
+    "height": "(split + 1) - (cav_z0)",
+    "corner": [
+     "-(x_si + 0.01)",
+     "cav_y0",
+     "cav_z0"
+    ],
+    "operation": "cut",
+    "name": "MechCavityL",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + 0.5) - (x_ki - 0.5)",
+    "width": "(tg_y + tg_w/2 + rail_clr) - (tg_y - tg_w/2 - rail_clr)",
+    "height": "(split + 1) - (tg_z0 - rail_clr)",
+    "corner": [
+     "-(x_ko + 0.5)",
+     "tg_y - tg_w/2 - rail_clr",
+     "tg_z0 - rail_clr"
+    ],
+    "operation": "cut",
+    "name": "TongueSlotL",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + 0.5) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 0.5)",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "cut",
+    "name": "AxleHoleCoreL",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + 0.5) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 0.5)",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "cut",
+    "name": "PivotHoleCoreL",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "mag_d + mag_clr",
+    "height": "mag_h + 1",
+    "axis": "Z",
+    "base": [
+     "-mag_x",
+     "mag_y",
+     "split - mag_h"
+    ],
+    "operation": "cut",
+    "targets": [
+     "Core"
+    ],
+    "name": "MagnetPocketBodyL"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.5)",
+     "-D/2 + 8",
+     "20"
+    ],
+    "operation": "cut",
+    "name": "PegHoleL118",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.5)",
+     "D/2 - 8",
+     "20"
+    ],
+    "operation": "cut",
+    "name": "PegHoleL119",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.5)",
+     "-D/2 + 6",
+     "split - 10"
+    ],
+    "operation": "cut",
+    "name": "PegHoleL120",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2 + weld_clr",
+    "height": "(x_si + 0.5) - (x_si - 2)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.5)",
+     "D/2 - 8",
+     "cav_z0 - 6"
+    ],
+    "operation": "cut",
+    "name": "PegHoleL121",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + cam_clr + lay_t)",
+    "name": "LidStopLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 2.2166",
+      "Hz + 4.4818"
+     ],
+     [
+      "Hy - 4.1453",
+      "Hz + 5.6406"
+     ],
+     [
+      "Hy - 3.7417",
+      "Hz + 5.9161"
+     ],
+     [
+      "Hy - 3.2984",
+      "Hz + 6.1742"
+     ],
+     [
+      "Hy - 2.8373",
+      "Hz + 6.3992"
+     ],
+     [
+      "Hy - 2.361",
+      "Hz + 6.5898"
+     ],
+     [
+      "Hy - 1.8721",
+      "Hz + 6.745"
+     ],
+     [
+      "Hy - 1.373",
+      "Hz + 6.864"
+     ],
+     [
+      "Hy - 0.9807",
+      "Hz + 4.9029"
+     ],
+     [
+      "Hy - 1.3485",
+      "Hz + 4.8147"
+     ],
+     [
+      "Hy - 1.7086",
+      "Hz + 4.699"
+     ],
+     [
+      "Hy - 2.0589",
+      "Hz + 4.5564"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "LidStopLSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko - 0.2)",
+    "operation": "join",
+    "name": "LidStopL",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "foot_d",
+    "height": "foot_h + 1",
+    "axis": "Z",
+    "base": [
+     "-(W/2 - foot_e)",
+     "-(D/2 - foot_e)",
+     -1
+    ],
+    "name": "FootRecess",
+    "operation": "cut",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.pattern.rectangular",
+   "params": {
+    "features": [
+     "FootRecess"
+    ],
+    "dir1": [
+     1,
+     0,
+     0
+    ],
+    "count1": 2,
+    "spacing1": "W - 2*foot_e",
+    "dir2": [
+     0,
+     1,
+     0
+    ],
+    "count2": 2,
+    "spacing2": "D - 2*foot_e",
+    "name": "FootRecesses"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XY",
+    "offset": -1,
+    "flip": true,
+    "name": "BottomTextSk"
+   }
+  },
+  {
+   "command": "sketch.text",
+   "params": {
+    "text_expression": "bt_title",
+    "at": [
+     "0*W",
+     "bt_y"
+    ],
+    "height": 6,
+    "align": "center",
+    "vertical_align": "middle"
+   }
+  },
+  {
+   "command": "sketch.text",
+   "params": {
+    "text_expression": "bt_sub",
+    "at": [
+     "0*W",
+     "-bt_y"
+    ],
+    "height": 3.5,
+    "align": "center",
+    "vertical_align": "middle"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "BottomTextSk",
+    "distance": "1 + bt_d",
+    "direction": "negative",
+    "name": "BottomText",
+    "operation": "cut",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "art_w + 2*art_clr",
+    "width": "(-D/2 + art_f + art_t) - (-D/2 + art_f)",
+    "height": "(split + 1) - (art_z0)",
+    "corner": [
+     "-(art_w/2 + art_clr)",
+     "-D/2 + art_f",
+     "art_z0"
+    ],
+    "operation": "cut",
+    "name": "ArtSlot",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "art_w - 2*art_lip",
+    "width": "(-D/2 + art_f + 0.1) - (-D/2 - 1)",
+    "height": "(split + 1) - (art_z0 + art_lip)",
+    "corner": [
+     "-(art_w/2 - art_lip)",
+     "-D/2 - 1",
+     "art_z0 + art_lip"
+    ],
+    "operation": "cut",
+    "name": "ArtWindow",
+    "targets": [
+     "Core"
+    ]
+   }
+  },
+  {
+   "command": "solid.fillet",
+   "params": {
+    "body": "Core",
+    "edges": [
+     [
+      20.5,
+      -39.8004,
+      32.5
+     ],
+     [
+      -20.5,
+      -39.8004,
+      32.5
+     ]
+    ],
+    "radius": 2,
+    "name": "ArtWindowCorners"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2) - (x_si)",
+    "width": "(D/2 - sh_m - weld_clr) - (-D/2 + sh_m + weld_clr)",
+    "height": "(split) - (sh_z0 + weld_clr)",
+    "corner": [
+     "x_si",
+     "-D/2 + sh_m + weld_clr",
+     "sh_z0 + weld_clr"
+    ],
+    "operation": "new",
+    "name": "ShellPlateR",
+    "body_name": "ShellR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_si + 0.1) - (x_ko + weld_clr)",
+    "width": "(cav_y1 - weld_clr) - (cav_y0 + weld_clr)",
+    "height": "(split) - (split - 2)",
+    "corner": [
+     "x_ko + weld_clr",
+     "cav_y0 + weld_clr",
+     "split - 2"
+    ],
+    "operation": "join",
+    "name": "ShellCapR",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + 2*cam_clr + lay_t) - (x_ko - 0.2)",
+    "width": "(D/2 + 1) - (Hy - 13.3)",
+    "height": "(split + 1) - (split - 3)",
+    "corner": [
+     "x_ko - 0.2",
+     "Hy - 13.3",
+     "split - 3"
+    ],
+    "operation": "cut",
+    "name": "HookSlotR",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_si + pin_bl) - (x_si - 0.5)",
+    "axis": "X",
+    "base": [
+     "x_si - 0.5",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "cut",
+    "name": "AxleHoleShellR",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_si + pin_bl) - (x_si - 0.5)",
+    "axis": "X",
+    "base": [
+     "x_si - 0.5",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "cut",
+    "name": "PivotHoleShellR",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "x_si - 1.6",
+     "-D/2 + 8",
+     "20"
+    ],
+    "operation": "join",
+    "name": "PegR141",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "x_si - 1.6",
+     "D/2 - 8",
+     "20"
+    ],
+    "operation": "join",
+    "name": "PegR142",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "x_si - 1.6",
+     "-D/2 + 6",
+     "split - 10"
+    ],
+    "operation": "join",
+    "name": "PegR143",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "x_si - 1.6",
+     "D/2 - 8",
+     "cav_z0 - 6"
+    ],
+    "operation": "join",
+    "name": "PegR144",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XZ",
+    "offset": "-(34.3004)",
+    "name": "FlutingRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "(W/2 + fl_d)",
+      "-(fl_z0 - 2*fl_d)"
+     ],
+     [
+      "(W/2 + fl_d)",
+      "-(fl_z0 + 2*fl_d)"
+     ],
+     [
+      "(W/2 - fl_d)",
+      "-fl_z0"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "FlutingRSk",
+    "distance": "68.6008",
+    "name": "FlutingR",
+    "operation": "cut",
+    "targets": [
+     "ShellR"
+    ]
+   }
+  },
+  {
+   "command": "solid.pattern.rectangular",
+   "params": {
+    "features": [
+     "FlutingR"
+    ],
+    "dir1": [
+     0,
+     0,
+     1
+    ],
+    "count1": "fl_n",
+    "spacing1": "fl_p",
+    "name": "FlutingsR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2) - (x_si)",
+    "width": "(D/2 - sh_m - weld_clr) - (-D/2 + sh_m + weld_clr)",
+    "height": "(split) - (sh_z0 + weld_clr)",
+    "corner": [
+     "-(W/2)",
+     "-D/2 + sh_m + weld_clr",
+     "sh_z0 + weld_clr"
+    ],
+    "operation": "new",
+    "name": "ShellPlateL",
+    "body_name": "ShellL"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_si + 0.1) - (x_ko + weld_clr)",
+    "width": "(cav_y1 - weld_clr) - (cav_y0 + weld_clr)",
+    "height": "(split) - (split - 2)",
+    "corner": [
+     "-(x_si + 0.1)",
+     "cav_y0 + weld_clr",
+     "split - 2"
+    ],
+    "operation": "join",
+    "name": "ShellCapL",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + 2*cam_clr + lay_t) - (x_ko - 0.2)",
+    "width": "(D/2 + 1) - (Hy - 13.3)",
+    "height": "(split + 1) - (split - 3)",
+    "corner": [
+     "-(x_ko + 2*cam_clr + lay_t)",
+     "Hy - 13.3",
+     "split - 3"
+    ],
+    "operation": "cut",
+    "name": "HookSlotL",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_si + pin_bl) - (x_si - 0.5)",
+    "axis": "X",
+    "base": [
+     "-(x_si + pin_bl)",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "cut",
+    "name": "AxleHoleShellL",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_si + pin_bl) - (x_si - 0.5)",
+    "axis": "X",
+    "base": [
+     "-(x_si + pin_bl)",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "cut",
+    "name": "PivotHoleShellL",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.2)",
+     "-D/2 + 8",
+     "20"
+    ],
+    "operation": "join",
+    "name": "PegL155",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.2)",
+     "D/2 - 8",
+     "20"
+    ],
+    "operation": "join",
+    "name": "PegL156",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.2)",
+     "-D/2 + 6",
+     "split - 10"
+    ],
+    "operation": "join",
+    "name": "PegL157",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "1.2",
+    "height": "(x_si + 0.2) - (x_si - 1.6)",
+    "axis": "X",
+    "base": [
+     "-(x_si + 0.2)",
+     "D/2 - 8",
+     "cav_z0 - 6"
+    ],
+    "operation": "join",
+    "name": "PegL158",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XZ",
+    "offset": "-(34.3004)",
+    "name": "FlutingLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "-(W/2 + fl_d)",
+      "-(fl_z0 - 2*fl_d)"
+     ],
+     [
+      "-(W/2 + fl_d)",
+      "-(fl_z0 + 2*fl_d)"
+     ],
+     [
+      "-(W/2 - fl_d)",
+      "-fl_z0"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "FlutingLSk",
+    "distance": "68.6008",
+    "name": "FlutingL",
+    "operation": "cut",
+    "targets": [
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.pattern.rectangular",
+   "params": {
+    "features": [
+     "FlutingL"
+    ],
+    "dir1": [
+     0,
+     0,
+     1
+    ],
+    "count1": "fl_n",
+    "spacing1": "fl_p",
+    "name": "FlutingsL"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XY",
+    "offset": "split - sg_h",
+    "name": "ShadowGapSk"
+   }
+  },
+  {
+   "command": "sketch.draw.dimensioned",
+   "params": {
+    "command": "sketch.rectangle.center",
+    "params": {
+     "center": [
+      0,
+      0
+     ],
+     "corner": [
+      51.398,
+      45.3004
+     ]
+    },
+    "dimensions": {
+     "width": "W + 10",
+     "height": "D + 10"
+    }
+   }
+  },
+  {
+   "command": "sketch.draw.dimensioned",
+   "params": {
+    "command": "sketch.rectangle.center",
+    "params": {
+     "center": [
+      0,
+      0
+     ],
+     "corner": [
+      45.898,
+      39.8004
+     ]
+    },
+    "dimensions": {
+     "width": "W - 2*sg_d",
+     "height": "D - 2*sg_d"
+    }
+   }
+  },
+  {
+   "command": "sketch.fillet",
+   "params": {
+    "points": [
+     {
+      "a": "l7",
+      "b": "l10"
+     },
+     {
+      "a": "l7",
+      "b": "l8"
+     },
+     {
+      "a": "l8",
+      "b": "l9"
+     },
+     {
+      "a": "l9",
+      "b": "l10"
+     }
+    ],
+    "radius": "r_out - sg_d"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "ShadowGapSk",
+    "distance": "sg_h + 1",
+    "name": "ShadowGap",
+    "operation": "cut",
+    "targets": [
+     "Core",
+     "ShellR",
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "W + 2",
+    "width": "(D/2 + 1) - (Hy)",
+    "height": "(split + 1) - (Hz + bn_z)",
+    "corner": [
+     "-W/2 - 1",
+     "Hy",
+     "Hz + bn_z"
+    ],
+    "operation": "cut",
+    "name": "BackNotch",
+    "targets": [
+     "Core",
+     "ShellR",
+     "ShellL"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "2*x_co",
+    "width": "(cy + in_y/2 + crad_t) - (cy - in_y/2 - crad_t)",
+    "height": "(split - 0.5) - (z_c0)",
+    "corner": [
+     "-x_co",
+     "cy - in_y/2 - crad_t",
+     "z_c0"
+    ],
+    "operation": "new",
+    "name": "CradleBlock",
+    "body_name": "Cradle"
+   }
+  },
+  {
+   "command": "solid.fillet",
+   "params": {
+    "body": "Cradle",
+    "edges": [
+     [
+      34.798,
+      -36.000400000000006,
+      40
+     ],
+     [
+      34.798,
+      34.40040000000001,
+      40
+     ],
+     [
+      -34.798,
+      -36.000400000000006,
+      40
+     ],
+     [
+      -34.798,
+      34.40040000000001,
+      40
+     ]
+    ],
+    "radius": 1.6,
+    "name": "CradleCorners"
+   }
+  },
+  {
+   "command": "solid.chamfer",
+   "params": {
+    "body": "Cradle",
+    "edges": [
+     [
+      0,
+      -36.000400000000006,
+      2.3
+     ]
+    ],
+    "distance": 0.6,
+    "name": "CradleLeadIn"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "in_x",
+    "width": "(cy + in_y/2) - (cy - in_y/2)",
+    "height": "(split) - (z_c0 + crad_f)",
+    "corner": [
+     "-in_x/2",
+     "cy - in_y/2",
+     "z_c0 + crad_f"
+    ],
+    "operation": "cut",
+    "name": "CradleInside",
+    "targets": [
+     "Cradle"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "u_w",
+    "width": "(cy - in_y/2 + 0.1) - (cy - in_y/2 - crad_t - 1)",
+    "height": "(split + 1) - (split - 0.5 - u_d + u_w/2)",
+    "corner": [
+     "-u_w/2",
+     "cy - in_y/2 - crad_t - 1",
+     "split - 0.5 - u_d + u_w/2"
+    ],
+    "operation": "cut",
+    "name": "CradleU",
+    "targets": [
+     "Cradle"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "u_w/2",
+    "height": "crad_t + 1.1",
+    "axis": "Y",
+    "base": [
+     0,
+     "cy - in_y/2 - crad_t - 1",
+     "split - 0.5 - u_d + u_w/2"
+    ],
+    "operation": "cut",
+    "targets": [
+     "Cradle"
+    ],
+    "name": "CradleUBottom"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + cam_clr + lay_t) - (x_co - 0.2)",
+    "width": "(tg_y + tg_w/2) - (tg_y - tg_w/2)",
+    "height": "(tg_z0 + tg_h) - (tg_z0)",
+    "corner": [
+     "x_co - 0.2",
+     "tg_y - tg_w/2",
+     "tg_z0"
+    ],
+    "operation": "join",
+    "name": "TongueR",
+    "targets": [
+     "Cradle"
+    ]
+   }
+  },
+  {
+   "command": "solid.chamfer",
+   "params": {
+    "body": "Cradle",
+    "edges": [
+     [
+      40.598,
+      -24.881501422579873,
+      45.69614270615125
+     ]
+    ],
+    "distance": "5.75",
+    "name": "TongueChamferR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + cam_clr + lay_t + 0.5) - (x_co - 0.5)",
+    "width": "(Hy - 56.1555) - (Hy - 61.7998)",
+    "height": "(Hz - 21.2709) - (Hz - 24.8709)",
+    "corner": [
+     "x_co - 0.5",
+     "Hy - 61.7998",
+     "Hz - 24.8709"
+    ],
+    "operation": "cut",
+    "name": "YokeR",
+    "targets": [
+     "Cradle"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + cam_clr + lay_t) - (x_co - 0.2)",
+    "width": "(tg_y + tg_w/2) - (tg_y - tg_w/2)",
+    "height": "(tg_z0 + tg_h) - (tg_z0)",
+    "corner": [
+     "-(x_ko + cam_clr + lay_t)",
+     "tg_y - tg_w/2",
+     "tg_z0"
+    ],
+    "operation": "join",
+    "name": "TongueL",
+    "targets": [
+     "Cradle"
+    ]
+   }
+  },
+  {
+   "command": "solid.chamfer",
+   "params": {
+    "body": "Cradle",
+    "edges": [
+     [
+      -40.598,
+      -24.881501422579873,
+      45.69614270615125
+     ]
+    ],
+    "distance": "5.75",
+    "name": "TongueChamferL"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(x_ko + cam_clr + lay_t + 0.5) - (x_co - 0.5)",
+    "width": "(Hy - 56.1555) - (Hy - 61.7998)",
+    "height": "(Hz - 21.2709) - (Hz - 24.8709)",
+    "corner": [
+     "-(x_ko + cam_clr + lay_t + 0.5)",
+     "Hy - 61.7998",
+     "Hz - 24.8709"
+    ],
+    "operation": "cut",
+    "name": "YokeL",
+    "targets": [
+     "Cradle"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "W",
+    "width": "(D/2) - (-D/2)",
+    "height": "(H) - (split)",
+    "corner": [
+     "-W/2",
+     "-D/2",
+     "split"
+    ],
+    "operation": "new",
+    "name": "LidBlock",
+    "body_name": "Lid"
+   }
+  },
+  {
+   "command": "solid.fillet",
+   "params": {
+    "body": "Lid",
+    "edges": [
+     [
+      46.398,
+      40.3004,
+      94.76700000000001
+     ],
+     [
+      46.398,
+      -40.3004,
+      94.76700000000001
+     ],
+     [
+      -46.398,
+      40.3004,
+      94.76700000000001
+     ],
+     [
+      -46.398,
+      -40.3004,
+      94.76700000000001
+     ]
+    ],
+    "radius": "r_out",
+    "name": "LidCorners"
+   }
+  },
+  {
+   "command": "solid.chamfer",
+   "params": {
+    "body": "Lid",
+    "edges": [
+     [
+      0,
+      -40.3004,
+      88.56700000000001
+     ]
+    ],
+    "distance": "reveal",
+    "name": "LidReveal"
+   }
+  },
+  {
+   "command": "solid.chamfer",
+   "params": {
+    "body": "Lid",
+    "edges": [
+     [
+      0,
+      -40.3004,
+      100.96700000000001
+     ]
+    ],
+    "distance": "top_ch",
+    "name": "LidTopChamfer"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "W - 2*lid_t",
+    "width": "(D/2 - lid_t) - (-D/2 + lid_t)",
+    "height": "(H - roof_t) - (split - 1)",
+    "corner": [
+     "-(W/2 - lid_t)",
+     "-D/2 + lid_t",
+     "split - 1"
+    ],
+    "operation": "cut",
+    "name": "LidInside",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2 - lid_t + 0.5) - (x_ko + cam_clr)",
+    "width": "(cav_y0) - (-D/2 + lid_t - 0.5)",
+    "height": "(H - roof_t + 0.5) - (split)",
+    "corner": [
+     "x_ko + cam_clr",
+     "-D/2 + lid_t - 0.5",
+     "split"
+    ],
+    "operation": "join",
+    "name": "LidMagBlockR",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2 - lid_t + 0.5) - (x_ko + cam_clr)",
+    "width": "(Hy - 6) - (Hy - 14)",
+    "height": "(H - roof_t + 0.5) - (split)",
+    "corner": [
+     "x_ko + cam_clr",
+     "Hy - 14",
+     "split"
+    ],
+    "operation": "join",
+    "name": "LidEarR",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "mag_d + mag_clr",
+    "height": "mag_h + 1",
+    "axis": "Z",
+    "base": [
+     "mag_x",
+     "mag_y",
+     "split - 1"
+    ],
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ],
+    "name": "MagnetPocketLidR"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + cam_clr - 1",
+    "name": "MortiseRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 9.7",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 6.3",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 5.5",
+      "Hz + 13.5"
+     ],
+     [
+      "Hy - 10.5",
+      "Hz + 13.5"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "MortiseRSk",
+    "distance": "(x_ko + cam_clr + lay_t + 0.1) - (x_ko + cam_clr - 1)",
+    "operation": "cut",
+    "name": "MortiseR",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2 - lid_t + 0.5) - (x_ko + cam_clr)",
+    "width": "(cav_y0) - (-D/2 + lid_t - 0.5)",
+    "height": "(H - roof_t + 0.5) - (split)",
+    "corner": [
+     "-(W/2 - lid_t + 0.5)",
+     "-D/2 + lid_t - 0.5",
+     "split"
+    ],
+    "operation": "join",
+    "name": "LidMagBlockL",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "(W/2 - lid_t + 0.5) - (x_ko + cam_clr)",
+    "width": "(Hy - 6) - (Hy - 14)",
+    "height": "(H - roof_t + 0.5) - (split)",
+    "corner": [
+     "-(W/2 - lid_t + 0.5)",
+     "Hy - 14",
+     "split"
+    ],
+    "operation": "join",
+    "name": "LidEarL",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "mag_d + mag_clr",
+    "height": "mag_h + 1",
+    "axis": "Z",
+    "base": [
+     "-mag_x",
+     "mag_y",
+     "split - 1"
+    ],
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ],
+    "name": "MagnetPocketLidL"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + cam_clr + lay_t + 0.1)",
+    "name": "MortiseLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 9.7",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 6.3",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 5.5",
+      "Hz + 13.5"
+     ],
+     [
+      "Hy - 10.5",
+      "Hz + 13.5"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "MortiseLSk",
+    "distance": "(x_ko + cam_clr + lay_t + 0.1) - (x_ko + cam_clr - 1)",
+    "operation": "cut",
+    "name": "MortiseL",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + cam_clr",
+    "name": "CrankRingRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 8.1",
+      "Hz + 10.8"
+     ],
+     [
+      "Hy - 8.8505",
+      "Hz + 10.194"
+     ],
+     [
+      "Hy - 9.5559",
+      "Hz + 9.536"
+     ],
+     [
+      "Hy - 10.2124",
+      "Hz + 8.8293"
+     ],
+     [
+      "Hy - 10.8168",
+      "Hz + 8.0775"
+     ],
+     [
+      "Hy - 11.366",
+      "Hz + 7.2845"
+     ],
+     [
+      "Hy - 11.8572",
+      "Hz + 6.4543"
+     ],
+     [
+      "Hy - 12.2878",
+      "Hz + 5.5911"
+     ],
+     [
+      "Hy - 12.6557",
+      "Hz + 4.6994"
+     ],
+     [
+      "Hy - 12.9589",
+      "Hz + 3.7837"
+     ],
+     [
+      "Hy - 13.196",
+      "Hz + 2.8486"
+     ],
+     [
+      "Hy - 13.3658",
+      "Hz + 1.8991"
+     ],
+     [
+      "Hy - 13.4672",
+      "Hz + 0.9398"
+     ],
+     [
+      "Hy - 13.5",
+      "Hz - 0.0243"
+     ],
+     [
+      "Hy - 13.4638",
+      "Hz - 0.9882"
+     ],
+     [
+      "Hy - 13.3588",
+      "Hz - 1.9471"
+     ],
+     [
+      "Hy - 13.1857",
+      "Hz - 2.8961"
+     ],
+     [
+      "Hy - 12.9452",
+      "Hz - 3.8302"
+     ],
+     [
+      "Hy - 12.6387",
+      "Hz - 4.7448"
+     ],
+     [
+      "Hy - 12.2676",
+      "Hz - 5.6352"
+     ],
+     [
+      "Hy - 11.8339",
+      "Hz - 6.4968"
+     ],
+     [
+      "Hy - 11.3398",
+      "Hz - 7.3253"
+     ],
+     [
+      "Hy - 10.7877",
+      "Hz - 8.1163"
+     ],
+     [
+      "Hy - 10.1806",
+      "Hz - 8.8659"
+     ],
+     [
+      "Hy - 9.5215",
+      "Hz - 9.5703"
+     ],
+     [
+      "Hy - 8.8138",
+      "Hz - 10.2258"
+     ],
+     [
+      "Hy - 8.0611",
+      "Hz - 10.829"
+     ],
+     [
+      "Hy - 7.2673",
+      "Hz - 11.377"
+     ],
+     [
+      "Hy - 6.4363",
+      "Hz - 11.8669"
+     ],
+     [
+      "Hy - 5.5725",
+      "Hz - 12.2962"
+     ],
+     [
+      "Hy - 4.6802",
+      "Hz - 12.6628"
+     ],
+     [
+      "Hy - 3.7641",
+      "Hz - 12.9646"
+     ],
+     [
+      "Hy - 2.8287",
+      "Hz - 13.2003"
+     ],
+     [
+      "Hy - 1.8788",
+      "Hz - 13.3686"
+     ],
+     [
+      "Hy - 1.4335",
+      "Hz - 10.1998"
+     ],
+     [
+      "Hy - 2.1561",
+      "Hz - 10.0718"
+     ],
+     [
+      "Hy - 2.8679",
+      "Hz - 9.8927"
+     ],
+     [
+      "Hy - 3.565",
+      "Hz - 9.6634"
+     ],
+     [
+      "Hy - 4.2441",
+      "Hz - 9.385"
+     ],
+     [
+      "Hy - 4.9016",
+      "Hz - 9.059"
+     ],
+     [
+      "Hy - 5.5342",
+      "Hz - 8.6869"
+     ],
+     [
+      "Hy - 6.1387",
+      "Hz - 8.2708"
+     ],
+     [
+      "Hy - 6.7121",
+      "Hz - 7.8127"
+     ],
+     [
+      "Hy - 7.2514",
+      "Hz - 7.3149"
+     ],
+     [
+      "Hy - 7.7538",
+      "Hz - 6.78"
+     ],
+     [
+      "Hy - 8.2169",
+      "Hz - 6.2107"
+     ],
+     [
+      "Hy - 8.6383",
+      "Hz - 5.6098"
+     ],
+     [
+      "Hy - 9.0158",
+      "Hz - 4.9804"
+     ],
+     [
+      "Hy - 9.3476",
+      "Hz - 4.3258"
+     ],
+     [
+      "Hy - 9.6319",
+      "Hz - 3.6492"
+     ],
+     [
+      "Hy - 9.8673",
+      "Hz - 2.9541"
+     ],
+     [
+      "Hy - 10.0526",
+      "Hz - 2.244"
+     ],
+     [
+      "Hy - 10.1869",
+      "Hz - 1.5224"
+     ],
+     [
+      "Hy - 10.2694",
+      "Hz - 0.7932"
+     ],
+     [
+      "Hy - 10.2998",
+      "Hz - 0.0599"
+     ],
+     [
+      "Hy - 10.2779",
+      "Hz + 0.6737"
+     ],
+     [
+      "Hy - 10.2039",
+      "Hz + 1.4038"
+     ],
+     [
+      "Hy - 10.078",
+      "Hz + 2.1268"
+     ],
+     [
+      "Hy - 9.901",
+      "Hz + 2.8391"
+     ],
+     [
+      "Hy - 9.6737",
+      "Hz + 3.5369"
+     ],
+     [
+      "Hy - 9.3973",
+      "Hz + 4.2167"
+     ],
+     [
+      "Hy - 9.0732",
+      "Hz + 4.8752"
+     ],
+     [
+      "Hy - 8.703",
+      "Hz + 5.5089"
+     ],
+     [
+      "Hy - 8.2886",
+      "Hz + 6.1146"
+     ],
+     [
+      "Hy - 7.8322",
+      "Hz + 6.6893"
+     ],
+     [
+      "Hy - 7.336",
+      "Hz + 7.23"
+     ],
+     [
+      "Hy - 6.8025",
+      "Hz + 7.7341"
+     ],
+     [
+      "Hy - 6.2345",
+      "Hz + 8.1988"
+     ],
+     [
+      "Hy - 5.6349",
+      "Hz + 8.622"
+     ],
+     [
+      "Hy - 5.0066",
+      "Hz + 9.0013"
+     ],
+     [
+      "Hy - 4.353",
+      "Hz + 9.335"
+     ],
+     [
+      "Hy - 5.0361",
+      "Hz + 10.8"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CrankRingRSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "operation": "new",
+    "name": "CrankRingR",
+    "body_name": "CrankR"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + cam_clr",
+    "name": "CrankArmRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy + 2.6097",
+      "Hz - 0.4602"
+     ],
+     [
+      "Hy + 0.8733",
+      "Hz - 10.3082"
+     ],
+     [
+      "Hy - 4.3462",
+      "Hz - 9.3879"
+     ],
+     [
+      "Hy - 2.6097",
+      "Hz + 0.4602"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CrankArmRSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "operation": "join",
+    "name": "CrankArmR",
+    "targets": [
+     "CrankR"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + cam_clr",
+    "name": "CrankTenonRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 9.6",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 6.4",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 5.6",
+      "Hz + 13.4"
+     ],
+     [
+      "Hy - 10.4",
+      "Hz + 13.4"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CrankTenonRSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "operation": "join",
+    "name": "CrankTenonR",
+    "targets": [
+     "CrankR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "hub_r",
+    "height": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "axis": "X",
+    "base": [
+     "x_ko + cam_clr",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "join",
+    "name": "CrankHubR",
+    "targets": [
+     "CrankR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 2.65,
+    "height": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "axis": "X",
+    "base": [
+     "x_ko + cam_clr",
+     "Hy - 1.7365",
+     "Hz - 9.8481"
+    ],
+    "operation": "join",
+    "name": "CrankBossR",
+    "targets": [
+     "CrankR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2 + hinge_clr",
+    "height": "(x_ko + cam_clr + lay_t + 0.5) - (x_ko + cam_clr - 0.5)",
+    "axis": "X",
+    "base": [
+     "x_ko + cam_clr - 0.5",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "cut",
+    "name": "CrankHubHoleR",
+    "targets": [
+     "CrankR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + cam_clr + lay_t + 0.5) - (x_ko + cam_clr - 0.5)",
+    "axis": "X",
+    "base": [
+     "x_ko + cam_clr - 0.5",
+     "Hy - 1.7365",
+     "Hz - 9.8481"
+    ],
+    "operation": "cut",
+    "name": "CrankPinHoleR",
+    "targets": [
+     "CrankR"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + cam_clr + lay_t)",
+    "name": "CrankRingLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 8.1",
+      "Hz + 10.8"
+     ],
+     [
+      "Hy - 8.8505",
+      "Hz + 10.194"
+     ],
+     [
+      "Hy - 9.5559",
+      "Hz + 9.536"
+     ],
+     [
+      "Hy - 10.2124",
+      "Hz + 8.8293"
+     ],
+     [
+      "Hy - 10.8168",
+      "Hz + 8.0775"
+     ],
+     [
+      "Hy - 11.366",
+      "Hz + 7.2845"
+     ],
+     [
+      "Hy - 11.8572",
+      "Hz + 6.4543"
+     ],
+     [
+      "Hy - 12.2878",
+      "Hz + 5.5911"
+     ],
+     [
+      "Hy - 12.6557",
+      "Hz + 4.6994"
+     ],
+     [
+      "Hy - 12.9589",
+      "Hz + 3.7837"
+     ],
+     [
+      "Hy - 13.196",
+      "Hz + 2.8486"
+     ],
+     [
+      "Hy - 13.3658",
+      "Hz + 1.8991"
+     ],
+     [
+      "Hy - 13.4672",
+      "Hz + 0.9398"
+     ],
+     [
+      "Hy - 13.5",
+      "Hz - 0.0243"
+     ],
+     [
+      "Hy - 13.4638",
+      "Hz - 0.9882"
+     ],
+     [
+      "Hy - 13.3588",
+      "Hz - 1.9471"
+     ],
+     [
+      "Hy - 13.1857",
+      "Hz - 2.8961"
+     ],
+     [
+      "Hy - 12.9452",
+      "Hz - 3.8302"
+     ],
+     [
+      "Hy - 12.6387",
+      "Hz - 4.7448"
+     ],
+     [
+      "Hy - 12.2676",
+      "Hz - 5.6352"
+     ],
+     [
+      "Hy - 11.8339",
+      "Hz - 6.4968"
+     ],
+     [
+      "Hy - 11.3398",
+      "Hz - 7.3253"
+     ],
+     [
+      "Hy - 10.7877",
+      "Hz - 8.1163"
+     ],
+     [
+      "Hy - 10.1806",
+      "Hz - 8.8659"
+     ],
+     [
+      "Hy - 9.5215",
+      "Hz - 9.5703"
+     ],
+     [
+      "Hy - 8.8138",
+      "Hz - 10.2258"
+     ],
+     [
+      "Hy - 8.0611",
+      "Hz - 10.829"
+     ],
+     [
+      "Hy - 7.2673",
+      "Hz - 11.377"
+     ],
+     [
+      "Hy - 6.4363",
+      "Hz - 11.8669"
+     ],
+     [
+      "Hy - 5.5725",
+      "Hz - 12.2962"
+     ],
+     [
+      "Hy - 4.6802",
+      "Hz - 12.6628"
+     ],
+     [
+      "Hy - 3.7641",
+      "Hz - 12.9646"
+     ],
+     [
+      "Hy - 2.8287",
+      "Hz - 13.2003"
+     ],
+     [
+      "Hy - 1.8788",
+      "Hz - 13.3686"
+     ],
+     [
+      "Hy - 1.4335",
+      "Hz - 10.1998"
+     ],
+     [
+      "Hy - 2.1561",
+      "Hz - 10.0718"
+     ],
+     [
+      "Hy - 2.8679",
+      "Hz - 9.8927"
+     ],
+     [
+      "Hy - 3.565",
+      "Hz - 9.6634"
+     ],
+     [
+      "Hy - 4.2441",
+      "Hz - 9.385"
+     ],
+     [
+      "Hy - 4.9016",
+      "Hz - 9.059"
+     ],
+     [
+      "Hy - 5.5342",
+      "Hz - 8.6869"
+     ],
+     [
+      "Hy - 6.1387",
+      "Hz - 8.2708"
+     ],
+     [
+      "Hy - 6.7121",
+      "Hz - 7.8127"
+     ],
+     [
+      "Hy - 7.2514",
+      "Hz - 7.3149"
+     ],
+     [
+      "Hy - 7.7538",
+      "Hz - 6.78"
+     ],
+     [
+      "Hy - 8.2169",
+      "Hz - 6.2107"
+     ],
+     [
+      "Hy - 8.6383",
+      "Hz - 5.6098"
+     ],
+     [
+      "Hy - 9.0158",
+      "Hz - 4.9804"
+     ],
+     [
+      "Hy - 9.3476",
+      "Hz - 4.3258"
+     ],
+     [
+      "Hy - 9.6319",
+      "Hz - 3.6492"
+     ],
+     [
+      "Hy - 9.8673",
+      "Hz - 2.9541"
+     ],
+     [
+      "Hy - 10.0526",
+      "Hz - 2.244"
+     ],
+     [
+      "Hy - 10.1869",
+      "Hz - 1.5224"
+     ],
+     [
+      "Hy - 10.2694",
+      "Hz - 0.7932"
+     ],
+     [
+      "Hy - 10.2998",
+      "Hz - 0.0599"
+     ],
+     [
+      "Hy - 10.2779",
+      "Hz + 0.6737"
+     ],
+     [
+      "Hy - 10.2039",
+      "Hz + 1.4038"
+     ],
+     [
+      "Hy - 10.078",
+      "Hz + 2.1268"
+     ],
+     [
+      "Hy - 9.901",
+      "Hz + 2.8391"
+     ],
+     [
+      "Hy - 9.6737",
+      "Hz + 3.5369"
+     ],
+     [
+      "Hy - 9.3973",
+      "Hz + 4.2167"
+     ],
+     [
+      "Hy - 9.0732",
+      "Hz + 4.8752"
+     ],
+     [
+      "Hy - 8.703",
+      "Hz + 5.5089"
+     ],
+     [
+      "Hy - 8.2886",
+      "Hz + 6.1146"
+     ],
+     [
+      "Hy - 7.8322",
+      "Hz + 6.6893"
+     ],
+     [
+      "Hy - 7.336",
+      "Hz + 7.23"
+     ],
+     [
+      "Hy - 6.8025",
+      "Hz + 7.7341"
+     ],
+     [
+      "Hy - 6.2345",
+      "Hz + 8.1988"
+     ],
+     [
+      "Hy - 5.6349",
+      "Hz + 8.622"
+     ],
+     [
+      "Hy - 5.0066",
+      "Hz + 9.0013"
+     ],
+     [
+      "Hy - 4.353",
+      "Hz + 9.335"
+     ],
+     [
+      "Hy - 5.0361",
+      "Hz + 10.8"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CrankRingLSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "operation": "new",
+    "name": "CrankRingL",
+    "body_name": "CrankL"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + cam_clr + lay_t)",
+    "name": "CrankArmLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy + 2.6097",
+      "Hz - 0.4602"
+     ],
+     [
+      "Hy + 0.8733",
+      "Hz - 10.3082"
+     ],
+     [
+      "Hy - 4.3462",
+      "Hz - 9.3879"
+     ],
+     [
+      "Hy - 2.6097",
+      "Hz + 0.4602"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CrankArmLSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "operation": "join",
+    "name": "CrankArmL",
+    "targets": [
+     "CrankL"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + cam_clr + lay_t)",
+    "name": "CrankTenonLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 9.6",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 6.4",
+      "Hz + 10.2"
+     ],
+     [
+      "Hy - 5.6",
+      "Hz + 13.4"
+     ],
+     [
+      "Hy - 10.4",
+      "Hz + 13.4"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CrankTenonLSk",
+    "distance": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "operation": "join",
+    "name": "CrankTenonL",
+    "targets": [
+     "CrankL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "hub_r",
+    "height": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + cam_clr + lay_t)",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "join",
+    "name": "CrankHubL",
+    "targets": [
+     "CrankL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 2.65,
+    "height": "(x_ko + cam_clr + lay_t) - (x_ko + cam_clr)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + cam_clr + lay_t)",
+     "Hy - 1.7365",
+     "Hz - 9.8481"
+    ],
+    "operation": "join",
+    "name": "CrankBossL",
+    "targets": [
+     "CrankL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2 + hinge_clr",
+    "height": "(x_ko + cam_clr + lay_t + 0.5) - (x_ko + cam_clr - 0.5)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + cam_clr + lay_t + 0.5)",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "cut",
+    "name": "CrankHubHoleL",
+    "targets": [
+     "CrankL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + cam_clr + lay_t + 0.5) - (x_ko + cam_clr - 0.5)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + cam_clr + lay_t + 0.5)",
+     "Hy - 1.7365",
+     "Hz - 9.8481"
+    ],
+    "operation": "cut",
+    "name": "CrankPinHoleL",
+    "targets": [
+     "CrankL"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + 2*cam_clr + lay_t",
+    "name": "LeverWebRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 2.3196",
+      "Hz - 12.9945"
+     ],
+     [
+      "Hy - 2.5187",
+      "Hz - 12.9575"
+     ],
+     [
+      "Hy - 2.7444",
+      "Hz - 12.9115"
+     ],
+     [
+      "Hy - 2.9694",
+      "Hz - 12.8617"
+     ],
+     [
+      "Hy - 3.1934",
+      "Hz - 12.8079"
+     ],
+     [
+      "Hy - 3.4164",
+      "Hz - 12.7502"
+     ],
+     [
+      "Hy - 3.6384",
+      "Hz - 12.6887"
+     ],
+     [
+      "Hy - 3.8593",
+      "Hz - 12.6232"
+     ],
+     [
+      "Hy - 4.079",
+      "Hz - 12.5539"
+     ],
+     [
+      "Hy - 4.2975",
+      "Hz - 12.4808"
+     ],
+     [
+      "Hy - 4.5147",
+      "Hz - 12.4039"
+     ],
+     [
+      "Hy - 4.7305",
+      "Hz - 12.3233"
+     ],
+     [
+      "Hy - 4.9448",
+      "Hz - 12.2388"
+     ],
+     [
+      "Hy - 5.1577",
+      "Hz - 12.1507"
+     ],
+     [
+      "Hy - 5.3689",
+      "Hz - 12.0588"
+     ],
+     [
+      "Hy - 5.5786",
+      "Hz - 11.9633"
+     ],
+     [
+      "Hy - 5.7865",
+      "Hz - 11.8641"
+     ],
+     [
+      "Hy - 5.9927",
+      "Hz - 11.7613"
+     ],
+     [
+      "Hy - 6.197",
+      "Hz - 11.6549"
+     ],
+     [
+      "Hy - 6.3995",
+      "Hz - 11.545"
+     ],
+     [
+      "Hy - 6.6",
+      "Hz - 11.4315"
+     ],
+     [
+      "Hy - 6.7985",
+      "Hz - 11.3146"
+     ],
+     [
+      "Hy - 6.9949",
+      "Hz - 11.1942"
+     ],
+     [
+      "Hy - 7.1892",
+      "Hz - 11.0705"
+     ],
+     [
+      "Hy - 7.3813",
+      "Hz - 10.9433"
+     ],
+     [
+      "Hy - 7.5701",
+      "Hz - 10.8136"
+     ],
+     [
+      "Hy - 7.7501",
+      "Hz - 10.6855"
+     ],
+     [
+      "Hy - 7.9161",
+      "Hz - 10.5642"
+     ],
+     [
+      "Hy - 8.0677",
+      "Hz - 10.4518"
+     ],
+     [
+      "Hy - 8.2058",
+      "Hz - 10.3492"
+     ],
+     [
+      "Hy - 8.3314",
+      "Hz - 10.2565"
+     ],
+     [
+      "Hy - 8.446",
+      "Hz - 10.1735"
+     ],
+     [
+      "Hy - 8.5512",
+      "Hz - 10.0995"
+     ],
+     [
+      "Hy - 8.6489",
+      "Hz - 10.0333"
+     ],
+     [
+      "Hy - 8.7412",
+      "Hz - 9.9736"
+     ],
+     [
+      "Hy - 8.8304",
+      "Hz - 9.9189"
+     ],
+     [
+      "Hy - 8.919",
+      "Hz - 9.8676"
+     ],
+     [
+      "Hy - 9.0095",
+      "Hz - 9.8184"
+     ],
+     [
+      "Hy - 9.1043",
+      "Hz - 9.7701"
+     ],
+     [
+      "Hy - 9.2057",
+      "Hz - 9.7216"
+     ],
+     [
+      "Hy - 9.316",
+      "Hz - 9.672"
+     ],
+     [
+      "Hy - 9.4369",
+      "Hz - 9.6208"
+     ],
+     [
+      "Hy - 9.5699",
+      "Hz - 9.5672"
+     ],
+     [
+      "Hy - 9.7165",
+      "Hz - 9.5105"
+     ],
+     [
+      "Hy - 9.8775",
+      "Hz - 9.4501"
+     ],
+     [
+      "Hy - 10.0523",
+      "Hz - 9.3854"
+     ],
+     [
+      "Hy - 10.2344",
+      "Hz - 9.3182"
+     ],
+     [
+      "Hy - 10.4168",
+      "Hz - 9.2508"
+     ],
+     [
+      "Hy - 10.5983",
+      "Hz - 9.1838"
+     ],
+     [
+      "Hy - 10.7788",
+      "Hz - 9.117"
+     ],
+     [
+      "Hy - 10.9583",
+      "Hz - 9.0506"
+     ],
+     [
+      "Hy - 11.1368",
+      "Hz - 8.9846"
+     ],
+     [
+      "Hy - 11.3143",
+      "Hz - 8.9189"
+     ],
+     [
+      "Hy - 11.4907",
+      "Hz - 8.8536"
+     ],
+     [
+      "Hy - 11.6661",
+      "Hz - 8.7887"
+     ],
+     [
+      "Hy - 11.8404",
+      "Hz - 8.7243"
+     ],
+     [
+      "Hy - 12.0136",
+      "Hz - 8.6602"
+     ],
+     [
+      "Hy - 12.1857",
+      "Hz - 8.5966"
+     ],
+     [
+      "Hy - 12.3567",
+      "Hz - 8.5335"
+     ],
+     [
+      "Hy - 12.5265",
+      "Hz - 8.4709"
+     ],
+     [
+      "Hy - 12.6952",
+      "Hz - 8.4087"
+     ],
+     [
+      "Hy - 12.8627",
+      "Hz - 8.3471"
+     ],
+     [
+      "Hy - 13.029",
+      "Hz - 8.286"
+     ],
+     [
+      "Hy - 13.1941",
+      "Hz - 8.2254"
+     ],
+     [
+      "Hy - 13.358",
+      "Hz - 8.1654"
+     ],
+     [
+      "Hy - 13.5207",
+      "Hz - 8.106"
+     ],
+     [
+      "Hy - 13.6821",
+      "Hz - 8.0473"
+     ],
+     [
+      "Hy - 13.8423",
+      "Hz - 7.9891"
+     ],
+     [
+      "Hy - 14.0011",
+      "Hz - 7.9316"
+     ],
+     [
+      "Hy - 14.1587",
+      "Hz - 7.8747"
+     ],
+     [
+      "Hy - 14.3149",
+      "Hz - 7.8185"
+     ],
+     [
+      "Hy - 14.4698",
+      "Hz - 7.763"
+     ],
+     [
+      "Hy - 14.6233",
+      "Hz - 7.7083"
+     ],
+     [
+      "Hy - 14.7755",
+      "Hz - 7.6543"
+     ],
+     [
+      "Hy - 14.9262",
+      "Hz - 7.6011"
+     ],
+     [
+      "Hy - 15.0781",
+      "Hz - 7.5478"
+     ],
+     [
+      "Hy - 15.2437",
+      "Hz - 7.4896"
+     ],
+     [
+      "Hy - 15.4356",
+      "Hz - 7.4204"
+     ],
+     [
+      "Hy - 15.6566",
+      "Hz - 7.3358"
+     ],
+     [
+      "Hy - 15.9061",
+      "Hz - 7.2316"
+     ],
+     [
+      "Hy - 16.1821",
+      "Hz - 7.1025"
+     ],
+     [
+      "Hy - 16.481",
+      "Hz - 6.9426"
+     ],
+     [
+      "Hy - 16.7965",
+      "Hz - 6.7467"
+     ],
+     [
+      "Hy - 17.1192",
+      "Hz - 6.511"
+     ],
+     [
+      "Hy - 17.4375",
+      "Hz - 6.235"
+     ],
+     [
+      "Hy - 17.7391",
+      "Hz - 5.9224"
+     ],
+     [
+      "Hy - 18.0129",
+      "Hz - 5.5813"
+     ],
+     [
+      "Hy - 18.2511",
+      "Hz - 5.2224"
+     ],
+     [
+      "Hy - 18.4506",
+      "Hz - 4.857"
+     ],
+     [
+      "Hy - 18.6122",
+      "Hz - 4.4955"
+     ],
+     [
+      "Hy - 18.7396",
+      "Hz - 4.1456"
+     ],
+     [
+      "Hy - 18.8378",
+      "Hz - 3.8126"
+     ],
+     [
+      "Hy - 18.9122",
+      "Hz - 3.4998"
+     ],
+     [
+      "Hy - 18.968",
+      "Hz - 3.2094"
+     ],
+     [
+      "Hy - 19.0097",
+      "Hz - 2.9426"
+     ],
+     [
+      "Hy - 19.0432",
+      "Hz - 2.6827"
+     ],
+     [
+      "Hy - 19.0709",
+      "Hz - 2.4033"
+     ],
+     [
+      "Hy - 19.0893",
+      "Hz - 2.1111"
+     ],
+     [
+      "Hy - 19.0977",
+      "Hz - 1.8221"
+     ],
+     [
+      "Hy - 19.0967",
+      "Hz - 1.5384"
+     ],
+     [
+      "Hy - 19.0877",
+      "Hz - 1.2618"
+     ],
+     [
+      "Hy - 19.072",
+      "Hz - 0.9937"
+     ],
+     [
+      "Hy - 19.051",
+      "Hz - 0.7351"
+     ],
+     [
+      "Hy - 19.0259",
+      "Hz - 0.4868"
+     ],
+     [
+      "Hy - 18.998",
+      "Hz - 0.2495"
+     ],
+     [
+      "Hy - 18.9685",
+      "Hz - 0.0236"
+     ],
+     [
+      "Hy - 18.9383",
+      "Hz + 0.1909"
+     ],
+     [
+      "Hy - 18.9082",
+      "Hz + 0.3942"
+     ],
+     [
+      "Hy - 18.8789",
+      "Hz + 0.5867"
+     ],
+     [
+      "Hy - 18.8506",
+      "Hz + 0.7696"
+     ],
+     [
+      "Hy - 18.8233",
+      "Hz + 0.945"
+     ],
+     [
+      "Hy - 18.5167",
+      "Hz + 1.8981"
+     ],
+     [
+      "Hy - 17.9307",
+      "Hz + 2.7098"
+     ],
+     [
+      "Hy - 17.1224",
+      "Hz + 3.3007"
+     ],
+     [
+      "Hy - 16.1712",
+      "Hz + 3.6128"
+     ],
+     [
+      "Hy - 15.17",
+      "Hz + 3.6158"
+     ],
+     [
+      "Hy - 14.2169",
+      "Hz + 3.3092"
+     ],
+     [
+      "Hy - 13.4052",
+      "Hz + 2.7231"
+     ],
+     [
+      "Hy - 12.8143",
+      "Hz + 1.9149"
+     ],
+     [
+      "Hy - 12.5021",
+      "Hz + 0.9636"
+     ],
+     [
+      "Hy - 12.4992",
+      "Hz - 0.0375"
+     ],
+     [
+      "Hy - 12.5261",
+      "Hz - 0.2111"
+     ],
+     [
+      "Hy - 12.5531",
+      "Hz - 0.3849"
+     ],
+     [
+      "Hy - 12.5792",
+      "Hz - 0.5563"
+     ],
+     [
+      "Hy - 12.6039",
+      "Hz - 0.7234"
+     ],
+     [
+      "Hy - 12.6266",
+      "Hz - 0.8846"
+     ],
+     [
+      "Hy - 12.6468",
+      "Hz - 1.0384"
+     ],
+     [
+      "Hy - 12.6639",
+      "Hz - 1.1834"
+     ],
+     [
+      "Hy - 12.6776",
+      "Hz - 1.3184"
+     ],
+     [
+      "Hy - 12.6878",
+      "Hz - 1.4424"
+     ],
+     [
+      "Hy - 12.6945",
+      "Hz - 1.5547"
+     ],
+     [
+      "Hy - 12.6978",
+      "Hz - 1.6547"
+     ],
+     [
+      "Hy - 12.6981",
+      "Hz - 1.7426"
+     ],
+     [
+      "Hy - 12.696",
+      "Hz - 1.8189"
+     ],
+     [
+      "Hy - 12.6919",
+      "Hz - 1.8849"
+     ],
+     [
+      "Hy - 12.6846",
+      "Hz - 1.9561"
+     ],
+     [
+      "Hy - 12.6734",
+      "Hz - 2.0419"
+     ],
+     [
+      "Hy - 12.6619",
+      "Hz - 2.117"
+     ],
+     [
+      "Hy - 12.6537",
+      "Hz - 2.1616"
+     ],
+     [
+      "Hy - 12.651",
+      "Hz - 2.1742"
+     ],
+     [
+      "Hy - 12.6573",
+      "Hz - 2.1541"
+     ],
+     [
+      "Hy - 12.6764",
+      "Hz - 2.1026"
+     ],
+     [
+      "Hy - 12.7123",
+      "Hz - 2.023"
+     ],
+     [
+      "Hy - 12.7679",
+      "Hz - 1.9217"
+     ],
+     [
+      "Hy - 12.8435",
+      "Hz - 1.8081"
+     ],
+     [
+      "Hy - 12.9358",
+      "Hz - 1.693"
+     ],
+     [
+      "Hy - 13.0375",
+      "Hz - 1.5874"
+     ],
+     [
+      "Hy - 13.1382",
+      "Hz - 1.4998"
+     ],
+     [
+      "Hy - 13.2262",
+      "Hz - 1.435"
+     ],
+     [
+      "Hy - 13.2913",
+      "Hz - 1.3942"
+     ],
+     [
+      "Hy - 13.3256",
+      "Hz - 1.3753"
+     ],
+     [
+      "Hy - 13.3245",
+      "Hz - 1.3754"
+     ],
+     [
+      "Hy - 13.2862",
+      "Hz - 1.391"
+     ],
+     [
+      "Hy - 13.2108",
+      "Hz - 1.4195"
+     ],
+     [
+      "Hy - 13.1",
+      "Hz - 1.4593"
+     ],
+     [
+      "Hy - 12.9584",
+      "Hz - 1.509"
+     ],
+     [
+      "Hy - 12.8007",
+      "Hz - 1.5643"
+     ],
+     [
+      "Hy - 12.6399",
+      "Hz - 1.6211"
+     ],
+     [
+      "Hy - 12.4783",
+      "Hz - 1.6785"
+     ],
+     [
+      "Hy - 12.3161",
+      "Hz - 1.7363"
+     ],
+     [
+      "Hy - 12.1532",
+      "Hz - 1.7946"
+     ],
+     [
+      "Hy - 11.9896",
+      "Hz - 1.8535"
+     ],
+     [
+      "Hy - 11.8252",
+      "Hz - 1.9128"
+     ],
+     [
+      "Hy - 11.6602",
+      "Hz - 1.9726"
+     ],
+     [
+      "Hy - 11.4944",
+      "Hz - 2.0328"
+     ],
+     [
+      "Hy - 11.3278",
+      "Hz - 2.0934"
+     ],
+     [
+      "Hy - 11.1605",
+      "Hz - 2.1545"
+     ],
+     [
+      "Hy - 10.9925",
+      "Hz - 2.216"
+     ],
+     [
+      "Hy - 10.8237",
+      "Hz - 2.2779"
+     ],
+     [
+      "Hy - 10.6542",
+      "Hz - 2.3402"
+     ],
+     [
+      "Hy - 10.4838",
+      "Hz - 2.4029"
+     ],
+     [
+      "Hy - 10.3127",
+      "Hz - 2.4659"
+     ],
+     [
+      "Hy - 10.1409",
+      "Hz - 2.5293"
+     ],
+     [
+      "Hy - 9.9682",
+      "Hz - 2.5931"
+     ],
+     [
+      "Hy - 9.7948",
+      "Hz - 2.6572"
+     ],
+     [
+      "Hy - 9.6206",
+      "Hz - 2.7216"
+     ],
+     [
+      "Hy - 9.4456",
+      "Hz - 2.7863"
+     ],
+     [
+      "Hy - 9.2699",
+      "Hz - 2.8513"
+     ],
+     [
+      "Hy - 9.0933",
+      "Hz - 2.9166"
+     ],
+     [
+      "Hy - 8.916",
+      "Hz - 2.9823"
+     ],
+     [
+      "Hy - 8.7379",
+      "Hz - 3.0482"
+     ],
+     [
+      "Hy - 8.559",
+      "Hz - 3.1143"
+     ],
+     [
+      "Hy - 8.3793",
+      "Hz - 3.1808"
+     ],
+     [
+      "Hy - 8.1989",
+      "Hz - 3.2474"
+     ],
+     [
+      "Hy - 8.0176",
+      "Hz - 3.3144"
+     ],
+     [
+      "Hy - 7.8343",
+      "Hz - 3.3821"
+     ],
+     [
+      "Hy - 7.6423",
+      "Hz - 3.4531"
+     ],
+     [
+      "Hy - 7.4366",
+      "Hz - 3.5304"
+     ],
+     [
+      "Hy - 7.2181",
+      "Hz - 3.6149"
+     ],
+     [
+      "Hy - 6.9895",
+      "Hz - 3.7072"
+     ],
+     [
+      "Hy - 6.7534",
+      "Hz - 3.8075"
+     ],
+     [
+      "Hy - 6.5124",
+      "Hz - 3.9159"
+     ],
+     [
+      "Hy - 6.2695",
+      "Hz - 4.0321"
+     ],
+     [
+      "Hy - 6.0274",
+      "Hz - 4.1556"
+     ],
+     [
+      "Hy - 5.7888",
+      "Hz - 4.2853"
+     ],
+     [
+      "Hy - 5.5563",
+      "Hz - 4.4197"
+     ],
+     [
+      "Hy - 5.3323",
+      "Hz - 4.557"
+     ],
+     [
+      "Hy - 5.1189",
+      "Hz - 4.6949"
+     ],
+     [
+      "Hy - 4.9175",
+      "Hz - 4.831"
+     ],
+     [
+      "Hy - 4.7296",
+      "Hz - 4.9631"
+     ],
+     [
+      "Hy - 4.5559",
+      "Hz - 5.0887"
+     ],
+     [
+      "Hy - 4.3967",
+      "Hz - 5.2061"
+     ],
+     [
+      "Hy - 4.2523",
+      "Hz - 5.3135"
+     ],
+     [
+      "Hy - 4.1222",
+      "Hz - 5.41"
+     ],
+     [
+      "Hy - 4.0059",
+      "Hz - 5.495"
+     ],
+     [
+      "Hy - 3.9014",
+      "Hz - 5.5695"
+     ],
+     [
+      "Hy - 3.8025",
+      "Hz - 5.6375"
+     ],
+     [
+      "Hy - 3.7035",
+      "Hz - 5.703"
+     ],
+     [
+      "Hy - 3.6035",
+      "Hz - 5.7667"
+     ],
+     [
+      "Hy - 3.5023",
+      "Hz - 5.8287"
+     ],
+     [
+      "Hy - 3.4",
+      "Hz - 5.889"
+     ],
+     [
+      "Hy - 3.2967",
+      "Hz - 5.9474"
+     ],
+     [
+      "Hy - 3.1924",
+      "Hz - 6.004"
+     ],
+     [
+      "Hy - 3.0871",
+      "Hz - 6.0588"
+     ],
+     [
+      "Hy - 2.9809",
+      "Hz - 6.1118"
+     ],
+     [
+      "Hy - 2.8738",
+      "Hz - 6.1629"
+     ],
+     [
+      "Hy - 2.7658",
+      "Hz - 6.2121"
+     ],
+     [
+      "Hy - 2.657",
+      "Hz - 6.2594"
+     ],
+     [
+      "Hy - 2.5473",
+      "Hz - 6.3049"
+     ],
+     [
+      "Hy - 2.4369",
+      "Hz - 6.3483"
+     ],
+     [
+      "Hy - 2.3257",
+      "Hz - 6.3899"
+     ],
+     [
+      "Hy - 2.2139",
+      "Hz - 6.4295"
+     ],
+     [
+      "Hy - 2.1013",
+      "Hz - 6.4672"
+     ],
+     [
+      "Hy - 1.9881",
+      "Hz - 6.5029"
+     ],
+     [
+      "Hy - 1.8743",
+      "Hz - 6.5366"
+     ],
+     [
+      "Hy - 1.76",
+      "Hz - 6.5683"
+     ],
+     [
+      "Hy - 1.6451",
+      "Hz - 6.598"
+     ],
+     [
+      "Hy - 1.5297",
+      "Hz - 6.6257"
+     ],
+     [
+      "Hy - 1.4138",
+      "Hz - 6.6514"
+     ],
+     [
+      "Hy - 1.2975",
+      "Hz - 6.6751"
+     ],
+     [
+      "Hy - 1.1533",
+      "Hz - 6.7017"
+     ],
+     [
+      "Hy - 0.2096",
+      "Hz - 7.0359"
+     ],
+     [
+      "Hy + 0.5847",
+      "Hz - 7.6453"
+     ],
+     [
+      "Hy + 1.1518",
+      "Hz - 8.4704"
+     ],
+     [
+      "Hy + 1.4361",
+      "Hz - 9.4304"
+     ],
+     [
+      "Hy + 1.4099",
+      "Hz - 10.4312"
+     ],
+     [
+      "Hy + 1.0757",
+      "Hz - 11.375"
+     ],
+     [
+      "Hy + 0.4663",
+      "Hz - 12.1693"
+     ],
+     [
+      "Hy - 0.3588",
+      "Hz - 12.7364"
+     ],
+     [
+      "Hy - 1.3188",
+      "Hz - 13.0207"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "LeverWebRSk",
+    "distance": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "operation": "new",
+    "name": "LeverWebR",
+    "body_name": "LeverR"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + 2*cam_clr + lay_t",
+    "name": "LeverArmRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy + 0.4125",
+      "Hz - 19.4756"
+     ],
+     [
+      "Hy - 59.1694",
+      "Hz - 26.5465"
+     ],
+     [
+      "Hy - 59.9944",
+      "Hz - 19.5952"
+     ],
+     [
+      "Hy - 0.4125",
+      "Hz - 12.5244"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "LeverArmRSk",
+    "distance": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "operation": "join",
+    "name": "LeverArmR",
+    "targets": [
+     "LeverR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "hub_r",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "axis": "X",
+    "base": [
+     "x_ko + 2*cam_clr + lay_t",
+     "Hy - 59.5819",
+     "Hz - 23.0709"
+    ],
+    "operation": "join",
+    "name": "LeverEBossR",
+    "targets": [
+     "LeverR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "hub_r",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "axis": "X",
+    "base": [
+     "x_ko + 2*cam_clr + lay_t",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "join",
+    "name": "LeverHubR",
+    "targets": [
+     "LeverR"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "x_ko + 2*cam_clr + lay_t - 0.5",
+    "name": "CamSlotRSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 2.0645",
+      "Hz - 11.6179"
+     ],
+     [
+      "Hy - 2.2515",
+      "Hz - 11.5832"
+     ],
+     [
+      "Hy - 2.4534",
+      "Hz - 11.5421"
+     ],
+     [
+      "Hy - 2.6544",
+      "Hz - 11.4976"
+     ],
+     [
+      "Hy - 2.8547",
+      "Hz - 11.4495"
+     ],
+     [
+      "Hy - 3.0541",
+      "Hz - 11.3979"
+     ],
+     [
+      "Hy - 3.2525",
+      "Hz - 11.3429"
+     ],
+     [
+      "Hy - 3.45",
+      "Hz - 11.2844"
+     ],
+     [
+      "Hy - 3.6464",
+      "Hz - 11.2225"
+     ],
+     [
+      "Hy - 3.8417",
+      "Hz - 11.1571"
+     ],
+     [
+      "Hy - 4.0358",
+      "Hz - 11.0884"
+     ],
+     [
+      "Hy - 4.2287",
+      "Hz - 11.0162"
+     ],
+     [
+      "Hy - 4.4204",
+      "Hz - 10.9408"
+     ],
+     [
+      "Hy - 4.6106",
+      "Hz - 10.862"
+     ],
+     [
+      "Hy - 4.7995",
+      "Hz - 10.7798"
+     ],
+     [
+      "Hy - 4.9869",
+      "Hz - 10.6944"
+     ],
+     [
+      "Hy - 5.1728",
+      "Hz - 10.6058"
+     ],
+     [
+      "Hy - 5.3571",
+      "Hz - 10.5139"
+     ],
+     [
+      "Hy - 5.5398",
+      "Hz - 10.4188"
+     ],
+     [
+      "Hy - 5.7208",
+      "Hz - 10.3205"
+     ],
+     [
+      "Hy - 5.9",
+      "Hz - 10.2191"
+     ],
+     [
+      "Hy - 6.0774",
+      "Hz - 10.1146"
+     ],
+     [
+      "Hy - 6.253",
+      "Hz - 10.007"
+     ],
+     [
+      "Hy - 6.4267",
+      "Hz - 9.8963"
+     ],
+     [
+      "Hy - 6.5985",
+      "Hz - 9.7826"
+     ],
+     [
+      "Hy - 6.7676",
+      "Hz - 9.6664"
+     ],
+     [
+      "Hy - 6.931",
+      "Hz - 9.5501"
+     ],
+     [
+      "Hy - 7.0862",
+      "Hz - 9.4367"
+     ],
+     [
+      "Hy - 7.2331",
+      "Hz - 9.3278"
+     ],
+     [
+      "Hy - 7.3725",
+      "Hz - 9.2241"
+     ],
+     [
+      "Hy - 7.5055",
+      "Hz - 9.126"
+     ],
+     [
+      "Hy - 7.633",
+      "Hz - 9.0337"
+     ],
+     [
+      "Hy - 7.7563",
+      "Hz - 8.947"
+     ],
+     [
+      "Hy - 7.8767",
+      "Hz - 8.8655"
+     ],
+     [
+      "Hy - 7.9955",
+      "Hz - 8.7887"
+     ],
+     [
+      "Hy - 8.1142",
+      "Hz - 8.7159"
+     ],
+     [
+      "Hy - 8.2343",
+      "Hz - 8.6465"
+     ],
+     [
+      "Hy - 8.3571",
+      "Hz - 8.5797"
+     ],
+     [
+      "Hy - 8.4842",
+      "Hz - 8.5149"
+     ],
+     [
+      "Hy - 8.6166",
+      "Hz - 8.4516"
+     ],
+     [
+      "Hy - 8.7554",
+      "Hz - 8.3892"
+     ],
+     [
+      "Hy - 8.9015",
+      "Hz - 8.3272"
+     ],
+     [
+      "Hy - 9.0555",
+      "Hz - 8.2651"
+     ],
+     [
+      "Hy - 9.2178",
+      "Hz - 8.2023"
+     ],
+     [
+      "Hy - 9.3886",
+      "Hz - 8.1382"
+     ],
+     [
+      "Hy - 9.5671",
+      "Hz - 8.0722"
+     ],
+     [
+      "Hy - 9.7495",
+      "Hz - 8.0049"
+     ],
+     [
+      "Hy - 9.9317",
+      "Hz - 7.9376"
+     ],
+     [
+      "Hy - 10.1129",
+      "Hz - 7.8706"
+     ],
+     [
+      "Hy - 10.2932",
+      "Hz - 7.8039"
+     ],
+     [
+      "Hy - 10.4726",
+      "Hz - 7.7376"
+     ],
+     [
+      "Hy - 10.651",
+      "Hz - 7.6716"
+     ],
+     [
+      "Hy - 10.8285",
+      "Hz - 7.6059"
+     ],
+     [
+      "Hy - 11.0049",
+      "Hz - 7.5406"
+     ],
+     [
+      "Hy - 11.1804",
+      "Hz - 7.4757"
+     ],
+     [
+      "Hy - 11.3548",
+      "Hz - 7.4112"
+     ],
+     [
+      "Hy - 11.5282",
+      "Hz - 7.3471"
+     ],
+     [
+      "Hy - 11.7006",
+      "Hz - 7.2834"
+     ],
+     [
+      "Hy - 11.872",
+      "Hz - 7.2201"
+     ],
+     [
+      "Hy - 12.0422",
+      "Hz - 7.1573"
+     ],
+     [
+      "Hy - 12.2115",
+      "Hz - 7.0949"
+     ],
+     [
+      "Hy - 12.3796",
+      "Hz - 7.0331"
+     ],
+     [
+      "Hy - 12.5466",
+      "Hz - 6.9717"
+     ],
+     [
+      "Hy - 12.7125",
+      "Hz - 6.9109"
+     ],
+     [
+      "Hy - 12.8773",
+      "Hz - 6.8506"
+     ],
+     [
+      "Hy - 13.041",
+      "Hz - 6.7908"
+     ],
+     [
+      "Hy - 13.2035",
+      "Hz - 6.7316"
+     ],
+     [
+      "Hy - 13.3649",
+      "Hz - 6.673"
+     ],
+     [
+      "Hy - 13.5251",
+      "Hz - 6.6149"
+     ],
+     [
+      "Hy - 13.6842",
+      "Hz - 6.5576"
+     ],
+     [
+      "Hy - 13.842",
+      "Hz - 6.5008"
+     ],
+     [
+      "Hy - 13.9987",
+      "Hz - 6.4447"
+     ],
+     [
+      "Hy - 14.1541",
+      "Hz - 6.3893"
+     ],
+     [
+      "Hy - 14.3083",
+      "Hz - 6.3345"
+     ],
+     [
+      "Hy - 14.4613",
+      "Hz - 6.2805"
+     ],
+     [
+      "Hy - 14.6144",
+      "Hz - 6.2268"
+     ],
+     [
+      "Hy - 14.7747",
+      "Hz - 6.1705"
+     ],
+     [
+      "Hy - 14.949",
+      "Hz - 6.1077"
+     ],
+     [
+      "Hy - 15.1381",
+      "Hz - 6.0354"
+     ],
+     [
+      "Hy - 15.3413",
+      "Hz - 5.9506"
+     ],
+     [
+      "Hy - 15.5573",
+      "Hz - 5.8497"
+     ],
+     [
+      "Hy - 15.7833",
+      "Hz - 5.7289"
+     ],
+     [
+      "Hy - 16.0155",
+      "Hz - 5.5848"
+     ],
+     [
+      "Hy - 16.2483",
+      "Hz - 5.4148"
+     ],
+     [
+      "Hy - 16.475",
+      "Hz - 5.2183"
+     ],
+     [
+      "Hy - 16.6884",
+      "Hz - 4.9972"
+     ],
+     [
+      "Hy - 16.8821",
+      "Hz - 4.7559"
+     ],
+     [
+      "Hy - 17.0516",
+      "Hz - 4.5003"
+     ],
+     [
+      "Hy - 17.1954",
+      "Hz - 4.2371"
+     ],
+     [
+      "Hy - 17.3138",
+      "Hz - 3.9721"
+     ],
+     [
+      "Hy - 17.4091",
+      "Hz - 3.7099"
+     ],
+     [
+      "Hy - 17.4844",
+      "Hz - 3.4542"
+     ],
+     [
+      "Hy - 17.5432",
+      "Hz - 3.2071"
+     ],
+     [
+      "Hy - 17.5886",
+      "Hz - 2.9704"
+     ],
+     [
+      "Hy - 17.6237",
+      "Hz - 2.7456"
+     ],
+     [
+      "Hy - 17.6522",
+      "Hz - 2.5237"
+     ],
+     [
+      "Hy - 17.6755",
+      "Hz - 2.2899"
+     ],
+     [
+      "Hy - 17.6908",
+      "Hz - 2.0472"
+     ],
+     [
+      "Hy - 17.6978",
+      "Hz - 1.8047"
+     ],
+     [
+      "Hy - 17.697",
+      "Hz - 1.5639"
+     ],
+     [
+      "Hy - 17.6892",
+      "Hz - 1.3259"
+     ],
+     [
+      "Hy - 17.6755",
+      "Hz - 1.0918"
+     ],
+     [
+      "Hy - 17.6568",
+      "Hz - 0.8627"
+     ],
+     [
+      "Hy - 17.6342",
+      "Hz - 0.6392"
+     ],
+     [
+      "Hy - 17.6087",
+      "Hz - 0.4221"
+     ],
+     [
+      "Hy - 17.5812",
+      "Hz - 0.2119"
+     ],
+     [
+      "Hy - 17.5526",
+      "Hz - 0.0091"
+     ],
+     [
+      "Hy - 17.5237",
+      "Hz + 0.1863"
+     ],
+     [
+      "Hy - 17.4951",
+      "Hz + 0.3742"
+     ],
+     [
+      "Hy - 17.4671",
+      "Hz + 0.5551"
+     ],
+     [
+      "Hy - 17.4399",
+      "Hz + 0.7301"
+     ],
+     [
+      "Hy - 17.2675",
+      "Hz + 1.2662"
+     ],
+     [
+      "Hy - 16.9378",
+      "Hz + 1.7228"
+     ],
+     [
+      "Hy - 16.4832",
+      "Hz + 2.0551"
+     ],
+     [
+      "Hy - 15.9481",
+      "Hz + 2.2307"
+     ],
+     [
+      "Hy - 15.3849",
+      "Hz + 2.2324"
+     ],
+     [
+      "Hy - 14.8488",
+      "Hz + 2.0599"
+     ],
+     [
+      "Hy - 14.3922",
+      "Hz + 1.7303"
+     ],
+     [
+      "Hy - 14.0599",
+      "Hz + 1.2756"
+     ],
+     [
+      "Hy - 13.8843",
+      "Hz + 0.7405"
+     ],
+     [
+      "Hy - 13.8826",
+      "Hz + 0.1774"
+     ],
+     [
+      "Hy - 13.9096",
+      "Hz + 0.0035"
+     ],
+     [
+      "Hy - 13.9368",
+      "Hz - 0.1724"
+     ],
+     [
+      "Hy - 13.9637",
+      "Hz - 0.3484"
+     ],
+     [
+      "Hy - 13.9896",
+      "Hz - 0.5234"
+     ],
+     [
+      "Hy - 14.0139",
+      "Hz - 0.6962"
+     ],
+     [
+      "Hy - 14.0361",
+      "Hz - 0.8658"
+     ],
+     [
+      "Hy - 14.0556",
+      "Hz - 1.031"
+     ],
+     [
+      "Hy - 14.0718",
+      "Hz - 1.1908"
+     ],
+     [
+      "Hy - 14.0843",
+      "Hz - 1.3443"
+     ],
+     [
+      "Hy - 14.093",
+      "Hz - 1.4906"
+     ],
+     [
+      "Hy - 14.0976",
+      "Hz - 1.6293"
+     ],
+     [
+      "Hy - 14.098",
+      "Hz - 1.76"
+     ],
+     [
+      "Hy - 14.0946",
+      "Hz - 1.8828"
+     ],
+     [
+      "Hy - 14.0873",
+      "Hz - 1.9983"
+     ],
+     [
+      "Hy - 14.0755",
+      "Hz - 2.115"
+     ],
+     [
+      "Hy - 14.0595",
+      "Hz - 2.2389"
+     ],
+     [
+      "Hy - 14.0414",
+      "Hz - 2.356"
+     ],
+     [
+      "Hy - 14.0227",
+      "Hz - 2.4543"
+     ],
+     [
+      "Hy - 14.0044",
+      "Hz - 2.5326"
+     ],
+     [
+      "Hy - 13.9878",
+      "Hz - 2.5898"
+     ],
+     [
+      "Hy - 13.9749",
+      "Hz - 2.626"
+     ],
+     [
+      "Hy - 13.9676",
+      "Hz - 2.6429"
+     ],
+     [
+      "Hy - 13.9673",
+      "Hz - 2.6437"
+     ],
+     [
+      "Hy - 13.9743",
+      "Hz - 2.6335"
+     ],
+     [
+      "Hy - 13.9865",
+      "Hz - 2.6182"
+     ],
+     [
+      "Hy - 14",
+      "Hz - 2.604"
+     ],
+     [
+      "Hy - 14.009",
+      "Hz - 2.596"
+     ],
+     [
+      "Hy - 14.0072",
+      "Hz - 2.597"
+     ],
+     [
+      "Hy - 13.989",
+      "Hz - 2.6079"
+     ],
+     [
+      "Hy - 13.9505",
+      "Hz - 2.6281"
+     ],
+     [
+      "Hy - 13.8892",
+      "Hz - 2.6564"
+     ],
+     [
+      "Hy - 13.8047",
+      "Hz - 2.6914"
+     ],
+     [
+      "Hy - 13.6975",
+      "Hz - 2.7322"
+     ],
+     [
+      "Hy - 13.5689",
+      "Hz - 2.7785"
+     ],
+     [
+      "Hy - 13.4221",
+      "Hz - 2.8299"
+     ],
+     [
+      "Hy - 13.2657",
+      "Hz - 2.8849"
+     ],
+     [
+      "Hy - 13.107",
+      "Hz - 2.9409"
+     ],
+     [
+      "Hy - 12.9475",
+      "Hz - 2.9975"
+     ],
+     [
+      "Hy - 12.7872",
+      "Hz - 3.0546"
+     ],
+     [
+      "Hy - 12.6261",
+      "Hz - 3.1124"
+     ],
+     [
+      "Hy - 12.4641",
+      "Hz - 3.1706"
+     ],
+     [
+      "Hy - 12.3012",
+      "Hz - 3.2294"
+     ],
+     [
+      "Hy - 12.1375",
+      "Hz - 3.2887"
+     ],
+     [
+      "Hy - 11.9729",
+      "Hz - 3.3484"
+     ],
+     [
+      "Hy - 11.8075",
+      "Hz - 3.4087"
+     ],
+     [
+      "Hy - 11.6412",
+      "Hz - 3.4694"
+     ],
+     [
+      "Hy - 11.4741",
+      "Hz - 3.5306"
+     ],
+     [
+      "Hy - 11.3061",
+      "Hz - 3.5922"
+     ],
+     [
+      "Hy - 11.1373",
+      "Hz - 3.6542"
+     ],
+     [
+      "Hy - 10.9676",
+      "Hz - 3.7167"
+     ],
+     [
+      "Hy - 10.797",
+      "Hz - 3.7795"
+     ],
+     [
+      "Hy - 10.6256",
+      "Hz - 3.8428"
+     ],
+     [
+      "Hy - 10.4533",
+      "Hz - 3.9064"
+     ],
+     [
+      "Hy - 10.2802",
+      "Hz - 3.9703"
+     ],
+     [
+      "Hy - 10.1062",
+      "Hz - 4.0347"
+     ],
+     [
+      "Hy - 9.9314",
+      "Hz - 4.0993"
+     ],
+     [
+      "Hy - 9.7557",
+      "Hz - 4.1643"
+     ],
+     [
+      "Hy - 9.5792",
+      "Hz - 4.2296"
+     ],
+     [
+      "Hy - 9.4018",
+      "Hz - 4.2953"
+     ],
+     [
+      "Hy - 9.2236",
+      "Hz - 4.3612"
+     ],
+     [
+      "Hy - 9.0446",
+      "Hz - 4.4274"
+     ],
+     [
+      "Hy - 8.8647",
+      "Hz - 4.4939"
+     ],
+     [
+      "Hy - 8.684",
+      "Hz - 4.5607"
+     ],
+     [
+      "Hy - 8.5026",
+      "Hz - 4.6277"
+     ],
+     [
+      "Hy - 8.3195",
+      "Hz - 4.6953"
+     ],
+     [
+      "Hy - 8.1313",
+      "Hz - 4.7649"
+     ],
+     [
+      "Hy - 7.9353",
+      "Hz - 4.8385"
+     ],
+     [
+      "Hy - 7.7326",
+      "Hz - 4.917"
+     ],
+     [
+      "Hy - 7.5249",
+      "Hz - 5.0008"
+     ],
+     [
+      "Hy - 7.3139",
+      "Hz - 5.0904"
+     ],
+     [
+      "Hy - 7.1016",
+      "Hz - 5.1859"
+     ],
+     [
+      "Hy - 6.8896",
+      "Hz - 5.2873"
+     ],
+     [
+      "Hy - 6.6797",
+      "Hz - 5.3944"
+     ],
+     [
+      "Hy - 6.4735",
+      "Hz - 5.5065"
+     ],
+     [
+      "Hy - 6.2725",
+      "Hz - 5.6227"
+     ],
+     [
+      "Hy - 6.078",
+      "Hz - 5.7419"
+     ],
+     [
+      "Hy - 5.891",
+      "Hz - 5.8626"
+     ],
+     [
+      "Hy - 5.7124",
+      "Hz - 5.9835"
+     ],
+     [
+      "Hy - 5.5426",
+      "Hz - 6.1028"
+     ],
+     [
+      "Hy - 5.3818",
+      "Hz - 6.2192"
+     ],
+     [
+      "Hy - 5.23",
+      "Hz - 6.3311"
+     ],
+     [
+      "Hy - 5.0869",
+      "Hz - 6.4375"
+     ],
+     [
+      "Hy - 4.9521",
+      "Hz - 6.5375"
+     ],
+     [
+      "Hy - 4.8249",
+      "Hz - 6.6304"
+     ],
+     [
+      "Hy - 4.7039",
+      "Hz - 6.7166"
+     ],
+     [
+      "Hy - 4.5854",
+      "Hz - 6.7981"
+     ],
+     [
+      "Hy - 4.466",
+      "Hz - 6.8771"
+     ],
+     [
+      "Hy - 4.3453",
+      "Hz - 6.954"
+     ],
+     [
+      "Hy - 4.2233",
+      "Hz - 7.0288"
+     ],
+     [
+      "Hy - 4.1",
+      "Hz - 7.1014"
+     ],
+     [
+      "Hy - 3.9754",
+      "Hz - 7.1719"
+     ],
+     [
+      "Hy - 3.8497",
+      "Hz - 7.2402"
+     ],
+     [
+      "Hy - 3.7227",
+      "Hz - 7.3063"
+     ],
+     [
+      "Hy - 3.5946",
+      "Hz - 7.3701"
+     ],
+     [
+      "Hy - 3.4655",
+      "Hz - 7.4317"
+     ],
+     [
+      "Hy - 3.3352",
+      "Hz - 7.4911"
+     ],
+     [
+      "Hy - 3.204",
+      "Hz - 7.5481"
+     ],
+     [
+      "Hy - 3.0718",
+      "Hz - 7.6029"
+     ],
+     [
+      "Hy - 2.9386",
+      "Hz - 7.6554"
+     ],
+     [
+      "Hy - 2.8046",
+      "Hz - 7.7055"
+     ],
+     [
+      "Hy - 2.6697",
+      "Hz - 7.7533"
+     ],
+     [
+      "Hy - 2.5339",
+      "Hz - 7.7987"
+     ],
+     [
+      "Hy - 2.3974",
+      "Hz - 7.8417"
+     ],
+     [
+      "Hy - 2.2602",
+      "Hz - 7.8823"
+     ],
+     [
+      "Hy - 2.1223",
+      "Hz - 7.9206"
+     ],
+     [
+      "Hy - 1.9838",
+      "Hz - 7.9564"
+     ],
+     [
+      "Hy - 1.8446",
+      "Hz - 7.9898"
+     ],
+     [
+      "Hy - 1.7049",
+      "Hz - 8.0208"
+     ],
+     [
+      "Hy - 1.5646",
+      "Hz - 8.0493"
+     ],
+     [
+      "Hy - 1.4085",
+      "Hz - 8.0782"
+     ],
+     [
+      "Hy - 0.8776",
+      "Hz - 8.2662"
+     ],
+     [
+      "Hy - 0.4308",
+      "Hz - 8.609"
+     ],
+     [
+      "Hy - 0.1118",
+      "Hz - 9.0732"
+     ],
+     [
+      "Hy + 0.0481",
+      "Hz - 9.6131"
+     ],
+     [
+      "Hy + 0.0334",
+      "Hz - 10.1761"
+     ],
+     [
+      "Hy - 0.1546",
+      "Hz - 10.707"
+     ],
+     [
+      "Hy - 0.4974",
+      "Hz - 11.1538"
+     ],
+     [
+      "Hy - 0.9616",
+      "Hz - 11.4727"
+     ],
+     [
+      "Hy - 1.5015",
+      "Hz - 11.6327"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CamSlotRSk",
+    "distance": "(x_ko + 2*cam_clr + 2*lay_t + 0.5) - (x_ko + 2*cam_clr + lay_t - 0.5)",
+    "operation": "cut",
+    "name": "CamSlotR",
+    "targets": [
+     "LeverR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2 + hinge_clr",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t + 0.5) - (x_ko + 2*cam_clr + lay_t - 0.5)",
+    "axis": "X",
+    "base": [
+     "x_ko + 2*cam_clr + lay_t - 0.5",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "cut",
+    "name": "LeverPivotHoleR",
+    "targets": [
+     "LeverR"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t + 0.5) - (x_ko + 2*cam_clr + lay_t - 0.5)",
+    "axis": "X",
+    "base": [
+     "x_ko + 2*cam_clr + lay_t - 0.5",
+     "Hy - 59.5819",
+     "Hz - 23.0709"
+    ],
+    "operation": "cut",
+    "name": "LeverEHoleR",
+    "targets": [
+     "LeverR"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + 2*cam_clr + 2*lay_t)",
+    "name": "LeverWebLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 2.3196",
+      "Hz - 12.9945"
+     ],
+     [
+      "Hy - 2.5187",
+      "Hz - 12.9575"
+     ],
+     [
+      "Hy - 2.7444",
+      "Hz - 12.9115"
+     ],
+     [
+      "Hy - 2.9694",
+      "Hz - 12.8617"
+     ],
+     [
+      "Hy - 3.1934",
+      "Hz - 12.8079"
+     ],
+     [
+      "Hy - 3.4164",
+      "Hz - 12.7502"
+     ],
+     [
+      "Hy - 3.6384",
+      "Hz - 12.6887"
+     ],
+     [
+      "Hy - 3.8593",
+      "Hz - 12.6232"
+     ],
+     [
+      "Hy - 4.079",
+      "Hz - 12.5539"
+     ],
+     [
+      "Hy - 4.2975",
+      "Hz - 12.4808"
+     ],
+     [
+      "Hy - 4.5147",
+      "Hz - 12.4039"
+     ],
+     [
+      "Hy - 4.7305",
+      "Hz - 12.3233"
+     ],
+     [
+      "Hy - 4.9448",
+      "Hz - 12.2388"
+     ],
+     [
+      "Hy - 5.1577",
+      "Hz - 12.1507"
+     ],
+     [
+      "Hy - 5.3689",
+      "Hz - 12.0588"
+     ],
+     [
+      "Hy - 5.5786",
+      "Hz - 11.9633"
+     ],
+     [
+      "Hy - 5.7865",
+      "Hz - 11.8641"
+     ],
+     [
+      "Hy - 5.9927",
+      "Hz - 11.7613"
+     ],
+     [
+      "Hy - 6.197",
+      "Hz - 11.6549"
+     ],
+     [
+      "Hy - 6.3995",
+      "Hz - 11.545"
+     ],
+     [
+      "Hy - 6.6",
+      "Hz - 11.4315"
+     ],
+     [
+      "Hy - 6.7985",
+      "Hz - 11.3146"
+     ],
+     [
+      "Hy - 6.9949",
+      "Hz - 11.1942"
+     ],
+     [
+      "Hy - 7.1892",
+      "Hz - 11.0705"
+     ],
+     [
+      "Hy - 7.3813",
+      "Hz - 10.9433"
+     ],
+     [
+      "Hy - 7.5701",
+      "Hz - 10.8136"
+     ],
+     [
+      "Hy - 7.7501",
+      "Hz - 10.6855"
+     ],
+     [
+      "Hy - 7.9161",
+      "Hz - 10.5642"
+     ],
+     [
+      "Hy - 8.0677",
+      "Hz - 10.4518"
+     ],
+     [
+      "Hy - 8.2058",
+      "Hz - 10.3492"
+     ],
+     [
+      "Hy - 8.3314",
+      "Hz - 10.2565"
+     ],
+     [
+      "Hy - 8.446",
+      "Hz - 10.1735"
+     ],
+     [
+      "Hy - 8.5512",
+      "Hz - 10.0995"
+     ],
+     [
+      "Hy - 8.6489",
+      "Hz - 10.0333"
+     ],
+     [
+      "Hy - 8.7412",
+      "Hz - 9.9736"
+     ],
+     [
+      "Hy - 8.8304",
+      "Hz - 9.9189"
+     ],
+     [
+      "Hy - 8.919",
+      "Hz - 9.8676"
+     ],
+     [
+      "Hy - 9.0095",
+      "Hz - 9.8184"
+     ],
+     [
+      "Hy - 9.1043",
+      "Hz - 9.7701"
+     ],
+     [
+      "Hy - 9.2057",
+      "Hz - 9.7216"
+     ],
+     [
+      "Hy - 9.316",
+      "Hz - 9.672"
+     ],
+     [
+      "Hy - 9.4369",
+      "Hz - 9.6208"
+     ],
+     [
+      "Hy - 9.5699",
+      "Hz - 9.5672"
+     ],
+     [
+      "Hy - 9.7165",
+      "Hz - 9.5105"
+     ],
+     [
+      "Hy - 9.8775",
+      "Hz - 9.4501"
+     ],
+     [
+      "Hy - 10.0523",
+      "Hz - 9.3854"
+     ],
+     [
+      "Hy - 10.2344",
+      "Hz - 9.3182"
+     ],
+     [
+      "Hy - 10.4168",
+      "Hz - 9.2508"
+     ],
+     [
+      "Hy - 10.5983",
+      "Hz - 9.1838"
+     ],
+     [
+      "Hy - 10.7788",
+      "Hz - 9.117"
+     ],
+     [
+      "Hy - 10.9583",
+      "Hz - 9.0506"
+     ],
+     [
+      "Hy - 11.1368",
+      "Hz - 8.9846"
+     ],
+     [
+      "Hy - 11.3143",
+      "Hz - 8.9189"
+     ],
+     [
+      "Hy - 11.4907",
+      "Hz - 8.8536"
+     ],
+     [
+      "Hy - 11.6661",
+      "Hz - 8.7887"
+     ],
+     [
+      "Hy - 11.8404",
+      "Hz - 8.7243"
+     ],
+     [
+      "Hy - 12.0136",
+      "Hz - 8.6602"
+     ],
+     [
+      "Hy - 12.1857",
+      "Hz - 8.5966"
+     ],
+     [
+      "Hy - 12.3567",
+      "Hz - 8.5335"
+     ],
+     [
+      "Hy - 12.5265",
+      "Hz - 8.4709"
+     ],
+     [
+      "Hy - 12.6952",
+      "Hz - 8.4087"
+     ],
+     [
+      "Hy - 12.8627",
+      "Hz - 8.3471"
+     ],
+     [
+      "Hy - 13.029",
+      "Hz - 8.286"
+     ],
+     [
+      "Hy - 13.1941",
+      "Hz - 8.2254"
+     ],
+     [
+      "Hy - 13.358",
+      "Hz - 8.1654"
+     ],
+     [
+      "Hy - 13.5207",
+      "Hz - 8.106"
+     ],
+     [
+      "Hy - 13.6821",
+      "Hz - 8.0473"
+     ],
+     [
+      "Hy - 13.8423",
+      "Hz - 7.9891"
+     ],
+     [
+      "Hy - 14.0011",
+      "Hz - 7.9316"
+     ],
+     [
+      "Hy - 14.1587",
+      "Hz - 7.8747"
+     ],
+     [
+      "Hy - 14.3149",
+      "Hz - 7.8185"
+     ],
+     [
+      "Hy - 14.4698",
+      "Hz - 7.763"
+     ],
+     [
+      "Hy - 14.6233",
+      "Hz - 7.7083"
+     ],
+     [
+      "Hy - 14.7755",
+      "Hz - 7.6543"
+     ],
+     [
+      "Hy - 14.9262",
+      "Hz - 7.6011"
+     ],
+     [
+      "Hy - 15.0781",
+      "Hz - 7.5478"
+     ],
+     [
+      "Hy - 15.2437",
+      "Hz - 7.4896"
+     ],
+     [
+      "Hy - 15.4356",
+      "Hz - 7.4204"
+     ],
+     [
+      "Hy - 15.6566",
+      "Hz - 7.3358"
+     ],
+     [
+      "Hy - 15.9061",
+      "Hz - 7.2316"
+     ],
+     [
+      "Hy - 16.1821",
+      "Hz - 7.1025"
+     ],
+     [
+      "Hy - 16.481",
+      "Hz - 6.9426"
+     ],
+     [
+      "Hy - 16.7965",
+      "Hz - 6.7467"
+     ],
+     [
+      "Hy - 17.1192",
+      "Hz - 6.511"
+     ],
+     [
+      "Hy - 17.4375",
+      "Hz - 6.235"
+     ],
+     [
+      "Hy - 17.7391",
+      "Hz - 5.9224"
+     ],
+     [
+      "Hy - 18.0129",
+      "Hz - 5.5813"
+     ],
+     [
+      "Hy - 18.2511",
+      "Hz - 5.2224"
+     ],
+     [
+      "Hy - 18.4506",
+      "Hz - 4.857"
+     ],
+     [
+      "Hy - 18.6122",
+      "Hz - 4.4955"
+     ],
+     [
+      "Hy - 18.7396",
+      "Hz - 4.1456"
+     ],
+     [
+      "Hy - 18.8378",
+      "Hz - 3.8126"
+     ],
+     [
+      "Hy - 18.9122",
+      "Hz - 3.4998"
+     ],
+     [
+      "Hy - 18.968",
+      "Hz - 3.2094"
+     ],
+     [
+      "Hy - 19.0097",
+      "Hz - 2.9426"
+     ],
+     [
+      "Hy - 19.0432",
+      "Hz - 2.6827"
+     ],
+     [
+      "Hy - 19.0709",
+      "Hz - 2.4033"
+     ],
+     [
+      "Hy - 19.0893",
+      "Hz - 2.1111"
+     ],
+     [
+      "Hy - 19.0977",
+      "Hz - 1.8221"
+     ],
+     [
+      "Hy - 19.0967",
+      "Hz - 1.5384"
+     ],
+     [
+      "Hy - 19.0877",
+      "Hz - 1.2618"
+     ],
+     [
+      "Hy - 19.072",
+      "Hz - 0.9937"
+     ],
+     [
+      "Hy - 19.051",
+      "Hz - 0.7351"
+     ],
+     [
+      "Hy - 19.0259",
+      "Hz - 0.4868"
+     ],
+     [
+      "Hy - 18.998",
+      "Hz - 0.2495"
+     ],
+     [
+      "Hy - 18.9685",
+      "Hz - 0.0236"
+     ],
+     [
+      "Hy - 18.9383",
+      "Hz + 0.1909"
+     ],
+     [
+      "Hy - 18.9082",
+      "Hz + 0.3942"
+     ],
+     [
+      "Hy - 18.8789",
+      "Hz + 0.5867"
+     ],
+     [
+      "Hy - 18.8506",
+      "Hz + 0.7696"
+     ],
+     [
+      "Hy - 18.8233",
+      "Hz + 0.945"
+     ],
+     [
+      "Hy - 18.5167",
+      "Hz + 1.8981"
+     ],
+     [
+      "Hy - 17.9307",
+      "Hz + 2.7098"
+     ],
+     [
+      "Hy - 17.1224",
+      "Hz + 3.3007"
+     ],
+     [
+      "Hy - 16.1712",
+      "Hz + 3.6128"
+     ],
+     [
+      "Hy - 15.17",
+      "Hz + 3.6158"
+     ],
+     [
+      "Hy - 14.2169",
+      "Hz + 3.3092"
+     ],
+     [
+      "Hy - 13.4052",
+      "Hz + 2.7231"
+     ],
+     [
+      "Hy - 12.8143",
+      "Hz + 1.9149"
+     ],
+     [
+      "Hy - 12.5021",
+      "Hz + 0.9636"
+     ],
+     [
+      "Hy - 12.4992",
+      "Hz - 0.0375"
+     ],
+     [
+      "Hy - 12.5261",
+      "Hz - 0.2111"
+     ],
+     [
+      "Hy - 12.5531",
+      "Hz - 0.3849"
+     ],
+     [
+      "Hy - 12.5792",
+      "Hz - 0.5563"
+     ],
+     [
+      "Hy - 12.6039",
+      "Hz - 0.7234"
+     ],
+     [
+      "Hy - 12.6266",
+      "Hz - 0.8846"
+     ],
+     [
+      "Hy - 12.6468",
+      "Hz - 1.0384"
+     ],
+     [
+      "Hy - 12.6639",
+      "Hz - 1.1834"
+     ],
+     [
+      "Hy - 12.6776",
+      "Hz - 1.3184"
+     ],
+     [
+      "Hy - 12.6878",
+      "Hz - 1.4424"
+     ],
+     [
+      "Hy - 12.6945",
+      "Hz - 1.5547"
+     ],
+     [
+      "Hy - 12.6978",
+      "Hz - 1.6547"
+     ],
+     [
+      "Hy - 12.6981",
+      "Hz - 1.7426"
+     ],
+     [
+      "Hy - 12.696",
+      "Hz - 1.8189"
+     ],
+     [
+      "Hy - 12.6919",
+      "Hz - 1.8849"
+     ],
+     [
+      "Hy - 12.6846",
+      "Hz - 1.9561"
+     ],
+     [
+      "Hy - 12.6734",
+      "Hz - 2.0419"
+     ],
+     [
+      "Hy - 12.6619",
+      "Hz - 2.117"
+     ],
+     [
+      "Hy - 12.6537",
+      "Hz - 2.1616"
+     ],
+     [
+      "Hy - 12.651",
+      "Hz - 2.1742"
+     ],
+     [
+      "Hy - 12.6573",
+      "Hz - 2.1541"
+     ],
+     [
+      "Hy - 12.6764",
+      "Hz - 2.1026"
+     ],
+     [
+      "Hy - 12.7123",
+      "Hz - 2.023"
+     ],
+     [
+      "Hy - 12.7679",
+      "Hz - 1.9217"
+     ],
+     [
+      "Hy - 12.8435",
+      "Hz - 1.8081"
+     ],
+     [
+      "Hy - 12.9358",
+      "Hz - 1.693"
+     ],
+     [
+      "Hy - 13.0375",
+      "Hz - 1.5874"
+     ],
+     [
+      "Hy - 13.1382",
+      "Hz - 1.4998"
+     ],
+     [
+      "Hy - 13.2262",
+      "Hz - 1.435"
+     ],
+     [
+      "Hy - 13.2913",
+      "Hz - 1.3942"
+     ],
+     [
+      "Hy - 13.3256",
+      "Hz - 1.3753"
+     ],
+     [
+      "Hy - 13.3245",
+      "Hz - 1.3754"
+     ],
+     [
+      "Hy - 13.2862",
+      "Hz - 1.391"
+     ],
+     [
+      "Hy - 13.2108",
+      "Hz - 1.4195"
+     ],
+     [
+      "Hy - 13.1",
+      "Hz - 1.4593"
+     ],
+     [
+      "Hy - 12.9584",
+      "Hz - 1.509"
+     ],
+     [
+      "Hy - 12.8007",
+      "Hz - 1.5643"
+     ],
+     [
+      "Hy - 12.6399",
+      "Hz - 1.6211"
+     ],
+     [
+      "Hy - 12.4783",
+      "Hz - 1.6785"
+     ],
+     [
+      "Hy - 12.3161",
+      "Hz - 1.7363"
+     ],
+     [
+      "Hy - 12.1532",
+      "Hz - 1.7946"
+     ],
+     [
+      "Hy - 11.9896",
+      "Hz - 1.8535"
+     ],
+     [
+      "Hy - 11.8252",
+      "Hz - 1.9128"
+     ],
+     [
+      "Hy - 11.6602",
+      "Hz - 1.9726"
+     ],
+     [
+      "Hy - 11.4944",
+      "Hz - 2.0328"
+     ],
+     [
+      "Hy - 11.3278",
+      "Hz - 2.0934"
+     ],
+     [
+      "Hy - 11.1605",
+      "Hz - 2.1545"
+     ],
+     [
+      "Hy - 10.9925",
+      "Hz - 2.216"
+     ],
+     [
+      "Hy - 10.8237",
+      "Hz - 2.2779"
+     ],
+     [
+      "Hy - 10.6542",
+      "Hz - 2.3402"
+     ],
+     [
+      "Hy - 10.4838",
+      "Hz - 2.4029"
+     ],
+     [
+      "Hy - 10.3127",
+      "Hz - 2.4659"
+     ],
+     [
+      "Hy - 10.1409",
+      "Hz - 2.5293"
+     ],
+     [
+      "Hy - 9.9682",
+      "Hz - 2.5931"
+     ],
+     [
+      "Hy - 9.7948",
+      "Hz - 2.6572"
+     ],
+     [
+      "Hy - 9.6206",
+      "Hz - 2.7216"
+     ],
+     [
+      "Hy - 9.4456",
+      "Hz - 2.7863"
+     ],
+     [
+      "Hy - 9.2699",
+      "Hz - 2.8513"
+     ],
+     [
+      "Hy - 9.0933",
+      "Hz - 2.9166"
+     ],
+     [
+      "Hy - 8.916",
+      "Hz - 2.9823"
+     ],
+     [
+      "Hy - 8.7379",
+      "Hz - 3.0482"
+     ],
+     [
+      "Hy - 8.559",
+      "Hz - 3.1143"
+     ],
+     [
+      "Hy - 8.3793",
+      "Hz - 3.1808"
+     ],
+     [
+      "Hy - 8.1989",
+      "Hz - 3.2474"
+     ],
+     [
+      "Hy - 8.0176",
+      "Hz - 3.3144"
+     ],
+     [
+      "Hy - 7.8343",
+      "Hz - 3.3821"
+     ],
+     [
+      "Hy - 7.6423",
+      "Hz - 3.4531"
+     ],
+     [
+      "Hy - 7.4366",
+      "Hz - 3.5304"
+     ],
+     [
+      "Hy - 7.2181",
+      "Hz - 3.6149"
+     ],
+     [
+      "Hy - 6.9895",
+      "Hz - 3.7072"
+     ],
+     [
+      "Hy - 6.7534",
+      "Hz - 3.8075"
+     ],
+     [
+      "Hy - 6.5124",
+      "Hz - 3.9159"
+     ],
+     [
+      "Hy - 6.2695",
+      "Hz - 4.0321"
+     ],
+     [
+      "Hy - 6.0274",
+      "Hz - 4.1556"
+     ],
+     [
+      "Hy - 5.7888",
+      "Hz - 4.2853"
+     ],
+     [
+      "Hy - 5.5563",
+      "Hz - 4.4197"
+     ],
+     [
+      "Hy - 5.3323",
+      "Hz - 4.557"
+     ],
+     [
+      "Hy - 5.1189",
+      "Hz - 4.6949"
+     ],
+     [
+      "Hy - 4.9175",
+      "Hz - 4.831"
+     ],
+     [
+      "Hy - 4.7296",
+      "Hz - 4.9631"
+     ],
+     [
+      "Hy - 4.5559",
+      "Hz - 5.0887"
+     ],
+     [
+      "Hy - 4.3967",
+      "Hz - 5.2061"
+     ],
+     [
+      "Hy - 4.2523",
+      "Hz - 5.3135"
+     ],
+     [
+      "Hy - 4.1222",
+      "Hz - 5.41"
+     ],
+     [
+      "Hy - 4.0059",
+      "Hz - 5.495"
+     ],
+     [
+      "Hy - 3.9014",
+      "Hz - 5.5695"
+     ],
+     [
+      "Hy - 3.8025",
+      "Hz - 5.6375"
+     ],
+     [
+      "Hy - 3.7035",
+      "Hz - 5.703"
+     ],
+     [
+      "Hy - 3.6035",
+      "Hz - 5.7667"
+     ],
+     [
+      "Hy - 3.5023",
+      "Hz - 5.8287"
+     ],
+     [
+      "Hy - 3.4",
+      "Hz - 5.889"
+     ],
+     [
+      "Hy - 3.2967",
+      "Hz - 5.9474"
+     ],
+     [
+      "Hy - 3.1924",
+      "Hz - 6.004"
+     ],
+     [
+      "Hy - 3.0871",
+      "Hz - 6.0588"
+     ],
+     [
+      "Hy - 2.9809",
+      "Hz - 6.1118"
+     ],
+     [
+      "Hy - 2.8738",
+      "Hz - 6.1629"
+     ],
+     [
+      "Hy - 2.7658",
+      "Hz - 6.2121"
+     ],
+     [
+      "Hy - 2.657",
+      "Hz - 6.2594"
+     ],
+     [
+      "Hy - 2.5473",
+      "Hz - 6.3049"
+     ],
+     [
+      "Hy - 2.4369",
+      "Hz - 6.3483"
+     ],
+     [
+      "Hy - 2.3257",
+      "Hz - 6.3899"
+     ],
+     [
+      "Hy - 2.2139",
+      "Hz - 6.4295"
+     ],
+     [
+      "Hy - 2.1013",
+      "Hz - 6.4672"
+     ],
+     [
+      "Hy - 1.9881",
+      "Hz - 6.5029"
+     ],
+     [
+      "Hy - 1.8743",
+      "Hz - 6.5366"
+     ],
+     [
+      "Hy - 1.76",
+      "Hz - 6.5683"
+     ],
+     [
+      "Hy - 1.6451",
+      "Hz - 6.598"
+     ],
+     [
+      "Hy - 1.5297",
+      "Hz - 6.6257"
+     ],
+     [
+      "Hy - 1.4138",
+      "Hz - 6.6514"
+     ],
+     [
+      "Hy - 1.2975",
+      "Hz - 6.6751"
+     ],
+     [
+      "Hy - 1.1533",
+      "Hz - 6.7017"
+     ],
+     [
+      "Hy - 0.2096",
+      "Hz - 7.0359"
+     ],
+     [
+      "Hy + 0.5847",
+      "Hz - 7.6453"
+     ],
+     [
+      "Hy + 1.1518",
+      "Hz - 8.4704"
+     ],
+     [
+      "Hy + 1.4361",
+      "Hz - 9.4304"
+     ],
+     [
+      "Hy + 1.4099",
+      "Hz - 10.4312"
+     ],
+     [
+      "Hy + 1.0757",
+      "Hz - 11.375"
+     ],
+     [
+      "Hy + 0.4663",
+      "Hz - 12.1693"
+     ],
+     [
+      "Hy - 0.3588",
+      "Hz - 12.7364"
+     ],
+     [
+      "Hy - 1.3188",
+      "Hz - 13.0207"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "LeverWebLSk",
+    "distance": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "operation": "new",
+    "name": "LeverWebL",
+    "body_name": "LeverL"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + 2*cam_clr + 2*lay_t)",
+    "name": "LeverArmLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy + 0.4125",
+      "Hz - 19.4756"
+     ],
+     [
+      "Hy - 59.1694",
+      "Hz - 26.5465"
+     ],
+     [
+      "Hy - 59.9944",
+      "Hz - 19.5952"
+     ],
+     [
+      "Hy - 0.4125",
+      "Hz - 12.5244"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "LeverArmLSk",
+    "distance": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "operation": "join",
+    "name": "LeverArmL",
+    "targets": [
+     "LeverL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "hub_r",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 2*cam_clr + 2*lay_t)",
+     "Hy - 59.5819",
+     "Hz - 23.0709"
+    ],
+    "operation": "join",
+    "name": "LeverEBossL",
+    "targets": [
+     "LeverL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "hub_r",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 2*cam_clr + 2*lay_t)",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "join",
+    "name": "LeverHubL",
+    "targets": [
+     "LeverL"
+    ]
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "YZ",
+    "offset": "-(x_ko + 2*cam_clr + 2*lay_t + 0.5)",
+    "name": "CamSlotLSk"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "closed": true,
+    "points": [
+     [
+      "Hy - 2.0645",
+      "Hz - 11.6179"
+     ],
+     [
+      "Hy - 2.2515",
+      "Hz - 11.5832"
+     ],
+     [
+      "Hy - 2.4534",
+      "Hz - 11.5421"
+     ],
+     [
+      "Hy - 2.6544",
+      "Hz - 11.4976"
+     ],
+     [
+      "Hy - 2.8547",
+      "Hz - 11.4495"
+     ],
+     [
+      "Hy - 3.0541",
+      "Hz - 11.3979"
+     ],
+     [
+      "Hy - 3.2525",
+      "Hz - 11.3429"
+     ],
+     [
+      "Hy - 3.45",
+      "Hz - 11.2844"
+     ],
+     [
+      "Hy - 3.6464",
+      "Hz - 11.2225"
+     ],
+     [
+      "Hy - 3.8417",
+      "Hz - 11.1571"
+     ],
+     [
+      "Hy - 4.0358",
+      "Hz - 11.0884"
+     ],
+     [
+      "Hy - 4.2287",
+      "Hz - 11.0162"
+     ],
+     [
+      "Hy - 4.4204",
+      "Hz - 10.9408"
+     ],
+     [
+      "Hy - 4.6106",
+      "Hz - 10.862"
+     ],
+     [
+      "Hy - 4.7995",
+      "Hz - 10.7798"
+     ],
+     [
+      "Hy - 4.9869",
+      "Hz - 10.6944"
+     ],
+     [
+      "Hy - 5.1728",
+      "Hz - 10.6058"
+     ],
+     [
+      "Hy - 5.3571",
+      "Hz - 10.5139"
+     ],
+     [
+      "Hy - 5.5398",
+      "Hz - 10.4188"
+     ],
+     [
+      "Hy - 5.7208",
+      "Hz - 10.3205"
+     ],
+     [
+      "Hy - 5.9",
+      "Hz - 10.2191"
+     ],
+     [
+      "Hy - 6.0774",
+      "Hz - 10.1146"
+     ],
+     [
+      "Hy - 6.253",
+      "Hz - 10.007"
+     ],
+     [
+      "Hy - 6.4267",
+      "Hz - 9.8963"
+     ],
+     [
+      "Hy - 6.5985",
+      "Hz - 9.7826"
+     ],
+     [
+      "Hy - 6.7676",
+      "Hz - 9.6664"
+     ],
+     [
+      "Hy - 6.931",
+      "Hz - 9.5501"
+     ],
+     [
+      "Hy - 7.0862",
+      "Hz - 9.4367"
+     ],
+     [
+      "Hy - 7.2331",
+      "Hz - 9.3278"
+     ],
+     [
+      "Hy - 7.3725",
+      "Hz - 9.2241"
+     ],
+     [
+      "Hy - 7.5055",
+      "Hz - 9.126"
+     ],
+     [
+      "Hy - 7.633",
+      "Hz - 9.0337"
+     ],
+     [
+      "Hy - 7.7563",
+      "Hz - 8.947"
+     ],
+     [
+      "Hy - 7.8767",
+      "Hz - 8.8655"
+     ],
+     [
+      "Hy - 7.9955",
+      "Hz - 8.7887"
+     ],
+     [
+      "Hy - 8.1142",
+      "Hz - 8.7159"
+     ],
+     [
+      "Hy - 8.2343",
+      "Hz - 8.6465"
+     ],
+     [
+      "Hy - 8.3571",
+      "Hz - 8.5797"
+     ],
+     [
+      "Hy - 8.4842",
+      "Hz - 8.5149"
+     ],
+     [
+      "Hy - 8.6166",
+      "Hz - 8.4516"
+     ],
+     [
+      "Hy - 8.7554",
+      "Hz - 8.3892"
+     ],
+     [
+      "Hy - 8.9015",
+      "Hz - 8.3272"
+     ],
+     [
+      "Hy - 9.0555",
+      "Hz - 8.2651"
+     ],
+     [
+      "Hy - 9.2178",
+      "Hz - 8.2023"
+     ],
+     [
+      "Hy - 9.3886",
+      "Hz - 8.1382"
+     ],
+     [
+      "Hy - 9.5671",
+      "Hz - 8.0722"
+     ],
+     [
+      "Hy - 9.7495",
+      "Hz - 8.0049"
+     ],
+     [
+      "Hy - 9.9317",
+      "Hz - 7.9376"
+     ],
+     [
+      "Hy - 10.1129",
+      "Hz - 7.8706"
+     ],
+     [
+      "Hy - 10.2932",
+      "Hz - 7.8039"
+     ],
+     [
+      "Hy - 10.4726",
+      "Hz - 7.7376"
+     ],
+     [
+      "Hy - 10.651",
+      "Hz - 7.6716"
+     ],
+     [
+      "Hy - 10.8285",
+      "Hz - 7.6059"
+     ],
+     [
+      "Hy - 11.0049",
+      "Hz - 7.5406"
+     ],
+     [
+      "Hy - 11.1804",
+      "Hz - 7.4757"
+     ],
+     [
+      "Hy - 11.3548",
+      "Hz - 7.4112"
+     ],
+     [
+      "Hy - 11.5282",
+      "Hz - 7.3471"
+     ],
+     [
+      "Hy - 11.7006",
+      "Hz - 7.2834"
+     ],
+     [
+      "Hy - 11.872",
+      "Hz - 7.2201"
+     ],
+     [
+      "Hy - 12.0422",
+      "Hz - 7.1573"
+     ],
+     [
+      "Hy - 12.2115",
+      "Hz - 7.0949"
+     ],
+     [
+      "Hy - 12.3796",
+      "Hz - 7.0331"
+     ],
+     [
+      "Hy - 12.5466",
+      "Hz - 6.9717"
+     ],
+     [
+      "Hy - 12.7125",
+      "Hz - 6.9109"
+     ],
+     [
+      "Hy - 12.8773",
+      "Hz - 6.8506"
+     ],
+     [
+      "Hy - 13.041",
+      "Hz - 6.7908"
+     ],
+     [
+      "Hy - 13.2035",
+      "Hz - 6.7316"
+     ],
+     [
+      "Hy - 13.3649",
+      "Hz - 6.673"
+     ],
+     [
+      "Hy - 13.5251",
+      "Hz - 6.6149"
+     ],
+     [
+      "Hy - 13.6842",
+      "Hz - 6.5576"
+     ],
+     [
+      "Hy - 13.842",
+      "Hz - 6.5008"
+     ],
+     [
+      "Hy - 13.9987",
+      "Hz - 6.4447"
+     ],
+     [
+      "Hy - 14.1541",
+      "Hz - 6.3893"
+     ],
+     [
+      "Hy - 14.3083",
+      "Hz - 6.3345"
+     ],
+     [
+      "Hy - 14.4613",
+      "Hz - 6.2805"
+     ],
+     [
+      "Hy - 14.6144",
+      "Hz - 6.2268"
+     ],
+     [
+      "Hy - 14.7747",
+      "Hz - 6.1705"
+     ],
+     [
+      "Hy - 14.949",
+      "Hz - 6.1077"
+     ],
+     [
+      "Hy - 15.1381",
+      "Hz - 6.0354"
+     ],
+     [
+      "Hy - 15.3413",
+      "Hz - 5.9506"
+     ],
+     [
+      "Hy - 15.5573",
+      "Hz - 5.8497"
+     ],
+     [
+      "Hy - 15.7833",
+      "Hz - 5.7289"
+     ],
+     [
+      "Hy - 16.0155",
+      "Hz - 5.5848"
+     ],
+     [
+      "Hy - 16.2483",
+      "Hz - 5.4148"
+     ],
+     [
+      "Hy - 16.475",
+      "Hz - 5.2183"
+     ],
+     [
+      "Hy - 16.6884",
+      "Hz - 4.9972"
+     ],
+     [
+      "Hy - 16.8821",
+      "Hz - 4.7559"
+     ],
+     [
+      "Hy - 17.0516",
+      "Hz - 4.5003"
+     ],
+     [
+      "Hy - 17.1954",
+      "Hz - 4.2371"
+     ],
+     [
+      "Hy - 17.3138",
+      "Hz - 3.9721"
+     ],
+     [
+      "Hy - 17.4091",
+      "Hz - 3.7099"
+     ],
+     [
+      "Hy - 17.4844",
+      "Hz - 3.4542"
+     ],
+     [
+      "Hy - 17.5432",
+      "Hz - 3.2071"
+     ],
+     [
+      "Hy - 17.5886",
+      "Hz - 2.9704"
+     ],
+     [
+      "Hy - 17.6237",
+      "Hz - 2.7456"
+     ],
+     [
+      "Hy - 17.6522",
+      "Hz - 2.5237"
+     ],
+     [
+      "Hy - 17.6755",
+      "Hz - 2.2899"
+     ],
+     [
+      "Hy - 17.6908",
+      "Hz - 2.0472"
+     ],
+     [
+      "Hy - 17.6978",
+      "Hz - 1.8047"
+     ],
+     [
+      "Hy - 17.697",
+      "Hz - 1.5639"
+     ],
+     [
+      "Hy - 17.6892",
+      "Hz - 1.3259"
+     ],
+     [
+      "Hy - 17.6755",
+      "Hz - 1.0918"
+     ],
+     [
+      "Hy - 17.6568",
+      "Hz - 0.8627"
+     ],
+     [
+      "Hy - 17.6342",
+      "Hz - 0.6392"
+     ],
+     [
+      "Hy - 17.6087",
+      "Hz - 0.4221"
+     ],
+     [
+      "Hy - 17.5812",
+      "Hz - 0.2119"
+     ],
+     [
+      "Hy - 17.5526",
+      "Hz - 0.0091"
+     ],
+     [
+      "Hy - 17.5237",
+      "Hz + 0.1863"
+     ],
+     [
+      "Hy - 17.4951",
+      "Hz + 0.3742"
+     ],
+     [
+      "Hy - 17.4671",
+      "Hz + 0.5551"
+     ],
+     [
+      "Hy - 17.4399",
+      "Hz + 0.7301"
+     ],
+     [
+      "Hy - 17.2675",
+      "Hz + 1.2662"
+     ],
+     [
+      "Hy - 16.9378",
+      "Hz + 1.7228"
+     ],
+     [
+      "Hy - 16.4832",
+      "Hz + 2.0551"
+     ],
+     [
+      "Hy - 15.9481",
+      "Hz + 2.2307"
+     ],
+     [
+      "Hy - 15.3849",
+      "Hz + 2.2324"
+     ],
+     [
+      "Hy - 14.8488",
+      "Hz + 2.0599"
+     ],
+     [
+      "Hy - 14.3922",
+      "Hz + 1.7303"
+     ],
+     [
+      "Hy - 14.0599",
+      "Hz + 1.2756"
+     ],
+     [
+      "Hy - 13.8843",
+      "Hz + 0.7405"
+     ],
+     [
+      "Hy - 13.8826",
+      "Hz + 0.1774"
+     ],
+     [
+      "Hy - 13.9096",
+      "Hz + 0.0035"
+     ],
+     [
+      "Hy - 13.9368",
+      "Hz - 0.1724"
+     ],
+     [
+      "Hy - 13.9637",
+      "Hz - 0.3484"
+     ],
+     [
+      "Hy - 13.9896",
+      "Hz - 0.5234"
+     ],
+     [
+      "Hy - 14.0139",
+      "Hz - 0.6962"
+     ],
+     [
+      "Hy - 14.0361",
+      "Hz - 0.8658"
+     ],
+     [
+      "Hy - 14.0556",
+      "Hz - 1.031"
+     ],
+     [
+      "Hy - 14.0718",
+      "Hz - 1.1908"
+     ],
+     [
+      "Hy - 14.0843",
+      "Hz - 1.3443"
+     ],
+     [
+      "Hy - 14.093",
+      "Hz - 1.4906"
+     ],
+     [
+      "Hy - 14.0976",
+      "Hz - 1.6293"
+     ],
+     [
+      "Hy - 14.098",
+      "Hz - 1.76"
+     ],
+     [
+      "Hy - 14.0946",
+      "Hz - 1.8828"
+     ],
+     [
+      "Hy - 14.0873",
+      "Hz - 1.9983"
+     ],
+     [
+      "Hy - 14.0755",
+      "Hz - 2.115"
+     ],
+     [
+      "Hy - 14.0595",
+      "Hz - 2.2389"
+     ],
+     [
+      "Hy - 14.0414",
+      "Hz - 2.356"
+     ],
+     [
+      "Hy - 14.0227",
+      "Hz - 2.4543"
+     ],
+     [
+      "Hy - 14.0044",
+      "Hz - 2.5326"
+     ],
+     [
+      "Hy - 13.9878",
+      "Hz - 2.5898"
+     ],
+     [
+      "Hy - 13.9749",
+      "Hz - 2.626"
+     ],
+     [
+      "Hy - 13.9676",
+      "Hz - 2.6429"
+     ],
+     [
+      "Hy - 13.9673",
+      "Hz - 2.6437"
+     ],
+     [
+      "Hy - 13.9743",
+      "Hz - 2.6335"
+     ],
+     [
+      "Hy - 13.9865",
+      "Hz - 2.6182"
+     ],
+     [
+      "Hy - 14",
+      "Hz - 2.604"
+     ],
+     [
+      "Hy - 14.009",
+      "Hz - 2.596"
+     ],
+     [
+      "Hy - 14.0072",
+      "Hz - 2.597"
+     ],
+     [
+      "Hy - 13.989",
+      "Hz - 2.6079"
+     ],
+     [
+      "Hy - 13.9505",
+      "Hz - 2.6281"
+     ],
+     [
+      "Hy - 13.8892",
+      "Hz - 2.6564"
+     ],
+     [
+      "Hy - 13.8047",
+      "Hz - 2.6914"
+     ],
+     [
+      "Hy - 13.6975",
+      "Hz - 2.7322"
+     ],
+     [
+      "Hy - 13.5689",
+      "Hz - 2.7785"
+     ],
+     [
+      "Hy - 13.4221",
+      "Hz - 2.8299"
+     ],
+     [
+      "Hy - 13.2657",
+      "Hz - 2.8849"
+     ],
+     [
+      "Hy - 13.107",
+      "Hz - 2.9409"
+     ],
+     [
+      "Hy - 12.9475",
+      "Hz - 2.9975"
+     ],
+     [
+      "Hy - 12.7872",
+      "Hz - 3.0546"
+     ],
+     [
+      "Hy - 12.6261",
+      "Hz - 3.1124"
+     ],
+     [
+      "Hy - 12.4641",
+      "Hz - 3.1706"
+     ],
+     [
+      "Hy - 12.3012",
+      "Hz - 3.2294"
+     ],
+     [
+      "Hy - 12.1375",
+      "Hz - 3.2887"
+     ],
+     [
+      "Hy - 11.9729",
+      "Hz - 3.3484"
+     ],
+     [
+      "Hy - 11.8075",
+      "Hz - 3.4087"
+     ],
+     [
+      "Hy - 11.6412",
+      "Hz - 3.4694"
+     ],
+     [
+      "Hy - 11.4741",
+      "Hz - 3.5306"
+     ],
+     [
+      "Hy - 11.3061",
+      "Hz - 3.5922"
+     ],
+     [
+      "Hy - 11.1373",
+      "Hz - 3.6542"
+     ],
+     [
+      "Hy - 10.9676",
+      "Hz - 3.7167"
+     ],
+     [
+      "Hy - 10.797",
+      "Hz - 3.7795"
+     ],
+     [
+      "Hy - 10.6256",
+      "Hz - 3.8428"
+     ],
+     [
+      "Hy - 10.4533",
+      "Hz - 3.9064"
+     ],
+     [
+      "Hy - 10.2802",
+      "Hz - 3.9703"
+     ],
+     [
+      "Hy - 10.1062",
+      "Hz - 4.0347"
+     ],
+     [
+      "Hy - 9.9314",
+      "Hz - 4.0993"
+     ],
+     [
+      "Hy - 9.7557",
+      "Hz - 4.1643"
+     ],
+     [
+      "Hy - 9.5792",
+      "Hz - 4.2296"
+     ],
+     [
+      "Hy - 9.4018",
+      "Hz - 4.2953"
+     ],
+     [
+      "Hy - 9.2236",
+      "Hz - 4.3612"
+     ],
+     [
+      "Hy - 9.0446",
+      "Hz - 4.4274"
+     ],
+     [
+      "Hy - 8.8647",
+      "Hz - 4.4939"
+     ],
+     [
+      "Hy - 8.684",
+      "Hz - 4.5607"
+     ],
+     [
+      "Hy - 8.5026",
+      "Hz - 4.6277"
+     ],
+     [
+      "Hy - 8.3195",
+      "Hz - 4.6953"
+     ],
+     [
+      "Hy - 8.1313",
+      "Hz - 4.7649"
+     ],
+     [
+      "Hy - 7.9353",
+      "Hz - 4.8385"
+     ],
+     [
+      "Hy - 7.7326",
+      "Hz - 4.917"
+     ],
+     [
+      "Hy - 7.5249",
+      "Hz - 5.0008"
+     ],
+     [
+      "Hy - 7.3139",
+      "Hz - 5.0904"
+     ],
+     [
+      "Hy - 7.1016",
+      "Hz - 5.1859"
+     ],
+     [
+      "Hy - 6.8896",
+      "Hz - 5.2873"
+     ],
+     [
+      "Hy - 6.6797",
+      "Hz - 5.3944"
+     ],
+     [
+      "Hy - 6.4735",
+      "Hz - 5.5065"
+     ],
+     [
+      "Hy - 6.2725",
+      "Hz - 5.6227"
+     ],
+     [
+      "Hy - 6.078",
+      "Hz - 5.7419"
+     ],
+     [
+      "Hy - 5.891",
+      "Hz - 5.8626"
+     ],
+     [
+      "Hy - 5.7124",
+      "Hz - 5.9835"
+     ],
+     [
+      "Hy - 5.5426",
+      "Hz - 6.1028"
+     ],
+     [
+      "Hy - 5.3818",
+      "Hz - 6.2192"
+     ],
+     [
+      "Hy - 5.23",
+      "Hz - 6.3311"
+     ],
+     [
+      "Hy - 5.0869",
+      "Hz - 6.4375"
+     ],
+     [
+      "Hy - 4.9521",
+      "Hz - 6.5375"
+     ],
+     [
+      "Hy - 4.8249",
+      "Hz - 6.6304"
+     ],
+     [
+      "Hy - 4.7039",
+      "Hz - 6.7166"
+     ],
+     [
+      "Hy - 4.5854",
+      "Hz - 6.7981"
+     ],
+     [
+      "Hy - 4.466",
+      "Hz - 6.8771"
+     ],
+     [
+      "Hy - 4.3453",
+      "Hz - 6.954"
+     ],
+     [
+      "Hy - 4.2233",
+      "Hz - 7.0288"
+     ],
+     [
+      "Hy - 4.1",
+      "Hz - 7.1014"
+     ],
+     [
+      "Hy - 3.9754",
+      "Hz - 7.1719"
+     ],
+     [
+      "Hy - 3.8497",
+      "Hz - 7.2402"
+     ],
+     [
+      "Hy - 3.7227",
+      "Hz - 7.3063"
+     ],
+     [
+      "Hy - 3.5946",
+      "Hz - 7.3701"
+     ],
+     [
+      "Hy - 3.4655",
+      "Hz - 7.4317"
+     ],
+     [
+      "Hy - 3.3352",
+      "Hz - 7.4911"
+     ],
+     [
+      "Hy - 3.204",
+      "Hz - 7.5481"
+     ],
+     [
+      "Hy - 3.0718",
+      "Hz - 7.6029"
+     ],
+     [
+      "Hy - 2.9386",
+      "Hz - 7.6554"
+     ],
+     [
+      "Hy - 2.8046",
+      "Hz - 7.7055"
+     ],
+     [
+      "Hy - 2.6697",
+      "Hz - 7.7533"
+     ],
+     [
+      "Hy - 2.5339",
+      "Hz - 7.7987"
+     ],
+     [
+      "Hy - 2.3974",
+      "Hz - 7.8417"
+     ],
+     [
+      "Hy - 2.2602",
+      "Hz - 7.8823"
+     ],
+     [
+      "Hy - 2.1223",
+      "Hz - 7.9206"
+     ],
+     [
+      "Hy - 1.9838",
+      "Hz - 7.9564"
+     ],
+     [
+      "Hy - 1.8446",
+      "Hz - 7.9898"
+     ],
+     [
+      "Hy - 1.7049",
+      "Hz - 8.0208"
+     ],
+     [
+      "Hy - 1.5646",
+      "Hz - 8.0493"
+     ],
+     [
+      "Hy - 1.4085",
+      "Hz - 8.0782"
+     ],
+     [
+      "Hy - 0.8776",
+      "Hz - 8.2662"
+     ],
+     [
+      "Hy - 0.4308",
+      "Hz - 8.609"
+     ],
+     [
+      "Hy - 0.1118",
+      "Hz - 9.0732"
+     ],
+     [
+      "Hy + 0.0481",
+      "Hz - 9.6131"
+     ],
+     [
+      "Hy + 0.0334",
+      "Hz - 10.1761"
+     ],
+     [
+      "Hy - 0.1546",
+      "Hz - 10.707"
+     ],
+     [
+      "Hy - 0.4974",
+      "Hz - 11.1538"
+     ],
+     [
+      "Hy - 0.9616",
+      "Hz - 11.4727"
+     ],
+     [
+      "Hy - 1.5015",
+      "Hz - 11.6327"
+     ]
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "CamSlotLSk",
+    "distance": "(x_ko + 2*cam_clr + 2*lay_t + 0.5) - (x_ko + 2*cam_clr + lay_t - 0.5)",
+    "operation": "cut",
+    "name": "CamSlotL",
+    "targets": [
+     "LeverL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2 + hinge_clr",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t + 0.5) - (x_ko + 2*cam_clr + lay_t - 0.5)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 2*cam_clr + 2*lay_t + 0.5)",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "cut",
+    "name": "LeverPivotHoleL",
+    "targets": [
+     "LeverL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "(pin_d - pin_press)/2",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t + 0.5) - (x_ko + 2*cam_clr + lay_t - 0.5)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 2*cam_clr + 2*lay_t + 0.5)",
+     "Hy - 59.5819",
+     "Hz - 23.0709"
+    ],
+    "operation": "cut",
+    "name": "LeverEHoleL",
+    "targets": [
+     "LeverL"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_si + pin_bl) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "x_ko - pin_bl",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "new",
+    "name": "AxlePinR",
+    "body_name": "AxleR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_si + pin_bl) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "x_ko - pin_bl",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "new",
+    "name": "PivotPinR",
+    "body_name": "PivotR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t - cam_clr) - (x_ko + cam_clr)",
+    "axis": "X",
+    "base": [
+     "x_ko + cam_clr",
+     "Hy - 1.7365",
+     "Hz - 9.8481"
+    ],
+    "operation": "new",
+    "name": "CPinR",
+    "body_name": "CpinR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + cam_clr + cam_clr)",
+    "axis": "X",
+    "base": [
+     "x_ko + cam_clr + cam_clr",
+     "Hy - 59.5819",
+     "Hz - 23.0709"
+    ],
+    "operation": "new",
+    "name": "EPinR",
+    "body_name": "EpinR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_si + pin_bl) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "-(x_si + pin_bl)",
+     "Hy",
+     "Hz"
+    ],
+    "operation": "new",
+    "name": "AxlePinL",
+    "body_name": "AxleL"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_si + pin_bl) - (x_ko - pin_bl)",
+    "axis": "X",
+    "base": [
+     "-(x_si + pin_bl)",
+     "Hy + 0",
+     "Hz - 16"
+    ],
+    "operation": "new",
+    "name": "PivotPinL",
+    "body_name": "PivotL"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t - cam_clr) - (x_ko + cam_clr)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 2*cam_clr + 2*lay_t - cam_clr)",
+     "Hy - 1.7365",
+     "Hz - 9.8481"
+    ],
+    "operation": "new",
+    "name": "CPinL",
+    "body_name": "CpinL"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": "pin_d/2",
+    "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + cam_clr + cam_clr)",
+    "axis": "X",
+    "base": [
+     "-(x_ko + 2*cam_clr + 2*lay_t)",
+     "Hy - 59.5819",
+     "Hz - 23.0709"
+    ],
+    "operation": "new",
+    "name": "EPinL",
+    "body_name": "EpinL"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "in_x - 2*liner_t - 2*div_gap",
+    "width": "(-D/2 + div_h) - (-D/2)",
+    "height": "(div_t) - (0)",
+    "corner": [
+     "W/2 + 15",
+     "-D/2",
+     "0"
+    ],
+    "operation": "new",
+    "name": "DividerPlate",
+    "body_name": "Divider"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "tab_w",
+    "width": "(-D/2 + tab_top) - (-D/2 + div_h - 1)",
+    "height": "(div_t) - (0)",
+    "corner": [
+     "W/2 + 15 + (in_x - 2*liner_t - 2*div_gap - tab_w)/2",
+     "-D/2 + div_h - 1",
+     "0"
+    ],
+    "operation": "join",
+    "name": "DividerTab",
+    "targets": [
+     "Divider"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "card_w",
+    "width": "(cy + in_y/2 - liner_t) - (cy + in_y/2 - liner_t - n_cards*card_t - div_t)",
+    "height": "(z_c0 + crad_f + liner_t + card_h) - (z_c0 + crad_f + liner_t)",
+    "corner": [
+     "-card_w/2",
+     "cy + in_y/2 - liner_t - n_cards*card_t - div_t",
+     "z_c0 + crad_f + liner_t"
+    ],
+    "operation": "new",
+    "name": "DeckBlock",
+    "body_name": "Deck"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "Core"
+    ],
+    "color": "#1f2a44"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "ShellR"
+    ],
+    "color": "#26324f"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "ShellL"
+    ],
+    "color": "#26324f"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "Lid"
+    ],
+    "color": "#d4a017"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "Cradle"
+    ],
+    "color": "#7a2230"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "Divider"
+    ],
+    "color": "#a8322d"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "CrankR"
+    ],
+    "color": "#9aa3ad"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "CrankL"
+    ],
+    "color": "#9aa3ad"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "LeverR"
+    ],
+    "color": "#c0c6cc"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "LeverL"
+    ],
+    "color": "#c0c6cc"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "Deck"
+    ],
+    "color": "#e8e2d0"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "AxleR"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "AxleL"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "PivotR"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "PivotL"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "CpinR"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "CpinL"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "EpinR"
+    ],
+    "color": "#5b6168"
+   }
+  },
+  {
+   "command": "appearance.assign",
+   "params": {
+    "bodies": [
+     "EpinL"
+    ],
+    "color": "#5b6168"
+   }
+  }
+ ]
+}

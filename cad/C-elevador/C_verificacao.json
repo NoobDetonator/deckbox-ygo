@@ -1,0 +1,2774 @@
+[
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "label": "tampa 0 graus, berco +0.00"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-15 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-0.0000 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       0.0
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 15 graus, berco +0.00"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-25 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-0.0000 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       0.0
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 25 graus, berco +0.00"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-30 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-0.1083 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       0.1126
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 30 graus, berco +0.11"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-45 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-4.3313 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       4.52
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 45 graus, berco +4.52"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-60 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-10.8098 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       11.3
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 60 graus, berco +11.30"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-75 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-17.3408 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       18.08
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 75 graus, berco +18.08"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-90 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.6566 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.4874
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 90 graus, berco +22.49"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-95 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.7679 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.6
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 95 graus, berco +22.60"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-100 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.6197 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.45
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 100 graus, berco +22.45"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-110 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.1755 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.0
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 110 graus, berco +22.00"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 1.7365",
+       "Hz - 9.8481"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 59.5819",
+       "Hz - 23.0709"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 0 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-25 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-0.0000 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       0.0
+      ]
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 5.7358",
+       "Hz - 8.1915"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 59.5819",
+       "Hz - 23.0709"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 25 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-45 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-4.3313 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       4.52
+      ]
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 8.1915",
+       "Hz - 5.7358"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 59.9458",
+       "Hz - 18.5509"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 45 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-60 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-10.8098 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       11.3
+      ]
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 9.3969",
+       "Hz - 3.4202"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 59.8508",
+       "Hz - 11.7709"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 60 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-75 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-17.3408 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       18.08
+      ]
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 9.9619",
+       "Hz - 0.8716"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 58.9813",
+       "Hz - 4.9909"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 75 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-95 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.7679 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.6
+      ]
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 9.6593",
+       "Hz + 2.5882"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 57.9555",
+       "Hz - 0.4709"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 95 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-110 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.1755 deg",
+      "origin": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.0
+      ]
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "(x_ko + 2*cam_clr + 2*lay_t) - (x_ko + 2*cam_clr + lay_t)",
+      "axis": "X",
+      "base": [
+       "x_ko + 2*cam_clr + lay_t",
+       "Hy - 8.6603",
+       "Hz + 5"
+      ],
+      "operation": "new",
+      "body_name": "ProbeC"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": "pin_d/2 + cam_clr + 0.15",
+      "height": "1",
+      "axis": "X",
+      "base": [
+       "x_ko + cam_clr + 1",
+       "Hy - 58.113",
+       "Hz - 1.0709"
+      ],
+      "operation": "new",
+      "body_name": "ProbeE"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeC",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeE",
+       "Cradle"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sondas 110 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-113 deg",
+      "origin": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "CrankR",
+       "Core"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "batente a 113 graus (tem de tocar)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d",
+      "height": "mag_t",
+      "axis": "Z",
+      "base": [
+       "mag_x",
+       "mag_y",
+       "split - mag_h"
+      ],
+      "operation": "new",
+      "body_name": "MagBody"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d",
+      "height": "mag_t",
+      "axis": "Z",
+      "base": [
+       "mag_x",
+       "mag_y",
+       "split + 0.1"
+      ],
+      "operation": "new",
+      "body_name": "MagLid"
+     }
+    },
+    {
+     "command": "solid.box",
+     "params": {
+      "length": "art_w",
+      "width": "0.5",
+      "height": "split - art_z0 - 0.5",
+      "corner": [
+       "-art_w/2",
+       "-D/2 + art_f + 0.15",
+       "art_z0"
+      ],
+      "operation": "new",
+      "body_name": "Art"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "MagBody",
+       "MagLid",
+       "Art",
+       "Core",
+       "Lid"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Art"
+      ],
+      "translate": [
+       0,
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Art",
+       "Lid"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "imas e arte (1a: zero; 2a: arte subindo bate na tampa)"
+ }
+]
