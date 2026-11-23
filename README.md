@@ -71,14 +71,27 @@ O de veludo tem as mesmas peças, com as medidas para 0,5 mm: [prévia](images/f
 
 As paredes param 0,5 mm antes do topo do lábio e do degrau da tampa. **Não cubra essas faces: é onde ficam os ímãs.** Se mudar o tamanho da caixa, ajuste os números no começo de `forro/gerar_forro.py` e rode `python forro/gerar_forro.py`.
 
+**Versão C (elevador):** só o berço leva forro, porque as cartas não encostam na tampa. O molde em tamanho real, com as medidas em cm e mm, está em [`forro/forro_C_veludo_0-5mm.pdf`](forro/forro_C_veludo_0-5mm.pdf). São 5 peças de veludo adesivo de 0,5 mm:
+
+| Peça | Qtd. | Medida |
+|---|---|---|
+| Fundo | 1 | 6,60 × 6,68 cm |
+| Frente (recorte em U de 3,10 cm de largura e 1,80 cm de fundo) | 1 | 6,60 × 8,32 cm |
+| Traseira | 1 | 6,60 × 8,32 cm |
+| Lateral | 2 | 6,58 × 8,32 cm |
+
+Cole o fundo, depois a frente e a traseira, e por último as laterais. As paredes param 0,5 mm abaixo da borda do berço: não dobre o tecido por cima dela, porque o berço corre no corpo com só 0,3 mm de folga. O berço foi desenhado para forro de 1 mm; com veludo de 0,5 mm as cartas ficam 1 mm mais soltas. As medidas vêm do gerador do modelo: rode `python forro/gerar_forro_C.py` se mudar a caixa.
+
+![Molde do forro do berço da versão C](images/forro_C_veludo_0-5mm.png)
+
 ## Ímãs
 
-Dois pares de **ímãs de neodímio em disco 5 × 1 mm (N35)** ficam na frente. Os do corpo vão no topo do lábio; os da tampa, no degrau interno logo acima. Com a caixa fechada, ficam face a face a 0,5 mm e puxam a tampa direto para baixo. A trava de clique continua lá.
+Dois pares de **ímãs de neodímio em disco 4 × 2 mm (Ø4 × 2, N35)** ficam na frente. Os do corpo vão no topo do lábio; os da tampa, no degrau interno logo acima. Com a caixa fechada, ficam face a face a 0,5 mm e puxam a tampa direto para baixo. A trava de clique continua lá.
 
-- São **4 ímãs** por caixa. Para fechar mais firme, empilhe 2 por encaixe (8 ímãs) e mude `mag_stack` para 2.
+- São **4 ímãs** por caixa. Meça os seus com paquímetro: se forem de outra medida, mude `mag_d` e `mag_t`, e o encaixe acompanha.
 - Para os ímãs caberem com parede em volta, a **parede da frente tem 9 mm** (as outras têm 2,8).
 - **Polaridade:** cole primeiro os 2 ímãs do corpo. Depois apoie cada ímã da tampa em cima do ímã correspondente do corpo: ele "gruda" no lado certo. Marque a face de cima com caneta antes de passar cola no encaixe da tampa.
-- Fixe com uma gota de super bonder no fundo do encaixe. O encaixe tem 5,3 mm (`mag_clr` 0,3).
+- Fixe com uma gota de super bonder no fundo do encaixe. O encaixe tem Ø4,2 × 2,1 mm (`mag_clr` 0,2): o ímã fica 0,1 mm abaixo da face. Se ele ficar saliente, os ímãs do corpo e da tampa batem um no outro e a tampa não fecha.
 
 ---
 
@@ -186,7 +199,7 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
 |---|---|
 | ![Fechada](images/C_fechada.png) | ![Aberta](images/C_aberta.png) |
 
-Ao abrir a tampa, o próprio giro dela ergue um **berço** com as cartas. As cartas só encostam no berço forrado; o mecanismo fica em cavidades laterais fechadas por painéis colados com acetona.
+Ao abrir a tampa, o próprio giro dela ergue um **berço** com as cartas. As cartas só encostam no berço forrado; o mecanismo fica em cavidades laterais fechadas por painéis lisos colados com acetona. A frente é lisa, sem porta-arte.
 
 ![Animação: tampa de 0° a 110°, mecanismo visto de lado sem o painel e em 3/4, com a curva de subida do berço](images/C_animacao.gif)
 
@@ -203,13 +216,15 @@ Ao abrir a tampa, o próprio giro dela ergue um **berço** com as cartas. As car
 
 | Tampa | 0–25° | 25–95° | 95–110° |
 |---|---|---|---|
-| Berço | parado: o teto da tampa se afasta das cartas antes | sobe 22,6 mm, suave | desce 0,6 mm até o batente: trava aberta pelo peso do deck |
+| Berço | parado: o teto da tampa se afasta das cartas antes | sobe 22,6 mm, suave | desce 0,6 mm até o batente (over-center leve) |
 
-- Ângulo de pressão de 15° a 27° na subida. A força na borda da tampa é de ~0,7 N, mais o atrito.
+- Ângulo de pressão de 15° a 27° na subida. Para abrir: ~1 N na borda da tampa pelo peso do deck, ~1,3–1,5 N com o atrito (estimativa).
 - Aberta, a caixa não tomba: o centro de gravidade fica a mais de 25 mm da borda de apoio.
-- Fecha com 2 pares de ímãs 5 × 1 mm nos cantos da frente. Não tem trava de clique: aberta, quem segura é o over-center; fechada, os ímãs.
+- Fecha com 2 pares de ímãs 4 × 2 mm nos cantos da frente, rentes à face (furo Ø4,2 × 2,1). Não tem trava de clique: aberta, a tampa fica parada pelo atrito e pelo over-center; fechada, pelos ímãs.
+- Peças reforçadas: o balancim é uma placa só entre a ranhura e o braço, com paredes de 1,65 mm em volta da ranhura (4 perímetros), braço de 8 mm e pontas redondas. A manivela tem braço de 6,4 mm, cubo de raio 4, anel de 4,7 mm com a ponta arredondada, e o batente pega o braço dela de 4,6 a 9 mm do eixo. A ranhura passa 2° do batente, então quem para a tampa é sempre o batente.
+- Cuidados: não force a tampa aberta além do batente, não levante a caixa pela tampa e não empurre o deck para baixo com a caixa aberta. Essas cargas passam por peças de 3,2 mm de espessura.
 
-**Medidas:** 92,8 × 80,6 × 101,0 mm (mais larga que a B por causa das cavidades do mecanismo). Interior do berço 66,4 × 67,2 mm, com forro de 1 mm e as mesmas folgas da B.
+**Medidas:** 92,8 × 78,6 × 101,0 mm (mais larga que a B por causa das cavidades do mecanismo). Interior do berço 66,4 × 67,2 mm, com forro de 1 mm e as mesmas folgas da B.
 
 ### Imprimir
 
@@ -218,25 +233,41 @@ Ao abrir a tampa, o próprio giro dela ergue um **berço** com as cartas. As car
 | `C_corpo.stl` | 1 | em pé, fundo na mesa |
 | `C_berco.stl` | 1 | em pé, fundo na mesa (as línguas laterais têm chanfro de 45°) |
 | `C_tampa.stl` | 1 | de cabeça para baixo |
-| `C_painel_direito.stl` / `C_painel_esquerdo.stl` | 1 + 1 | deitados, face canelada na mesa |
+| `C_painel_direito.stl` / `C_painel_esquerdo.stl` | 1 + 1 | deitados, face externa na mesa |
 | `C_manivela_x2.stl` | 2 | deitada |
 | `C_balancim_x2.stl` | 2 | deitado |
 | `C_divisoria.stl` | 1 | deitada |
+| `C_pino_longo_x4.stl` / `C_pino_curto_x4.stl` | 4 + 4 | deitados, chato na mesa (opcional: no lugar dos pinos de aço) |
 
-Os arquivos já estão na posição de impressão e nenhum precisa de suporte. Mesma configuração de ABS das outras versões.
+Os arquivos já estão na posição de impressão e nenhum precisa de suporte. Mesma configuração de ABS das outras versões. Imprima manivelas e balancins com 100% de preenchimento e 4 perímetros, e ligue a compensação de pé de elefante: a primeira camada não pode estreitar a ranhura nem os furos.
 
-**Compre:** 8 pinos de aço de Ø3 mm (vareta de 3 mm cortada): **4 de 10,5 mm** (eixos da tampa e pivôs) e **4 de 6,4 mm** (pinos da manivela e do balancim). Mais 4 ímãs 5 × 1 mm e 4 pezinhos de 8 mm.
+**Compre:** 8 pinos de aço de Ø3 mm (vareta de 3 mm cortada e sem rebarba): **4 de 9,3 mm** (eixos da tampa e pivôs; mais longos, o painel não assenta) e **4 de 6,4 mm** (pinos da manivela e do balancim). Mais 4 ímãs 4 × 2 mm, 4 pezinhos de 8 mm e cola instantânea (CA).
+
+**Sem vareta de aço?** Imprima os pinos: `C_pino_longo_x4.stl` (Ø3 × 9,2, eixos e pivôs) e `C_pino_curto_x4.stl` (Ø2,8 × 6,4, manivelas e balancins), 4 de cada.
+- **Orientação:** saem deitados, com as camadas ao longo do pino, que é a direção que aguenta flexão. Têm um chato de 0,2 mm para assentar na mesa. Nunca imprima em pé: assim o pino quebra entre as camadas.
+- **Impressão:** use camada de 0,1 mm para ficarem redondos e 100% de preenchimento. Imprima os 8 juntos com alguns de reserva, para cada camada ter tempo de esfriar.
+- **Ajuste:** o pino longo tem de girar livre no furo de Ø3,4 da manivela e do balancim. Se prender, passe uma lixa fina girando. O curto é mais fino (Ø2,8, parâmetro `pin_s_d`) porque os furos de Ø3,1 da manivela e do balancim saem apertados: são verticais na impressão, em placa fina. A folga que sobra a gota de CA preenche. Na ranhura, ele fica com 0,1 mm a mais de folga do que o de aço.
+- **Montagem:** igual à dos de aço, com uma gota de CA só no furo fixo. Deixe o chato virado para longe da ranhura, assim a face redonda é que corre nela.
+- **Limite:** ABS contra ABS gasta e tem mais atrito que aço. O lubrificante de PTFE seco é obrigatório, e o aço continua sendo a melhor escolha para o eixo da tampa e o pivô.
 
 ### Montar
 
-1. **Prepare:** lixe com lixa 220 as faces que vão ser coladas e limpe com álcool. Furos de pino fixo têm Ø2,9 (o pino entra apertado); furos que giram têm Ø3,4.
+**Manual em PDF:** [`manual/C_manual_montagem.pdf`](manual/C_manual_montagem.pdf) tem 12 páginas A4 para imprimir. Traz o desenho técnico, a lista de peças, as ferragens em tamanho real (imprima em 100 % para conferir os pinos) e os 11 passos ilustrados.
+
+| Folha 1: vistas ortográficas (1:2) | Folha 2: mecanismo de lado (1:1) |
+|---|---|
+| ![Vistas frontal, lateral e superior cotadas, e a perspectiva isométrica](images/C_folha_ortografica.png) | ![Vista lateral sem o painel, fechada e aberta, com eixo, pivô e curso do berço](images/C_folha_mecanismo.png) |
+
+![Animação de montagem: corpo, berço, manivelas na tampa, tampa, eixos, pinos, balancins, painéis e o deck](images/C_montagem.gif)
+
+1. **Prepare:** lixe com lixa 220 as faces que vão ser coladas e limpe com álcool. Furos de pino fixo têm Ø3,1: o pino entra justo e vai colado com uma gota de CA, sem prensar (prensado racha os ressaltos finos). Furos que giram têm Ø3,4.
 2. **Berço:** desça o berço no corpo por cima; as línguas entram pelas fendas laterais. Ele tem que descer sozinho, pelo peso.
 3. **Manivelas na tampa:** encaixe o rabo-de-andorinha de cada manivela na orelha da tampa, por dentro, e cole com uma gota de acetona.
-4. **Tampa no corpo:** feche a tampa. Prense os pinos de 10,5 mm: o do eixo atravessa o cubo da manivela e entra no corpo; o do pivô entra no corpo.
-5. **Balancins:** prense um pino de 6,4 mm em cada manivela e um no furo da ponta de cada balancim. Encaixe o balancim no pivô, com o pino da manivela na ranhura e o pino da ponta no garfo da língua.
-6. **Teste a seco:** encaixe os painéis pelos pinos-guia e prenda com fita. Com o deck dentro, abra e feche umas 20 vezes. O berço fica parado até uns 25°, sobe suave e dá um clique leve no fim. Se raspar, ajuste `cam_clr` ou `rail_clr` e reimprima só a peça.
+4. **Tampa no corpo:** feche a tampa. Coloque os pinos de 9,3 mm com uma gota de CA na ponta que entra no corpo: o do eixo atravessa o cubo da manivela; o do pivô entra direto.
+5. **Balancins:** cole um pino de 6,4 mm em cada manivela e um no furo da ponta de cada balancim. Encaixe o balancim no pivô, com o pino da manivela na ranhura e o pino da ponta no garfo da língua.
+6. **Teste a seco:** encaixe os painéis pelos pinos-guia e prenda com fita. Com o deck dentro, abra e feche umas 20 vezes. O berço fica parado até uns 25°, sobe suave e, no fim de curso, desce um pouco e a tampa fica aberta. Se raspar, ajuste `cam_clr` ou `rail_clr` e reimprima só a peça.
 7. **Solda:** lubrifique pinos e ranhuras com PTFE seco. Passe acetona com pincel só nas faces de contato dos painéis, encaixe pelos pinos-guia, prenda por 10 min e deixe curar 24 h. **Depois disso a tampa não sai mais.**
-8. **Final:** ímãs (polaridade como na B), forro, arte e pés.
+8. **Final:** ímãs (polaridade como na B), forro e pés.
 
 ### Calibrar
 
@@ -244,7 +275,8 @@ Os arquivos já estão na posição de impressão e nenhum precisa de suporte. M
 |---|---|---|
 | `rail_clr` | 0,3 | folga do berço no corpo, em cada lado |
 | `cam_clr` | 0,3 | folga dos pinos nas ranhuras e entre camadas |
-| `hinge_clr` / `pin_press` | 0,2 / 0,1 | furos que giram (Ø3,4) / furos de pino fixo (Ø2,9) |
+| `hinge_clr` / `pin_press` | 0,2 / −0,1 | furos que giram (Ø3,4) / furos de pino fixo (Ø3,1; negativo = folga, pino colado) |
+| `pin_s_d` | 2,8 | diâmetro do pino curto impresso; se ainda não entrar, baixe para 2,7 |
 | `shrink` | 0,006 | contração do ABS, aplicada onde o ABS encosta em carta, ímã ou aço |
 | `card_t`, `liner_t` | 0,68 / 1,0 | como na B |
 
@@ -252,15 +284,16 @@ Mudou subida, ângulos ou alavancas? Ajuste as constantes no começo de `cad/C-e
 
 ### Verificação (versão C)
 
-Booleanas exatas do SolidCraft, com todas as peças e o bloco de 90 cartas + divisória; os pinos de aço prensados não entram na conta.
+Booleanas exatas do SolidCraft, com todas as peças e o bloco de 90 cartas + divisória; os pinos de aço fixos não entram na conta. O roteiro gira as peças transladando até o eixo, girando e voltando, então roda em qualquer versão do SolidCraft.
 
 | Cenário | Resultado |
 |---|---|
-| Tampa a 0°, 15°, 25°, 30°, 45°, 60°, 75°, 90°, 95°, 100° e 110°, com berço, balancins e manivelas na posição de cada ângulo | 0 de interferência em todos |
+| Tampa a 0°, 15°, 25°, 30°, 45°, 60°, 75°, 90°, 95°, 100°, 105° e 110°, com berço, balancins e manivelas na posição de cada ângulo | 0 de interferência em todos |
 | Pinos dentro das ranhuras (sonda 0,15 mm maior que a folga) em 7 ângulos | tocam em todos: o pino nunca sai da ranhura |
-| Batente | livre a 110°, encosta a ~111° |
-| 4 ímãs 5 × 1 mm e arte de 46 × 57,5 × 0,5 | cabem sem tocar |
-| Arte empurrada 1 mm para cima | bate na tampa (fica presa) |
+| Batente | livre a 111,0°, encosta entre 111,0° e 111,5° |
+| Fim da ranhura a 113° (mecanismo parado em 110°) | o pino ainda não encosta: o batente para a tampa sozinho |
+| 4 ímãs 4 × 2 mm | cabem sem tocar o corpo, a tampa, os painéis nem um no outro, 0,1 mm abaixo da face |
+| Furos dos ímãs (corpo e tampa, dos dois lados) | sonda 0,1 mm mais larga encosta na parede e ímã 0,05 mm mais fundo encosta no fundo: os 4 furos têm Ø4,2 × 2,1 |
 
 ---
 
@@ -368,7 +401,7 @@ O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado 
 | Paredes / fundo / topo | 2,8 (frente 9,0) / 2,0 / 2,0 |
 | Divisão corpo/tampa | 64 (as cartas ficam ~25 mm acima do lábio para pegar) |
 
-- **Ímãs:** 2 pares de 5 × 1 mm na frente, face a face a 0,5 mm com a caixa fechada.
+- **Ímãs:** 2 pares de 4 × 2 mm na frente, face a face a 0,5 mm com a caixa fechada.
 - **Trava de clique:** um ressalto de 0,6 mm no lábio frontal encaixa numa ranhura escondida na tampa. A interferência é de 0,3 mm (0,45 mm na versão B, ajustada depois do teste impresso), só no primeiro grau de abertura.
 - **Lábio e saia:** o lábio de 5 mm do corpo entra na saia da tampa com 0,3 mm de folga. Tem chanfro de entrada e um vinco de 0,4 mm na linha de divisão.
 - **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
@@ -384,7 +417,7 @@ Feita com booleanas exatas do SolidCraft (`inspect.interference`):
 |---|---|---|
 | Caixa fechada (corpo × tampa) | 0 de interferência | 0 de interferência |
 | 90 cartas (62,5 × 61,2 × 91) **com 1 mm de forro em volta** + divisória | cabem: 0,75 mm de folga de cada lado e 1,5 mm em cima | igual |
-| 4 ímãs 5 × 1 mm nos encaixes | assentam sem tocar; 0,5 mm entre os pares | igual |
+| 4 ímãs 4 × 2 mm nos encaixes | assentam sem tocar; 0,5 mm entre os pares | igual |
 | Arte de 46 × 43,5 × 0,5 no porta-arte | cabe sem tocar | cabe sem tocar |
 | Arte empurrada 1 mm para cima | a tampa bloqueia (fica presa) | a tampa bloqueia (fica presa) |
 | Pino / dobradiça montada | pino de 1,75 sem tocar | dobradiça de metal e impressa sem tocar |
@@ -407,3 +440,5 @@ solidcraft-cli run cad/A-dobradica-integrada/A_deckbox_build.json --save cad/A-d
 ```
 
 Depois exporte cada peça em STL pelo app. O modelo fica na posição de montagem, então vire a tampa de cabeça para baixo no fatiador.
+
+Mudou a versão C? Gere o manual de novo com `python manual/gerar_manual.py`. Ele renderiza as cenas a partir de `cad/C-elevador/C_elevador.sc` pelo `solidcraft-cli` (caminho na variável `SOLIDCRAFT_CLI`) e reescreve o PDF e as duas folhas técnicas em `images/`.

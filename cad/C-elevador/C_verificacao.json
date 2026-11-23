@@ -108,16 +108,10 @@
        "CpinR",
        "CpinL"
       ],
-      "axis": [
-       1,
+      "translate": [
        0,
-       0
-      ],
-      "angle": "-15 deg",
-      "origin": [
-       0,
-       "Hy",
-       "Hz"
+       "-(Hy)",
+       "-(Hz)"
       ]
      }
     },
@@ -125,35 +119,34 @@
      "command": "solid.move",
      "params": {
       "bodies": [
-       "LeverR",
-       "LeverL",
-       "EpinR",
-       "EpinL"
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
       ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-0.0000 deg",
-      "origin": [
-       0,
-       "Hy + 0",
-       "Hz - 16"
-      ]
+      "angle": "-15.0000 deg"
      }
     },
     {
      "command": "solid.move",
      "params": {
       "bodies": [
-       "Cradle",
-       "Deck"
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
       ],
       "translate": [
        0,
-       0,
-       0.0
+       "Hy",
+       "Hz"
       ]
      }
     },
@@ -272,16 +265,10 @@
        "CpinR",
        "CpinL"
       ],
-      "axis": [
-       1,
+      "translate": [
        0,
-       0
-      ],
-      "angle": "-25 deg",
-      "origin": [
-       0,
-       "Hy",
-       "Hz"
+       "-(Hy)",
+       "-(Hz)"
       ]
      }
     },
@@ -289,35 +276,34 @@
      "command": "solid.move",
      "params": {
       "bodies": [
-       "LeverR",
-       "LeverL",
-       "EpinR",
-       "EpinL"
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
       ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-0.0000 deg",
-      "origin": [
-       0,
-       "Hy + 0",
-       "Hz - 16"
-      ]
+      "angle": "-25.0000 deg"
      }
     },
     {
      "command": "solid.move",
      "params": {
       "bodies": [
-       "Cradle",
-       "Deck"
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
       ],
       "translate": [
        0,
-       0,
-       0.0
+       "Hy",
+       "Hz"
       ]
      }
     },
@@ -436,16 +422,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-30 deg",
-      "origin": [
+      "angle": "-30.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -463,8 +494,19 @@
        0,
        0
       ],
-      "angle": "-0.1083 deg",
-      "origin": [
+      "angle": "-0.1083 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -579,6 +621,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -600,16 +658,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-45 deg",
-      "origin": [
+      "angle": "-45.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -627,8 +730,19 @@
        0,
        0
       ],
-      "angle": "-4.3313 deg",
-      "origin": [
+      "angle": "-4.3313 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -743,6 +857,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -764,16 +894,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-60 deg",
-      "origin": [
+      "angle": "-60.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -791,8 +966,19 @@
        0,
        0
       ],
-      "angle": "-10.8098 deg",
-      "origin": [
+      "angle": "-10.8098 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -907,6 +1093,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -928,16 +1130,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-75 deg",
-      "origin": [
+      "angle": "-75.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -955,8 +1202,19 @@
        0,
        0
       ],
-      "angle": "-17.3408 deg",
-      "origin": [
+      "angle": "-17.3408 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -1071,6 +1329,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -1092,16 +1366,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-90 deg",
-      "origin": [
+      "angle": "-90.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -1119,8 +1438,19 @@
        0,
        0
       ],
-      "angle": "-21.6566 deg",
-      "origin": [
+      "angle": "-21.6566 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -1235,6 +1565,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -1256,16 +1602,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-95 deg",
-      "origin": [
+      "angle": "-95.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -1283,8 +1674,19 @@
        0,
        0
       ],
-      "angle": "-21.7679 deg",
-      "origin": [
+      "angle": "-21.7679 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -1399,6 +1801,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -1420,16 +1838,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-100 deg",
-      "origin": [
+      "angle": "-100.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -1447,8 +1910,19 @@
        0,
        0
       ],
-      "angle": "-21.6197 deg",
-      "origin": [
+      "angle": "-21.6197 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -1563,6 +2037,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -1584,16 +2074,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-110 deg",
-      "origin": [
+      "angle": "-105.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -1611,8 +2146,255 @@
        0,
        0
       ],
-      "angle": "-21.1755 deg",
-      "origin": [
+      "angle": "-21.3235 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.15
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Core",
+       "ShellR",
+       "ShellL",
+       "AxleR",
+       "AxleL",
+       "PivotR",
+       "PivotL",
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL",
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL",
+       "Cradle",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "AxleR",
+        "Core"
+       ],
+       [
+        "AxleR",
+        "ShellR"
+       ],
+       [
+        "AxleL",
+        "Core"
+       ],
+       [
+        "AxleL",
+        "ShellL"
+       ],
+       [
+        "PivotR",
+        "Core"
+       ],
+       [
+        "PivotR",
+        "ShellR"
+       ],
+       [
+        "PivotL",
+        "Core"
+       ],
+       [
+        "PivotL",
+        "ShellL"
+       ],
+       [
+        "CpinR",
+        "CrankR"
+       ],
+       [
+        "CpinL",
+        "CrankL"
+       ],
+       [
+        "EpinR",
+        "LeverR"
+       ],
+       [
+        "EpinL",
+        "LeverL"
+       ],
+       [
+        "CrankR",
+        "Lid"
+       ],
+       [
+        "CrankL",
+        "Lid"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "tampa 105 graus, berco +22.15"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-110.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
+       0,
+       "Hy",
+       "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.1755 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -1727,6 +2509,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -1814,16 +2612,10 @@
        "CpinR",
        "CpinL"
       ],
-      "axis": [
-       1,
+      "translate": [
        0,
-       0
-      ],
-      "angle": "-25 deg",
-      "origin": [
-       0,
-       "Hy",
-       "Hz"
+       "-(Hy)",
+       "-(Hz)"
       ]
      }
     },
@@ -1831,35 +2623,34 @@
      "command": "solid.move",
      "params": {
       "bodies": [
-       "LeverR",
-       "LeverL",
-       "EpinR",
-       "EpinL"
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
       ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-0.0000 deg",
-      "origin": [
-       0,
-       "Hy + 0",
-       "Hz - 16"
-      ]
+      "angle": "-25.0000 deg"
      }
     },
     {
      "command": "solid.move",
      "params": {
       "bodies": [
-       "Cradle",
-       "Deck"
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
       ],
       "translate": [
        0,
-       0,
-       0.0
+       "Hy",
+       "Hz"
       ]
      }
     },
@@ -1951,16 +2742,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-45 deg",
-      "origin": [
+      "angle": "-45.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -1978,8 +2814,19 @@
        0,
        0
       ],
-      "angle": "-4.3313 deg",
-      "origin": [
+      "angle": "-4.3313 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -2067,6 +2914,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -2088,16 +2951,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-60 deg",
-      "origin": [
+      "angle": "-60.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -2115,8 +3023,19 @@
        0,
        0
       ],
-      "angle": "-10.8098 deg",
-      "origin": [
+      "angle": "-10.8098 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -2204,6 +3123,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -2225,16 +3160,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-75 deg",
-      "origin": [
+      "angle": "-75.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -2252,8 +3232,19 @@
        0,
        0
       ],
-      "angle": "-17.3408 deg",
-      "origin": [
+      "angle": "-17.3408 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -2341,6 +3332,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -2362,16 +3369,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-95 deg",
-      "origin": [
+      "angle": "-95.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -2389,8 +3441,19 @@
        0,
        0
       ],
-      "angle": "-21.7679 deg",
-      "origin": [
+      "angle": "-21.7679 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -2478,6 +3541,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -2499,16 +3578,61 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-110 deg",
-      "origin": [
+      "angle": "-110.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
       ]
      }
     },
@@ -2526,8 +3650,19 @@
        0,
        0
       ],
-      "angle": "-21.1755 deg",
-      "origin": [
+      "angle": "-21.1755 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
        0,
        "Hy + 0",
        "Hz - 16"
@@ -2615,6 +3750,22 @@
     {
      "command": "undo",
      "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
     }
    ]
   },
@@ -2636,16 +3787,108 @@
        "CpinR",
        "CpinL"
       ],
+      "translate": [
+       0,
+       "-(Hy)",
+       "-(Hz)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
       "axis": [
        1,
        0,
        0
       ],
-      "angle": "-113 deg",
-      "origin": [
+      "angle": "-113.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Lid",
+       "CrankR",
+       "CrankL",
+       "CpinR",
+       "CpinL"
+      ],
+      "translate": [
        0,
        "Hy",
        "Hz"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "-(Hy + 0)",
+       "-(Hz - 16)"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "axis": [
+       1,
+       0,
+       0
+      ],
+      "angle": "-21.1755 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "LeverR",
+       "LeverL",
+       "EpinR",
+       "EpinL"
+      ],
+      "translate": [
+       0,
+       "Hy + 0",
+       "Hz - 16"
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Cradle",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       22.0
       ]
      }
     },
@@ -2659,12 +3902,45 @@
      }
     },
     {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "CpinR",
+       "LeverR"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
      "command": "undo",
      "params": {}
     }
    ]
   },
-  "label": "batente a 113 graus (tem de tocar)"
+  "label": "batente a 113 graus (1a: tem de tocar; 2a: zero, o fim da ranhura nao e batente)"
  },
  {
   "tool": "batch",
@@ -2676,7 +3952,7 @@
      "command": "solid.cylinder",
      "params": {
       "diameter": "mag_d",
-      "height": "mag_t",
+      "height": "mag_stack*mag_t",
       "axis": "Z",
       "base": [
        "mag_x",
@@ -2684,14 +3960,14 @@
        "split - mag_h"
       ],
       "operation": "new",
-      "body_name": "MagBody"
+      "body_name": "MagBodyR"
      }
     },
     {
      "command": "solid.cylinder",
      "params": {
       "diameter": "mag_d",
-      "height": "mag_t",
+      "height": "mag_stack*mag_t",
       "axis": "Z",
       "base": [
        "mag_x",
@@ -2699,55 +3975,51 @@
        "split + 0.1"
       ],
       "operation": "new",
-      "body_name": "MagLid"
+      "body_name": "MagLidR"
      }
     },
     {
-     "command": "solid.box",
+     "command": "solid.cylinder",
      "params": {
-      "length": "art_w",
-      "width": "0.5",
-      "height": "split - art_z0 - 0.5",
-      "corner": [
-       "-art_w/2",
-       "-D/2 + art_f + 0.15",
-       "art_z0"
+      "diameter": "mag_d",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "-mag_x",
+       "mag_y",
+       "split - mag_h"
       ],
       "operation": "new",
-      "body_name": "Art"
+      "body_name": "MagBodyL"
      }
     },
     {
-     "command": "inspect.interference",
+     "command": "solid.cylinder",
      "params": {
-      "bodies": [
-       "MagBody",
-       "MagLid",
-       "Art",
-       "Core",
-       "Lid"
-      ]
-     }
-    },
-    {
-     "command": "solid.move",
-     "params": {
-      "bodies": [
-       "Art"
+      "diameter": "mag_d",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "-mag_x",
+       "mag_y",
+       "split + 0.1"
       ],
-      "translate": [
-       0,
-       0,
-       1
-      ]
+      "operation": "new",
+      "body_name": "MagLidL"
      }
     },
     {
      "command": "inspect.interference",
      "params": {
       "bodies": [
-       "Art",
-       "Lid"
+       "MagBodyR",
+       "MagLidR",
+       "MagBodyL",
+       "MagLidL",
+       "Core",
+       "Lid",
+       "ShellR",
+       "ShellL"
       ]
      }
     },
@@ -2769,6 +4041,310 @@
     }
    ]
   },
-  "label": "imas e arte (1a: zero; 2a: arte subindo bate na tampa)"
+  "label": "imas: os 4 nos furos, 0,1 abaixo da face (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d + mag_clr + 0.1",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "mag_x",
+       "mag_y",
+       "split - mag_h + 0.05"
+      ],
+      "operation": "new",
+      "body_name": "ProbeWall"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeWall",
+       "Core"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Core R: parede (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "mag_x",
+       "mag_y",
+       "split - mag_h - 0.05"
+      ],
+      "operation": "new",
+      "body_name": "ProbeFloor"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeFloor",
+       "Core"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Core R: fundo (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d + mag_clr + 0.1",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "mag_x",
+       "mag_y",
+       "split + 0.05"
+      ],
+      "operation": "new",
+      "body_name": "ProbeWall"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeWall",
+       "Lid"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Lid R: parede (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "mag_x",
+       "mag_y",
+       "split + 0.15"
+      ],
+      "operation": "new",
+      "body_name": "ProbeFloor"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeFloor",
+       "Lid"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Lid R: fundo (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d + mag_clr + 0.1",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "-mag_x",
+       "mag_y",
+       "split - mag_h + 0.05"
+      ],
+      "operation": "new",
+      "body_name": "ProbeWall"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeWall",
+       "Core"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Core L: parede (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "-mag_x",
+       "mag_y",
+       "split - mag_h - 0.05"
+      ],
+      "operation": "new",
+      "body_name": "ProbeFloor"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeFloor",
+       "Core"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Core L: fundo (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d + mag_clr + 0.1",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "-mag_x",
+       "mag_y",
+       "split + 0.05"
+      ],
+      "operation": "new",
+      "body_name": "ProbeWall"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeWall",
+       "Lid"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Lid L: parede (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "diameter": "mag_d",
+      "height": "mag_stack*mag_t",
+      "axis": "Z",
+      "base": [
+       "-mag_x",
+       "mag_y",
+       "split + 0.15"
+      ],
+      "operation": "new",
+      "body_name": "ProbeFloor"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeFloor",
+       "Lid"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do ima Lid L: fundo (toca)"
  }
 ]

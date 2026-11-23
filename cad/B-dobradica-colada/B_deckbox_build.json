@@ -602,15 +602,15 @@
    "command": "parameters.add",
    "params": {
     "name": "mag_d",
-    "expression": "5 mm",
-    "comment": "magnet diameter (5 x 1 mm N35 discs)"
+    "expression": "4 mm",
+    "comment": "magnet diameter (4 x 2 mm N35 discs, measured)"
    }
   },
   {
    "command": "parameters.add",
    "params": {
     "name": "mag_t",
-    "expression": "1 mm",
+    "expression": "2 mm",
     "comment": "magnet thickness"
    }
   },
@@ -627,7 +627,7 @@
    "command": "parameters.add",
    "params": {
     "name": "mag_clr",
-    "expression": "0.3 mm",
+    "expression": "0.2 mm",
     "comment": "CALIBRATE: extra pocket diameter (glue the magnets in)"
    }
   },
