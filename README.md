@@ -418,6 +418,7 @@ Feita com booleanas exatas do SolidCraft (`inspect.interference`):
 | Caixa fechada (corpo × tampa) | 0 de interferência | 0 de interferência |
 | 90 cartas (62,5 × 61,2 × 91) **com 1 mm de forro em volta** + divisória | cabem: 0,75 mm de folga de cada lado e 1,5 mm em cima | igual |
 | 4 ímãs 4 × 2 mm nos encaixes | assentam sem tocar; 0,5 mm entre os pares | igual |
+| Encaixes dos ímãs (corpo e tampa, dos dois lados) | sonda 0,1 mm mais larga encosta na parede e ímã 0,05 mm mais fundo encosta no fundo: os 4 têm Ø4,2 × 2,1 | igual |
 | Arte de 46 × 43,5 × 0,5 no porta-arte | cabe sem tocar | cabe sem tocar |
 | Arte empurrada 1 mm para cima | a tampa bloqueia (fica presa) | a tampa bloqueia (fica presa) |
 | Pino / dobradiça montada | pino de 1,75 sem tocar | dobradiça de metal e impressa sem tocar |
