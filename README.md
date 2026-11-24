@@ -20,7 +20,7 @@ A caixa é a mesma nas duas versões; muda só a dobradiça.
 
 Cada pasta tem tudo que precisa ser impresso para aquela versão.
 
-A **versão C — elevador** é outra caixa: ao abrir a tampa, um mecanismo escondido nas laterais **ergue as cartas 22 mm** acima da borda. Está na [seção própria](#versão-c--elevador-cinemática) e em [`stl/C-elevador`](stl/C-elevador).
+A **versão C — elevador** é outra caixa: ao abrir a tampa, um mecanismo escondido nas laterais **ergue as cartas 22 mm** acima da borda. Está na [seção própria](#versão-c--elevador-cinemática) e em [`stl/C-elevador`](stl/C-elevador). **Para imprimir agora, use a [C V2](#versão-c-v2--elevador-revisado)** ([`stl/C-elevador-v2`](stl/C-elevador-v2)): ela corrige os eixos que escapavam e os painéis que soltavam na C.
 
 ---
 
@@ -294,6 +294,105 @@ Booleanas exatas do SolidCraft, com todas as peças e o bloco de 90 cartas + div
 | Fim da ranhura a 113° (mecanismo parado em 110°) | o pino ainda não encosta: o batente para a tampa sozinho |
 | 4 ímãs 4 × 2 mm | cabem sem tocar o corpo, a tampa, os painéis nem um no outro, 0,1 mm abaixo da face |
 | Furos dos ímãs (corpo e tampa, dos dois lados) | sonda 0,1 mm mais larga encosta na parede e ímã 0,05 mm mais fundo encosta no fundo: os 4 furos têm Ø4,2 × 2,1 |
+
+---
+
+## Versão C V2 — elevador revisado
+
+| Fechada, vista de trás: dobra do painel e parafusos | Aberta | Mecanismo aberto (sem o painel) |
+|---|---|---|
+| ![Fechada](images/C2_fechada.png) | ![Aberta](images/C2_aberta.png) | ![Mecanismo](images/C2_mecanismo_aberta.png) |
+
+O mesmo elevador da C, revisado depois de impressa. Na C os eixos escapavam com o peso das cartas e os painéis soltavam quando não estavam colados. As causas, e o que mudou:
+
+| Problema na C | Causa | Na V2 |
+|---|---|---|
+| Eixo da tampa e pivô do balancim escapam | os furos deles no painel ficavam a 1,5 mm da borda de trás: com raio de 1,55 mm, viravam um entalhe aberto. E o pino entrava só 1,0 mm em cada ponta | painel em **L**, que dobra na quina de trás: os furos ficam inteiros, com mais de 5 mm de material atrás. No corpo o pino entra 1,6 mm |
+| O deck "pesa" no mecanismo com a caixa fechada | fechada, o berço ficava 0,3 mm acima do fundo, pendurado no pino do balancim. Nessa posição a força passa a 2,8 mm do pivô: com 90 cartas com sleeve duplo (~320 g) davam **~33 N em cada pino, o tempo todo** — o ABS cede com o tempo e os pinos saem | o berço **descansa no fundo** quando fechado, e o garfo tem 0,6 mm de **folga morta** em cima: fechada, a carga no mecanismo é **zero**. O mecanismo sobe 0,6 mm a mais para o berço ainda subir 22 mm |
+| Painel solta sem cola | só 4 pinos-guia com folga: com 16 N perto do eixo a placa abria vários milímetros | **4 parafusos M2** por painel (2 no pilar da frente, 2 pela dobra de trás, junto do eixo), escareados e rentes. Painel de **3,0 mm** (era 2,0): 3,4× mais rígido. Desmonta quando quiser |
+| Montagem dos eixos estranha | os pinos tinham de ficar no lugar enquanto o painel fechava | eixo e pivô **entram por fora, depois do painel parafusado**: cabeça rebaixada, apertados no painel (Ø2,9), soltos no corpo (Ø3,1) |
+
+**Medidas:** 94,8 × 79,8 × 100,7 mm (2 mm mais larga e 1,2 mm mais funda que a C). O resto — subida, curva, ímãs 4 × 2, forro do berço — é igual à C.
+
+### Cargas (90 cartas com sleeve duplo, ~2,9 g cada; deck + berço + divisória + forro ≈ 320 g)
+
+| Situação | Pino da manivela | Pivô do balancim |
+|---|---|---|
+| Fechada (C) | 34 N | 32 N |
+| **Fechada (V2)** | **0 N** | **0 N** |
+| Começo da subida (25°–40°) | 8–10 N | 7–9 N |
+| Meio e fim da subida | 5–7 N | 4–7 N |
+| Aberta e parada (110°) | 6,6 N | 7,5 N |
+| Aberta, apertando o deck para baixo com 20 N | ~50 N | ~55 N |
+
+- Força para abrir: ~1,1 N na borda da frente da tampa, mais o atrito.
+- Pino de Ø3 em ABS com 7 N: ~5 MPa de flexão, tranquilo. Com 50 N (alguém apertando o deck aberto) passa de 35 MPa: o pino impresso pode entortar. **Use pinos de aço nos 4 longos** se quiser margem; os impressos funcionam no uso normal.
+
+### Imprimir
+
+| Arquivo | Qtd. | Orientação | Camada | Perímetros | Preenchimento | Observação |
+|---|---|---|---|---|---|---|
+| `C2_teste_folgas.stl` | 1 | deitado | 0,16 | 5 | 100% | **imprima primeiro**: furos de Ø2,8 a 3,5 (a quina cortada fica no lado do 2,8) |
+| `C2_corpo.stl` | 1 | em pé | 0,2 | 5 | 20% giroide | parede de 2,0 = 5 linhas de 0,4; topo/fundo 6 camadas; brim 5 mm; costura atrás |
+| `C2_berco.stl` | 1 | em pé | 0,2 | 4 | 20% giroide (100% nas línguas) | parede de 1,6 = 4 linhas; fundo de 8 camadas; costura no canto de trás |
+| `C2_tampa.stl` | 1 | de cabeça para baixo | 0,2 | 5 | 20% giroide | as orelhas do encaixe da manivela pedem 5 perímetros |
+| `C2_painel_direito.stl` / `C2_painel_esquerdo.stl` | 1 + 1 | deitados, face de fora na mesa | 0,2 | 4 | **100%** retilíneo ±45° | é a placa que segura os pinos: tem de ser rígida |
+| `C2_manivela_x2.stl` | 2 | deitada | 0,16 | 5 | 100% | primeira camada sem esmagar (o pé de elefante fecha os furos) |
+| `C2_balancim_x2.stl` | 2 | deitado | 0,16 | 5 | 100% | a parede de 1,65 em volta da ranhura sai só de perímetros |
+| `C2_pino_eixo_x4.stl` | 4 | deitados, chato na mesa | 0,1 | todos | 100% | cabeça em "D"; imprima 6 ou mais juntos (resfriamento). Ou use aço (abaixo) |
+| `C2_pino_curto_x4.stl` | 4 | deitados, chato na mesa | 0,1 | todos | 100% | Ø2,8 × 6,4, igual à C |
+| `C2_divisoria.stl` | 1 | deitada | 0,2 | 3 | 100% | |
+
+**ABS:** bico 240–250 °C, mesa 100–110 °C, câmara fechada (40–50 °C), ventoinha 0% (20–30% só nas pontes), largura de linha 0,4 mm, compensação de pé de elefante 0,15 mm. Seque o filamento (4 h a 65 °C) se estalar.
+
+**Por que essas escolhas:** giroide distribui a contração do ABS em todas as direções e empena menos que grade; peças finas que trabalham em flexão (painéis, manivela, balancim, pinos) vão maciças. Os pinos saem deitados para as camadas correrem ao longo deles — em pé eles quebram entre camadas. Furo vertical em placa fina sai 0,1–0,15 mm menor que o desenho: é para isso o teste de folgas.
+
+**O canto de trás do painel** é arredondado (R4) e fica junto da mesa na impressão: os primeiros ~1 mm da curva saem com um leve degrau. É só estético; uma lixada resolve.
+
+### Compre
+
+- **8 parafusos M2 auto-atarraxantes de cabeça chata (escareada):** 4 × **M2 × 8** (frente) e 4 × **M2 × 6** (trás; o furo atrás tem só 4,4 mm para não furar o berço). Se só tiver M2 × 6, serve nos 8.
+- **Pinos de aço Ø3 (opcional, recomendado):** 4 × 10,8 mm para eixo e pivô (vareta de 3 mm cortada, sem rebarba; ficam rentes no fundo do rebaixo, presos pelo aperto no painel) e 4 × 6,4 mm para manivela e balancim.
+- 4 ímãs 4 × 2 mm, 4 pezinhos de silicone de 8 mm, forro do berço (o mesmo da C).
+
+### Calibrar antes (teste de folgas)
+
+Com o `C2_teste_folgas.stl` impresso, teste os pinos que você vai usar:
+
+| O que testar | Deve | Parâmetro |
+|---|---|---|
+| Pino longo (eixo/pivô) no furo que gira (manivela, balancim) | girar livre, sem jogo visível | `hinge_clr` (0,2 → furo de 3,4) |
+| Pino longo no painel | entrar apertado, com a mão ou batendo leve | `shell_press` (0,1 → furo de 2,9) |
+| Pino curto nos furos da manivela e da ponta do balancim | entrar justo | `pin_s_d` (2,8) |
+| Pino na ranhura (largura 3,6) | correr sem agarrar | `cam_clr` (0,3) |
+
+Ache no teste o furo que dá cada encaixe e ajuste o parâmetro para esse diâmetro. Sem reimprimir: passe uma broca de 3,4–3,5 mm na mão nos furos que giram, ou de 3,0 mm nos de pressão.
+
+### Montar
+
+1. **Berço:** desça o berço no corpo por cima; as línguas entram pelas fendas laterais. Ele desce sozinho e assenta no fundo.
+2. **Manivelas na tampa:** encaixe o rabo-de-andorinha de cada manivela na orelha da tampa, por dentro (uma gota de acetona é opcional).
+3. **Pinos curtos:** coloque um em cada manivela e um no furo da ponta de cada balancim. Não precisam de cola: ficam presos entre o corpo e o painel.
+4. **Balancins:** encaixe cada balancim com o pino da manivela na ranhura e o pino da ponta no garfo da língua. Feche a tampa.
+5. **Painéis:** encoste o painel (os 2 pinos-guia de baixo alinham) e aperte os 4 parafusos M2, sem forçar: rosca em plástico espana fácil.
+6. **Eixo e pivô:** empurre cada pino longo por fora, pelo furo do painel, até a cabeça assentar no rebaixo. Se não achar o furo do cubo da manivela ou do balancim, mexa a tampa de leve enquanto empurra.
+7. **Teste:** com o deck dentro, abra e feche umas 20 vezes. O berço fica parado até ~30°, sobe suave e, no fim, desce um pouco e a tampa fica aberta. Para ajustar alguma peça: tire os 2 pinos longos (puxe pela cabeça) e os 4 parafusos.
+8. **Final:** lubrifique pinos e ranhuras com PTFE seco. Ímãs (polaridade como na B), forro, pés.
+
+Mudou alguma medida? Ajuste as constantes no começo de `cad/C-elevador-v2/gerar_c2.py` e rode `python cad/C-elevador-v2/gerar_c2.py`: ele reescreve o script do modelo (`C2_elevador_build.json`) e o da verificação (`C2_verificacao.json`).
+
+### Verificação (versão C V2)
+
+Booleanas exatas do SolidCraft (`cad/C-elevador-v2/C2_verificacao.json`), com todas as peças, os pinos com cabeça e o bloco de 90 cartas + divisória. O berço sobe pela curva com a folga morta descontada.
+
+| Cenário | Resultado |
+|---|---|
+| Tampa a 0°, 15°, 25°, 30°, 45°, 60°, 75°, 90°, 95°, 100°, 105° e 110° (18 corpos) | 0 de interferência em todos |
+| Fechada: berço 0,05 mm mais baixo | encosta no fundo: ele descansa ali |
+| Fechada: berço descendo a folga morta inteira | ainda não toca o pino do balancim: **o mecanismo não carrega nada** |
+| Pinos dentro das ranhuras e do garfo (sonda 0,15 mm maior que a folga) em 7 ângulos | tocam em todos: nenhum pino sai da ranhura |
+| Batente a 113° | a manivela encosta no batente; o pino ainda não chega ao fim da ranhura |
+| 4 ímãs 4 × 2 mm e seus furos | cabem 0,1 mm abaixo da face; furos de Ø4,2 × 2,1 conferidos |
 
 ---
 
