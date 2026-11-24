@@ -1,7 +1,7 @@
 # Deck box YGO — impressão 3D em ABS
 
 Deck box para **90 cartas com sleeve duplo** (tamanho japonês, 62 × 89 mm): main + extra + side deck, com espaço para **forro de tecido** por dentro.
-Tem tampa basculante, **fechamento com ímãs** e trava de clique, **porta-arte trocável** na frente e divisória removível, e imprime **sem suporte**.
+Tem tampa basculante, **fechamento com ímãs** e trava de clique, faces lisas com cantos arredondados e divisória removível, e imprime **sem suporte**.
 Modelada em [SolidCraft](https://github.com/bherbruck/solidcraft), 100 % paramétrica.
 
 ![Fechada](images/shot_fechada.png)
@@ -133,7 +133,7 @@ Os arquivos já estão na posição de impressão. Total: ~130 g de ABS.
 
 ## Versão B — dobradiça colada
 
-<img src="images/render_B_caixa.png" width="360" alt="Versão B montada, com arte no porta-arte">
+<img src="images/render_B_caixa.png" width="480" alt="Versão B aberta, com o deck dentro">
 
 | Rebaixo-guia | Com dobradiça de metal | Dobradiça impressa |
 |---|---|---|
@@ -299,16 +299,11 @@ Booleanas exatas do SolidCraft, com todas as peças e o bloco de 90 cartas + div
 
 ## Detalhes de design (nas duas versões)
 
-| Por dentro e porta-arte | Fundo |
+| Por dentro | Fundo |
 |---|---|
 | ![Detalhe](images/shot_detalhe.png) | ![Fundo](images/shot_fundo.png) |
 
-- **Porta-arte deslizante:** uma janela com trilhos na frente.
-  - A arte entra por cima, pela boca na linha de divisão, e com a **tampa fechada ela não sai**.
-  - Imprima a arte do seu deck em papel fotográfico ou cartão de até 0,5 mm e **corte em 46 × 43,5 mm**.
-  - Para trocar, abra a tampa e puxe a arte para cima.
-  - A boca do porta-arte também serve de apoio para o polegar ao abrir a tampa.
-- **Canelado horizontal:** 20 ranhuras em V de 0,6 mm nas laterais. Dá pegada e disfarça as linhas de camada.
+- **Faces lisas:** frente e laterais retas, só com os cantos arredondados (R4). A frente tem 9 mm porque é ali que ficam os ímãs.
 - **Linha de sombra:** um degrau de 0,5 × 1,2 mm no topo do corpo, logo abaixo da tampa. Marca a divisão com uma linha escura e esconde desalinhamentos.
 - **Fundo:**
   - 4 rebaixos para **pezinhos de silicone autoadesivos de 8 mm**, para a caixa não escorregar na mesa;
@@ -316,9 +311,6 @@ Booleanas exatas do SolidCraft, com todas as peças e o bloco de 90 cartas + div
 
 | Parâmetro | Padrão | Efeito |
 |---|---|---|
-| `art_t` | 0,6 | espessura da fenda da arte (para papel ou cartão de até 0,5 mm) |
-| `art_w` / `art_z0` | 46 / 20 | largura da arte e altura do fundo da fenda (altura da arte = 64 − `art_z0`) |
-| `fl_n` / `fl_p` / `fl_d` | 20 / 2 / 0,6 | quantidade, passo e profundidade das ranhuras |
 | `sg_d` / `sg_h` | 0,5 / 1,2 | profundidade e altura da linha de sombra |
 | `bt_title` / `bt_sub` | texto | as duas linhas do texto no fundo |
 
@@ -407,7 +399,7 @@ O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado 
 - **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
 - **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o pé de elefante.
 
-![Explodida (A): tampa, arte saindo do porta-arte, divisória e pino](images/shot_explodida.png)
+![Explodida (A): tampa, divisória e pino](images/shot_explodida.png)
 
 ## Verificação
 
@@ -419,10 +411,9 @@ Feita com booleanas exatas do SolidCraft (`inspect.interference`):
 | 90 cartas (62,5 × 61,2 × 91) **com 1 mm de forro em volta** + divisória | cabem: 0,75 mm de folga de cada lado e 1,5 mm em cima | igual |
 | 4 ímãs 4 × 2 mm nos encaixes | assentam sem tocar; 0,5 mm entre os pares | igual |
 | Encaixes dos ímãs (corpo e tampa, dos dois lados) | sonda 0,1 mm mais larga encosta na parede e ímã 0,05 mm mais fundo encosta no fundo: os 4 têm Ø4,2 × 2,1 | igual |
-| Arte de 46 × 43,5 × 0,5 no porta-arte | cabe sem tocar | cabe sem tocar |
-| Arte empurrada 1 mm para cima | a tampa bloqueia (fica presa) | a tampa bloqueia (fica presa) |
 | Pino / dobradiça montada | pino de 1,75 sem tocar | dobradiça de metal e impressa sem tocar |
 | Giro da tampa | clique a 1°, livre de 2° a 168°, batente a ~169° | clique a 1°, livre até 180° |
+| Corpo liso (sem porta-arte e sem canelado) | fechada e a 2°, 45°, 90°, 135° e 168°: 0 de interferência | fechada e a 2°, 45°, 90°, 135° e 180°: 0 de interferência |
 | Dobradiça impressa sozinha | — | plana sem as abas se tocarem, dobra livre até 180° |
 
 ## Editar o modelo
