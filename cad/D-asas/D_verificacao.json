@@ -1,0 +1,4634 @@
+[
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-45.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "45.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       24.74
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       18.1427
+      ]
+     }
+    },
+    {
+     "command": "inspect.measure",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "RackF",
+       "Tray"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "sentido: porta E a 45 graus (bbox)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "label": "portas a 0 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-3.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "3.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       1.6493
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 3 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-6.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "6.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       3.2987
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 6 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-9.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "9.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       4.948
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 9 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-12.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "12.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       6.5973
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 12 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-16.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "16.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       8.7965
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       2.1991
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 16 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-20.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "20.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       10.9956
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       4.3982
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 20 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-30.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "30.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       16.4934
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       9.896
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 30 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-40.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "40.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       21.9911
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       15.3938
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 40 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-50.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "50.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       27.4889
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       20.8916
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 50 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-60.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "60.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       32.9867
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       26.3894
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 60 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-70.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "70.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       38.4845
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       31.8872
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 70 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-75.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "75.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       41.2334
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       34.6361
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 75 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-77.5000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "77.5000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       42.6079
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       36.0105
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Base",
+       "PinL",
+       "PinR",
+       "DoorL",
+       "PlateLF",
+       "PlateLB",
+       "DoorR",
+       "PlateRF",
+       "PlateRB",
+       "RackF",
+       "RackB",
+       "Tray",
+       "Deck"
+      ],
+      "exclude_pairs": [
+       [
+        "DoorL",
+        "PlateLF"
+       ],
+       [
+        "DoorL",
+        "PlateLB"
+       ],
+       [
+        "DoorR",
+        "PlateRF"
+       ],
+       [
+        "DoorR",
+        "PlateRB"
+       ],
+       [
+        "Tray",
+        "RackF"
+       ],
+       [
+        "Tray",
+        "RackB"
+       ]
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "portas a 77.5 graus (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-5.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "5.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       2.7489
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF"
+      ],
+      "translate": [
+       0,
+       0,
+       -0.4
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackF",
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engrenamento 5 graus, cremalheira -0.4 (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-5.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "5.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       2.7489
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF"
+      ],
+      "translate": [
+       0,
+       0,
+       0.4
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackF",
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engrenamento 5 graus, cremalheira +0.4 (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-40.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "40.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       21.9911
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       15.3938
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF"
+      ],
+      "translate": [
+       0,
+       0,
+       -0.4
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackF",
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engrenamento 40 graus, cremalheira -0.4 (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-40.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "40.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       21.9911
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       15.3938
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF"
+      ],
+      "translate": [
+       0,
+       0,
+       0.4
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackF",
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engrenamento 40 graus, cremalheira +0.4 (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-77.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "77.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       42.333
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       35.7356
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF"
+      ],
+      "translate": [
+       0,
+       0,
+       -0.4
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackF",
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engrenamento 77 graus, cremalheira -0.4 (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-77.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "77.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       42.333
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       35.7356
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF"
+      ],
+      "translate": [
+       0,
+       0,
+       0.4
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackF",
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engrenamento 77 graus, cremalheira +0.4 (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-78.5000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "78.5000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       43.1576
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       36.5603
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "Base"
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "Base"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "batente a 78.5 graus (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-75.2264 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "75.2264 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       41.3579
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray",
+       "Deck"
+      ],
+      "translate": [
+       0,
+       0,
+       34.7605
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "RackB",
+       "Base"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "trava a 75.2 graus (toca: a lingueta cede 0,3)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-1.5000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "1.5000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       0.8247
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "PlateLF",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "engate a 1,5 grau (toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "-12.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorL",
+       "PlateLF",
+       "PlateLB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       -38.598,
+       0,
+       -55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "axis": [
+       0,
+       1,
+       0
+      ],
+      "angle": "12.0000 deg"
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "DoorR",
+       "PlateRF",
+       "PlateRB"
+      ],
+      "translate": [
+       38.598,
+       0,
+       55.0
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "RackF",
+       "RackB"
+      ],
+      "translate": [
+       0,
+       0,
+       6.5973
+      ]
+     }
+    },
+    {
+     "command": "solid.move",
+     "params": {
+      "bodies": [
+       "Tray"
+      ],
+      "translate": [
+       0,
+       0,
+       -0.05
+      ]
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "Tray",
+       "RackF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "fim da espera: berco 0,05 abaixo toca a cremalheira"
+ }
+]

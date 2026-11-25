@@ -2,3 +2,6 @@
 
 # arte do folheto (fica so local)
 folheto/
+
+# caixa D em andamento: o .sc (23 MB) sai do build JSON
+cad/D-asas/*.sc
