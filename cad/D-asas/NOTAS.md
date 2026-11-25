@@ -12,10 +12,14 @@ pip install shapely
 python cad/D-asas/geo_d.py        # só as checagens 2D (rápido)
 python cad/D-asas/gerar_d.py      # escreve D_asas_build.json e D_verificacao.json
 solidcraft-cli run cad/D-asas/D_asas_build.json --save cad/D-asas/D_asas.sc --quiet   # ~2 min
+python cad/D-asas/verificar_d.py  # roda as 25 checagens no solidcraft-cli e diz ok/FALHA (~11 min)
+python cad/D-asas/exportar_stl_d.py   # STLs na posição de impressão em stl/D-asas/ (~40 s)
+python cad/D-asas/render_d.py         # imagens do README em images/D_*.png (~1 min)
 ```
 
 O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JSON com o comando acima.
-`D_verificacao.json` é uma lista de chamadas `batch` do MCP do SolidCraft (abrir o `.sc` e rodar cada uma).
+`D_verificacao.json` é uma lista de chamadas `batch` do MCP do SolidCraft; `verificar_d.py` roda as mesmas sem o MCP
+(`--reuse` só reanalisa a última saída).
 
 ## Decisões (e por quê)
 
@@ -37,7 +41,7 @@ O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JS
 - **Dobradiça:** 7 nós (base nos pares). Pino de filamento 1,75: furo de 1,9 na base (aperta) e 2,2 na porta (solto), em gota, com a frente fechada (1 mm).
 - **Fechamento:**
   - na emenda das placas da esquerda há 2 hastes com farpas (snap) que entram no receptáculo das placas da direita;
-  - 1 ímã 4×2 por placa (z = 74): 4 pares no total;
+  - 1 ímã 4×2 por placa (z = 74): 4 ímãs, 2 pares (frente E↔D e trás E↔D);
   - as placas E e D são diferentes (2 STLs, 2 de cada) — confira a polaridade dos ímãs antes de colar.
 - **Placas:** presas na parede da porta com 2 parafusos M2 escareados por fora. Encostam no teto e na lateral da porta.
 - **Acabamento:**
@@ -55,14 +59,35 @@ O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JS
     - engrenamento ±0,4 encosta;
     - engate a 1,5° encosta;
     - fim da espera encosta.
+- **Feito (2026-11-25, no outro computador):**
+  - **Build:** no SolidCraft 0.40.1 daqui o build quebrava no `HingeDoorL2` (booleano do SMLib). A fatia da dobradiça do
+    outro lado encostava topo com topo no nó vizinho, e o arco dela quase coincidia com o do entalhe. Agora ela para 0,02 antes
+    do nó vizinho e o arco fica 0,02 por fora (sobrepor também falha: faces laterais coplanares). A peça não muda na prática.
+  - **Batente:** com o build refeito, o 3D bate com o 2D, sem mexer em `base_lug()`:
+    - livre a 77,5°;
+    - 0,02 mm³ a 78°;
+    - 7,9 mm³ a 78,5° (0,112 mm² × 70,4 mm de dobradiça).
+  - **Trava na varredura:** a 75° e 77,5° a varredura exclui só o par cremalheira de trás × base. O clique é checado à parte.
+  - **`verificar_d.py`:** as 25 checagens deram 24 ok + 1 informativa (o sentido de abertura está certo).
+  - **STLs** (`exportar_stl_d.py`): 9 arquivos em `stl/D-asas/`, já na mesa. As faces na mesa foram conferidas pela área:
+
+    | Arquivo | Imprimir | Posição | Medidas (mm) |
+    |---|---|---|---|
+    | `D_base` | 1 | em pé (gota do pino para cima) | 89,2 × 85,6 × 58,5 |
+    | `D_berco` | 1 | em pé | 69,6 × 75,0 × 52,5 |
+    | `D_porta_esquerda` | 1 | de cabeça para baixo (teto na mesa) | 41,9 × 85,6 × 48,6 |
+    | `D_porta_direita` | 1 | de cabeça para baixo | 41,9 × 85,6 × 48,6 |
+    | `D_placa_esquerda_x2` | 2 | deitada (frente e trás são iguais) | 39,1 × 75,4 × 5,0 |
+    | `D_placa_direita_x2` | 2 | deitada | 34,9 × 75,4 × 5,0 |
+    | `D_cremalheira_frente` | 1 | rasgo para baixo | 17,2 × 55,7 × 5,0 |
+    | `D_cremalheira_tras` | 1 | rasgo para baixo, nervura da trava para cima | 17,2 × 55,7 × 5,6 |
+    | `D_divisoria` | 1 | deitada | 63,6 × 92,0 × 1,6 |
+
+    Os pinos da dobradiça não têm STL: são de filamento 1,75 cortado (~70 mm).
+  - **Renders** (`render_d.py`): `images/D_fechada`, `D_aberta`, `D_mecanismo_fechada` e `D_mecanismo_aberta`.
+    O mecanismo sai cortado na folga entre o berço e as placas de trás: no corte no meio, a parede do berço tapava a cremalheira.
+  - **README:** seção da versão D (impressão, compras, montagem, calibração, verificação) e menção na introdução.
+    - Ferragens conferidas no modelo: 8× M2×6 escareado, **4** ímãs 4×2 (o "8 ímãs" daqui estava errado), 2 pinos de filamento 1,75 × 69.
 - **Pendente:**
-  1. **Batente:** no 3D, a 78,5° a porta ainda não encosta na barra de baixo (no 2D encostava 0,12 mm²). Achar o ângulo real (testar 80–85°) e ajustar `base_lug()` para encostar a 78°.
-  2. A checagem "portas a 75 graus" deve esperar a trava (renomear ou tirar o 75 da varredura).
-  3. Exportar os STLs na posição de impressão:
-     - base em pé;
-     - portas de cabeça para baixo;
-     - placas deitadas;
-     - cremalheiras com o rasgo para baixo;
-     - berço em pé.
-  4. Renders (fechada, aberta, mecanismo) e a seção da versão D no README (tabela de impressão, montagem, ferragens: 8× M2×6 escareado, 8 ímãs 4×2, 2 pinos de filamento 1,75 × ~70).
-  5. **Montagem:** com as portas abertas a 78°, encaixar o berço com as cremalheiras (o último dente do setor entre os dentes 9 e 10 da cremalheira).
+  - Imprimir e testar: primeiro placas + cremalheiras (engrenamento, `bl`), depois o engate da emenda e a trava.
+  - Quando fechar o projeto: o `.sc` e um `.step` no git, como nas outras versões.

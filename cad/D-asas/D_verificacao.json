@@ -2611,6 +2611,10 @@
        [
         "Tray",
         "RackB"
+       ],
+       [
+        "RackB",
+        "Base"
        ]
       ]
      }
@@ -2649,7 +2653,7 @@
     }
    ]
   },
-  "label": "portas a 75 graus (zero)"
+  "label": "portas a 75 graus (zero, menos a trava)"
  },
  {
   "tool": "batch",
@@ -2819,6 +2823,10 @@
        [
         "Tray",
         "RackB"
+       ],
+       [
+        "RackB",
+        "Base"
        ]
       ]
      }
@@ -2857,7 +2865,7 @@
     }
    ]
   },
-  "label": "portas a 77.5 graus (zero)"
+  "label": "portas a 77.5 graus (zero, menos a trava)"
  },
  {
   "tool": "batch",

@@ -93,10 +93,14 @@ def rounded(x0, z0, x1, z1, r):
 def hinge(tag, s, body, bar, own_even):
     """Dobradica em fatias de y, cada uma com o seu perfil (sem cilindro analitico: o booleano de um cilindro
     contra o perfil poligonal da barra falhava). Nos proprios: barra + no de r_k; o resto (nos do outro lado e as
-    folgas de 0,15): barra - disco de r_k + k_clr. Antes, o entalhe na parede no lugar dos nos do outro lado."""
+    folgas de 0,15): barra - disco de r_k + k_clr + 0,02. Antes, o entalhe na parede no lugar dos nos do outro lado.
+    SolidCraft 0.40.1: a fatia do outro lado encostada topo com topo no no vizinho falhava no HingeDoorL2 ("related
+    vertex is not an end of the edge use"); sobreposta 0,02, as faces laterais ficam coplanares e falha igual. Por
+    isso ela para 0,02 antes do no vizinho (fenda de 0,02 na barra, presa pela parede; o fatiador nem enxerga) e o
+    arco dela fica 0,02 fora do entalhe (dois arcos quase coincidentes sao o mesmo problema)."""
     rel = g.disc((0, 0), P["r_k"] + P["k_clr"], 96)
     own_p = g.at_pivot(bar.union(g.disc((0, 0), P["r_k"], 96)), s)
-    other_p = g.at_pivot(bar.difference(rel), s)
+    other_p = g.at_pivot(bar.difference(g.disc((0, 0), P["r_k"] + P["k_clr"] + 0.02, 96)), s)
     for i in range(N_SEG):
         a, b = SEG[i], SEG[i + 1]
         if (i % 2 == 0) == own_even:
@@ -104,7 +108,7 @@ def hinge(tag, s, body, bar, own_even):
             xz(f"Knuckle{tag}{i}", own_p, lo, hi, "join", targets=[body])
         else:
             xz(f"WallRelief{tag}{i}", g.at_pivot(rel, s), a - 0.1, b + 0.1, "cut", targets=[body])
-            xz(f"Hinge{tag}{i}", other_p, a - KG / 2, b + KG / 2, "join", targets=[body])
+            xz(f"Hinge{tag}{i}", other_p, a - KG / 2 + 0.02, b + KG / 2 - 0.02, "join", targets=[body])
 
 
 # ---------------- parametros (informativos; a geometria vem do Python) ----------------
@@ -275,10 +279,14 @@ def interf(bodies, excl=None):
 # 1) o sentido do giro: a porta esquerda aberta tem de ir para fora (x menor) e o bbox medido mostra isso
 mv = pose(45)
 batch(mv + [{"command": "inspect.measure", "params": {"bodies": ["DoorL", "RackF", "Tray"]}}] + [UNDO] * len(mv), "sentido: porta E a 45 graus (bbox)")
-# 2) varredura: nada encosta em nada (fora dos pares parafusados/encaixados)
+# 2) varredura: nada encosta em nada (fora dos pares parafusados/encaixados); perto do clique a nervura da cremalheira
+#    passa por cima do ressalto da lingueta de proposito: ali o par cremalheira de tras x base fica para a checagem 5
+t_click = (g.Z_BUMP - (g.Z_RIDGE + g.RIDGE["lo"])) / (g.R * g.D2R)
 for t in (0, 3, 6, 9, 12, 16, 20, 30, 40, 50, 60, 70, 75, P["th_rest"]):
     mv = pose(t)
-    batch(mv + [interf(ALL, TOUCH)] + [UNDO] * len(mv), f"portas a {t} graus (zero)")
+    near = abs(t - t_click) < 2.5
+    batch(mv + [interf(ALL, TOUCH + ([["RackB", "Base"]] if near else []))] + [UNDO] * len(mv),
+          f"portas a {t} graus (zero{', menos a trava' if near else ''})")
 # 3) engrenamento: a cremalheira 0,4 abaixo ou acima do lugar tem de bater nos dentes (folga < 0,4)
 for t in (5, 40, 77):
     for dz in (-0.4, 0.4):
@@ -289,7 +297,6 @@ for t in (5, 40, 77):
 mv = pose(P["th_stop"] + 0.5)
 batch(mv + [interf(["DoorL", "Base"]), interf(["DoorR", "Base"])] + [UNDO] * len(mv), f"batente a {P['th_stop'] + 0.5} graus (toca)")
 # 5) trava: a nervura passa por cima do ressalto entre ~74 e 77 graus (toca no meio, livre em th_rest)
-t_click = (g.Z_BUMP - (g.Z_RIDGE + g.RIDGE["lo"])) / (g.R * g.D2R)
 mv = pose(t_click)
 batch(mv + [interf(["RackB", "Base"])] + [UNDO] * len(mv), f"trava a {t_click:.1f} graus (toca: a lingueta cede 0,3)")
 # 6) engate na emenda a 1,5 grau (as farpas forcam as hastes: toca) e fechado (zero, ja checado em 0)
