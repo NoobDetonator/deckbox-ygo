@@ -498,6 +498,14 @@ Total: ~185 g de ABS com as peças de teste. O resto segue a [configuração ger
 
 ### Montar
 
+**Manual em PDF:** [`manual/D_manual_montagem.pdf`](manual/D_manual_montagem.pdf) é uma folha A4 frente e verso para imprimir e deixar na bancada.
+- **Frente:** visão geral com as peças apontadas, como o mecanismo funciona, as peças na posição de impressão, as peças de teste e o que ajustar se algo der errado.
+- **Verso:** os 9 passos, com setas para onde cada peça vai e o selo COLA / SEM COLA em cada um.
+
+| Frente | Verso |
+|---|---|
+| ![Frente do manual: visão geral com chamadas, como funciona, peças para imprimir, peças de teste e ajustes](images/D_manual_frente.png) | ![Verso do manual: os 9 passos de montagem com setas e chamadas](images/D_manual_verso.png) |
+
 ![Montagem passo a passo](images/D_montagem.gif)
 
 **Cola (super bonder) só nos ímãs, nas dobradiças e nos pinos das placas, e só depois de testar.** A ordem importa: a cremalheira não entra com as portas já montadas e abertas. Descendo de cima, ela bate nos dentes do setor, e o batente impede abrir mais para engrenar rolando. Por isso tudo entra fechado, e as placas engrenam deslizando de lado (os dentes são retos no sentido do eixo).
@@ -707,3 +715,8 @@ solidcraft-cli run cad/A-dobradica-integrada/A_deckbox_build.json --save cad/A-d
 Depois exporte cada peça em STL pelo app. O modelo fica na posição de montagem, então vire a tampa de cabeça para baixo no fatiador.
 
 Mudou a versão C? Gere o manual de novo com `python manual/gerar_manual.py`. Ele renderiza as cenas a partir de `cad/C-elevador/C_elevador.sc` pelo `solidcraft-cli` (caminho na variável `SOLIDCRAFT_CLI`) e reescreve o PDF e as duas folhas técnicas em `images/`.
+
+Mudou a versão D? Gere o `.sc` (veja `cad/D-asas/NOTAS.md`) e rode `python cad/D-asas/manual_d.py --render`.
+- **O que faz:** renderiza as cenas no Blender, com as mesmas peças dos GIFs, e monta a folha no DesignCraft (`designcraft-cli`, caminho na variável `DESIGNCRAFT_CLI`).
+- **O que sai:** o PDF, o `manual/D_manual_montagem.designcraft` (abre no DesignCraft para editar à mão) e as prévias em `images/`.
+- **Sem `--render`:** só remonta a folha com as imagens já renderizadas (`manual/D_img/`, fora do git).

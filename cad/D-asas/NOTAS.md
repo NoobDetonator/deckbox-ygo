@@ -17,9 +17,14 @@ python cad/D-asas/verificar_d.py  # 35 checagens no solidcraft-cli, diz ok/FALHA
 python cad/D-asas/exportar_stl_d.py   # STLs na posição de impressão em stl/D-asas/ (~1 min)
 python cad/D-asas/render_d.py         # imagens do README em images/D_*.png (~3 min)
 python cad/D-asas/animar_d.py --export  # GIFs de montagem e funcionamento (Blender 5.2+)
+python cad/D-asas/manual_d.py --render  # manual A4 frente e verso: Blender + DesignCraft
 ```
 
-- **Programas:** os scripts acham o `solidcraft-cli` e o Blender sozinhos nos dois computadores do projeto. Em outro lugar, use as variáveis `SOLIDCRAFT_CLI` e `BLENDER`.
+- **Programas:** os scripts acham o `solidcraft-cli`, o Blender e o `designcraft-cli` sozinhos nos dois computadores do projeto. Em outro lugar, use as variáveis `SOLIDCRAFT_CLI`, `BLENDER` e `DESIGNCRAFT_CLI`.
+- **Manual (`manual_d.py`):**
+  - as setas e chamadas são pontos 3D projetados com a mesma câmera de cada imagem, então seguem o modelo;
+  - `--render passo3,capa` renderiza só essas cenas;
+  - sem `--render`, só remonta a folha com as imagens de `manual/D_img/` (fora do git, como o `.sc`).
 - **O `.sc` não vai para o git** enquanto o projeto muda (23 MB): ele sai do build JSON com o comando acima.
 - **`D_verificacao.json`** é uma lista de chamadas `batch` do MCP do SolidCraft. `verificar_d.py` roda as mesmas sem o MCP (`--reuse` só reanalisa a última saída).
 
@@ -87,7 +92,8 @@ python cad/D-asas/animar_d.py --export  # GIFs de montagem e funcionamento (Blen
 - **Arquivos gerados:**
   - STLs: 13 arquivos em `stl/D-asas/`, incluindo `D_dobradica_x2` (as duas abas juntas, deitada) e as peças de teste;
   - renders novos: `D_dobradica` e `D_batente`;
-  - GIFs refeitos com a ordem de montagem nova (dobradiças com fita crepe, teste, cola).
+  - GIFs refeitos com a ordem de montagem nova (dobradiças com fita crepe, teste, cola);
+  - manual de montagem [`manual/D_manual_montagem.pdf`](../../manual/D_manual_montagem.pdf): folha A4 frente e verso diagramada no DesignCraft (o `.designcraft` editável fica ao lado).
 - **Ordem de montagem:**
   1. cremalheiras no berço por baixo;
   2. placas deslizando de lado sobre as cremalheiras, já engatadas na emenda;

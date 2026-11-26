@@ -8,3 +8,7 @@ cad/D-asas/*.sc
 
 # backups automaticos do FreeCAD
 *.FCBak
+
+# manual da D: renders e roteiro saem do cad/D-asas/manual_d.py (--render)
+manual/D_img/
+manual/D_manual_roteiro.txt
