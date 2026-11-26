@@ -22,7 +22,9 @@ Cada pasta tem tudo que precisa ser impresso para aquela versão.
 
 A **versão C — elevador** é outra caixa: ao abrir a tampa, um mecanismo escondido nas laterais **ergue as cartas 22 mm** acima da borda. Está na [seção própria](#versão-c--elevador-cinemática) e em [`stl/C-elevador`](stl/C-elevador). **Para imprimir agora, use a [C V2](#versão-c-v2--elevador-revisado)** ([`stl/C-elevador-v2`](stl/C-elevador-v2)): ela corrige os eixos que escapavam e os painéis que soltavam na C.
 
-A **versão D — asas** também é outra caixa: o topo se abre em duas portas, como asas, e uma engrenagem com cremalheira ergue as cartas 36 mm. É um protótipo, ainda não impresso: veja a [seção própria](#versão-d--asas-portas-com-engrenagem) e [`stl/D-asas`](stl/D-asas).
+A **versão D — asas** também é outra caixa: o topo se abre em duas portas, como asas, e uma engrenagem com cremalheira ergue as cartas 36 mm. A dobradiça é impressa já montada e colada, como na B. É um protótipo, ainda não impresso: comece pelas peças de teste da [seção própria](#versão-d--asas-portas-com-engrenagem). Pasta: [`stl/D-asas`](stl/D-asas).
+
+Antes de imprimir qualquer versão, veja o **[guia de impressão 3D](GUIA_IMPRESSAO_3D.md)**: folgas para cada tipo de encaixe, orientação na mesa, pé de elefante, ABS e um checklist.
 
 ---
 
@@ -400,7 +402,7 @@ Booleanas exatas do SolidCraft (`cad/C-elevador-v2/C2_verificacao.json`), com to
 
 ## Versão D — asas (portas com engrenagem)
 
-> **Protótipo:** verificada no CAD, ainda **não impressa**. Imprima as placas e as cremalheiras primeiro para testar o engrenamento.
+> **Protótipo:** verificada no CAD, ainda **não impressa**. **Comece pelas [peças de teste](#antes-de-tudo-peças-de-teste)** (~10 g). Elas conferem as folgas na sua impressora antes das peças grandes. As regras de folga e de orientação estão no [guia de impressão 3D](GUIA_IMPRESSAO_3D.md).
 
 | Fechada | Aberta: as portas abrem como asas e o berço sobe 36 mm |
 |---|---|
@@ -415,73 +417,112 @@ O topo é dividido em **duas portas** que giram nas laterais, como asas.
 - **As portas abrem juntas:** as duas engrenam na mesma cremalheira o tempo todo. Abrindo uma, a outra vem junto.
 - **Espera de 12°:** a cremalheira corre 6,6 mm numa cauda de andorinha do berço antes de pegar nele. As portas se afastam das cartas antes de o berço subir: folga mínima de 2,5 mm entre o teto da porta e as cartas em todo o giro.
 - **Subida:** curso da cremalheira de 42,9 mm. O berço sobe **36,3 mm** a 78°.
+- **Dobradiça impressa já montada (print-in-place), colada:** a mesma receita da dobradiça da [versão B](#dobradiça-impressa-print-in-place), uma por lado.
+  - 7 nós; o pino de 2,6 mm sai impresso dentro deles. Não tem pino de filamento.
+  - Entra em rebaixos de 0,6 mm na base e na porta. Os rebaixos acertam a posição do eixo, e a engrenagem depende dela.
+- **Batente:** a 78° a lateral da porta encosta em 4 **orelhas** da base, nas pontas das dobradiças. O esforço vai direto para a base, sem passar pela engrenagem.
 - **Fica aberta:**
   - uma lingueta na parede de trás da base tem um ressalto de 0,5 mm. A nervura da cremalheira de trás passa por cima dele perto de 75° (clique) e segura ~6 N contra os ~2,9 N do baralho;
-  - aberta, o centro de gravidade de cada porta fica por fora e ela descansa no **batente** da dobradiça, a 78°.
+  - aberta, o centro de gravidade de cada porta fica por fora e ela descansa no batente.
 - **Fechamento:**
-  - 2 hastes com farpa na emenda das placas da esquerda entram no receptáculo das placas da direita;
+  - 2 hastes com farpa na emenda das placas da esquerda entram com um clique no receptáculo das placas da direita;
   - 2 pares de ímãs 4 × 2 mm ficam na emenda.
 
 | | mm |
 |---|---|
-| Externa | 74,2 × 85,6 × 100,1 (+5 da dobradiça de cada lado) |
-| Divisão base/portas | 55 (= eixo das portas) |
-| Dobradiça | 7 nós, pino de filamento 1,75: furo de 1,9 na base (aperta) e 2,2 na porta (solto), em gota |
+| Externa | 74,2 × 85,6 × 100,1 (+5,4 da dobradiça de cada lado) |
+| Divisão base/portas | 55 (= altura do eixo das portas) |
+| Eixo das portas | 2,4 por fora da lateral |
+| Dobradiça | 64 de comprimento; abas de 10 × 1,2; nós de Ø6 |
+
+| Dobradiça fechada: nós alternados e orelhas do batente nas pontas | Aberta a 77,5°: a lateral da porta descansa nas orelhas |
+|---|---|
+| ![Dobradiça](images/D_dobradica.png) | ![Batente](images/D_batente.png) |
+
+### Antes de tudo: peças de teste
+
+![Peças de teste](images/D_testes.png)
+
+Imprima `D_teste_deitado.stl` e `D_teste_em_pe.stl` (~10 g no total) com a mesma configuração das peças de verdade. Cada peça testa um encaixe do jeito que ele vai ser impresso na caixa.
+
+| Peça | O que conferir | Se não der certo (em `cad/D-asas/geo_d.py`) |
+|---|---|---|
+| **Engrenagem**: base com trilho e eixo, setor de 4 dentes e cremalheira de 4 dentes | Encaixe o setor no eixo e a cremalheira no trilho, e gire o setor: a cremalheira tem de correr lisa, com um pouco de folga | Dura ou travando: `bl` 0,1 → 0,12. Frouxa demais: 0,08. A cremalheira não desliza no trilho: `dt_clr` 0,25 → 0,3 |
+| **Trilho do berço** (em pé) | Desliza no rasgo da cremalheira de teste sem forçar e sem jogo grande | O mesmo `dt_clr` |
+| **Emenda**: pedaço da placa esquerda (hastes) e da direita (receptáculo) | Empurrando uma contra a outra na mesa, dá um clique e segura; puxando, solta. O ímã 4 × 2 entra justo no rasgo | Não entra: `SNAP` `clr` 0,25 → 0,3. Não segura: `barb` 0,6 → 0,7. Ímã solto ou não entra: `MAG` |
+| **Mini dobradiça** (3 nós) | Tire da mesa e dobre devagar para um lado e para o outro: tem de girar livre | Soldou: `hk_pin_clr` 0,35 → 0,4 e `hk_gap` 0,4 → 0,5 (a primeira dobradiça da B, com 0,4 e 0,5, saiu perfeita, só um pouco solta) |
+| **Pino da placa** + furos | Entra no furo vertical da placa e no furo em gota do pedaço de parede da porta (em pé), e a cabeça assenta no rebaixo | `PIN` `hole` (2,8) em `gerar_d.py` |
+| **Lingueta da trava** (em pé) | Os cortes a 45° saem abertos: a lingueta mexe com a unha | Cortes fechados: `SLIT` 0,9 → 1,0 |
+
+Ajustou um número? Gere tudo de novo (comandos em [`cad/D-asas/NOTAS.md`](cad/D-asas/NOTAS.md)) e imprima de novo só a peça de teste daquele encaixe.
 
 ### Imprimir
 
-Pasta [`stl/D-asas`](stl/D-asas). Os STLs já saem na posição de impressão.
+Pasta [`stl/D-asas`](stl/D-asas). Os STLs já saem na posição de impressão: **não gire no fatiador**.
 
 | Arquivo | Qtd. | Orientação | Volume | Observação |
 |---|---|---|---|---|
-| `D_base.stl` | 1 | em pé | 47,9 cm³ | brim 5 mm |
-| `D_berco.stl` | 1 | em pé | 30,8 cm³ | |
-| `D_porta_esquerda.stl` / `D_porta_direita.stl` | 1 + 1 | de cabeça para baixo (teto na mesa) | 21,0 cm³ cada | a gota do furo do pino fica para cima |
-| `D_placa_esquerda_x2.stl` | 2 | deitada | 10,3 cm³ | **100%**: dentes e hastes do engate |
-| `D_placa_direita_x2.stl` | 2 | deitada | 10,2 cm³ | **100%** |
-| `D_cremalheira_frente.stl` | 1 | deitada, rasgo para baixo | 3,1 cm³ | **100%** |
-| `D_cremalheira_tras.stl` | 1 | deitada, rasgo para baixo (nervura da trava para cima) | 3,1 cm³ | **100%** |
+| `D_teste_deitado.stl` / `D_teste_em_pe.stl` | 1 + 1 | como estão | 8,9 + 1,4 cm³ | **primeiro** (veja acima) |
+| `D_base.stl` | 1 | em pé | 44,0 cm³ | brim 5–8 mm |
+| `D_berco.stl` | 1 | em pé | 30,8 cm³ | brim 5 mm |
+| `D_porta_esquerda.stl` / `D_porta_direita.stl` | 1 + 1 | de cabeça para baixo (teto na mesa) | 19,6 cm³ cada | brim 5 mm |
+| `D_placa_esquerda_x2.stl` | 2 | deitada (frente e trás são iguais) | 10,0 cm³ | 40 % gyroid: com 6 perímetros, dentes e hastes já saem maciços |
+| `D_placa_direita_x2.stl` | 2 | deitada | 10,0 cm³ | 40 % gyroid |
+| `D_cremalheira_frente.stl` / `D_cremalheira_tras.stl` | 1 + 1 | deitada, rasgo para baixo (na de trás, a nervura da trava fica para cima) | 3,5 cm³ cada | 40 % gyroid |
+| `D_dobradica_x2.stl` | 2 | deitada, face lisa na mesa (já sai montada) | 2,9 cm³ | não esmague a primeira camada |
 | `D_divisoria.stl` | 1 | deitada | 8,8 cm³ | |
-| `D_pino_placa_x8.stl` | 8 (+2 de reserva) | em pé, sobre a cabeça | 0,04 cm³ cada | **100%**, camada 0,12; imprima vários juntos (resfriamento). A cabeça sai lisa da mesa e fica para fora |
+| `D_pino_placa_x8.stl` | 8 (+2 de reserva) | em pé, sobre a cabeça | 0,04 cm³ cada | 100 %, camada 0,12; imprima junto com outras peças (esfriamento) |
 
-O resto segue a [configuração geral](#configuração-de-impressão-abs-vale-para-tudo). As placas e as cremalheiras vão maciças: os dentes de módulo 1,5 e as hastes do engate trabalham em flexão.
+Total: ~185 g de ABS com as peças de teste. O resto segue a [configuração geral](#configuração-de-impressão-abs-vale-para-tudo).
+
+**Sem suporte em nenhuma peça.** O que foi desenhado para isso:
+- **Base:**
+  - rebaixos e canal da dobradiça abertos para cima;
+  - orelhas com 45° por baixo;
+  - lingueta da trava com cortes a 45° de 0,9 mm (abertos o bastante para não soldar).
+- **Portas:**
+  - furos dos pinos das placas em gota, com a ponta para cima na impressão;
+  - friso do teto com 1 mm de largura (mais estreito, o pé de elefante fecharia).
+- **Placas e cremalheiras:**
+  - alívio de 0,2 × 0,3 mm na face que vai na mesa, contra o pé de elefante;
+  - boca do rasgo da cremalheira chanfrada;
+  - ímã num rasgo aberto até a borda (sem pele fina).
+- **Dobradiça:** furo em gota nos nós que giram.
 
 ### Compre
 
-- **4 ímãs 4 × 2 mm:** 1 por placa, na face da emenda.
-- **2 pinos de filamento 1,75 mm × 69 mm**, um para cada dobradiça.
-- **Super bonder:** nos ímãs e nos 8 pinos das placas.
-- 4 pezinhos de silicone de 8 mm e a divisória.
+- **4 ímãs 4 × 2 mm:** 1 por placa, na emenda.
+- **Super bonder com ativador:** nos ímãs, nas dobradiças e nos 8 pinos das placas.
+- **Fita crepe**, para testar antes de colar as dobradiças.
+- 4 pezinhos de silicone de 8 mm.
 
 ### Montar
 
 ![Montagem passo a passo](images/D_montagem.gif)
 
-**Cola (super bonder) só nos ímãs e nos pinos das placas.**
-- **Pinos das placas:** cole só depois de testar a caixa montada. Coladas, as placas não saem mais.
-- **Cremalheiras:** não leve cola. Elas precisam correr 6,6 mm no trilho do berço, que é a espera de 12°.
-- **Pinos da dobradiça:** ficam presos pelo furo de 1,9 da base. Se ficar folgado, uma gota de cola só na ponta de trás, no nó da base, nunca nos nós da porta.
+**Cola (super bonder) só nos ímãs, nas dobradiças e nos pinos das placas, e só depois de testar.** A ordem importa: a cremalheira não entra com as portas já montadas e abertas. Descendo de cima, ela bate nos dentes do setor, e o batente impede abrir mais para engrenar rolando. Por isso tudo entra fechado, e as placas engrenam deslizando de lado (os dentes são retos no sentido do eixo).
 
-A ordem importa. **Não dá para encaixar a cremalheira com as portas já montadas e abertas:** descendo de cima, ela bate nos dentes 7 e 8 do setor (2D: sobreposição de 0,25 a 13 mm antes do lugar), e o batente impede abrir mais para engrenar rolando. Por isso tudo entra fechado, e as placas engrenam deslizando de lado (os dentes são retos no sentido do eixo).
-
-1. **Ímãs:** cole 1 ímã no furo da face da emenda de cada placa, com uma gota de super bonder.
+1. **Ímãs:** um em cada placa, no rasgo da face da emenda, rente à face, com uma gota de super bonder.
    - Antes de colar, encoste a placa da frente esquerda na da frente direita (e as duas de trás) e deixe os ímãs se acharem.
    - Marque a face de cada ímã.
-   - As placas E e D são diferentes: a da esquerda tem as hastes do engate, a da direita o receptáculo.
-2. **Cremalheiras no berço:** o rasgo em cauda de andorinha é aberto só em cima. Por isso a cremalheira entra **por baixo**: o trilho do berço entra pela boca do rasgo. A cremalheira de trás tem a nervura da trava virada para fora, para a parede da base.
-3. **Placas nas cremalheiras:** com o berço e as cremalheiras na posição fechada, deslize cada par de placas **de lado** (no sentido dos dentes, ao longo de Y) sobre a cremalheira, até o engate da emenda fechar.
+   - As placas E e D são diferentes: a da esquerda tem as hastes do engate; a da direita, o receptáculo.
+2. **Cremalheiras no berço:** o rasgo em cauda de andorinha é aberto só em cima, então a cremalheira entra **por baixo**. A de trás vai com a nervura da trava virada para fora, para a parede da base.
+3. **Placas nas cremalheiras:** com o berço e as cremalheiras na posição fechada, deslize cada par de placas **de lado** (no sentido dos dentes) sobre a cremalheira, até o engate da emenda fechar.
    - O dente de cima de cada setor vai no **1º vão da cremalheira, contando de cima**.
-   - Com as duas placas engatadas na emenda e engrenadas, o conjunto fica firme.
+   - Engatadas na emenda e engrenadas, as placas deixam o conjunto firme.
 4. **Conjunto na base:** desça berço, cremalheiras e placas juntos na base, fechados. A nervura da cremalheira de trás passa pelo ressalto da trava com um clique.
-5. **Portas:** encaixe cada porta **por cima**, fechada. Os nós entram entre os da base e as placas encostam no teto e na lateral da porta. Conferido em 2D: a porta descendo reta de 30 mm até o lugar não encosta na base.
-6. **Pinos:** filamento de 1,75 × 69 mm, empurrado por trás até o fundo do furo (a frente é fechada). Corte rente.
-7. **Pinos das placas (ainda sem cola):** 2 por placa. Entram por fora, pela parede da porta (frente e trás), e vão 4 mm para dentro da placa. A cabeça de Ø4,8 fica rente, num rebaixo de Ø5,0 × 0,8 mm, e tampa o furo.
-8. **Teste:** abra e feche devagar.
-   - Nos primeiros 12° só a cremalheira anda; depois o berço sobe junto.
-   - Perto de 75° vem o clique da trava.
-   - Fechada, o engate da emenda segura as portas.
-9. **Cole os pinos das placas:** tire um pino por vez, ponha uma gota de super bonder no furo e empurre de volta até a cabeça assentar. Limpe o excesso na hora.
-10. **Final:** forro, divisória e pés de silicone adesivos.
+5. **Portas:** encaixe cada uma **por cima**, fechada. As placas entram nela e encostam no teto e na lateral.
+6. **Pinos das placas, ainda secos:** 2 por placa, entram por fora pela parede da porta (frente e trás) e vão 4 mm para dentro da placa. A cabeça de Ø4,8 fica rente num rebaixo de Ø5,0 × 0,8 mm.
+7. **Dobradiças:**
+   - Com a caixa fechada, encaixe cada uma nos rebaixos da lateral: a aba com **4 nós** vai na base (embaixo) e a **face lisa** (a que ficou na mesa) vai para dentro.
+   - Prenda as duas abas com **fita crepe** e teste: abra e feche devagar.
+     - Nos primeiros 12° só a cremalheira anda; depois o berço sobe junto.
+     - Perto de 75° vem o clique da trava e, a 78°, as portas descansam nas orelhas.
+     - Fechada, o engate da emenda segura as portas.
+8. **Cole, nesta ordem, só depois do teste:**
+   - **Dobradiças**, com a caixa fechada e travada no engate. Tire a fita de uma aba por vez, ponha poucas gotas de super bonder no rebaixo, **longe do canal dos nós**, encoste e segure 30 s. Cola nos nós trava a dobradiça.
+   - **Pinos das placas:** tire um por vez, ponha uma gota no furo e empurre de volta até a cabeça assentar.
+9. **Final:** forro, divisória e pés de silicone.
 
 ![A caixa funcionando: portas de 0° a 77,5° e de volta; à direita, o corte logo atrás do berço mostra placas e cremalheira de trás](images/D_funcionando.gif)
 
@@ -492,33 +533,38 @@ Os parâmetros ficam em `P`, no começo de `cad/D-asas/geo_d.py`. Depois de muda
 - reconstrua o `.sc`;
 - rode `python cad/D-asas/exportar_stl_d.py`.
 
-Os comandos estão em [`cad/D-asas/NOTAS.md`](cad/D-asas/NOTAS.md).
+Os comandos estão em [`cad/D-asas/NOTAS.md`](cad/D-asas/NOTAS.md). As faixas de folga recomendadas e de onde elas vêm estão no [guia de impressão 3D](GUIA_IMPRESSAO_3D.md).
 
 | Parâmetro | Padrão | Efeito |
 |---|---|---|
-| `bl` | 0,075 | folga de cada flanco dos dentes, em cada peça. Engrenagem dura: suba para 0,1 |
-| `rail_clr` | 0,3 | folga do berço na base e entre o berço e as placas e cremalheiras |
-| `pin_press` / `pin_free` | 1,9 / 2,2 | furo do pino na base (aperta) e na porta (gira) |
-| `k_clr` | 0,3 | folga radial entre os nós da dobradiça |
+| `bl` | 0,1 | folga de cada flanco dos dentes, em cada peça (0,4 no total). Engrenagem dura: 0,12 |
+| `dt_clr` / `dt_depth_clr` | 0,25 / 0,3 | folga da cauda de andorinha nos flancos / no fundo |
+| `hk_pin_clr` / `hk_gap` / `hk_clr` | 0,35 / 0,4 / 0,4 | dobradiça: pino no furo / entre nós / nó contra a aba do outro lado |
+| `hk_pocket_clr` | 0,15 | folga da aba no rebaixo |
+| `SNAP` `clr` / `barb` | 0,25 / 0,6 | engate: folga no receptáculo / altura da farpa (a haste cede `barb` − `clr`) |
+| `ef` / `ef_h` | 0,2 / 0,3 | alívio do pé de elefante nas faces da mesa |
+| `rail_clr` | 0,3 | folga do berço na base, e entre o berço e as placas e cremalheiras |
 | `dwell` | 12 | graus de espera antes de o berço subir |
 | `card_t`, `liner_t` | 0,68 / 1,0 | como nas outras versões |
-| `PIN` (em `gerar_d.py`) | haste 2,5, furo 2,7, cabeça 4,8 × 0,8, rebaixo 5,0 | pino das placas. Pino frouxo: furo 2,6; não entra: 2,8 (ou passe uma broca de 2,7) |
+| `PIN` (em `gerar_d.py`) | haste 2,5, furo 2,8, cabeça 4,8 × 0,8, rebaixo 5,0 | pino das placas |
 
 ### Verificação (versão D)
 
-Booleanas exatas do SolidCraft (`cad/D-asas/D_verificacao.json`, rodadas com `python cad/D-asas/verificar_d.py`), com 13 corpos: base, portas, 4 placas, cremalheiras, berço, bloco de 90 cartas e pinos.
+Booleanas exatas do SolidCraft (`cad/D-asas/D_verificacao.json`, rodadas com `python cad/D-asas/verificar_d.py`). São 35 checagens: 34 ok e 1 informativa, a que mostra que as portas abrem para o lado certo. Entram 15 corpos (base, portas, 4 placas, 2 cremalheiras, berço, bloco de 90 cartas e as 2 dobradiças, cada uma com 2 abas), mais as peças de teste.
 
 | Cenário | Resultado |
 |---|---|
-| Portas a 0°, 3°, 6°, 9°, 12°, 16°, 20°, 30°, 40°, 50°, 60°, 70°, 75° e 77,5°, com cremalheiras e berço na posição de cada ângulo | 0 de interferência (a 75° e 77,5°, fora o clique previsto da trava) |
-| Engrenamento a 5°, 40° e 77°: cremalheira 0,4 mm acima ou abaixo do lugar | bate nos dentes das placas: a folga é menor que 0,4 mm |
-| Batente | livre a 77,5°, encosta a 78° |
+| Portas a 0°, 3°, 6°, 9°, 12°, 16°, 20°, 30°, 40°, 50°, 60°, 70°, 75° e 77,5°, com cremalheiras, berço e dobradiças na posição de cada ângulo | 0 de interferência (a 75° e 77,5°, fora o clique previsto da trava) |
+| Engrenamento a 5°, 40° e 77°: cremalheira 0,45 mm acima ou abaixo do lugar | bate nos dentes das placas: a folga é menor que 0,45 mm |
+| Batente | livre a 77,5°; a 78,5° a lateral da porta encosta nas orelhas |
 | Trava a 75,2° | a nervura passa por cima do ressalto (a lingueta cede 0,3 mm) |
 | Engate a 1,5° | as farpas forçam as hastes: o engate pega |
 | Fim da espera (12°) | o fundo do rasgo encosta no trilho: dali em diante o berço sobe junto |
+| Dobradiça fechada e a 78° | pino e nós sem tocar; a aba 0,05 mm para dentro toca o fundo do rebaixo |
 | 8 pinos das placas no lugar | não tocam a porta nem a placa |
-| Furos dos pinos | sonda 0,1 mm mais grossa encosta na porta e na placa (furo de 2,7) e no rebaixo da cabeça (5,0) |
-| Checagens 2D (`geo_d.py`) | dentes sem sobreposição de 0° a 78°, folga mínima de 0,14 mm |
+| Furos dos pinos | sonda 0,1 mm mais grossa encosta na porta e na placa (furo de 2,8) e no rebaixo da cabeça (5,0) |
+| Peças de teste | a engrenagem de teste montada a 38° não toca e engrena (cremalheira 0,45 fora do lugar bate); a mini dobradiça sai solta |
+| Checagens 2D (`geo_d.py`) | dentes sem sobreposição de 0° a 78°, folga mínima de 0,19 mm; nenhuma parte da placa fora da porta; a haste do engate cede 0,28 mm (deformação de 0,5 %) |
 
 ---
 
@@ -591,6 +637,8 @@ Imprima com a face para cima; o chanfro da base evita pé de elefante. Os losang
 Em `cad/token/` estão o `token.sc`, o `token.step` e o `token_build.json`. Nos parâmetros dá para trocar o número de estrelas (`n_est`), o tamanho do dado (`dado_d`), a altura da face (`z_face`) e o resto das cotas. O formato dos desenhos finos (estrela, losangos e brasão) sai de `cad/token/gerar_token.py`: mude lá e gere o JSON de novo.
 
 ## Configuração de impressão (ABS, vale para tudo)
+
+Os porquês (folgas, orientação, pé de elefante, empenamento) estão no [guia de impressão 3D](GUIA_IMPRESSAO_3D.md).
 
 | | |
 |---|---|

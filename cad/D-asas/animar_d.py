@@ -22,29 +22,29 @@ import geo_d as g  # noqa: E402
 HERE = Path(__file__).resolve().parent
 IMG = HERE.parent.parent / "images"
 WORK = Path(tempfile.gettempdir()) / "D_anim"
-CLI = os.environ.get("SOLIDCRAFT_CLI", "C:/Users/allan/Desktop/programas/cad/solidcraft-portable/app/"
-                     "solidcraft-0.40.1-windows-x64-portable/solidcraft-cli.exe")
-BLENDER = os.environ.get("BLENDER", "C:/Program Files/Blender Foundation/Blender 5.3/blender.exe")
+from geo_d import CLI  # noqa: E402  (SOLIDCRAFT_CLI ou o primeiro caminho conhecido que existir)
+BLENDER = next((b for b in (os.environ.get("BLENDER", ""), *(f"C:/Program Files/Blender Foundation/Blender {v}/blender.exe"
+                                                           for v in ("5.3", "5.2", "4.4"))) if b and os.path.exists(b)), "blender")
 FONT, FONT_B = "C:/Windows/Fonts/segoeui.ttf", "C:/Windows/Fonts/segoeuib.ttf"
 
 P, p = g.P, g.p
 XP, ZS, Dh = g.XP, g.ZS, p["Dh"]
 OPEN = P["th_rest"]
 COLORS = {"Base": "#1c2331", "DoorL": "#c9a227", "DoorR": "#c9a227", "Tray": "#7a2230", "Deck": "#e8e2d0",
-          "RackF": "#c0c6cc", "RackB": "#c0c6cc", "PinL": "#ff8c1a", "PinR": "#ff8c1a",
+          "RackF": "#c0c6cc", "RackB": "#c0c6cc", "HingeLA": "#3a4560", "HingeRA": "#3a4560", "HingeLB": "#e08a1e", "HingeRB": "#e08a1e",
           **{f"Plate{s}{f}": "#9aa3ad" for s in "LR" for f in "FB"}}
 SIDE = {"L": -1, "R": 1}
 
 # ---------------- extras: imas (1 por placa, na face da emenda) e pinos colados das placas (2 por placa) ----------------
 EXTRAS, GROUPS = [], {b: [b] for b in COLORS}
-SIDE_OF = {"DoorL": -1, "DoorR": 1, **{f"Plate{s}{f}": sg for s, sg in SIDE.items() for f in "FB"}}
+SIDE_OF = {"DoorL": -1, "DoorR": 1, "HingeLB": -1, "HingeRB": 1, **{f"Plate{s}{f}": sg for s, sg in SIDE.items() for f in "FB"}}
 PIN = d.PIN
 for s, sg in SIDE.items():
     for f, fy in (("F", -1), ("B", 1)):
         ym = fy * (p["y_bi"] + p["y_bo"]) / 2
         name = f"Mag{s}{f}"
         EXTRAS.append(dict(name=name, group=name, kind="cyl", r=2.0, h=2.0, axis="X", color="#3b4048",
-                           center=[sg * (-g.X_SEAM + 1.1), ym, g.Z_MAG]))   # 0,1 abaixo da face da emenda
+                           center=[sg * (-g.X_SEAM + 1.15), ym, g.Z_MAG]))   # 0,15 abaixo da face da emenda
         GROUPS[name], SIDE_OF[name] = [name], sg
         for k, (sx, sz) in enumerate(d.SCREW):
             grp = f"Pino{s}{f}{k}"
@@ -59,6 +59,7 @@ PLATES = [f"Plate{s}{f}" for s in "LR" for f in "FB"]
 MAGS = [f"Mag{s}{f}" for s in "LR" for f in "FB"]
 SCREWS = [f"Pino{s}{f}{k}" for s in "LR" for f in "FB" for k in range(len(d.SCREW))]
 CORE = ["Tray", "RackF", "RackB"] + PLATES + MAGS
+HINGES = ["HingeLA", "HingeLB", "HingeRA", "HingeRB"]
 
 
 def side_of(name):
@@ -68,7 +69,7 @@ def side_of(name):
 def mech(t):
     """Poses do mecanismo com as portas a t graus (mesma cinematica do gerar_d.pose)."""
     out = {}
-    for grp in ["DoorL", "DoorR"] + PLATES + MAGS + SCREWS:
+    for grp in ["DoorL", "DoorR", "HingeLB", "HingeRB"] + PLATES + MAGS + SCREWS:
         s = side_of(grp)
         # como no gerar_d.pose: esquerda -t em Y, direita +t (regra da mao direita: as duas sobem por fora)
         out[grp] = {"rot": s * t, "pivot": [s * XP, ZS]}
@@ -115,12 +116,18 @@ def s3(u):
 def s7(u):
     pose = moved([x for x in SCREWS if x[5] == "F"], (0, -22, 0), u)
     pose.update(moved([x for x in SCREWS if x[5] == "B"], (0, 22, 0), u))
-    return ["Base", "DoorL", "DoorR", "PinL", "PinR"] + CORE + SCREWS, pose
+    return ["Base", "DoorL", "DoorR"] + CORE + SCREWS, pose
 
 
-ALL = ["Base", "DoorL", "DoorR", "PinL", "PinR"] + CORE + SCREWS
+def s_hinge(u):
+    pose = moved(["HingeLA", "HingeLB"], (-45, 0, 0), u)
+    pose.update(moved(["HingeRA", "HingeRB"], (45, 0, 0), u))
+    return ["Base", "DoorL", "DoorR"] + CORE + SCREWS + HINGES, pose
+
+
+ALL = ["Base", "DoorL", "DoorR"] + HINGES + CORE + SCREWS
 STEPS = [
-    ("1 · Ímãs: 1 por placa, com uma gota de super bonder no fundo do furo. Antes de colar, encoste a placa da "
+    ("1 · Ímãs: 1 por placa, no rasgo da face da emenda, com uma gota de super bonder. Antes de colar, encoste a placa da "
      "esquerda na da direita (frente com frente, trás com trás) para conferir a polaridade.", True, 16, s1, "close"),
     ("2 · Cremalheiras no berço: entram por baixo no trilho em cauda de andorinha (o rasgo é aberto só em cima). "
      "Sem cola: elas correm 6,6 mm no trilho antes de levantar o berço.", False, 16,
@@ -129,14 +136,13 @@ STEPS = [
      "do setor vai no 1º vão da cremalheira (contando de cima).", False, 18, s3, "iso"),
     ("4 · Desça o conjunto na base, fechado. A nervura da cremalheira de trás passa pelo ressalto da trava (clique).",
      False, 16, lambda u: (["Base"] + CORE, moved(CORE, (0, 0, 95), u)), "iso"),
-    ("5 · Portas: encaixe cada uma por cima, fechada. Os nós entram entre os da base e as placas encostam no "
-     "teto e na lateral da porta.", False, 16,
+    ("5 · Portas: encaixe cada uma por cima, fechada. As placas entram nela e encostam no teto e na lateral "
+     "da porta.", False, 16,
      lambda u: (["Base", "DoorL", "DoorR"] + CORE, moved(["DoorL", "DoorR"], (0, 0, 60), u)), "iso"),
-    ("6 · Pinos: filamento 1,75 × 69 mm, empurrado por trás até o fundo (a frente do furo é fechada). "
-     "Corte rente. Sem cola: o furo de 1,9 da base segura.", False, 16,
-     lambda u: (["Base", "DoorL", "DoorR", "PinL", "PinR"] + CORE, moved(["PinL", "PinR"], (0, 110, 0), u)), "iso"),
-    ("7 · Pinos das placas: 2 por placa, entram por fora pela parede da porta (frente e trás) e a cabeça fica rente "
-     "no rebaixo. Teste a caixa com eles secos; depois, uma gota de super bonder em cada furo.", True, 18, s7, "pins"),
+    ("6 · Pinos das placas, ainda secos: 2 por placa, entram por fora pela parede da porta (frente e trás) e a "
+     "cabeça fica rente no rebaixo. A cola vem só depois do teste.", False, 18, s7, "pins"),
+    ("7 · Dobradiças: com a caixa fechada, encaixe cada uma nos rebaixos (os 4 nós do lado da base). Teste "
+     "prendendo com fita crepe; depois cole as abas com pouco super bonder, longe dos nós.", True, 18, s_hinge, "hinge"),
 ]
 
 
@@ -151,8 +157,8 @@ def deck_in(u):
     return ALL + ["Deck"], pose
 
 
-FINAL = ("8 · Pronto: abra (as portas vêm juntas e o berço sobe 36 mm), coloque as cartas e feche. "
-         "Pés de silicone adesivos no fundo.", False)
+FINAL = ("8 · Pronto: abra (as portas vêm juntas e o berço sobe 36 mm), coloque as cartas e feche. Deu certo? Uma "
+         "gota de super bonder em cada pino das placas e os pés de silicone no fundo.", False)
 STEPS += [(*FINAL, 18, lambda u: open_close(u, 0, OPEN), "iso"), (*FINAL, 14, deck_in, "iso"),
           (*FINAL, 18, lambda u: open_close(u, OPEN, 0), "iso")]
 
@@ -167,10 +173,11 @@ CAMERAS = {"iso": cam(-0.55, 0.42, [0, 0, 62], 270, [840, 600]),
            "close": cam(-0.35, 0.3, [0, 0, 58], 175, [840, 600]),
            "mid": cam(-0.55, 0.42, [0, 0, 30], 200, [840, 600]),
            "pins": cam(-0.4, 0.22, [12, -Dh, 76], 105, [840, 600]),
+           "hinge": cam(1.0, 0.3, [-28, 0, 55], 200, [840, 600]),
            "work_iso": cam(-0.55, 0.42, [0, 0, 78], 215, [620, 620]),
            "work_cut": {"eye": [0, -900, 72], "target": [0, 0, 72], "ortho_scale": 175, "res": [620, 620]}}
 CUT_Y = p["y_co"] + P["rail_clr"] / 2
-CUT_BODIES = ["Base", "DoorL", "DoorR", "Tray", "PinL", "PinR"]
+CUT_BODIES = ["Base", "DoorL", "DoorR", "Tray"]
 BACK = ["PlateLB", "PlateRB", "RackB", "MagLB", "MagRB"]
 
 

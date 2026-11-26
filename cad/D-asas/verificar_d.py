@@ -12,8 +12,7 @@ import tempfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-CLI = os.environ.get("SOLIDCRAFT_CLI", "C:/Users/allan/Desktop/programas/cad/solidcraft-portable/app/"
-                     "solidcraft-0.40.1-windows-x64-portable/solidcraft-cli.exe")
+from geo_d import CLI  # noqa: E402  (SOLIDCRAFT_CLI ou o primeiro caminho conhecido que existir)
 RAW = Path(tempfile.gettempdir()) / "D_verificacao_saida.txt"
 INSPECT = ("inspect.interference", "inspect.measure")
 

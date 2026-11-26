@@ -15,17 +15,23 @@ import gerar_d as d  # noqa: E402  (reescreve os JSON com o mesmo conteudo)
 
 HERE = Path(__file__).resolve().parent
 IMG = HERE.parent.parent / "images"
-CLI = os.environ.get("SOLIDCRAFT_CLI", "C:/Users/allan/Desktop/programas/cad/solidcraft-portable/app/"
-                     "solidcraft-0.40.1-windows-x64-portable/solidcraft-cli.exe")
+from geo_d import CLI  # noqa: E402  (SOLIDCRAFT_CLI ou o primeiro caminho conhecido que existir)
 OPEN = d.P["th_rest"]
 # corte na folga entre o berco e as placas de tras: ficam so as placas, a cremalheira de tras e o trilho no rasgo
 CUT = f"y={d.y_co + d.P['rail_clr'] / 2:.3f},flip"
 # nome: (angulo das portas, camera, corte, esconder)
+LOOSE = ["Divider", "PlatePin"] + d.FLAT + d.UP_          # pecas soltas ao lado da caixa (divisoria, pino, testes)
+BOX = ["Base", "DoorL", "DoorR", "Tray", "Deck", "RackF", "RackB", "PlateLF", "PlateLB", "PlateRF", "PlateRB",
+       "HingeLA", "HingeLB", "HingeRA", "HingeRB"]
 SHOTS = {
-    "D_fechada": (0, {"target": [0, 0, 48], "yaw": -0.6, "pitch": 0.42, "distance": 250}, None, ["Divider"]),
-    "D_aberta": (OPEN, {"target": [0, 4, 70], "yaw": -0.5, "pitch": 0.5, "distance": 330}, None, ["Divider"]),
-    "D_mecanismo_fechada": (0, {"target": [0, 0, 55], "yaw": 0.0, "pitch": 0.0, "distance": 260}, CUT, ["Divider", "Deck"]),
-    "D_mecanismo_aberta": (OPEN, {"target": [0, 0, 62], "yaw": 0.0, "pitch": 0.0, "distance": 300}, CUT, ["Divider", "Deck"]),
+    "D_fechada": (0, {"target": [0, 0, 48], "yaw": -0.6, "pitch": 0.42, "distance": 250}, None, LOOSE),
+    "D_aberta": (OPEN, {"target": [0, 4, 70], "yaw": -0.5, "pitch": 0.5, "distance": 330}, None, LOOSE),
+    "D_mecanismo_fechada": (0, {"target": [0, 0, 55], "yaw": 0.0, "pitch": 0.0, "distance": 260}, CUT, LOOSE + ["Deck"]),
+    "D_mecanismo_aberta": (OPEN, {"target": [0, 0, 62], "yaw": 0.0, "pitch": 0.0, "distance": 300}, CUT, LOOSE + ["Deck"]),
+    "D_dobradica": (0, {"target": [-40, 0, 54], "yaw": 1.2, "pitch": 0.22, "distance": 150}, None, LOOSE),
+    "D_batente": (OPEN, {"target": [-46, 0, 60], "yaw": 1.35, "pitch": 0.3, "distance": 175}, None, LOOSE + ["Deck"]),
+    "D_testes": (0, {"target": [d.TX + 57, d.TY - 8, 4], "yaw": -0.25, "pitch": 0.95, "distance": 230}, None,
+                 BOX + ["Divider", "PlatePin"]),
 }
 
 
