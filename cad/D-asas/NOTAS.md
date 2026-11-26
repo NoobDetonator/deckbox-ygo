@@ -15,6 +15,7 @@ solidcraft-cli run cad/D-asas/D_asas_build.json --save cad/D-asas/D_asas.sc --qu
 python cad/D-asas/verificar_d.py  # roda as 25 checagens no solidcraft-cli e diz ok/FALHA (~11 min)
 python cad/D-asas/exportar_stl_d.py   # STLs na posição de impressão em stl/D-asas/ (~40 s)
 python cad/D-asas/render_d.py         # imagens do README em images/D_*.png (~1 min)
+python cad/D-asas/animar_d.py         # GIFs de montagem e funcionamento (Blender 5.3; --export refaz os STLs)
 ```
 
 O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JSON com o comando acima.
@@ -88,6 +89,18 @@ O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JS
     O mecanismo sai cortado na folga entre o berço e as placas de trás: no corte no meio, a parede do berço tapava a cremalheira.
   - **README:** seção da versão D (impressão, compras, montagem, calibração, verificação) e menção na introdução.
     - Ferragens conferidas no modelo: 8× M2×6 escareado, **4** ímãs 4×2 (o "8 ímãs" daqui estava errado), 2 pinos de filamento 1,75 × 69.
+  - **Ordem de montagem corrigida.** A antiga ("abrir as portas a 78° e descer o berço com as cremalheiras") não funciona:
+    - com a porta parada no batente, a cremalheira descendo de cima bate nos dentes 7 e 8 do setor (2D: de 0,25 a 13 mm antes do lugar);
+    - engrenar rolando pediria abrir até ~103°, e o batente fica em 78°;
+    - o rasgo da cauda de andorinha é aberto só em cima, então a cremalheira entra no trilho por baixo.
+  - **Ordem que funciona:** cremalheiras no berço por baixo → placas deslizando de lado (Y) sobre as cremalheiras, já
+    engatadas na emenda → conjunto na base → portas por cima, fechadas (2D: descida de 30 mm sem tocar) → pinos → parafusos.
+    Cola só nos ímãs.
+  - **GIFs** (`animar_d.py` + `blender_d.py`, Blender 5.3 em segundo plano): `images/D_montagem.gif` (passo a passo, com
+    selo de cola/sem cola) e `images/D_funcionando.gif` (3/4 + corte atrás do berço). As peças saem do `.sc` em STL e as
+    poses vêm da mesma cinemática (`travel`, `lift`, giro das portas).
 - **Pendente:**
   - Imprimir e testar: primeiro placas + cremalheiras (engrenamento, `bl`), depois o engate da emenda e a trava.
+  - Montagem: testar na peça impressa se as placas deslizam de lado sobre a cremalheira com as duas engatadas na emenda
+    (o modelo diz que sim, os perfis são prismáticos em Y).
   - Quando fechar o projeto: o `.sc` e um `.step` no git, como nas outras versões.

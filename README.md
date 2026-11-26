@@ -454,19 +454,34 @@ O resto segue a [configuração geral](#configuração-de-impressão-abs-vale-pa
 
 ### Montar
 
-1. **Ímãs:** cole 1 ímã no furo da face da emenda de cada placa.
-   - Antes de colar, junte a placa da frente esquerda com a da frente direita (e as duas de trás) e deixe os ímãs se acharem.
+![Montagem passo a passo](images/D_montagem.gif)
+
+**Cola só nos ímãs.**
+- **Cremalheiras:** não leve cola. Elas precisam correr 6,6 mm no trilho do berço, que é a espera de 12°.
+- **Placas:** são parafusadas, para desmontar quando quiser.
+- **Pinos:** ficam presos pelo furo de 1,9 da base. Se ficar folgado, uma gota de cola só na ponta de trás, no nó da base, nunca nos nós da porta.
+
+A ordem importa. **Não dá para encaixar a cremalheira com as portas já montadas e abertas:** descendo de cima, ela bate nos dentes 7 e 8 do setor (2D: sobreposição de 0,25 a 13 mm antes do lugar), e o batente impede abrir mais para engrenar rolando. Por isso tudo entra fechado, e as placas engrenam deslizando de lado (os dentes são retos no sentido do eixo).
+
+1. **Ímãs:** cole 1 ímã no furo da face da emenda de cada placa, com uma gota de super bonder.
+   - Antes de colar, encoste a placa da frente esquerda na da frente direita (e as duas de trás) e deixe os ímãs se acharem.
    - Marque a face de cada ímã.
-   - As placas E e D são diferentes: a da esquerda tem as hastes, a da direita o receptáculo.
-2. **Placas nas portas:** cada porta recebe as suas 2 placas (frente e trás), encostadas no teto e na lateral. Prenda cada placa com 2 parafusos M2 por fora, sem forçar.
-3. **Portas na base:** alinhe os nós e passe o filamento de 1,75 por trás, até o fundo do furo (a frente é fechada). Corte rente.
-4. **Cremalheiras no berço:** encaixe cada cremalheira por cima, no trilho em cauda de andorinha do berço. A cremalheira de trás tem a nervura da trava virada para a parede da base.
-5. **Berço na base:** abra as portas até o batente (78°) e desça o berço com as cremalheiras entre as placas. O último dente de cada setor deve ficar entre os dentes 9 e 10 da cremalheira.
-6. **Teste:** feche e abra devagar.
+   - As placas E e D são diferentes: a da esquerda tem as hastes do engate, a da direita o receptáculo.
+2. **Cremalheiras no berço:** o rasgo em cauda de andorinha é aberto só em cima. Por isso a cremalheira entra **por baixo**: o trilho do berço entra pela boca do rasgo. A cremalheira de trás tem a nervura da trava virada para fora, para a parede da base.
+3. **Placas nas cremalheiras:** com o berço e as cremalheiras na posição fechada, deslize cada par de placas **de lado** (no sentido dos dentes, ao longo de Y) sobre a cremalheira, até o engate da emenda fechar.
+   - O dente de cima de cada setor vai no **1º vão da cremalheira, contando de cima**.
+   - Com as duas placas engatadas na emenda e engrenadas, o conjunto fica firme.
+4. **Conjunto na base:** desça berço, cremalheiras e placas juntos na base, fechados. A nervura da cremalheira de trás passa pelo ressalto da trava com um clique.
+5. **Portas:** encaixe cada porta **por cima**, fechada. Os nós entram entre os da base e as placas encostam no teto e na lateral da porta. Conferido em 2D: a porta descendo reta de 30 mm até o lugar não encosta na base.
+6. **Pinos:** filamento de 1,75 × 69 mm, empurrado por trás até o fundo do furo (a frente é fechada). Corte rente.
+7. **Parafusos:** 2 M2 × 6 escareados por placa, pela parede da porta (frente e trás), sem forçar.
+8. **Teste:** abra e feche devagar.
    - Nos primeiros 12° só a cremalheira anda; depois o berço sobe junto.
    - Perto de 75° vem o clique da trava.
    - Fechada, o engate da emenda segura as portas.
-7. **Final:** forro, divisória e pés.
+9. **Final:** forro, divisória e pés de silicone adesivos.
+
+![A caixa funcionando: portas de 0° a 77,5° e de volta; à direita, o corte logo atrás do berço mostra placas e cremalheira de trás](images/D_funcionando.gif)
 
 ### Calibrar
 
