@@ -22,7 +22,11 @@ x_ki, x_co, y_co, y_bi, y_bo, y_wi = (p[k] for k in ("x_ki", "x_co", "y_co", "y_
 Y_H = y_co                                    # a dobradica vai de -Y_H a +Y_H (fora das faixas das placas)
 N_SEG, KG = 7, 0.3                            # nos da dobradica: base nos pares (0,2,4,6), porta nos impares
 SEG = [-Y_H + 2 * Y_H * i / N_SEG for i in range(N_SEG + 1)]
-SCREW = [(28.0, 64.0), (28.0, 91.0)]          # parafusos M2 das placas (|x|, z) nas paredes da frente/tras das portas
+SCREW = [(28.0, 64.0), (28.0, 91.0)]          # pinos das placas (|x|, z) nas paredes da frente/tras das portas
+# pino impresso colado (super bonder) no lugar do parafuso M2: haste pela parede da porta ate 4 mm dentro da placa;
+# a cabeca larga fica num rebaixo da parede, rente, e tampa o furo
+PIN = dict(d=2.5, hole=2.7, head=4.8, cb=5.0, head_t=0.8, bite=4.0)
+PIN["l"] = P["dwall_t"] - PIN["head_t"] + PIN["bite"]           # comprimento da haste (5,5)
 Y_MID = (y_bi + y_bo) / 2
 
 cmds = []
@@ -168,10 +172,10 @@ for s, tag in ((-1, "L"), (1, "R")):
     ring = outer.difference(rounded(xo[0] + 0.8, -Dh + 5.8, xo[1] - 0.8, Dh - 5.8, 2.2))
     extrude(f"Door{tag}Frame", "XY", H - 0.4, rings(ring), 1, "cut", targets=[body])
     for k, (sx, sz) in enumerate(SCREW):
-        C("solid.hole", position=[r4(s * sx), r4(-Dh), sz], direction=[0, 1, 0], diameter=2.3, type="countersink",
-          cs_diameter=4.2, cs_angle=90, depth=P["dwall_t"] + 0.5, targets=[body], name=f"ScrewF{tag}{k}")
-        C("solid.hole", position=[r4(s * sx), r4(Dh), sz], direction=[0, -1, 0], diameter=2.3, type="countersink",
-          cs_diameter=4.2, cs_angle=90, depth=P["dwall_t"] + 0.5, targets=[body], name=f"ScrewB{tag}{k}")
+        # furo passante de 2,7 na parede e rebaixo de 5,0 x 0,8 por fora para a cabeca do pino
+        for f, y_in, y_cb in (("F", -Dh - 0.5, -Dh - 0.5), ("B", Dh - P["dwall_t"] - 0.5, Dh - PIN["head_t"])):
+            cyl(f"PinHole{f}{tag}{k}", PIN["hole"] / 2, [s * sx, y_in, sz], "Y", P["dwall_t"] + 1.0, "cut", targets=[body])
+            cyl(f"PinRecess{f}{tag}{k}", PIN["cb"] / 2, [s * sx, y_cb, sz], "Y", PIN["head_t"] + 0.5, "cut", targets=[body])
     # dobradica da porta: mao-francesa de cima continua, nos impares, alivio nos pares, furo livre de 2,2 em gota para baixo
     hinge(f"Door{tag}", s, body, g.door_gusset(), False)
     xz(f"PinHoleDoor{tag}", affinity.translate(g.teardrop(P["pin_free"] / 2, False), s * XP, ZS), -Y_H - 1, Y_H + 1, "cut", targets=[body])
@@ -184,8 +188,8 @@ for s, tag in ((-1, "L"), (1, "R")):
     for side, y0, y1 in (("F", -y_bo, -y_bi), ("B", y_bi, y_bo)):
         body = f"Plate{tag}{side}"
         xz(f"Plate{tag}{side}Body", geom, y0, y1, "new", body=body)
-        for k, (sx, sz) in enumerate(SCREW):
-            cyl(f"Plate{tag}{side}Pilot{k}", 0.8, [s * sx, y0 - 0.5, sz], "Y", y1 - y0 + 1, "cut", targets=[body])
+        for k, (sx, sz) in enumerate(SCREW):     # furo passante: placa da frente e de tras continuam iguais
+            cyl(f"Plate{tag}{side}PinHole{k}", PIN["hole"] / 2, [s * sx, y0 - 0.5, sz], "Y", y1 - y0 + 1, "cut", targets=[body])
         # ima 4 x 2 na face da emenda (eixo X): furo de 4,2 x 2,2
         x0 = g.X_SEAM - 2.2 if s < 0 else -g.X_SEAM - 0.5
         cyl(f"Plate{tag}{side}Magnet", 2.1, [x0, (y0 + y1) / 2, g.Z_MAG], "X", 2.7, "cut", targets=[body])
@@ -226,9 +230,13 @@ yb = p["in_y"] / 2 - P["liner_t"]
 box("DeckBlock", -P["card_w"] / 2, P["card_w"] / 2, yb - deck_t, yb, p["card_z0"], p["card_top"], "new", body="Deck")
 for s, tag in ((-1, "L"), (1, "R")):
     cyl(f"Pin{tag}", 1.75 / 2, [s * XP, -Y_H + 1.2, ZS], "Y", 2 * Y_H - 1.4, "new", body=f"Pin{tag}")
+# pino das placas, em pe sobre a cabeca (posicao de impressao), ao lado da caixa
+cyl("PlatePinHead", PIN["head"] / 2, [Wh + 15, -Dh - 12, 0], "Z", PIN["head_t"], "new", body="PlatePin")
+cyl("PlatePinShaft", PIN["d"] / 2, [Wh + 15, -Dh - 12, PIN["head_t"] - 0.01], "Z", PIN["l"] + 0.01, "join", targets=["PlatePin"])
 
 COLORS = {"Base": "#1c2331", "DoorL": "#c9a227", "DoorR": "#c9a227", "Tray": "#7a2230", "Divider": "#a8322d",
-          "Deck": "#e8e2d0", "RackF": "#c0c6cc", "RackB": "#c0c6cc", "PinL": "#5b6168", "PinR": "#5b6168"}
+          "Deck": "#e8e2d0", "RackF": "#c0c6cc", "RackB": "#c0c6cc", "PinL": "#5b6168", "PinR": "#5b6168",
+          "PlatePin": "#c9a227"}
 for b in ("PlateLF", "PlateLB", "PlateRF", "PlateRB"):
     COLORS[b] = "#9aa3ad"
 for b, c in COLORS.items():
@@ -306,6 +314,30 @@ batch(mv + [interf(["PlateLF", "PlateRF"])] + [UNDO] * len(mv), "engate a 1,5 gr
 mv = pose(P["dwell"])
 batch(mv + [{"command": "solid.move", "params": {"bodies": ["Tray"], "translate": [0, 0, -0.05]}}, interf(["Tray", "RackF"])]
       + [UNDO] * (len(mv) + 1), "fim da espera: berco 0,05 abaixo toca a cremalheira")
+# 8) pinos das placas: no lugar (cabeca no rebaixo, haste pela parede ate dentro da placa) nao tocam nada;
+#    sondas 0,1 mais grossas tocam: o furo tem 2,7 na porta e na placa e o rebaixo tem 5,0
+def plate_pin(name, s, sx, sz, f, dr=0.0):
+    fy = -1 if f == "F" else 1
+    yh = -Dh if fy < 0 else Dh - PIN["head_t"]                                       # comeco (menor y) da cabeca
+    ys = -Dh + PIN["head_t"] if fy < 0 else Dh - PIN["head_t"] - PIN["l"]            # comeco da haste
+    cy = lambda nm, r, y0, h: {"command": "solid.cylinder", "params": {"radius": r4(r), "height": r4(h), "axis": "Y",
+                                                                         "base": [r4(s * sx), r4(y0), sz], "operation": "new", "body_name": nm}}
+    return [cy(name + "H", PIN["head"] / 2 + dr, yh, PIN["head_t"]), cy(name + "S", PIN["d"] / 2 + dr, ys, PIN["l"])]
+
+
+pins, names = [], []
+for s, tag in ((-1, "L"), (1, "R")):
+    for f in "FB":
+        for k, (sx, sz) in enumerate(SCREW):
+            pins += plate_pin(f"PP{tag}{f}{k}", s, sx, sz, f)
+            names += [f"PP{tag}{f}{k}H", f"PP{tag}{f}{k}S"]
+batch(pins + [interf(names + ["DoorL", "DoorR"] + [b for b in ALL if b.startswith("Plate")])] + [UNDO] * len(pins),
+      "pinos das placas no lugar (zero)")
+for part in ("DoorR", "PlateRF"):
+    batch(plate_pin("ProbePin", 1, SCREW[0][0], SCREW[0][1], "F", dr=0.05 + (PIN["hole"] - PIN["d"]) / 2)[1:]
+          + [interf(["ProbePinS", part]), UNDO], f"furo do pino com 2,7 em {part} (sonda de 2,8 toca)")
+batch(plate_pin("ProbeHead", 1, SCREW[0][0], SCREW[0][1], "F", dr=0.05 + (PIN["cb"] - PIN["head"]) / 2)[:1]
+      + [interf(["ProbeHeadH", "DoorR"]), UNDO], "rebaixo da cabeca com 5,0 (sonda de 5,1 toca)")
 (HERE / "D_verificacao.json").write_text(json.dumps(checks, ensure_ascii=False, indent=1), encoding="utf-8")
 
 if __name__ == "__main__":

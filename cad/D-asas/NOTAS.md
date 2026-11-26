@@ -12,7 +12,7 @@ pip install shapely
 python cad/D-asas/geo_d.py        # só as checagens 2D (rápido)
 python cad/D-asas/gerar_d.py      # escreve D_asas_build.json e D_verificacao.json
 solidcraft-cli run cad/D-asas/D_asas_build.json --save cad/D-asas/D_asas.sc --quiet   # ~2 min
-python cad/D-asas/verificar_d.py  # roda as 25 checagens no solidcraft-cli e diz ok/FALHA (~11 min)
+python cad/D-asas/verificar_d.py  # roda as 29 checagens no solidcraft-cli e diz ok/FALHA (~12 min)
 python cad/D-asas/exportar_stl_d.py   # STLs na posição de impressão em stl/D-asas/ (~40 s)
 python cad/D-asas/render_d.py         # imagens do README em images/D_*.png (~1 min)
 python cad/D-asas/animar_d.py         # GIFs de montagem e funcionamento (Blender 5.3; --export refaz os STLs)
@@ -44,7 +44,13 @@ O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JS
   - na emenda das placas da esquerda há 2 hastes com farpas (snap) que entram no receptáculo das placas da direita;
   - 1 ímã 4×2 por placa (z = 74): 4 ímãs, 2 pares (frente E↔D e trás E↔D);
   - as placas E e D são diferentes (2 STLs, 2 de cada) — confira a polaridade dos ímãs antes de colar.
-- **Placas:** presas na parede da porta com 2 parafusos M2 escareados por fora. Encostam no teto e na lateral da porta.
+- **Placas:** encostam no teto e na lateral da porta e ficam presas por 2 pinos impressos colados (super bonder) cada,
+  pela parede da porta. Eram parafusos M2: trocados a pedido em 2026-11-26.
+  - **Pino:** haste Ø2,5 × 5,5 e cabeça Ø4,8 × 0,8 (`PIN` em `gerar_d.py`).
+  - **Furos:** Ø2,7 passante na parede e na placa. O passante mantém iguais as placas da frente e de trás.
+  - **Rebaixo de Ø5,0 × 0,8 na parede:** a cabeça fica rente e tampa o furo.
+  - **Profundidade:** a haste entra 4 mm na placa e para 1 mm antes da face que dá para o berço.
+  - **Colagem:** depois de testar a caixa montada. Coladas, as placas não saem mais.
 - **Acabamento:**
   - painel rebaixado na frente da base (adesivo) e friso no teto das portas;
   - entalhe para a unha na emenda;
@@ -69,7 +75,7 @@ O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JS
     - 0,02 mm³ a 78°;
     - 7,9 mm³ a 78,5° (0,112 mm² × 70,4 mm de dobradiça).
   - **Trava na varredura:** a 75° e 77,5° a varredura exclui só o par cremalheira de trás × base. O clique é checado à parte.
-  - **`verificar_d.py`:** as 25 checagens deram 24 ok + 1 informativa (o sentido de abertura está certo).
+  - **`verificar_d.py`:** 29 checagens (com as 4 dos pinos das placas), 28 ok + 1 informativa (o sentido de abertura está certo).
   - **STLs** (`exportar_stl_d.py`): 9 arquivos em `stl/D-asas/`, já na mesa. As faces na mesa foram conferidas pela área:
 
     | Arquivo | Imprimir | Posição | Medidas (mm) |
@@ -88,14 +94,15 @@ O `.sc` não vai para o git enquanto o projeto muda (23 MB); ele sai do build JS
   - **Renders** (`render_d.py`): `images/D_fechada`, `D_aberta`, `D_mecanismo_fechada` e `D_mecanismo_aberta`.
     O mecanismo sai cortado na folga entre o berço e as placas de trás: no corte no meio, a parede do berço tapava a cremalheira.
   - **README:** seção da versão D (impressão, compras, montagem, calibração, verificação) e menção na introdução.
-    - Ferragens conferidas no modelo: 8× M2×6 escareado, **4** ímãs 4×2 (o "8 ímãs" daqui estava errado), 2 pinos de filamento 1,75 × 69.
+    - Ferragens conferidas no modelo: **4** ímãs 4×2 (o "8 ímãs" daqui estava errado), 2 pinos de filamento 1,75 × 69
+      (os 8 parafusos M2 viraram pinos impressos colados, ver Placas).
   - **Ordem de montagem corrigida.** A antiga ("abrir as portas a 78° e descer o berço com as cremalheiras") não funciona:
     - com a porta parada no batente, a cremalheira descendo de cima bate nos dentes 7 e 8 do setor (2D: de 0,25 a 13 mm antes do lugar);
     - engrenar rolando pediria abrir até ~103°, e o batente fica em 78°;
     - o rasgo da cauda de andorinha é aberto só em cima, então a cremalheira entra no trilho por baixo.
   - **Ordem que funciona:** cremalheiras no berço por baixo → placas deslizando de lado (Y) sobre as cremalheiras, já
-    engatadas na emenda → conjunto na base → portas por cima, fechadas (2D: descida de 30 mm sem tocar) → pinos → parafusos.
-    Cola só nos ímãs.
+    engatadas na emenda → conjunto na base → portas por cima, fechadas (2D: descida de 30 mm sem tocar) → pinos da
+    dobradiça → pinos das placas secos → teste → colar os pinos das placas. Cola só nos ímãs e nos pinos das placas.
   - **GIFs** (`animar_d.py` + `blender_d.py`, Blender 5.3 em segundo plano): `images/D_montagem.gif` (passo a passo, com
     selo de cola/sem cola) e `images/D_funcionando.gif` (3/4 + corte atrás do berço). As peças saem do `.sc` em STL e as
     poses vêm da mesma cinemática (`travel`, `lift`, giro das portas).

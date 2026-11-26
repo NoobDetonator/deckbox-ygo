@@ -27,6 +27,7 @@ PARTS = [
     ("PlateRF", "D_placa_direita_x2", 90),
     ("RackF", "D_cremalheira_frente", -90),         # rasgo da cauda de andorinha (face +Y) para baixo
     ("RackB", "D_cremalheira_tras", 90),            # rasgo (face -Y) para baixo, nervura da trava para cima
+    ("PlatePin", "D_pino_placa_x8", 0),             # em pe sobre a cabeca (a face de fora sai lisa, da mesa)
 ]
 
 

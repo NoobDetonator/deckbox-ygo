@@ -4638,5 +4638,462 @@
    ]
   },
   "label": "fim da espera: berco 0,05 abaixo toca a cremalheira"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       -42.8004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPLF0H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       -42.0004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPLF0S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       -42.8004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPLF1H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       -42.0004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPLF1S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       42.0004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPLB0H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       36.5004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPLB0S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       42.0004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPLB1H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       -28.0,
+       36.5004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPLB1S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.8004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPRF0H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.0004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPRF0S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.8004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPRF1H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.0004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPRF1S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       28.0,
+       42.0004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPRB0H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       28.0,
+       36.5004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "PPRB0S"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.4,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       28.0,
+       42.0004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPRB1H"
+     }
+    },
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.25,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       28.0,
+       36.5004,
+       91.0
+      ],
+      "operation": "new",
+      "body_name": "PPRB1S"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "PPLF0H",
+       "PPLF0S",
+       "PPLF1H",
+       "PPLF1S",
+       "PPLB0H",
+       "PPLB0S",
+       "PPLB1H",
+       "PPLB1S",
+       "PPRF0H",
+       "PPRF0S",
+       "PPRF1H",
+       "PPRF1S",
+       "PPRB0H",
+       "PPRB0S",
+       "PPRB1H",
+       "PPRB1S",
+       "DoorL",
+       "DoorR",
+       "PlateLF",
+       "PlateLB",
+       "PlateRF",
+       "PlateRB"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "pinos das placas no lugar (zero)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.4,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.0004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "ProbePinS"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbePinS",
+       "DoorR"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do pino com 2,7 em DoorR (sonda de 2,8 toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 1.4,
+      "height": 5.5,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.0004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "ProbePinS"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbePinS",
+       "PlateRF"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "furo do pino com 2,7 em PlateRF (sonda de 2,8 toca)"
+ },
+ {
+  "tool": "batch",
+  "args": {
+   "verbose": false,
+   "rollback": false,
+   "commands": [
+    {
+     "command": "solid.cylinder",
+     "params": {
+      "radius": 2.55,
+      "height": 0.8,
+      "axis": "Y",
+      "base": [
+       28.0,
+       -42.8004,
+       64.0
+      ],
+      "operation": "new",
+      "body_name": "ProbeHeadH"
+     }
+    },
+    {
+     "command": "inspect.interference",
+     "params": {
+      "bodies": [
+       "ProbeHeadH",
+       "DoorR"
+      ]
+     }
+    },
+    {
+     "command": "undo",
+     "params": {}
+    }
+   ]
+  },
+  "label": "rebaixo da cabeca com 5,0 (sonda de 5,1 toca)"
  }
 ]

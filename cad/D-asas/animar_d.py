@@ -35,33 +35,34 @@ COLORS = {"Base": "#1c2331", "DoorL": "#c9a227", "DoorR": "#c9a227", "Tray": "#7
           **{f"Plate{s}{f}": "#9aa3ad" for s in "LR" for f in "FB"}}
 SIDE = {"L": -1, "R": 1}
 
-# ---------------- extras: imas (1 por placa, na face da emenda) e parafusos M2 (2 por placa) ----------------
+# ---------------- extras: imas (1 por placa, na face da emenda) e pinos colados das placas (2 por placa) ----------------
 EXTRAS, GROUPS = [], {b: [b] for b in COLORS}
+SIDE_OF = {"DoorL": -1, "DoorR": 1, **{f"Plate{s}{f}": sg for s, sg in SIDE.items() for f in "FB"}}
+PIN = d.PIN
 for s, sg in SIDE.items():
     for f, fy in (("F", -1), ("B", 1)):
         ym = fy * (p["y_bi"] + p["y_bo"]) / 2
         name = f"Mag{s}{f}"
         EXTRAS.append(dict(name=name, group=name, kind="cyl", r=2.0, h=2.0, axis="X", color="#3b4048",
                            center=[sg * (-g.X_SEAM + 1.1), ym, g.Z_MAG]))   # 0,1 abaixo da face da emenda
-        GROUPS[name] = [name]
+        GROUPS[name], SIDE_OF[name] = [name], sg
         for k, (sx, sz) in enumerate(d.SCREW):
-            grp = f"Screw{s}{f}{k}"
-            y_face = fy * Dh
-            EXTRAS += [dict(name=grp + "s", group=grp, kind="cyl", r=0.95, h=6.0, axis="Y", color="#6f7780",
-                            center=[sg * sx, y_face - fy * 3.0, sz]),
-                       dict(name=grp + "h", group=grp, kind="cone", r=1.0 if fy < 0 else 2.1, r2=2.1 if fy < 0 else 1.0,
-                            h=1.05, axis="Y", color="#6f7780", center=[sg * sx, y_face - fy * 0.525, sz])]
-            GROUPS[grp] = [grp + "s", grp + "h"]
+            grp = f"Pino{s}{f}{k}"
+            y_face = fy * Dh                     # cabeca rente no rebaixo, haste pela parede ate 4 mm dentro da placa
+            EXTRAS += [dict(name=grp + "h", group=grp, kind="cyl", r=PIN["head"] / 2, h=PIN["head_t"], axis="Y",
+                            color="#e3bd45", center=[sg * sx, y_face - fy * PIN["head_t"] / 2, sz]),
+                       dict(name=grp + "s", group=grp, kind="cyl", r=PIN["d"] / 2, h=PIN["l"], axis="Y",
+                            color="#e3bd45", center=[sg * sx, y_face - fy * (PIN["head_t"] + PIN["l"] / 2), sz])]
+            GROUPS[grp], SIDE_OF[grp] = [grp + "h", grp + "s"], sg
 
 PLATES = [f"Plate{s}{f}" for s in "LR" for f in "FB"]
 MAGS = [f"Mag{s}{f}" for s in "LR" for f in "FB"]
-SCREWS = [f"Screw{s}{f}{k}" for s in "LR" for f in "FB" for k in range(len(d.SCREW))]
+SCREWS = [f"Pino{s}{f}{k}" for s in "LR" for f in "FB" for k in range(len(d.SCREW))]
 CORE = ["Tray", "RackF", "RackB"] + PLATES + MAGS
 
 
 def side_of(name):
-    return SIDE[name[len("Plate")]] if name.startswith("Plate") else SIDE[name[3] if name.startswith("Mag") else
-                                                                          name[5] if name.startswith("Screw") else name[4]]
+    return SIDE_OF[name]
 
 
 def mech(t):
@@ -112,8 +113,8 @@ def s3(u):
 
 
 def s7(u):
-    pose = moved([x for x in SCREWS if "F" in x[6:]], (0, -22, 0), u)
-    pose.update(moved([x for x in SCREWS if "B" in x[6:]], (0, 22, 0), u))
+    pose = moved([x for x in SCREWS if x[5] == "F"], (0, -22, 0), u)
+    pose.update(moved([x for x in SCREWS if x[5] == "B"], (0, 22, 0), u))
     return ["Base", "DoorL", "DoorR", "PinL", "PinR"] + CORE + SCREWS, pose
 
 
@@ -134,8 +135,8 @@ STEPS = [
     ("6 · Pinos: filamento 1,75 × 69 mm, empurrado por trás até o fundo (a frente do furo é fechada). "
      "Corte rente. Sem cola: o furo de 1,9 da base segura.", False, 16,
      lambda u: (["Base", "DoorL", "DoorR", "PinL", "PinR"] + CORE, moved(["PinL", "PinR"], (0, 110, 0), u)), "iso"),
-    ("7 · Parafusos: 2 M2 × 6 escareados por placa, pela parede da porta (frente e trás). Aperte sem forçar: "
-     "rosca em plástico espana fácil.", False, 16, s7, "iso"),
+    ("7 · Pinos das placas: 2 por placa, entram por fora pela parede da porta (frente e trás) e a cabeça fica rente "
+     "no rebaixo. Teste a caixa com eles secos; depois, uma gota de super bonder em cada furo.", True, 18, s7, "pins"),
 ]
 
 
@@ -165,6 +166,7 @@ def cam(yaw, pitch, target, scale, res):
 CAMERAS = {"iso": cam(-0.55, 0.42, [0, 0, 62], 270, [840, 600]),
            "close": cam(-0.35, 0.3, [0, 0, 58], 175, [840, 600]),
            "mid": cam(-0.55, 0.42, [0, 0, 30], 200, [840, 600]),
+           "pins": cam(-0.4, 0.22, [12, -Dh, 76], 105, [840, 600]),
            "work_iso": cam(-0.55, 0.42, [0, 0, 78], 215, [620, 620]),
            "work_cut": {"eye": [0, -900, 72], "target": [0, 0, 72], "ortho_scale": 175, "res": [620, 620]}}
 CUT_Y = p["y_co"] + P["rail_clr"] / 2

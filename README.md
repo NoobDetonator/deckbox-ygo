@@ -442,24 +442,25 @@ Pasta [`stl/D-asas`](stl/D-asas). Os STLs já saem na posição de impressão.
 | `D_cremalheira_frente.stl` | 1 | deitada, rasgo para baixo | 3,1 cm³ | **100%** |
 | `D_cremalheira_tras.stl` | 1 | deitada, rasgo para baixo (nervura da trava para cima) | 3,1 cm³ | **100%** |
 | `D_divisoria.stl` | 1 | deitada | 8,8 cm³ | |
+| `D_pino_placa_x8.stl` | 8 (+2 de reserva) | em pé, sobre a cabeça | 0,04 cm³ cada | **100%**, camada 0,12; imprima vários juntos (resfriamento). A cabeça sai lisa da mesa e fica para fora |
 
 O resto segue a [configuração geral](#configuração-de-impressão-abs-vale-para-tudo). As placas e as cremalheiras vão maciças: os dentes de módulo 1,5 e as hastes do engate trabalham em flexão.
 
 ### Compre
 
-- **8 parafusos M2 × 6 auto-atarraxantes de cabeça chata (escareada):** 2 por placa, entram por fora da parede da porta.
 - **4 ímãs 4 × 2 mm:** 1 por placa, na face da emenda.
 - **2 pinos de filamento 1,75 mm × 69 mm**, um para cada dobradiça.
+- **Super bonder:** nos ímãs e nos 8 pinos das placas.
 - 4 pezinhos de silicone de 8 mm e a divisória.
 
 ### Montar
 
 ![Montagem passo a passo](images/D_montagem.gif)
 
-**Cola só nos ímãs.**
+**Cola (super bonder) só nos ímãs e nos pinos das placas.**
+- **Pinos das placas:** cole só depois de testar a caixa montada. Coladas, as placas não saem mais.
 - **Cremalheiras:** não leve cola. Elas precisam correr 6,6 mm no trilho do berço, que é a espera de 12°.
-- **Placas:** são parafusadas, para desmontar quando quiser.
-- **Pinos:** ficam presos pelo furo de 1,9 da base. Se ficar folgado, uma gota de cola só na ponta de trás, no nó da base, nunca nos nós da porta.
+- **Pinos da dobradiça:** ficam presos pelo furo de 1,9 da base. Se ficar folgado, uma gota de cola só na ponta de trás, no nó da base, nunca nos nós da porta.
 
 A ordem importa. **Não dá para encaixar a cremalheira com as portas já montadas e abertas:** descendo de cima, ela bate nos dentes 7 e 8 do setor (2D: sobreposição de 0,25 a 13 mm antes do lugar), e o batente impede abrir mais para engrenar rolando. Por isso tudo entra fechado, e as placas engrenam deslizando de lado (os dentes são retos no sentido do eixo).
 
@@ -474,12 +475,13 @@ A ordem importa. **Não dá para encaixar a cremalheira com as portas já montad
 4. **Conjunto na base:** desça berço, cremalheiras e placas juntos na base, fechados. A nervura da cremalheira de trás passa pelo ressalto da trava com um clique.
 5. **Portas:** encaixe cada porta **por cima**, fechada. Os nós entram entre os da base e as placas encostam no teto e na lateral da porta. Conferido em 2D: a porta descendo reta de 30 mm até o lugar não encosta na base.
 6. **Pinos:** filamento de 1,75 × 69 mm, empurrado por trás até o fundo do furo (a frente é fechada). Corte rente.
-7. **Parafusos:** 2 M2 × 6 escareados por placa, pela parede da porta (frente e trás), sem forçar.
+7. **Pinos das placas (ainda sem cola):** 2 por placa. Entram por fora, pela parede da porta (frente e trás), e vão 4 mm para dentro da placa. A cabeça de Ø4,8 fica rente, num rebaixo de Ø5,0 × 0,8 mm, e tampa o furo.
 8. **Teste:** abra e feche devagar.
    - Nos primeiros 12° só a cremalheira anda; depois o berço sobe junto.
    - Perto de 75° vem o clique da trava.
    - Fechada, o engate da emenda segura as portas.
-9. **Final:** forro, divisória e pés de silicone adesivos.
+9. **Cole os pinos das placas:** tire um pino por vez, ponha uma gota de super bonder no furo e empurre de volta até a cabeça assentar. Limpe o excesso na hora.
+10. **Final:** forro, divisória e pés de silicone adesivos.
 
 ![A caixa funcionando: portas de 0° a 77,5° e de volta; à direita, o corte logo atrás do berço mostra placas e cremalheira de trás](images/D_funcionando.gif)
 
@@ -500,6 +502,7 @@ Os comandos estão em [`cad/D-asas/NOTAS.md`](cad/D-asas/NOTAS.md).
 | `k_clr` | 0,3 | folga radial entre os nós da dobradiça |
 | `dwell` | 12 | graus de espera antes de o berço subir |
 | `card_t`, `liner_t` | 0,68 / 1,0 | como nas outras versões |
+| `PIN` (em `gerar_d.py`) | haste 2,5, furo 2,7, cabeça 4,8 × 0,8, rebaixo 5,0 | pino das placas. Pino frouxo: furo 2,6; não entra: 2,8 (ou passe uma broca de 2,7) |
 
 ### Verificação (versão D)
 
@@ -513,6 +516,8 @@ Booleanas exatas do SolidCraft (`cad/D-asas/D_verificacao.json`, rodadas com `py
 | Trava a 75,2° | a nervura passa por cima do ressalto (a lingueta cede 0,3 mm) |
 | Engate a 1,5° | as farpas forçam as hastes: o engate pega |
 | Fim da espera (12°) | o fundo do rasgo encosta no trilho: dali em diante o berço sobe junto |
+| 8 pinos das placas no lugar | não tocam a porta nem a placa |
+| Furos dos pinos | sonda 0,1 mm mais grossa encosta na porta e na placa (furo de 2,7) e no rebaixo da cabeça (5,0) |
 | Checagens 2D (`geo_d.py`) | dentes sem sobreposição de 0° a 78°, folga mínima de 0,14 mm |
 
 ---
