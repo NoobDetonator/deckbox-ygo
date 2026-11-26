@@ -14,7 +14,7 @@ sys.dont_write_bytecode = True
 import gerar_d as d  # noqa: E402  (reescreve os JSON com o mesmo conteudo)
 
 HERE = Path(__file__).resolve().parent
-IMG = HERE.parent.parent / "images"
+IMG = HERE.parent.parent / "images" / "D"
 from geo_d import CLI  # noqa: E402  (SOLIDCRAFT_CLI ou o primeiro caminho conhecido que existir)
 OPEN = d.P["th_rest"]
 # corte na folga entre o berco e as placas de tras: ficam so as placas, a cremalheira de tras e o trilho no rasgo

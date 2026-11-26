@@ -4,7 +4,7 @@ Deck box para **90 cartas com sleeve duplo** (tamanho japonês, 62 × 89 mm): ma
 Tem tampa basculante, **fechamento com ímãs** e trava de clique, faces lisas com cantos arredondados e divisória removível, e imprime **sem suporte**.
 Modelada em [SolidCraft](https://github.com/bherbruck/solidcraft), 100 % paramétrica.
 
-![Fechada](images/shot_fechada.png)
+![Fechada](images/A-B/shot_fechada.png)
 
 ## Qual versão imprimir
 
@@ -12,7 +12,7 @@ A caixa é a mesma nas duas versões; muda só a dobradiça.
 
 | | **A — dobradiça integrada** | **B — dobradiça colada** |
 |---|---|---|
-| Visual | ![A](images/shot_traseira.png) | ![B](images/dobradica_impressa_montada.png) |
+| Visual | ![A](images/A-B/shot_traseira.png) | ![B](images/A-B/dobradica_impressa_montada.png) |
 | Dobradiça | 5 nós impressos na própria caixa | dobradiça de 50 × 38 mm colada num rebaixo-guia: **de metal** (2") ou a **impressa print-in-place** deste repositório |
 | Pino | 61,6 mm de filamento 1,75 (ou aço de 2 mm) | já vem na dobradiça |
 | Abertura | até ~168° | até 180° |
@@ -63,9 +63,9 @@ Os dois já vêm com cola. Se o tecido não tiver adesivo, use **cola spray** (t
 - São 10 peças: fundo, frente, traseira e laterais do corpo, teto e paredes da tampa.
 - Cada peça tem nome, medida e ordem de colagem.
 
-![Gabarito do forro](images/forro_feltro_1mm.png)
+![Gabarito do forro](images/forro/forro_feltro_1mm.png)
 
-O de veludo tem as mesmas peças, com as medidas para 0,5 mm: [prévia](images/forro_veludo_0-5mm.png).
+O de veludo tem as mesmas peças, com as medidas para 0,5 mm: [prévia](images/forro/forro_veludo_0-5mm.png).
 
 **Como forrar:**
 1. Passe uma lixa 220 de leve por dentro e limpe com álcool.
@@ -86,7 +86,7 @@ As paredes param 0,5 mm antes do topo do lábio e do degrau da tampa. **Não cub
 
 Cole o fundo, depois a frente e a traseira, e por último as laterais. As paredes param 0,5 mm abaixo da borda do berço: não dobre o tecido por cima dela, porque o berço corre no corpo com só 0,3 mm de folga. O berço foi desenhado para forro de 1 mm; com veludo de 0,5 mm as cartas ficam 1 mm mais soltas. As medidas vêm do gerador do modelo: rode `python forro/gerar_forro_C.py` se mudar a caixa.
 
-![Molde do forro do berço da versão C](images/forro_C_veludo_0-5mm.png)
+![Molde do forro do berço da versão C](images/forro/forro_C_veludo_0-5mm.png)
 
 ## Ímãs
 
@@ -101,7 +101,7 @@ Dois pares de **ímãs de neodímio em disco 4 × 2 mm (Ø4 × 2, N35)** ficam n
 
 ## Versão A — dobradiça integrada
 
-![Aberta](images/shot_aberta.png)
+![Aberta](images/A-B/shot_aberta.png)
 
 ### Imprimir
 
@@ -137,11 +137,11 @@ Os arquivos já estão na posição de impressão. Total: ~130 g de ABS.
 
 ## Versão B — dobradiça colada
 
-<img src="images/render_B_caixa.png" width="480" alt="Versão B aberta, com o deck dentro">
+<img src="images/A-B/render_B_caixa.png" width="480" alt="Versão B aberta, com o deck dentro">
 
 | Rebaixo-guia | Com dobradiça de metal | Dobradiça impressa |
 |---|---|---|
-| ![Guia](images/dobradica_guia.png) | ![Metal](images/dobradica_montada.png) | ![Impressa](images/dobradica_impressa.png) |
+| ![Guia](images/A-B/dobradica_guia.png) | ![Metal](images/A-B/dobradica_montada.png) | ![Impressa](images/A-B/dobradica_impressa.png) |
 
 A traseira tem um **ressalto de 3 mm** com:
 - um **rebaixo de 1,2 mm no tamanho exato da dobradiça**, com 0,2 mm de folga, que serve de guia para ela não ficar torta;
@@ -201,15 +201,15 @@ Ela sai da impressora já montada: 5 nós intercalados, com o pino de 2,6 mm pre
 
 | Fechada | Aberta: o berço sobe 22 mm |
 |---|---|
-| ![Fechada](images/C_fechada.png) | ![Aberta](images/C_aberta.png) |
+| ![Fechada](images/C/C_fechada.png) | ![Aberta](images/C/C_aberta.png) |
 
 Ao abrir a tampa, o próprio giro dela ergue um **berço** com as cartas. As cartas só encostam no berço forrado; o mecanismo fica em cavidades laterais fechadas por painéis lisos colados com acetona. A frente é lisa, sem porta-arte.
 
-![Animação: tampa de 0° a 110°, mecanismo visto de lado sem o painel e em 3/4, com a curva de subida do berço](images/C_animacao.gif)
+![Animação: tampa de 0° a 110°, mecanismo visto de lado sem o painel e em 3/4, com a curva de subida do berço](images/C/C_animacao.gif)
 
 | Mecanismo fechado (sem o painel lateral) | Aberto a 110° |
 |---|---|
-| ![Mecanismo fechado](images/C_mecanismo_fechada.png) | ![Mecanismo aberto](images/C_mecanismo_aberta.png) |
+| ![Mecanismo fechado](images/C/C_mecanismo_fechada.png) | ![Mecanismo aberto](images/C/C_mecanismo_aberta.png) |
 
 **Como funciona (igual nos dois lados):**
 1. A **manivela** está presa na tampa e gira com ela no eixo da dobradiça (pino de aço de Ø3, escondido na lateral).
@@ -260,9 +260,9 @@ Os arquivos já estão na posição de impressão e nenhum precisa de suporte. M
 
 | Folha 1: vistas ortográficas (1:2) | Folha 2: mecanismo de lado (1:1) |
 |---|---|
-| ![Vistas frontal, lateral e superior cotadas, e a perspectiva isométrica](images/C_folha_ortografica.png) | ![Vista lateral sem o painel, fechada e aberta, com eixo, pivô e curso do berço](images/C_folha_mecanismo.png) |
+| ![Vistas frontal, lateral e superior cotadas, e a perspectiva isométrica](images/C/C_folha_ortografica.png) | ![Vista lateral sem o painel, fechada e aberta, com eixo, pivô e curso do berço](images/C/C_folha_mecanismo.png) |
 
-![Animação de montagem: corpo, berço, manivelas na tampa, tampa, eixos, pinos, balancins, painéis e o deck](images/C_montagem.gif)
+![Animação de montagem: corpo, berço, manivelas na tampa, tampa, eixos, pinos, balancins, painéis e o deck](images/C/C_montagem.gif)
 
 1. **Prepare:** lixe com lixa 220 as faces que vão ser coladas e limpe com álcool. Furos de pino fixo têm Ø3,1: o pino entra justo e vai colado com uma gota de CA, sem prensar (prensado racha os ressaltos finos). Furos que giram têm Ø3,4.
 2. **Berço:** desça o berço no corpo por cima; as línguas entram pelas fendas laterais. Ele tem que descer sozinho, pelo peso.
@@ -305,7 +305,7 @@ Booleanas exatas do SolidCraft, com todas as peças e o bloco de 90 cartas + div
 
 | Fechada, vista de trás: dobra do painel e parafusos | Aberta | Mecanismo aberto (sem o painel) |
 |---|---|---|
-| ![Fechada](images/C2_fechada.png) | ![Aberta](images/C2_aberta.png) | ![Mecanismo](images/C2_mecanismo_aberta.png) |
+| ![Fechada](images/C2/C2_fechada.png) | ![Aberta](images/C2/C2_aberta.png) | ![Mecanismo](images/C2/C2_mecanismo_aberta.png) |
 
 O mesmo elevador da C, revisado depois de impressa. Na C os eixos escapavam com o peso das cartas e os painéis soltavam quando não estavam colados. As causas, e o que mudou:
 
@@ -406,11 +406,11 @@ Booleanas exatas do SolidCraft (`cad/C-elevador-v2/C2_verificacao.json`), com to
 
 | Fechada | Aberta: as portas abrem como asas e o berço sobe 36 mm |
 |---|---|
-| ![Fechada](images/D_fechada.png) | ![Aberta](images/D_aberta.png) |
+| ![Fechada](images/D/D_fechada.png) | ![Aberta](images/D/D_aberta.png) |
 
 | Mecanismo fechado (corte logo atrás do berço) | Aberto a 77,5° |
 |---|---|
-| ![Mecanismo fechado](images/D_mecanismo_fechada.png) | ![Mecanismo aberto](images/D_mecanismo_aberta.png) |
+| ![Mecanismo fechado](images/D/D_mecanismo_fechada.png) | ![Mecanismo aberto](images/D/D_mecanismo_aberta.png) |
 
 O topo é dividido em **duas portas** que giram nas laterais, como asas.
 - **Engrenagem:** cada porta leva 2 placas-setor (frente e trás) com 10 dentes evolventes (módulo 1,5, 42 dentes, R 31,5). Elas engrenam em **2 cremalheiras** (frente e trás), uma entre cada par de placas.
@@ -437,11 +437,11 @@ O topo é dividido em **duas portas** que giram nas laterais, como asas.
 
 | Dobradiça fechada: nós alternados e orelhas do batente nas pontas | Aberta a 77,5°: a lateral da porta descansa nas orelhas |
 |---|---|
-| ![Dobradiça](images/D_dobradica.png) | ![Batente](images/D_batente.png) |
+| ![Dobradiça](images/D/D_dobradica.png) | ![Batente](images/D/D_batente.png) |
 
 ### Antes de tudo: peças de teste
 
-![Peças de teste](images/D_testes.png)
+![Peças de teste](images/D/D_testes.png)
 
 Imprima `D_teste_deitado.stl` e `D_teste_em_pe.stl` (~10 g no total) com a mesma configuração das peças de verdade. Cada peça testa um encaixe do jeito que ele vai ser impresso na caixa.
 
@@ -504,9 +504,9 @@ Total: ~185 g de ABS com as peças de teste. O resto segue a [configuração ger
 
 | Frente | Verso |
 |---|---|
-| ![Frente do manual: visão geral com chamadas, como funciona, peças para imprimir, peças de teste e ajustes](images/D_manual_frente.png) | ![Verso do manual: os 9 passos de montagem com setas e chamadas](images/D_manual_verso.png) |
+| ![Frente do manual: visão geral com chamadas, como funciona, peças para imprimir, peças de teste e ajustes](images/D/D_manual_frente.png) | ![Verso do manual: os 9 passos de montagem com setas e chamadas](images/D/D_manual_verso.png) |
 
-![Montagem passo a passo](images/D_montagem.gif)
+![Montagem passo a passo](images/D/D_montagem.gif)
 
 **Cola (super bonder) só nos ímãs, nas dobradiças e nos pinos das placas, e só depois de testar.** A ordem importa: a cremalheira não entra com as portas já montadas e abertas. Descendo de cima, ela bate nos dentes do setor, e o batente impede abrir mais para engrenar rolando. Por isso tudo entra fechado, e as placas engrenam deslizando de lado (os dentes são retos no sentido do eixo).
 
@@ -532,7 +532,7 @@ Total: ~185 g de ABS com as peças de teste. O resto segue a [configuração ger
    - **Pinos das placas:** tire um por vez, ponha uma gota no furo e empurre de volta até a cabeça assentar.
 9. **Final:** forro, divisória e pés de silicone.
 
-![A caixa funcionando: portas de 0° a 77,5° e de volta; à direita, o corte logo atrás do berço mostra placas e cremalheira de trás](images/D_funcionando.gif)
+![A caixa funcionando: portas de 0° a 77,5° e de volta; à direita, o corte logo atrás do berço mostra placas e cremalheira de trás](images/D/D_funcionando.gif)
 
 ### Calibrar
 
@@ -580,7 +580,7 @@ Booleanas exatas do SolidCraft (`cad/D-asas/D_verificacao.json`, rodadas com `py
 
 | Por dentro | Fundo |
 |---|---|
-| ![Detalhe](images/shot_detalhe.png) | ![Fundo](images/shot_fundo.png) |
+| ![Detalhe](images/A-B/shot_detalhe.png) | ![Fundo](images/A-B/shot_fundo.png) |
 
 - **Faces lisas:** frente e laterais retas, só com os cantos arredondados (R4). A frente tem 9 mm porque é ali que ficam os ímãs.
 - **Linha de sombra:** um degrau de 0,5 × 1,2 mm no topo do corpo, logo abaixo da tampa. Marca a divisão com uma linha escura e esconde desalinhamentos.
@@ -603,7 +603,7 @@ Gabarito em escala real para envelopar a tampa com vinil adesivo:
 
 | Versão A | Versão B |
 |---|---|
-| ![Adesivo A](images/adesivo_tampa_A.png) | ![Adesivo B](images/adesivo_tampa_B.png) |
+| ![Adesivo A](images/A-B/adesivo_tampa_A.png) | ![Adesivo B](images/A-B/adesivo_tampa_B.png) |
 
 **Arquivos:** `adesivo/adesivo_tampa_A.svg` e `adesivo/adesivo_tampa_B.svg`.
 - São A4 paisagem, em mm, com as camadas Arte, Sangria, Área segura, Guias, Corte e Textos.
@@ -680,7 +680,7 @@ O topo da tampa e o fundo do corpo ficam com a textura da mesa (PEI texturizado 
 - **Dobradiça integrada (A):** 5 nós com reforços a 45° e furos em gota, então imprime sem suporte.
 - **Chanfros** nas bordas que tocam a mesa (0,8 no corpo, 1,0 na tampa), contra o pé de elefante.
 
-![Explodida (A): tampa, divisória e pino](images/shot_explodida.png)
+![Explodida (A): tampa, divisória e pino](images/A-B/shot_explodida.png)
 
 ## Verificação
 
@@ -714,9 +714,9 @@ solidcraft-cli run cad/A-dobradica-integrada/A_deckbox_build.json --save cad/A-d
 
 Depois exporte cada peça em STL pelo app. O modelo fica na posição de montagem, então vire a tampa de cabeça para baixo no fatiador.
 
-Mudou a versão C? Gere o manual de novo com `python manual/gerar_manual.py`. Ele renderiza as cenas a partir de `cad/C-elevador/C_elevador.sc` pelo `solidcraft-cli` (caminho na variável `SOLIDCRAFT_CLI`) e reescreve o PDF e as duas folhas técnicas em `images/`.
+Mudou a versão C? Gere o manual de novo com `python manual/gerar_manual.py`. Ele renderiza as cenas a partir de `cad/C-elevador/C_elevador.sc` pelo `solidcraft-cli` (caminho na variável `SOLIDCRAFT_CLI`) e reescreve o PDF e as duas folhas técnicas em `images/C/`.
 
 Mudou a versão D? Gere o `.sc` (veja `cad/D-asas/NOTAS.md`) e rode `python cad/D-asas/manual_d.py --render`.
 - **O que faz:** renderiza as cenas no Blender, com as mesmas peças dos GIFs, e monta a folha no DesignCraft (`designcraft-cli`, caminho na variável `DESIGNCRAFT_CLI`).
-- **O que sai:** o PDF, o `manual/D_manual_montagem.designcraft` (abre no DesignCraft para editar à mão) e as prévias em `images/`.
+- **O que sai:** o PDF, o `manual/D_manual_montagem.designcraft` (abre no DesignCraft para editar à mão) e as prévias em `images/D/`.
 - **Sem `--render`:** só remonta a folha com as imagens já renderizadas (`manual/D_img/`, fora do git).

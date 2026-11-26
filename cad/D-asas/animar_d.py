@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""GIFs da caixa D: montagem passo a passo (images/D_montagem.gif) e funcionamento (images/D_funcionando.gif).
+"""GIFs da caixa D: montagem passo a passo (images/D/D_montagem.gif) e funcionamento (images/D/D_funcionando.gif).
     python cad/D-asas/animar_d.py [--export]      # precisa do D_asas.sc (ver NOTAS.md) e do Blender
 1. exporta cada peca do .sc em STL na posicao montada (cache em %TEMP%/D_anim; --export refaz);
 2. calcula a pose de cada peca quadro a quadro com a mesma cinematica do modelo (travel, lift, giro das portas);
@@ -20,7 +20,7 @@ import gerar_d as d  # noqa: E402  (reescreve os JSON com o mesmo conteudo)
 import geo_d as g  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-IMG = HERE.parent.parent / "images"
+IMG = HERE.parent.parent / "images" / "D"
 WORK = Path(tempfile.gettempdir()) / "D_anim"
 from geo_d import CLI  # noqa: E402  (SOLIDCRAFT_CLI ou o primeiro caminho conhecido que existir)
 BLENDER = next((b for b in (os.environ.get("BLENDER", ""), *(f"C:/Program Files/Blender Foundation/Blender {v}/blender.exe"

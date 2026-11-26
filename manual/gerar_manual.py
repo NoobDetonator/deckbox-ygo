@@ -4,7 +4,7 @@
     python manual/gerar_manual.py            # renderiza as cenas no solidcraft-cli e monta tudo
     python manual/gerar_manual.py --cache    # reaproveita as renderizacoes da ultima vez (so mudou texto)
 
-Saidas: manual/C_manual_montagem.pdf e as duas folhas tecnicas em images/C_folha_*.png.
+Saidas: manual/C_manual_montagem.pdf e as duas folhas tecnicas em images/C/C_folha_*.png.
 O solidcraft-cli vem de SOLIDCRAFT_CLI (ou do caminho padrao em render.py); a fonte e a Montserrat.
 """
 import math, os, sys
@@ -667,7 +667,7 @@ def build():
     Image.init()  # registra o JPEG usado dentro do PDF
     pages[0].save(here / "C_manual_montagem.pdf", save_all=True, append_images=pages[1:], resolution=DPI, quality=82)
     for i, nome in ((1, "C_folha_ortografica"), (2, "C_folha_mecanismo")):
-        pages[i].resize((1754, 1240), Image.LANCZOS).save(here.parent / "images" / f"{nome}.png", optimize=True)
+        pages[i].resize((1754, 1240), Image.LANCZOS).save(here.parent / "images" / "C" / f"{nome}.png", optimize=True)
     print("ok", len(pages), "paginas")
 
 

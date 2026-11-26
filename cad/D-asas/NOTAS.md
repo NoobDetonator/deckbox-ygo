@@ -15,7 +15,7 @@ python cad/D-asas/gerar_d.py      # escreve D_asas_build.json e D_verificacao.js
 solidcraft-cli run cad/D-asas/D_asas_build.json --save cad/D-asas/D_asas.sc --quiet   # ~2 min
 python cad/D-asas/verificar_d.py  # 35 checagens no solidcraft-cli, diz ok/FALHA (~10 min)
 python cad/D-asas/exportar_stl_d.py   # STLs na posição de impressão em stl/D-asas/ (~1 min)
-python cad/D-asas/render_d.py         # imagens do README em images/D_*.png (~3 min)
+python cad/D-asas/render_d.py         # imagens do README em images/D/D_*.png (~3 min)
 python cad/D-asas/animar_d.py --export  # GIFs de montagem e funcionamento (Blender 5.2+)
 python cad/D-asas/manual_d.py --render  # manual A4 frente e verso: Blender + DesignCraft
 ```

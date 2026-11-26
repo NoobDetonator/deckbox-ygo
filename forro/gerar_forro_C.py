@@ -5,7 +5,7 @@
 
 Só o berço, onde ficam as cartas: fundo, frente (com o recorte em U), traseira e 2 laterais.
 As medidas vêm do gerador do modelo (cad/C-elevador/gerar_came.py), então acompanham qualquer
-mudança na caixa. Saídas: forro/forro_C_veludo_0-5mm.pdf (imprimir) e images/forro_C_veludo_0-5mm.png.
+mudança na caixa. Saídas: forro/forro_C_veludo_0-5mm.pdf (imprimir) e images/forro/forro_C_veludo_0-5mm.png.
 """
 import contextlib
 import io
@@ -174,5 +174,5 @@ if __name__ == "__main__":
     page = build()
     Image.init()
     page.save(HERE / "forro_C_veludo_0-5mm.pdf", resolution=DPI, quality=92)
-    page.resize((2180, round(2180 * PH / PW)), Image.LANCZOS).save(HERE.parent / "images" / "forro_C_veludo_0-5mm.png", optimize=True)
+    page.resize((2180, round(2180 * PH / PW)), Image.LANCZOS).save(HERE.parent / "images" / "forro" / "forro_C_veludo_0-5mm.png", optimize=True)
     print("ok")

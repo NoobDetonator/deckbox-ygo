@@ -6,7 +6,7 @@
    de stl/D-asas (ja na posicao de impressao);
 2. setas e chamadas: pontos 3D projetados com a mesma camera ortografica de cada cena, entao caem no lugar certo;
 3. folha: um roteiro de comandos do DesignCraft (manual/D_manual_roteiro.txt) rodado no designcraft-cli, que grava
-   manual/D_manual_montagem.designcraft (editavel), o PDF e as previas images/D_manual_frente.png e _verso.png.
+   manual/D_manual_montagem.designcraft (editavel), o PDF e as previas images/D/D_manual_frente.png e _verso.png.
 """
 import json
 import math
@@ -628,11 +628,11 @@ def build():
         sys.exit(r.stdout[-3000:] + r.stderr[-3000:])
     for k, nm in ((0, "frente"), (1, "verso")):
         r = subprocess.run([DCLI, "run", "--in", str(doc), "--page", str(k), "--scale", "2", "--export",
-                            str(ROOT / "images" / f"D_manual_{nm}.png")], capture_output=True, text=True,
+                            str(ROOT / "images" / "D" / f"D_manual_{nm}.png")], capture_output=True, text=True,
                            encoding="utf-8", errors="replace", stdin=subprocess.DEVNULL)
         if r.returncode:
             sys.exit(r.stdout[-2000:] + r.stderr[-2000:])
-    print(f"{len(L)} comandos -> {pdf.name}, {doc.name}, images/D_manual_frente.png e _verso.png")
+    print(f"{len(L)} comandos -> {pdf.name}, {doc.name}, images/D/D_manual_frente.png e _verso.png")
 
 
 if __name__ == "__main__":
